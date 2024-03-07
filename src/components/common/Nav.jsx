@@ -7,15 +7,20 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import MGR_Logo from "../../assets/img/logos/MGR_logo.png"
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [
+    { name: 'Home', link: '/' },
+    { name: 'Méthode', link: '/method' },
+    { name: 'À propos', link: '/about' },
+    { name: 'Conditions', link: '/terms' },
+    { name: 'Tarifs', link: '/prices' },
+    { name: 'Contact', link: '/contact' },
+]
 
 function Nav() {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -45,8 +50,8 @@ function Nav() {
                     <Typography
                         variant="h6"
                         noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
+                        component={Link}
+                        to="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -90,8 +95,13 @@ function Nav() {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                <MenuItem 
+                                    key={page.name} 
+                                    component={Link}
+                                    to={page.link}
+                                    onClick={handleCloseNavMenu}
+                                >
+                                    <Typography textAlign="center">{page.name}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -102,8 +112,8 @@ function Nav() {
                     <Typography
                         variant="h5"
                         noWrap
-                        component="a"
-                        href="#app-bar-with-responsive-menu"
+                        component={Link}
+                        to="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -115,16 +125,28 @@ function Nav() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        MGR
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ 
+                        flexGrow: 1, 
+                        display: { xs: 'none', md: 'flex' },
+                        justifyContent: 'flex-end',
+                        gap: 2     
+                    }}>
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.name}
+                                component={Link}
+                                to={page.link}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ 
+                                    my: 2, 
+                                    color: 'white', 
+                                    display: 'block',
+                                    fontWeight: 300, 
+                                }}
                             >
-                                {page}
+                                {page.name}
                             </Button>
                         ))}
                     </Box>

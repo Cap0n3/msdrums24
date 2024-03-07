@@ -1,8 +1,11 @@
 import React from 'react';
 import { Typography, TextField, Button, Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
+import Stack from '@mui/material/Stack';
 import MGR_Logo from "../../assets/img/logos/MGR_logo.png"
 import styled from '@emotion/styled';
+import NavLink from "../common/NavLink";
+import { footer_pages_col1, footer_pages_col2 } from '../../routes/menu-urls';
 
 const Footer = () => {
     
@@ -50,17 +53,20 @@ const Footer = () => {
                     </Typography> 
                 </Grid>
                 <Grid xs={6} md={2}>
-                    <Typography variant="h6" gutterBottom>Company</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">À propos</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">Méthode</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">Lieu</Typography>
+                    <Typography variant="h6" gutterBottom>À propos</Typography>
+                    <Stack spacing={.5}>
+                        {footer_pages_col1.map((page) => (
+                            <NavLink key={page.id} url={page.link} name={page.name} />
+                        ))}
+                    </Stack>
                 </Grid>
                 <Grid xs={6} md={2}>
                     <Typography variant="h6" gutterBottom>Support</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">Tarifs</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">Conditions</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">FAQ</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">Contact</Typography>
+                    <Stack spacing={.5}>
+                        {footer_pages_col2.map((page) => (
+                            <NavLink key={page.id} url={page.link} name={page.name} />
+                        ))}
+                    </Stack>
                 </Grid>
                 <Grid xs={12} md={4}>
                     <Typography variant="h6" gutterBottom>Newsletter</Typography>

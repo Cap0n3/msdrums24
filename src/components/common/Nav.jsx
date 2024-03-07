@@ -9,18 +9,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { appbar_pages } from '../../routes/menu-urls';
 import MGR_Logo from "../../assets/img/logos/MGR_logo.png"
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-const pages = [
-    { name: 'Home', link: '/' },
-    { name: 'Méthode', link: '/method' },
-    { name: 'À propos', link: '/about' },
-    { name: 'Conditions', link: '/terms' },
-    { name: 'Tarifs', link: '/prices' },
-    { name: 'Contact', link: '/contact' },
-]
 
 function Nav() {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -94,9 +87,9 @@ function Nav() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
+                            {appbar_pages.map((page) => (
                                 <MenuItem 
-                                    key={page.name} 
+                                    key={page.id} 
                                     component={Link}
                                     to={page.link}
                                     onClick={handleCloseNavMenu}
@@ -133,9 +126,9 @@ function Nav() {
                         justifyContent: 'flex-end',
                         gap: 2     
                     }}>
-                        {pages.map((page) => (
+                        {appbar_pages.map((page) => (
                             <Button
-                                key={page.name}
+                                key={page.id}
                                 component={Link}
                                 to={page.link}
                                 onClick={handleCloseNavMenu}

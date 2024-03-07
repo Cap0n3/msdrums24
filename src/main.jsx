@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import mgr_palette from "./theme/palette";
 import Root from "./routes/root";
 import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
@@ -35,10 +36,10 @@ const router = createBrowserRouter([
 const darktheme = createTheme({
     palette: {
         primary: {
-            main: "#000000"
+            main: mgr_palette.primary.main
         },
         secondary: {
-            main: "#FFFFFF"
+            main: mgr_palette.secondary.main
         },
     },
 
@@ -53,14 +54,14 @@ const darktheme = createTheme({
                         color: '#FFFFFF', // Color of placeholder
                     },
                     '& label.Mui-focused': {
-                        color: '#FFFFFF', // Color of placeholder when focused
+                        color: mgr_palette.secondary.main, // Color of placeholder when focused
                     },
                     '& .MuiInput-underline:after': {
                         borderBottomColor: '#3E68A8', // don't know ...
                     },
                     '& .MuiOutlinedInput-root': {
                         '& fieldset': {
-                            borderColor: '#FFFFFF', // Color of the border
+                            borderColor: mgr_palette.secondary.main, // Color of the border
                         },
                         '&:hover fieldset': {
                             borderColor: 'red', // Color of the border when hovered
@@ -70,7 +71,7 @@ const darktheme = createTheme({
                             borderColor: 'red',
                         },
                         '& input': {
-                            color: '#FFFFFF',
+                            color: mgr_palette.secondary.main,
                         },
                     },
                 },

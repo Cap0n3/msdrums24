@@ -30,7 +30,6 @@ const HeroHeader = () => {
                     height: `${windowSize.innerHeight - mgr_layout.navHeight}px`,
                     minHeight: '500px',
                     backgroundColor: 'primary.dark',
-                    color: 'common.white',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundImage: 'url(https://fastly.picsum.photos/id/84/1280/848.jpg?hmac=YFRYDI4UsfbeTzI8ZakNOR98wVU7a-9a2tGF542539s)', // replace with your image path
@@ -44,7 +43,7 @@ const HeroHeader = () => {
                             component="h1"
                             variant="h2"
                             align="center"
-                            color="inherit"
+                            color="secondary"
                             gutterBottom
                         >
                             Hero header title
@@ -52,7 +51,7 @@ const HeroHeader = () => {
                         <Typography
                             variant="h5"
                             align="center"
-                            color="inherit"
+                            color="secondary"
                             paragraph
                         >
                             Something short and leading about the collection below—its contents,

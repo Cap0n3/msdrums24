@@ -1,10 +1,12 @@
 import { TextField } from '@mui/material';
+import HeroHeader from '../components/headers/HeroHeader';
 
 const HomePages = () => {
     return (
-        <div>
+        <>
+            <HeroHeader />
             <h1>Home Page</h1>
-        </div>
+        </>
     );
 }
 

@@ -8,9 +8,7 @@ export default function Root() {
     return (
         <>
             <Nav />
-            <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
                 <Outlet />
-            </Container>
             <Footer />
         </>
     );

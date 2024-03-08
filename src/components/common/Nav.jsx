@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,10 +13,12 @@ import { appbar_pages } from '../../routes/menu-urls';
 import MGR_Logo from "../../assets/img/logos/MGR_logo.png"
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import Zoom from '@mui/material/Zoom';
 
 
 function Nav() {
     const [anchorElNav, setAnchorElNav] = useState(null);
+    const [loaded, setLoaded] = useState(false);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -33,31 +35,43 @@ function Nav() {
         ` 
     );
 
+    useEffect(() => {
+        setLoaded(true);
+        return () => {
+            setLoaded(false);
+        }
+    }, []);
+
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-                        <Logo src={MGR_Logo} alt="logo"  />
-                    </Box>  
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component={Link}
-                        to="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        MGR
-                    </Typography>
-
+                    <Zoom in={loaded} style={{ transitionDelay: loaded ? '250ms' : '0ms' }}>
+                        <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+                            <Logo src={MGR_Logo} alt="logo"  />
+                        </Box>
+                    </Zoom>
+                    <Zoom in={loaded} style={{ transitionDelay: loaded ? '250ms' : '0ms' }}>
+                        <Box>
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                component={Link}
+                                to="/"
+                                sx={{
+                                    mr: 2,
+                                    display: { xs: 'none', md: 'flex' },
+                                    fontFamily: 'monospace',
+                                    fontWeight: 700,
+                                    letterSpacing: '.3rem',
+                                    color: 'inherit',
+                                    textDecoration: 'none',
+                                }}
+                            >
+                                MGR
+                            </Typography>
+                        </Box>
+                    </Zoom>    
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"

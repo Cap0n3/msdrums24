@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, forwardRef } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,6 +15,47 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import Zoom from '@mui/material/Zoom';
 
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
+const NavLogo = forwardRef((props, ref) => {
+    const theme = useTheme();
+    const isXS = useMediaQuery(theme.breakpoints.down('md'));
+
+    const Logo = styled('img')(
+        ({theme}) => `
+            color: ${theme.palette.text.secondary};
+            width: 50px;
+        ` 
+    );
+
+    return (
+        <Box ref={ref} {...props} sx={{ 
+            display: 'flex',
+            alignItems: 'center' 
+        }}>   
+            <Logo src={MGR_Logo} alt="logo"  />
+            <Typography
+                variant={isXS ? 'h5' : 'h6'}
+                color="secondary"
+                noWrap
+                component={Link}
+                to="/"
+                sx={{
+                    mr: 2,
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    letterSpacing: '.3rem',
+                    textDecoration: 'none',
+                }}
+            >
+                MGR
+            </Typography>
+        </Box>
+    );
+});
+
 
 function Nav() {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -28,13 +69,6 @@ function Nav() {
         setAnchorElNav(null);
     };
 
-    const Logo = styled('img')(
-        ({theme}) => `
-            color: ${theme.palette.text.secondary};
-            width: 50px;
-        ` 
-    );
-
     useEffect(() => {
         setLoaded(true);
         return () => {
@@ -46,32 +80,12 @@ function Nav() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Zoom in={loaded} style={{ transitionDelay: loaded ? '250ms' : '0ms' }}>
-                        <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-                            <Logo src={MGR_Logo} alt="logo"  />
-                        </Box>
-                    </Zoom>
-                    <Zoom in={loaded} style={{ transitionDelay: loaded ? '250ms' : '0ms' }}>
-                        <Box>
-                            <Typography
-                                variant="h6"
-                                noWrap
-                                component={Link}
-                                to="/"
-                                sx={{
-                                    mr: 2,
-                                    display: { xs: 'none', md: 'flex' },
-                                    fontFamily: 'monospace',
-                                    fontWeight: 700,
-                                    letterSpacing: '.3rem',
-                                    color: 'inherit',
-                                    textDecoration: 'none',
-                                }}
-                            >
-                                MGR
-                            </Typography>
-                        </Box>
-                    </Zoom>    
+                    {/* Logo */}
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <Zoom in={loaded} style={{ transitionDelay: loaded ? '250ms' : '0ms' }}>
+                            <NavLogo />
+                        </Zoom>
+                    </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -113,27 +127,12 @@ function Nav() {
                             ))}
                         </Menu>
                     </Box>
-                    <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-                        <Logo src={MGR_Logo} alt="logo"  />
+                    {/* Logo small screen */}
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <Zoom in={loaded} style={{ transitionDelay: loaded ? '250ms' : '0ms' }}>
+                            <NavLogo />
+                        </Zoom>
                     </Box>
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component={Link}
-                        to="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        MGR
-                    </Typography>
                     <Box sx={{ 
                         flexGrow: 1, 
                         display: { xs: 'none', md: 'flex' },

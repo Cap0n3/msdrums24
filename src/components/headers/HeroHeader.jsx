@@ -2,11 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import Slide from '@mui/material/Slide';
 import { Link } from 'react-router-dom';
+import useWindowSize from '../../hooks/useWindowSize';
+import mgr_layout from '../../theme/layout';
 
 
 const HeroHeader = () => {
     const [loaded, setLoaded] = useState(false);
     const containerRef = useRef<HTMLElement>(null);
+    const windowSize = useWindowSize();
 
     useEffect(() => {
         setLoaded(true);
@@ -18,9 +21,10 @@ const HeroHeader = () => {
     return (
         <Box
             sx={{
-                pt: 30,
-                pb: 30,
-                mb: 4,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: `${windowSize.innerHeight - mgr_layout.navHeight}px`,
                 backgroundColor: 'primary.dark',
                 color: 'common.white',
                 backgroundSize: 'cover',
@@ -30,7 +34,7 @@ const HeroHeader = () => {
                 overflow: 'hidden'
             }}
         >
-            <Slide direction="right" in={loaded} container={containerRef.current} style={{ transitionDelay: loaded ? '500ms' : '0ms' }}>
+            <Slide direction="left" in={loaded} container={containerRef.current} style={{ transitionDelay: loaded ? '500ms' : '0ms' }}>
                 <Container maxWidth="sm">
                     <Typography
                         component="h1"

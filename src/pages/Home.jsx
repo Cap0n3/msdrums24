@@ -1,11 +1,13 @@
-import { TextField } from '@mui/material';
 import HeroHeader from '../components/headers/HeroHeader';
+import Typography from '@mui/material/Typography';
 
 const HomePages = () => {
     return (
         <>
             <HeroHeader />
-            <h1>Home Page</h1>
+            <Typography color="secondary" variant="h6" gutterBottom>
+                Home Page
+            </Typography>
         </>
     );
 }

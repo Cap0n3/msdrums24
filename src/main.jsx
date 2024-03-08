@@ -4,7 +4,7 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import "./index.css";
+import "./assets/styles/global.css";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import mgr_palette from "./theme/palette";
 import Root from "./routes/root";

@@ -21,9 +21,15 @@ const NavLogo = forwardRef((props, ref) => {
     return (
         <Box ref={ref} {...props} sx={{ 
             display: 'flex',
-            alignItems: 'center' 
+            alignItems: 'center',
+            '&:hover': {
+                '& img': {
+                    transform: 'scale(1.1)',
+                    transition: 'transform 0.3s ease-in-out',
+                }
+            } 
         }}>   
-            <Logo src={MGR_Logo} alt="logo"  />
+            <Logo src={MGR_Logo} alt="logo" />
             <Typography
                 variant={isXS ? 'h5' : 'h6'}
                 color="secondary"

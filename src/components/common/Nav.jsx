@@ -36,12 +36,20 @@ function Nav() {
     }, []);
 
     return (
-        <AppBar position="fixed" sx={{ display: 'flex', justifyContent: 'center', height: `${mgr_layout.navHeight}px` }}>
+        <AppBar 
+            position="fixed" 
+            sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                height: `${mgr_layout.navHeight}px`,
+                backgroundColor: 'primary.main',
+            }}
+        >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Logo */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Zoom in={loaded} style={{ transitionDelay: loaded ? '250ms' : '0ms' }}>
+                        <Zoom in={loaded} style={{ transitionDelay: loaded ? '500ms' : '0ms' }}>
                             <NavLogo />
                         </Zoom>
                     </Box>
@@ -108,7 +116,11 @@ function Nav() {
                                     my: 2, 
                                     color: 'white', 
                                     display: 'block',
-                                    fontWeight: 300, 
+                                    fontWeight: 300,
+                                    '&:hover': {
+                                        transform: 'scale(1.1)',
+                                        transition: 'transform 0.3s ease-in-out',
+                                    }
                                 }}
                             >
                                 {page.name}

@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <Box component="footer" sx={{ 
             flexGrow: 1,
-            bgcolor: 'primary.main', 
+            bgcolor: 'transparent', 
             color: 'white', 
             padding: '2rem' 
         }}>

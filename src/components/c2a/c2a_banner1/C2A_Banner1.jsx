@@ -71,7 +71,7 @@ const C2A_Banner1 = () => {
                         overflow: 'hidden',
                     }}
                 >
-                    <Slide direction="up" in={isVisible} container={middleCell_container.current} style={{ transitionDelay: isVisible ? '1000ms' : '0ms' }}>
+                    <Slide direction="left" in={isVisible} container={middleCell_container.current} style={{ transitionDelay: isVisible ? '1000ms' : '0ms' }}>
                         <Al_Image src={Al_Detour} alt="Alex" />
                     </Slide>
                 </Grid>

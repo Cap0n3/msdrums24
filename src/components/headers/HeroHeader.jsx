@@ -4,6 +4,7 @@ import Slide from '@mui/material/Slide';
 import { Link } from 'react-router-dom';
 import useWindowSize from '../../hooks/useWindowSize';
 import mgr_layout from '../../theme/layout';
+import mgr_banner from "../../assets/img/img_cut.png";
 
 import { Fade } from '@mui/material';
 
@@ -32,7 +33,7 @@ const HeroHeader = () => {
                     backgroundColor: 'primary.dark',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundImage: 'url(https://fastly.picsum.photos/id/84/1280/848.jpg?hmac=YFRYDI4UsfbeTzI8ZakNOR98wVU7a-9a2tGF542539s)', // replace with your image path
+                    backgroundImage: `url(${mgr_banner})`, 
                     textAlign: 'center',
                     overflow: 'hidden'
                 }}

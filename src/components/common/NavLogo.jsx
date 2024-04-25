@@ -3,20 +3,14 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import MGR_Logo from "../../assets/img/logos/MGR_logo.png"
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+import PlaceholderLogo from '../../assets/img/logos/PlaceholderLogo';
 
 const NavLogo = forwardRef((props, ref) => {
     const theme = useTheme();
     const isXS = useMediaQuery(theme.breakpoints.down('md'));
-
-    const Logo = styled('img')(
-        ({theme}) => `
-            color: ${theme.palette.text.secondary};
-            width: 50px;
-        ` 
-    );
 
     return (
         <Box ref={ref} {...props} sx={{ 
@@ -29,22 +23,21 @@ const NavLogo = forwardRef((props, ref) => {
                 }
             } 
         }}>   
-            <Logo src={MGR_Logo} alt="logo" />
+            <PlaceholderLogo heigth="50px" width="50px" color={theme.palette.secondary.main} />
             <Typography
                 variant={isXS ? 'h5' : 'h6'}
-                color="secondary"
                 noWrap
                 component={Link}
                 to="/"
                 sx={{
-                    mr: 2,
-                    fontFamily: 'monospace',
+                    ml: 2,
+                    color: theme.palette.secondary.main,
                     fontWeight: 700,
                     letterSpacing: '.3rem',
                     textDecoration: 'none',
                 }}
             >
-                MGR
+                LOGO
             </Typography>
         </Box>
     );

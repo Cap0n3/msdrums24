@@ -1,5 +1,5 @@
-const mgr_layout = {
+const website_layout = {
     navHeight: 80,
 }
 
-export default mgr_layout;
+export default website_layout;

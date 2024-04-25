@@ -1,4 +1,6 @@
 import { useState, useEffect, forwardRef } from 'react';
+import { useTheme } from '@mui/material/styles';
+import { lighten } from 'polished';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,14 +11,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import NavLogo from './NavLogo';
-import { appbar_pages } from '../../routes/menu-urls';
+import NavLogo from '../NavLogo';
+import { appbar_pages } from '../../../routes/menu-urls';
 import { Link } from 'react-router-dom';
 import Zoom from '@mui/material/Zoom';
-import mgr_layout from '../../theme/layout';
+import website_layout from '../../../theme/layout';
 
 
 function Nav() {
+    const theme = useTheme();
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [loaded, setLoaded] = useState(false);
 
@@ -37,12 +40,13 @@ function Nav() {
 
     return (
         <AppBar 
-            position="fixed" 
+            position="fixed"
             sx={{ 
                 display: 'flex', 
                 justifyContent: 'center', 
-                height: `${mgr_layout.navHeight}px`,
-                backgroundColor: 'primary.main',
+                height: `${website_layout.navHeight}px`,
+                backgroundColor: lighten(0.05, theme.palette.background.default),
+                backgroundImage: "none",
             }}
         >
             <Container maxWidth="xl">
@@ -62,7 +66,7 @@ function Nav() {
                             onClick={handleOpenNavMenu}
                             color="inherit"
                         >
-                            <MenuIcon />
+                            <MenuIcon sx={{ color: theme.palette.text.primary }} />
                         </IconButton>
                         <Menu
                             id="menu-appbar"
@@ -89,7 +93,9 @@ function Nav() {
                                     to={page.link}
                                     onClick={handleCloseNavMenu}
                                 >
-                                    <Typography textAlign="center">{page.name}</Typography>
+                                    <Typography textAlign="center" sx={{ color: theme.palette.text.primary }}>
+                                        {page.name}
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -114,9 +120,9 @@ function Nav() {
                                 onClick={handleCloseNavMenu}
                                 sx={{ 
                                     my: 2, 
-                                    color: 'white', 
+                                    color: theme.palette.text.primary,
                                     display: 'block',
-                                    fontWeight: 300,
+                                    fontWeight: 400,
                                     '&:hover': {
                                         transform: 'scale(1.1)',
                                         transition: 'transform 0.3s ease-in-out',

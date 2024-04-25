@@ -1,15 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { Box, Typography, Button } from '@mui/material';
 import Slide from '@mui/material/Slide';
 import { Link } from 'react-router-dom';
 import useWindowSize from '../../hooks/useWindowSize';
-import mgr_layout from '../../theme/layout';
-import mgr_banner from "../../assets/img/img_cut.png";
-
+import website_layout from '../../theme/layout';
+import banner from "../../assets/img/template_banner.png";
 import { Fade } from '@mui/material';
 
 
 const HeroHeader = () => {
+    const theme = useTheme();
     const [loaded, setLoaded] = useState(false);
     const containerRef = useRef<HTMLElement>(null);
     const windowSize = useWindowSize();
@@ -29,32 +30,31 @@ const HeroHeader = () => {
                     flexDirection: 'column',
                     alignItems: 'start',
                     justifyContent: 'center',
-                    height: `${windowSize.innerHeight - mgr_layout.navHeight}px`,
+                    height: `${windowSize.innerHeight - website_layout.navHeight}px`,
                     minHeight: '500px',
-                    backgroundColor: 'primary.dark',
+                    backgroundColor: theme.palette.background.default,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundImage: `url(${mgr_banner})`, 
-                    textAlign: 'center',
+                    backgroundImage: `url(${banner})`, 
                     overflow: 'hidden'
                 }}
             >
                 <Slide direction="left" in={loaded} container={containerRef.current} style={{ transitionDelay: loaded ? '2000ms' : '0ms' }}>
-                    <Box maxWidth="sm">
+                    <Box maxWidth="sm" sx={{ marginLeft: "8%" }}>
                         <Typography
                             component="h1"
                             variant="h2"
-                            align="center"
-                            color="secondary"
+                            align="left"
+                            sx={{ color: theme.palette.text.primary }}
                             gutterBottom
                         >
                             Hero header title
                         </Typography>
                         <Typography
-                            variant="h5"
-                            align="center"
-                            color="secondary"
-                            paragraph
+                            component="h2"
+                            variant="p"
+                            align="left"
+                            sx={{ color: theme.palette.text.primary }}
                         >
                             Something short and leading about the collection below—its contents,
                             the creator, etc. Make it short and sweet, but not too short.
@@ -64,11 +64,11 @@ const HeroHeader = () => {
                                 mt: 4,
                                 display: 'flex',
                                 flexDirection: 'column',
-                                alignItems: 'center',
+                                alignItems: 'start',
                             }}
                         >
-                            <Button component={Link} to="/method" color="secondary" variant="outlined" size="large" sx={{ mt: 2 }}>
-                                Secondary action
+                            <Button component={Link} to="/method" color="primary" variant="outlined" size="large" sx={{ mt: 2 }}>
+                                Action
                             </Button>
                         </Box>
                     </Box>

@@ -1,20 +1,14 @@
 import React from 'react';
+import { useTheme } from '@mui/material/styles';
 import { Typography, TextField, Button, Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Stack from '@mui/material/Stack';
-import MGR_Logo from "../../assets/img/logos/MGR_logo.png"
-import styled from '@emotion/styled';
-import NavLink from "../common/NavLink";
-import { footer_pages_col1, footer_pages_col2 } from '../../routes/menu-urls';
+import NavLink from "./NavLink";
+import { footer_pages_col1, footer_pages_col2 } from '../../../routes/menu-urls';
+import NavLogo from '../NavLogo';
 
 const Footer = () => {
-    
-    const Logo = styled('img')(
-        ({theme}) => `
-            color: ${theme.palette.text.secondary};
-            width: 50px;
-        ` 
-    );
+    const theme = useTheme();
 
     return (
         <Box component="footer" sx={{ 
@@ -36,17 +30,7 @@ const Footer = () => {
                             alignItems: 'center'
                         }}
                     >
-                        <Box>
-                            <Logo src={MGR_Logo} alt="logo"  />
-                        </Box> 
-                        <Typography variant="h5" sx={{ 
-                                fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem',
-                                color: 'inherit',
-                                textDecoration: 'none', 
-                            }}
-                        >
-                            MGR
-                        </Typography>
+                        <NavLogo />
                     </Box>
                     <Typography variant="body2" fontWeight="fontWeightLight">
                         MGR is a music school that offers guitar and piano lessons. We are a team of professional musicians who are passionate about teaching music.

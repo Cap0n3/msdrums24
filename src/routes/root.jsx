@@ -1,8 +1,8 @@
-import Nav from "../components/common/Nav";
-import Footer from "../components/common/Footer";
+import Nav from "../components/common/Nav/Nav";
+import Footer from "../components/common/Footer/Footer";
 import { Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
-import mgr_layout from "../theme/layout";
+import website_layout from "../theme/layout";
 import { Box } from "@mui/material";
 
 export default function Root() {
@@ -18,7 +18,7 @@ export default function Root() {
             <Box component="main" sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                mt: `${mgr_layout.navHeight}px`,
+                mt: `${website_layout.navHeight}px`,
                 
             }}>
                 <Outlet />

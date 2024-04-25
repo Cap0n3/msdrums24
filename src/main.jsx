@@ -11,25 +11,11 @@ import Root from "./routes/root";
 import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
 import MethodPage from "./pages/Method";
-
+import { website_routes } from "./routes/routes";
 
 // === ROUTER === //
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Root />,
-        errorElement: <ErrorPage />,
-        children: [
-            {
-                path: "/",
-                element: <HomePage />,
-            },
-            {
-                path: "/method",
-                element: <MethodPage />,
-            }
-        ],
-    },
+    website_routes
 ]);
 
 // === THEME === //

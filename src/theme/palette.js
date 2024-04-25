@@ -1,4 +1,4 @@
-const mgr_palette = {
+const dark_palette= {
     primary: {
         main: "#000000"
     },
@@ -11,4 +11,4 @@ const mgr_palette = {
     }
 };
 
-export default mgr_palette;
+export default dark_palette;

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
-import mgr_palette from '../../theme/palette';
+import dark_palette from '../../theme/palette';
 import { Typography } from '@mui/material';
 
 const linkStyle = {
     textDecoration: "none",
-    color: mgr_palette.text.primary
+    color: text.primary
 };
 
 const NavLink = ({url, name}) => {

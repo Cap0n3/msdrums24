@@ -7,7 +7,12 @@ import NavLink from "./NavLink";
 import { footer_pages_col1, footer_pages_col2 } from '../../../routes/menu-urls';
 import NavLogo from '../NavLogo';
 
-const Footer = () => {
+const Footer = ({ 
+        description, 
+        newsletter_description,
+        newsletter_placeholder,
+        newsletter_button
+}) => {
     const theme = useTheme();
 
     return (
@@ -33,7 +38,7 @@ const Footer = () => {
                         <NavLogo />
                     </Box>
                     <Typography variant="body2" sx={{ color: theme.palette.text.secondary }} gutterBottom>
-                        MGR is a music school that offers guitar and piano lessons. We are a team of professional musicians who are passionate about teaching music.
+                        {description}
                     </Typography> 
                 </Grid>
                 <Grid xs={6} md={2}>
@@ -54,16 +59,18 @@ const Footer = () => {
                 </Grid>
                 <Grid xs={12} md={4}>
                     <Typography variant="h6" sx={{ color: theme.palette.text.primary }} gutterBottom>Newsletter</Typography>
-                    <Typography variant="body2" sx={{ color: theme.palette.text.secondary}}>Sign up our newsletter to get news, information update or insight about guitar & piano.</Typography>
+                    <Typography variant="body2" sx={{ color: theme.palette.text.secondary}}>
+                        {newsletter_description}
+                    </Typography>
                     <Box component="form" sx={{ mt: 2 }}>
                         <TextField 
                             fullWidth 
                             id="newsletter-input" 
-                            label="Entrer votre email" 
+                            label={newsletter_placeholder}
                             variant="outlined" 
                         />
                         <Button variant="contained" color="secondary" size="large" sx={{ mt: 1, width: '100%' }}>
-                            Sign up
+                            {newsletter_button}
                         </Button>
                     </Box>
                 </Grid>

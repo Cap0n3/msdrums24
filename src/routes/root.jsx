@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 import website_layout from "../theme/layout";
 import { Box } from "@mui/material";
-
+import jsonData from "../data/home/footer.json";
 export default function Root() {
 
     // Scroll to top on page load and on route change
@@ -23,7 +23,12 @@ export default function Root() {
             }}>
                 <Outlet />
             </Box>
-            <Footer />
+            <Footer 
+                description={jsonData.footer_description} 
+                newsletter_description={jsonData.newsletter_description} 
+                newsletter_placeholder={jsonData.newsletter_placeholder}
+                newsletter_button={jsonData.newsletter_button}
+            />
         </>
     );
 } 

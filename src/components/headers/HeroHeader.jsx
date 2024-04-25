@@ -9,7 +9,7 @@ import banner from "../../assets/img/template_banner.png";
 import { Fade } from '@mui/material';
 
 
-const HeroHeader = () => {
+const HeroHeader = ({title, description, call2Action}) => {
     const theme = useTheme();
     const [loaded, setLoaded] = useState(false);
     const containerRef = useRef<HTMLElement>(null);
@@ -48,7 +48,7 @@ const HeroHeader = () => {
                             sx={{ color: theme.palette.text.primary }}
                             gutterBottom
                         >
-                            Hero header title
+                            {title}
                         </Typography>
                         <Typography
                             component="h2"
@@ -56,8 +56,7 @@ const HeroHeader = () => {
                             align="left"
                             sx={{ color: theme.palette.text.primary }}
                         >
-                            Something short and leading about the collection below—its contents,
-                            the creator, etc. Make it short and sweet, but not too short.
+                            {description}
                         </Typography>
                         <Box
                             sx={{
@@ -68,7 +67,7 @@ const HeroHeader = () => {
                             }}
                         >
                             <Button component={Link} to="/method" color="primary" variant="outlined" size="large" sx={{ mt: 2 }}>
-                                Action
+                                {call2Action}
                             </Button>
                         </Box>
                     </Box>

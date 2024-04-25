@@ -26,7 +26,8 @@ const HeroHeader = () => {
             <Box
                 sx={{
                     display: 'flex',
-                    alignItems: 'center',
+                    flexDirection: 'column',
+                    alignItems: 'start',
                     justifyContent: 'center',
                     height: `${windowSize.innerHeight - mgr_layout.navHeight}px`,
                     minHeight: '500px',
@@ -39,7 +40,7 @@ const HeroHeader = () => {
                 }}
             >
                 <Slide direction="left" in={loaded} container={containerRef.current} style={{ transitionDelay: loaded ? '2000ms' : '0ms' }}>
-                    <Container maxWidth="sm">
+                    <Box maxWidth="sm">
                         <Typography
                             component="h1"
                             variant="h2"
@@ -70,7 +71,7 @@ const HeroHeader = () => {
                                 Secondary action
                             </Button>
                         </Box>
-                    </Container>
+                    </Box>
                 </Slide>
             </Box>
         </Fade>

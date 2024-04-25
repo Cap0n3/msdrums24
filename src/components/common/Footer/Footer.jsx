@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <Box component="footer" sx={{ 
             flexGrow: 1,
-            bgcolor: 'transparent', 
+            bgcolor: theme.palette.background.default,
             color: 'white', 
             padding: '2rem' 
         }}>
@@ -32,12 +32,12 @@ const Footer = () => {
                     >
                         <NavLogo />
                     </Box>
-                    <Typography variant="body2" fontWeight="fontWeightLight">
+                    <Typography variant="body2" sx={{ color: theme.palette.text.secondary }} gutterBottom>
                         MGR is a music school that offers guitar and piano lessons. We are a team of professional musicians who are passionate about teaching music.
                     </Typography> 
                 </Grid>
                 <Grid xs={6} md={2}>
-                    <Typography variant="h6" gutterBottom>À propos</Typography>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.primary }} gutterBottom>À propos</Typography>
                     <Stack spacing={.5}>
                         {footer_pages_col1.map((page) => (
                             <NavLink key={page.id} url={page.link} name={page.name} />
@@ -45,7 +45,7 @@ const Footer = () => {
                     </Stack>
                 </Grid>
                 <Grid xs={6} md={2}>
-                    <Typography variant="h6" gutterBottom>Support</Typography>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.primary }} gutterBottom>Support</Typography>
                     <Stack spacing={.5}>
                         {footer_pages_col2.map((page) => (
                             <NavLink key={page.id} url={page.link} name={page.name} />
@@ -53,8 +53,8 @@ const Footer = () => {
                     </Stack>
                 </Grid>
                 <Grid xs={12} md={4}>
-                    <Typography variant="h6" gutterBottom>Newsletter</Typography>
-                    <Typography variant="body2" fontWeight="fontWeightLight">Sign up our newsletter to get news, information update or insight about guitar & piano.</Typography>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.primary }} gutterBottom>Newsletter</Typography>
+                    <Typography variant="body2" sx={{ color: theme.palette.text.secondary}}>Sign up our newsletter to get news, information update or insight about guitar & piano.</Typography>
                     <Box component="form" sx={{ mt: 2 }}>
                         <TextField 
                             fullWidth 

@@ -10,7 +10,7 @@ import { website_routes } from "./routes/routes";
 import { getTheme } from "./theme/theme_utils";
 
 function App() {
-    const [mode, setMode] = useState("dark");
+    const [mode, setMode] = useState("light");
 
     // === ROUTER === //
     const router = createBrowserRouter([

@@ -35,18 +35,11 @@ const Features = () => {
         delay: 200
     });
 
-    const [ref, inView] = useInView({
+    const [refFeatBox, inViewFeatBox] = useInView({
         triggerOnce: true,
         threshold: 0.5,
         delay: 200,
     });
-
-    const setRefs = (el) => {
-        // Refs are 'mutated' via the current property
-        containerRef.current = el;
-        ref.current = el;
-    };
-    
 
     return (
         <Box py={4} sx={{ backgroundColor: theme.palette.background.default, overflow: 'hidden' }}>
@@ -61,9 +54,9 @@ const Features = () => {
                 </Container>
             </Slide>
             
-            <Fade in={inViewTitle} timeout={3000}>
+            <Fade in={inViewFeatBox} timeout={2000}>
                 <Box    
-                        ref={ref}
+                        ref={refFeatBox}
                         my={4} sx={{ 
                         display: 'flex',
                         justifyContent: 'space-around',
@@ -77,7 +70,7 @@ const Features = () => {
                     {features.map((feature, index) => (
                         <FeatBox 
                             key={index}
-                            inView={inView} 
+                            inView={inViewFeatBox} 
                             logo={feature.logo} 
                             title={feature.title} 
                             description={feature.text} 

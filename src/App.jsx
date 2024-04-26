@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -11,6 +11,7 @@ import { getTheme } from "./theme/theme_utils";
 
 function App() {
     const [mode, setMode] = useState("light"); // Can be "light" or "dark"
+    ;
 
     // === ROUTER === //
     const router = createBrowserRouter([
@@ -19,6 +20,13 @@ function App() {
 
     // === THEME === //
     const theme = getTheme(mode);
+
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100); // Adjust the delay as needed
+    }, []);
+
 
     return (
         <>

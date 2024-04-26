@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroHeader from '../components/headers/HeroHeader';
-import Features from '../components/features/features';
+import Features from '../components/features/Features';
 import Presentation from '../components/Presentation/Presentation';
 import jsonData from '../data/home/header.json';
 

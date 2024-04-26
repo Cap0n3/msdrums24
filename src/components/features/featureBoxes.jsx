@@ -42,4 +42,50 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
     );
 };
 
-export default FeatBox;
+const FeatureBoxes = ({data}) => {
+    const theme = useTheme();
+    const [isVisible, setIsVisible] = useState(false);
+
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+        delay: 200
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setIsVisible(true);
+        }
+    }
+    , [inView]);
+
+    return (
+        <Fade in={inView} timeout={2000}>
+                <Box    
+                        ref={ref}
+                        my={4} sx={{ 
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        flexWrap: 'wrap', 
+                        gap: 2, 
+                        maxWidth: 1200,
+                        minHeight: 320,
+                        margin: 'auto',
+                    }}
+                >
+                    {data.map((feature, index) => (
+                        <FeatBox 
+                            key={index}
+                            inView={isVisible} 
+                            logo={feature.logo} 
+                            title={feature.title} 
+                            description={feature.text} 
+                            transitionTime={500 + (index * 500)} 
+                        />
+                    ))}
+                </Box>
+            </Fade>
+    );
+}
+
+export default FeatureBoxes;

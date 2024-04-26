@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '@emotion/react';
 import { darken } from 'polished';
 import { Container, Box, Typography, Slide, Fade } from '@mui/material';
@@ -6,38 +6,34 @@ import { useInView } from 'react-intersection-observer';
 import FeatBox from './featBox';
 import { features } from '../../data/home/features';
 
-const Features = () => {
-    const theme = useTheme();
 
-    const [refTitleFade, inViewTitleFade] = useInView({
+const FeatureTitle = () => {
+    const theme = useTheme();
+    const [isVisible, setIsVisible] = useState(false);
+
+    const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.8 ,
+        threshold: 0.5,
         delay: 200
     });
 
-    const [refTitleSlide, inViewTitle] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-        delay: 200 // For timer when re-rendering (see App.jsx)
-    });
-
-    const [refFeatBox, inViewFeatBox] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-        delay: 200,
-    });
+    useEffect(() => {
+        if (inView) {
+            setIsVisible(true);
+        }
+    }
+    , [inView]);
 
     return (
-        <Box py={4} sx={{ flexGrow: 1, backgroundColor: darken(0.008, theme.palette.background.default) }}>
-            <Fade in={inViewTitleFade} timeout={2000}>
-                <Box ref={refTitleFade} sx={{ 
+        <Fade in={inView} timeout={2000}>
+                <Box ref={ref} sx={{ 
                         display: 'flex', 
                         justifyContent: 'center',
                         minHeight: 120, 
                     }}
                 >
-                        <Slide direction="up" in={inViewTitle} timeout={500}>
-                            <Container ref={refTitleSlide}>
+                        <Slide direction="up" in={isVisible} timeout={500}>
+                            <Container>
                                 <Typography variant="h4" align="center" fontWeight={400} sx={{ color: theme.palette.text.primary }} gutterBottom>
                                     Say Hello to great features!
                                 </Typography>
@@ -48,10 +44,30 @@ const Features = () => {
                         </Slide>
                 </Box>
             </Fade>
-            
-            <Fade in={inViewFeatBox} timeout={2000}>
+    );
+};
+
+const FeatureBoxes = () => {
+    const theme = useTheme();
+    const [isVisible, setIsVisible] = useState(false);
+
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+        delay: 200
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setIsVisible(true);
+        }
+    }
+    , [inView]);
+
+    return (
+        <Fade in={inView} timeout={2000}>
                 <Box    
-                        ref={refFeatBox}
+                        ref={ref}
                         my={4} sx={{ 
                         display: 'flex',
                         justifyContent: 'space-around',
@@ -65,7 +81,7 @@ const Features = () => {
                     {features.map((feature, index) => (
                         <FeatBox 
                             key={index}
-                            inView={inViewFeatBox} 
+                            inView={isVisible} 
                             logo={feature.logo} 
                             title={feature.title} 
                             description={feature.text} 
@@ -74,6 +90,17 @@ const Features = () => {
                     ))}
                 </Box>
             </Fade>
+    );
+}
+
+
+const Features = () => {
+    const theme = useTheme();
+
+    return (
+        <Box py={4} sx={{ flexGrow: 1, backgroundColor: darken(0.008, theme.palette.background.default) }}>
+            <FeatureTitle />
+            <FeatureBoxes />
         </Box>
     );
 };

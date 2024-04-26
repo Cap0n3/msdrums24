@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { useTheme } from '@emotion/react';
+import { darken } from 'polished';
 import { Container, Box, Typography, Slide, Fade } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
 import FeatBox from './featBox';
@@ -27,7 +28,7 @@ const Features = () => {
     });
 
     return (
-        <Box py={4} sx={{ backgroundColor: theme.palette.background.default, overflow: 'hidden' }}>
+        <Box py={4} sx={{ flexGrow: 1, backgroundColor: darken(0.008, theme.palette.background.default) }}>
             <Fade in={inViewTitleFade} timeout={2000}>
                 <Box ref={refTitleFade} sx={{ 
                         display: 'flex', 

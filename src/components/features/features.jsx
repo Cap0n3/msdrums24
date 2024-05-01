@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useTheme } from '@emotion/react';
 import { darken } from 'polished';
 import { Box } from '@mui/material';
-import FeatureTitle from './FeatureTitle';
-import FeatureBoxes from './FeatureBoxes';
+import FeatureTitle from './subcomponents/FeatureTitle';
+import FeatureBoxes from './subcomponents/FeatureBoxes';
 import { features } from '../../data/home/features';
 
 

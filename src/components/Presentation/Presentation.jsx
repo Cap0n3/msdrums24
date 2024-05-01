@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useTheme } from '@emotion/react';
-import { Box, Typography, Slide, Fade } from '@mui/material';
+import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import { useInView } from 'react-intersection-observer';
+import ImageCell from './subcomponents/ImageCell';
+import TextCell from './subcomponents/TextCell';
 
 const PresentationData = [
     {
@@ -22,70 +23,6 @@ const PresentationData = [
     },
 ];
 
-const ImageCell = ({ image }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [ ref, inView ] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-        delay: 200
-    });
-
-    useEffect(() => {
-        // console.log("TextImage in view: ", inView);
-        if (inView) {
-            setIsVisible(true);
-        }
-    }
-    , [inView]);
-
-    return (
-        <Fade in={inView} timeout={1000}>
-            <Box ref={ref} sx={{ width: '100%', paddingTop: '100%', position: 'relative' }}>
-                <Slide direction="up" in={isVisible} timeout={500}>
-                    <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, overflow: 'hidden', borderRadius: 2 }}>
-                        <img src={image} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
-                    </Box>
-                </Slide>
-            </Box>
-        </Fade>
-    );
-}
-
-const TextCell = ({ title, description }) => {
-    const theme = useTheme();
-    const [isVisible, setIsVisible] = useState(false);
-
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
-        delay: 200
-    });
-
-    useEffect(() => {
-        // console.log("TextCell in view: ", inView);
-        if (inView) {
-            setIsVisible(true);
-        }
-    }
-    , [inView]);
-
-    return (
-        <Fade in={inView} timeout={1000}>
-            <Box ref={ref} sx={{ width: '100%' }}>
-                <Slide direction="up" in={isVisible} timeout={500}>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', width: '100%', height: 400 }}>
-                        <Typography variant="h6" mt={2} fontWeight={600} sx={{ color: theme.palette.text.primary }}>
-                            {title}
-                        </Typography>
-                        <Typography variant="subtitle1" mt={2} sx={{ color: theme.palette.text.secondary }}>
-                            {description}
-                        </Typography>
-                    </Box>
-                </Slide>
-            </Box>
-        </Fade>
-    );
-}
 
 const Presentation = () => {
     const theme = useTheme();

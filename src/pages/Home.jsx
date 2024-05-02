@@ -2,6 +2,7 @@ import React from 'react';
 import HeroHeader from '../components/headers/HeroHeader';
 import Features from '../components/features/Features';
 import FeatureShowcase from '../components/featureShowcase/FeatureShowcase';
+import ReviewSection from '../components/reviewSection/Reviews';
 import jsonData from '../data/home/header.json';
 
 
@@ -16,6 +17,7 @@ const HomePages = () => {
             />
             <Features />
             <FeatureShowcase />
+            <ReviewSection />
         </>
     );
 }

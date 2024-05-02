@@ -29,6 +29,8 @@ const Testimonials = ({
     useEffect(() => {
         if (width >= 900 && width <= 1280) {
             setNbOfCards(2);
+        } else if (width < 900) {
+            setNbOfCards(1);
         } else {
             setNbOfCards(nbOfReviews);
         }
@@ -88,7 +90,8 @@ const Testimonials = ({
 
     return (
         <Box
-            py={5}
+            pt={4}
+            pb={8}
             onMouseEnter={() => setIsMouseInside(true)}
             onMouseLeave={() => setIsMouseInside(false)}
             sx={{
@@ -165,7 +168,7 @@ const Testimonials = ({
                 display="flex"
                 justifyContent="center"
                 position="absolute"
-                bottom={0}
+                bottom={15}
                 width="100%"
             >
                 {reviewSlides.map((_, index) => (

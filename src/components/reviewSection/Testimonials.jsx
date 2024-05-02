@@ -3,9 +3,9 @@ import { useTheme } from '@mui/material/styles';
 import useViewportSize from '../../hooks/useViewportSize';
 import { Box, IconButton, Typography, Tooltip, Avatar, Fade } from '@mui/material';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
-import { ReviewData } from './ReviewData';
+import { TestimonialsData } from './TestimonialsData';
 
-const ReviewSection = ({ transitionTime = 500, nbOfReviews = 3 }) => {
+const Testimonials = ({ transitionTime = 500, nbOfReviews = 3 }) => {
     const theme = useTheme();
     const { width } = useViewportSize();
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -24,8 +24,8 @@ const ReviewSection = ({ transitionTime = 500, nbOfReviews = 3 }) => {
 
     useEffect(() => {
         const chunks = [];
-        for (let i = 0; i < ReviewData.length; i += nbOfCards) {
-            chunks.push(ReviewData.slice(i, i + nbOfCards));
+        for (let i = 0; i < TestimonialsData.length; i += nbOfCards) {
+            chunks.push(TestimonialsData.slice(i, i + nbOfCards));
         }
         setReviewSlides(chunks);
     }, [nbOfCards]);
@@ -116,4 +116,4 @@ const ReviewSection = ({ transitionTime = 500, nbOfReviews = 3 }) => {
     );
 };
 
-export default ReviewSection;
+export default Testimonials;

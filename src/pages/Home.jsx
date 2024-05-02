@@ -2,12 +2,11 @@ import React from 'react';
 import HeroHeader from '../components/headers/HeroHeader';
 import Features from '../components/features/Features';
 import FeatureShowcase from '../components/featureShowcase/FeatureShowcase';
-import ReviewSection from '../components/reviewSection/Reviews';
+import Testimonials from '../components/reviewSection/Testimonials';
 import jsonData from '../data/home/header.json';
 
 
 const HomePages = () => {
-
     return (
         <>
             <HeroHeader 
@@ -17,7 +16,7 @@ const HomePages = () => {
             />
             <Features />
             <FeatureShowcase />
-            <ReviewSection />
+            <Testimonials />
         </>
     );
 }

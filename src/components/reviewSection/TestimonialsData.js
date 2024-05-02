@@ -1,4 +1,4 @@
-export const ReviewData = [
+export const TestimonialsData = [
     {
         studentPic: "https://randomuser.me/api/portraits/men/32.jpg",
         picAlt: "Review by John Doe",

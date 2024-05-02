@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useViewportSize from '../../hooks/useViewportSize';
-import { Box, IconButton, Typography, Tooltip, Avatar } from '@mui/material';
+import { Box, IconButton, Typography, Tooltip, Avatar, Fade } from '@mui/material';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import { ReviewData } from './ReviewData';
 
@@ -11,6 +11,7 @@ const ReviewSection = ({ transitionTime = 500, nbOfReviews = 3 }) => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
     const [reviewSlides, setReviewSlides] = useState([]);
     const [nbOfCards, setNbOfCards] = useState(nbOfReviews);
+    const [checked, setChecked] = useState(true);  // For controlling the Fade effect
     const timerRef = useRef(null); // Using useRef to hold the timer
 
     useEffect(() => {
@@ -30,9 +31,13 @@ const ReviewSection = ({ transitionTime = 500, nbOfReviews = 3 }) => {
     }, [nbOfCards]);
 
     const changeSlide = (newIndex) => {
-        setCurrentSlideIndex(() =>
-            newIndex < 0 ? reviewSlides.length - 1 : newIndex % reviewSlides.length
-        );
+        setChecked(false); // Start fading out
+        setTimeout(() => {
+            setCurrentSlideIndex(() =>
+                newIndex < 0 ? reviewSlides.length - 1 : newIndex % reviewSlides.length
+            );
+            setChecked(true); // Fade in the new slide
+        }, transitionTime);
     };
 
     useEffect(() => {
@@ -66,22 +71,24 @@ const ReviewSection = ({ transitionTime = 500, nbOfReviews = 3 }) => {
             backgroundColor: theme.palette.background.default,
         }}>
             {reviewSlides.length > 0 && reviewSlides[currentSlideIndex].map((review, index) => (
-                <Box key={index} p={2} sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'space-around',
-                    borderRadius: '10px',
-                    width: '350px',
-                    height: '300px',
-                    backgroundColor: theme.palette.background.paper,
-                    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-                }}>
-                    <Avatar src={review.studentPic} alt={review.picAlt} sx={{ width: 100, height: 100 }} />
-                    <Typography variant="body2" textAlign={'center'} gutterBottom>"{review.quote}"</Typography>
-                    <Typography variant="subtitle2">{review.studentName}</Typography>
-                    <Typography variant="caption">{review.roleFR}</Typography>
-                </Box>
+                <Fade in={checked} key={index} timeout={500}>
+                    <Box p={2} sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'space-around',
+                        borderRadius: '10px',
+                        width: '350px',
+                        height: '300px',
+                        backgroundColor: theme.palette.background.paper,
+                        boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+                    }}>
+                        <Avatar src={review.studentPic} alt={review.picAlt} sx={{ width: 100, height: 100 }} />
+                        <Typography variant="body2" textAlign={'center'} gutterBottom>"{review.quote}"</Typography>
+                        <Typography variant="subtitle2">{review.studentName}</Typography>
+                        <Typography variant="caption">{review.roleFR}</Typography>
+                    </Box>
+                </Fade>
             ))}
             <Box display="flex" justifyContent="space-between" position="absolute" width="100%" top="50%" px={2}>
                 <Tooltip title="Previous">

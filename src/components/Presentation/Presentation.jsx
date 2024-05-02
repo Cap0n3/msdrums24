@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import ImageCell from './subcomponents/ImageCell';
 import TextCell from './subcomponents/TextCell';
+import useViewportSize from '../../hooks/useViewportSize';
 
 const PresentationData = [
     {
@@ -26,9 +27,11 @@ const PresentationData = [
 
 const Presentation = () => {
     const theme = useTheme();
-    return (
-        <Box sx={{ flexGrow: 1, backgroundColor: theme.palette.background.default, overflow: 'hidden' }}>
-            <Grid container spacing={2} sx={{ border: "1px solid green" }}>
+    const { width } = useViewportSize();
+
+    const AlternateContent = () => {
+        return (
+            <>
                 {PresentationData.map((item, index) => (
                     <React.Fragment key={index}>
                         <Grid xs={12} sm={12} md={6} p={{ xs: 2, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -39,6 +42,31 @@ const Presentation = () => {
                         </Grid>
                     </React.Fragment>
                 ))}
+            </>
+        );
+    }
+
+    const NotAlternateContent = () => {
+        return (
+            <>
+                {PresentationData.map((item, index) => (
+                    <React.Fragment key={index}>
+                        <Grid xs={12} sm={12} md={6} p={8} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <ImageCell image={item.image} />
+                        </Grid>
+                        <Grid xs={12} sm={12} md={6} p={8} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                            <TextCell title={item.title} description={item.description} />
+                        </Grid>
+                    </React.Fragment>
+                ))}
+            </>
+        );
+    }
+ 
+    return (
+        <Box sx={{ flexGrow: 1, backgroundColor: theme.palette.background.default, overflow: 'hidden' }}>
+            <Grid container spacing={2} sx={{ border: "1px solid green" }}>
+                {width >= 900 ? <AlternateContent /> : <NotAlternateContent />}
             </Grid>
         </Box>
     );

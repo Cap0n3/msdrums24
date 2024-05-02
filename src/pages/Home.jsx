@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroHeader from '../components/headers/HeroHeader';
 import Features from '../components/features/Features';
-import FeatureShowcase from '../components/FeatureShowcase/FeatureShowcase';
+import FeatureShowcase from '../components/featureShowcase/FeatureShowcase';
 import jsonData from '../data/home/header.json';
 
 

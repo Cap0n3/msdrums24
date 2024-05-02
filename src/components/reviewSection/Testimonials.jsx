@@ -5,11 +5,12 @@ import { Box, IconButton, Typography, Tooltip, Avatar, Fade } from '@mui/materia
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import { TestimonialsData } from './TestimonialsData';
 
-const Testimonials = ({ transitionTime = 500, nbOfReviews = 3 }) => {
+const Testimonials = ({ transitionTime = 500, timerInterval=3000 ,nbOfReviews = 3 }) => {
     const theme = useTheme();
     const { width } = useViewportSize();
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
     const [reviewSlides, setReviewSlides] = useState([]);
+    const [isMouseInside, setIsMouseInside] = useState(false);
     const [nbOfCards, setNbOfCards] = useState(nbOfReviews);
     const [checked, setChecked] = useState(true);  // For controlling the Fade effect
     const timerRef = useRef(null); // Using useRef to hold the timer
@@ -30,35 +31,46 @@ const Testimonials = ({ transitionTime = 500, nbOfReviews = 3 }) => {
         setReviewSlides(chunks);
     }, [nbOfCards]);
 
-    const changeSlide = (newIndex) => {
-        setChecked(false); // Start fading out
+    const changeSlide = (direction, slideIndex = null) => {
+        // Get number of review slides for reference
+        const lastSlideIndex = reviewSlides.length - 1;
+        let newIndex;
+    
+        // Determine the new index based on the direction or specific slide index
+        switch (direction) {
+            case "forward":
+                newIndex = currentSlideIndex === lastSlideIndex ? 0 : currentSlideIndex + 1;
+                break;
+            case "backward":
+                newIndex = currentSlideIndex === 0 ? lastSlideIndex : currentSlideIndex - 1;
+                break;
+            case "toIndex":
+                // Ensure slideIndex is valid; otherwise, default to current slide index
+                newIndex = slideIndex != null ? slideIndex : currentSlideIndex;
+                break;
+            default:
+                console.error("Invalid direction");
+                return;
+        }
+    
+        setChecked(false); // Make disappear slide
         setTimeout(() => {
-            setCurrentSlideIndex(() =>
-                newIndex < 0 ? reviewSlides.length - 1 : newIndex % reviewSlides.length
-            );
-            setChecked(true); // Fade in the new slide
+            setCurrentSlideIndex(newIndex);
+            setChecked(true); // Make appear slide
         }, transitionTime);
-    };
+    }
 
     useEffect(() => {
-        timerRef.current = setInterval(() => {
-            changeSlide(currentSlideIndex + 1);
-        }, 12000);
+        if (!isMouseInside) {
+            timerRef.current = setInterval(() => {
+                changeSlide("forward");
+            }, timerInterval);
+        }
         return () => clearInterval(timerRef.current);
-    }, [currentSlideIndex, reviewSlides.length]);
-
-    const handleMouseEnter = () => {
-        clearInterval(timerRef.current);
-    };
-
-    const handleMouseLeave = () => {
-        timerRef.current = setInterval(() => {
-            changeSlide(currentSlideIndex + 1);
-        }, 10000);
-    };
+    }, [isMouseInside, currentSlideIndex]);
 
     return (
-        <Box py={5} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} sx={{
+        <Box py={5} onMouseEnter={() => setIsMouseInside(true)} onMouseLeave={() => setIsMouseInside(false)} sx={{
             position: 'relative',
             flexDirection: { sm: 'column', md: 'row'},
             display: 'flex',
@@ -92,19 +104,19 @@ const Testimonials = ({ transitionTime = 500, nbOfReviews = 3 }) => {
             ))}
             <Box display="flex" justifyContent="space-between" position="absolute" width="100%" top="50%" px={2}>
                 <Tooltip title="Previous">
-                    <IconButton onClick={() => changeSlide(currentSlideIndex - 1)}>
+                    <IconButton onClick={() => changeSlide("backward")}>
                         <ArrowBackIos />
                     </IconButton>
                 </Tooltip>
                 <Tooltip title="Next">
-                    <IconButton onClick={() => changeSlide(currentSlideIndex + 1)}>
+                    <IconButton onClick={() => changeSlide("forward")}>
                         <ArrowForwardIos />
                     </IconButton>
                 </Tooltip>
             </Box>
             <Box display="flex" justifyContent="center" position="absolute" bottom={0} width="100%">
                 {reviewSlides.map((_, index) => (
-                    <Typography key={index} component="span" color={index === currentSlideIndex ? 'primary.main' : 'grey.500'} onClick={() => changeSlide(index)} style={{ cursor: 'pointer' }} sx={{
+                    <Typography key={index} component="span" color={index === currentSlideIndex ? 'primary.main' : 'grey.500'} onClick={() => changeSlide("toIndex", index)} style={{ cursor: 'pointer' }} sx={{
                         fontSize: '1.5rem',
                         margin: '0 3px',
                     }}>

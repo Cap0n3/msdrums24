@@ -2,7 +2,7 @@ import React from "react";
 import HeroHeader from "../components/headers/HeroHeader";
 import Features from "../components/features/Features";
 import FeatureShowcase from "../components/featureShowcase/FeatureShowcase";
-import Testimonials from "../components/reviewSection/Testimonials";
+import Testimonials from "../components/testimonials/Testimonials";
 import jsonData from "../data/home/header.json";
 
 const HomePages = () => {

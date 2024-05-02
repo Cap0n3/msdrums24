@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useViewportSize = () => {
     const [viewportSize, setViewportSize] = useState({
@@ -24,8 +24,8 @@ const useViewportSize = () => {
             });
         });
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return viewportSize;

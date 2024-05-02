@@ -1,5 +1,5 @@
-import { createTheme } from '@mui/material/styles';
-import { colors } from './palette';
+import { createTheme } from "@mui/material/styles";
+import { colors } from "./palette";
 
 export function getTheme(mode) {
     return createTheme({
@@ -16,15 +16,15 @@ export function getTheme(mode) {
             },
             background: {
                 default: colors.background[mode],
-                paper: mode === 'dark' ? '#333333' : '#ffffff',
+                paper: mode === "dark" ? "#333333" : "#ffffff",
             },
             text: {
                 primary: colors.text.primary[mode],
                 secondary: colors.text.secondary[mode],
-            }
+            },
         },
         typography: {
-            fontFamily: 'Roboto, sans-serif',
+            fontFamily: "Roboto, sans-serif",
         },
         // Define font-weight for title variants
         components: {

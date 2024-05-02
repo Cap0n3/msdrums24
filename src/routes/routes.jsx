@@ -16,6 +16,6 @@ export const website_routes = {
         {
             path: "/method",
             element: <MethodPage />,
-        }
+        },
     ],
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTheme } from "@emotion/react";
 import { darken } from "polished";
 import { Box } from "@mui/material";

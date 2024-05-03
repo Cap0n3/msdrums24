@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./assets/styles/global.css";
 import { ThemeProvider } from "@mui/material/styles";

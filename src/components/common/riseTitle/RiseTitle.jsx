@@ -3,7 +3,13 @@ import { useTheme } from "@emotion/react";
 import { Box, Typography, Container, Slide, Fade } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
-const FeatureTitle = ({ title, subTitle }) => {
+/**
+ * RiseTitle component is a reusable component that displays a section title and subtitle with a fade and slide animation
+ *
+ * @param {String} title - The title of the component
+ * @param {String} subTitle - The subtitle of the component (optional)
+ */
+const RiseTitle = ({ title, subTitle }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -40,14 +46,16 @@ const FeatureTitle = ({ title, subTitle }) => {
                         >
                             {title}
                         </Typography>
-                        <Typography
-                            variant="h6"
-                            align="center"
-                            mb={4}
-                            sx={{ color: theme.palette.text.secondary }}
-                        >
-                            {subTitle}
-                        </Typography>
+                        {subTitle && (
+                            <Typography
+                                variant="h6"
+                                align="center"
+                                mb={4}
+                                sx={{ color: theme.palette.text.secondary }}
+                            >
+                                {subTitle}
+                            </Typography>
+                        )}
                     </Container>
                 </Slide>
             </Box>
@@ -55,4 +63,4 @@ const FeatureTitle = ({ title, subTitle }) => {
     );
 };
 
-export default FeatureTitle;
+export default RiseTitle;

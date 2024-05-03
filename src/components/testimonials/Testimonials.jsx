@@ -2,19 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTheme } from "@mui/material/styles";
 import { useInView } from "react-intersection-observer";
 import useViewportSize from "../../hooks/useViewportSize";
-import {
-    Box,
-    IconButton,
-    Typography,
-    Tooltip,
-    Fade,
-} from "@mui/material";
+import { Box, IconButton, Typography, Tooltip, Fade } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import TestimonialBox from "./subcomponents/TestimonialBox";
+import RiseTitle from "../common/riseTitle/RiseTitle";
 import { TestimonialsData } from "../../data/home/testimonials.data";
 
-
 const Testimonials = ({
+    title,
     transitionTime = 500,
     timerInterval = 12000,
     nbOfReviews = 3,
@@ -97,7 +92,6 @@ const Testimonials = ({
         return () => clearInterval(timerRef.current);
     }, [isMouseInside, inView, currentSlideIndex]);
 
-
     return (
         <Box
             ref={inViewRef}
@@ -109,6 +103,7 @@ const Testimonials = ({
             sx={{
                 position: "relative",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
                 height: "100%",
                 width: "100%",
@@ -116,6 +111,7 @@ const Testimonials = ({
                 backgroundColor: theme.palette.background.default,
             }}
         >
+            <RiseTitle title={title} />
             <Fade in={checked} timeout={200}>
                 <Box
                     ref={containerRef}
@@ -128,12 +124,21 @@ const Testimonials = ({
                         width: "100%",
                         minHeight: "305px",
                         overflow: "hidden",
-                    }}>
-                    {reviewSlides.length > 0 && inView &&
-                        reviewSlides[currentSlideIndex].map((review, boxIndex) => (
-                            <TestimonialBox key={boxIndex} wrapperRef={containerRef} review={review} active={checked} transitionTime={200 + boxIndex * 200} />
-                        ))
-                    }
+                    }}
+                >
+                    {reviewSlides.length > 0 &&
+                        inView &&
+                        reviewSlides[currentSlideIndex].map(
+                            (review, boxIndex) => (
+                                <TestimonialBox
+                                    key={boxIndex}
+                                    wrapperRef={containerRef}
+                                    review={review}
+                                    active={checked}
+                                    transitionTime={200 + boxIndex * 200}
+                                />
+                            ),
+                        )}
                 </Box>
             </Fade>
             <Box

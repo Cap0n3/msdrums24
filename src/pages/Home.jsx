@@ -13,9 +13,12 @@ const HomePages = () => {
                 description={jsonData.header_description}
                 call2Action={jsonData.header_call2Action}
             />
-            <Features />
+            <Features
+                title="Say Hello to great features!"
+                subTitle="Here are some of the features that you'll love."
+            />
             <FeatureShowcase />
-            <Testimonials />
+            <Testimonials title="What our customers say" />
         </>
     );
 };

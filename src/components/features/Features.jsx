@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "@emotion/react";
 import { darken } from "polished";
 import { Box } from "@mui/material";
-import FeatureTitle from "./subcomponents/FeatureTitle";
+import RiseTitle from "../common/riseTitle/RiseTitle";
 import FeatureBoxes from "./subcomponents/FeatureBoxes";
 import { features } from "../../data/home/features.data";
 
-const Features = () => {
+const Features = ({ title, subTitle }) => {
     const theme = useTheme();
 
     return (
@@ -21,10 +21,7 @@ const Features = () => {
                 ),
             }}
         >
-            <FeatureTitle
-                title="Say Hello to great features!"
-                subTitle="Here are some of the features that you'll love."
-            />
+            <RiseTitle title={title} subTitle={subTitle} />
             <FeatureBoxes data={features} />
         </Box>
     );

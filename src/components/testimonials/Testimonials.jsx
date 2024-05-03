@@ -48,6 +48,7 @@ const Testimonials = ({
             chunks.push(TestimonialsData.slice(i, i + nbOfCards));
         }
         setReviewSlides(chunks);
+        setCurrentSlideIndex(0); // Reset the current slide index (avoid crash on excessive resizing)
     }, [nbOfCards]);
 
     const changeSlide = (direction, slideIndex = null) => {
@@ -113,8 +114,8 @@ const Testimonials = ({
         >
             <Fade in={checked} timeout={200}>
                 <Box
-                    ref={containerRef} 
-                    sx={{ 
+                    ref={containerRef}
+                    sx={{
                         display: "flex",
                         flexDirection: { sm: "column", md: "row" },
                         justifyContent: "center",
@@ -122,11 +123,11 @@ const Testimonials = ({
                         gap: 4,
                         width: "100%",
                         minHeight: "305px",
-                        overflow: "hidden", 
-                }}>
-                    {reviewSlides.length > 0 &&    
+                        overflow: "hidden",
+                    }}>
+                    {reviewSlides.length > 0 && 
                         reviewSlides[currentSlideIndex].map((review, boxIndex) => (
-                            <TestimonialBox key={boxIndex} wrapperRef={containerRef} review={review} inView={checked} transitionTime={200 + boxIndex * 200} />
+                            <TestimonialBox key={review.id || boxIndex} wrapperRef={containerRef} review={review} inView={checked} transitionTime={200 + boxIndex * 200} />
                         ))
                     }
                 </Box>

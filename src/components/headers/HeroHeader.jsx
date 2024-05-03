@@ -24,6 +24,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
     return (
         <Fade in={loaded} timeout={3000}>
             <Box
+                component="header"
                 sx={{
                     display: "flex",
                     flexDirection: "column",

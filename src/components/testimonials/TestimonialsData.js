@@ -48,4 +48,25 @@ export const TestimonialsData = [
         studentName: "Emily White",
         roleFR: "Software Engineer",
     },
+    {
+        studentPic: "https://randomuser.me/api/portraits/women/90.jpg",
+        picAlt: "Review by Grace Brown",
+        quote: "Absolutely loved the learning environment and the supportive community. Highly recommend!",
+        studentName: "Grace Brown",
+        roleFR: "Data Analyst",
+    },
+    {
+        studentPic: "https://randomuser.me/api/portraits/men/92.jpg",
+        picAlt: "Review by Henry Johnson",
+        quote: "The instructors are very knowledgeable and approachable. I've gained a lot of practical skills.",
+        studentName: "Henry Johnson",
+        roleFR: "Project Manager",
+    },
+    {
+        studentPic: "https://randomuser.me/api/portraits/women/94.jpg",
+        picAlt: "Review by Isabella Lee",
+        quote: "The course content is very relevant and the projects are challenging. I feel much more confident now.",
+        studentName: "Isabella Lee",
+        roleFR: "UX Designer",
+    },
 ];

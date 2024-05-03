@@ -6,15 +6,16 @@ import {
     IconButton,
     Typography,
     Tooltip,
-    Avatar,
     Fade,
 } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import TestimonialBox from "./subcomponents/TestimonialBox";
 import { TestimonialsData } from "./TestimonialsData";
+
 
 const Testimonials = ({
     transitionTime = 500,
-    timerInterval = 3000,
+    timerInterval = 12000,
     nbOfReviews = 3,
 }) => {
     const theme = useTheme();
@@ -25,6 +26,11 @@ const Testimonials = ({
     const [nbOfCards, setNbOfCards] = useState(nbOfReviews);
     const [checked, setChecked] = useState(true); // For controlling the Fade effect
     const timerRef = useRef(null); // Using useRef to hold the timer
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        console.log(containerRef);
+    }, [containerRef]);
 
     useEffect(() => {
         if (width >= 900 && width <= 1280) {
@@ -76,7 +82,7 @@ const Testimonials = ({
         setTimeout(() => {
             setCurrentSlideIndex(newIndex);
             setChecked(true); // Make appear slide
-        }, transitionTime);
+        }, transitionTime + 100); // Let the slide disappear before changing the slide (avoid flickering)
     };
 
     useEffect(() => {
@@ -90,61 +96,41 @@ const Testimonials = ({
 
     return (
         <Box
+            component="section"
             pt={4}
             pb={8}
             onMouseEnter={() => setIsMouseInside(true)}
             onMouseLeave={() => setIsMouseInside(false)}
             sx={{
                 position: "relative",
-                flexDirection: { sm: "column", md: "row" },
                 display: "flex",
-                justifyContent: "center",
                 alignItems: "center",
-                gap: "50px",
                 height: "100%",
                 width: "100%",
                 overflow: "hidden",
                 backgroundColor: theme.palette.background.default,
             }}
         >
-            {reviewSlides.length > 0 &&
-                reviewSlides[currentSlideIndex].map((review, index) => (
-                    <Fade in={checked} key={index} timeout={500}>
-                        <Box
-                            p={2}
-                            sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: "center",
-                                justifyContent: "space-around",
-                                borderRadius: "10px",
-                                width: "350px",
-                                height: "300px",
-                                backgroundColor: theme.palette.background.paper,
-                                boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-                            }}
-                        >
-                            <Avatar
-                                src={review.studentPic}
-                                alt={review.picAlt}
-                                sx={{ width: 100, height: 100 }}
-                            />
-                            <Typography
-                                variant="body2"
-                                textAlign={"center"}
-                                gutterBottom
-                            >
-                                "{review.quote}"
-                            </Typography>
-                            <Typography variant="subtitle2">
-                                {review.studentName}
-                            </Typography>
-                            <Typography variant="caption">
-                                {review.roleFR}
-                            </Typography>
-                        </Box>
-                    </Fade>
-                ))}
+            <Fade in={checked} timeout={200}>
+                <Box
+                    ref={containerRef} 
+                    sx={{ 
+                        display: "flex",
+                        flexDirection: { sm: "column", md: "row" },
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: 4,
+                        width: "100%",
+                        minHeight: "305px",
+                        overflow: "hidden", 
+                }}>
+                    {reviewSlides.length > 0 &&    
+                        reviewSlides[currentSlideIndex].map((review, boxIndex) => (
+                            <TestimonialBox key={boxIndex} wrapperRef={containerRef} review={review} inView={checked} transitionTime={200 + boxIndex * 200} />
+                        ))
+                    }
+                </Box>
+            </Fade>
             <Box
                 display="flex"
                 justifyContent="space-between"

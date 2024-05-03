@@ -11,6 +11,7 @@ const Features = () => {
 
     return (
         <Box
+            component="section"
             py={4}
             sx={{
                 flexGrow: 1,

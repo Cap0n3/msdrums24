@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import TestimonialBox from "./subcomponents/TestimonialBox";
-import { TestimonialsData } from "./TestimonialsData";
+import { TestimonialsData } from "../../data/home/testimonials.data";
 
 
 const Testimonials = ({

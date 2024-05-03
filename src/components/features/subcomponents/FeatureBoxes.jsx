@@ -12,10 +12,6 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
         </Box>
     );
 
-    useEffect(() => {
-        console.log("Feature with ID: ", inView);
-    }, [inView]);
-
     return (
         <Slide direction="up" in={inView} timeout={transitionTime}>
             <Paper

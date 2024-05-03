@@ -4,7 +4,7 @@ import { darken } from "polished";
 import { Box } from "@mui/material";
 import FeatureTitle from "./subcomponents/FeatureTitle";
 import FeatureBoxes from "./subcomponents/FeatureBoxes";
-import { features } from "../../data/home/features";
+import { features } from "../../data/home/features.data";
 
 const Features = () => {
     const theme = useTheme();

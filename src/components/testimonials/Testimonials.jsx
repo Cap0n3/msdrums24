@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTheme } from "@mui/material/styles";
+import { useInView } from "react-intersection-observer";
 import useViewportSize from "../../hooks/useViewportSize";
 import {
     Box,
@@ -24,13 +25,14 @@ const Testimonials = ({
     const [reviewSlides, setReviewSlides] = useState([]);
     const [isMouseInside, setIsMouseInside] = useState(false);
     const [nbOfCards, setNbOfCards] = useState(nbOfReviews);
+    const [inViewRef, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+        delay: 200,
+    });
     const [checked, setChecked] = useState(true); // For controlling the Fade effect
     const timerRef = useRef(null); // Using useRef to hold the timer
     const containerRef = useRef(null);
-
-    useEffect(() => {
-        console.log(containerRef);
-    }, [containerRef]);
 
     useEffect(() => {
         if (width >= 900 && width <= 1280) {
@@ -87,16 +89,18 @@ const Testimonials = ({
     };
 
     useEffect(() => {
-        if (!isMouseInside) {
+        if (!isMouseInside && inView) {
             timerRef.current = setInterval(() => {
                 changeSlide("forward");
             }, timerInterval);
         }
         return () => clearInterval(timerRef.current);
-    }, [isMouseInside, currentSlideIndex]);
+    }, [isMouseInside, inView, currentSlideIndex]);
+
 
     return (
         <Box
+            ref={inViewRef}
             component="section"
             pt={4}
             pb={8}
@@ -125,9 +129,9 @@ const Testimonials = ({
                         minHeight: "305px",
                         overflow: "hidden",
                     }}>
-                    {reviewSlides.length > 0 && 
+                    {reviewSlides.length > 0 && inView &&
                         reviewSlides[currentSlideIndex].map((review, boxIndex) => (
-                            <TestimonialBox key={review.id || boxIndex} wrapperRef={containerRef} review={review} inView={checked} transitionTime={200 + boxIndex * 200} />
+                            <TestimonialBox key={boxIndex} wrapperRef={containerRef} review={review} active={checked} transitionTime={200 + boxIndex * 200} />
                         ))
                     }
                 </Box>

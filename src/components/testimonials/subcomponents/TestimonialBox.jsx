@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { useTheme } from '@emotion/react';
 import { Box, Avatar, Typography, Slide } from '@mui/material';
 
-const TestimonialBox = ({wrapperRef, review, inView, transitionTime}) => {
+const TestimonialBox = ({wrapperRef, review, active, transitionTime}) => {
     const theme = useTheme();
 
     return (
         <>
-            <Slide direction="up" in={inView} timeout={transitionTime} container={wrapperRef.current} mountOnEnter unmountOnExit>
+            <Slide direction="up" in={active} timeout={transitionTime} container={wrapperRef.current} mountOnEnter unmountOnExit>
                 <Box
                     p={2}
                     sx={{

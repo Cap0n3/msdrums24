@@ -7,12 +7,14 @@ import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import TestimonialBox from "./subcomponents/TestimonialBox";
 import RiseTitle from "../common/riseTitle/RiseTitle";
 import { TestimonialsData } from "../../data/home/testimonials.data";
+import { darken } from "polished";
 
 const Testimonials = ({
     title,
     transitionTime = 500,
     timerInterval = 12000,
     nbOfReviews = 3,
+    contrast = false,
 }) => {
     const theme = useTheme();
     const { width } = useViewportSize();
@@ -108,7 +110,7 @@ const Testimonials = ({
                 height: "100%",
                 width: "100%",
                 overflow: "hidden",
-                backgroundColor: theme.palette.background.default,
+                backgroundColor: contrast ? darken(0.008, theme.palette.background.default) : theme.palette.background.default,
             }}
         >
             <RiseTitle title={title} />

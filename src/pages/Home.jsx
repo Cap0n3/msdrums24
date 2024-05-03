@@ -18,9 +18,10 @@ const HomePages = () => {
             <Features
                 title="Say Hello to great features!"
                 subTitle="Here are some of the features that you'll love."
+                contrast={true}
             />
             <FeatureShowcase />
-            <Testimonials title="What our customers say" />
+            <Testimonials title="What our customers say" contrast={true} />
             <QnA questions={qnaData} />
         </>
     );

@@ -6,6 +6,7 @@ import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import { darken } from 'polished';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -43,7 +44,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-const QnA = ({questions}) => {
+const QnA = ({questions, contrast=false}) => {
     const theme = useTheme();
     const [expanded, setExpanded] = useState('panel1');
 
@@ -55,13 +56,14 @@ const QnA = ({questions}) => {
         <>
             <Box
                 component="section"
+                py={4}
                 sx={{
                     display: "flex",
                     flexDirection: { xs: "column", md: "row" },
                     justifyContent: "center",
                     alignItems: { xs: "center", md: "flex-start" },
                     minHeight: "400px",
-                    backgroundColor: theme.palette.background.default,
+                    backgroundColor: contrast ? darken(0.008, theme.palette.background.default) : theme.palette.background.default,
                 }}
             >
                 <Container

@@ -6,7 +6,7 @@ import RiseTitle from "../common/riseTitle/RiseTitle";
 import FeatureBoxes from "./subcomponents/FeatureBoxes";
 import { features } from "../../data/home/features.data";
 
-const Features = ({ title, subTitle }) => {
+const Features = ({ title, subTitle, contrast=false }) => {
     const theme = useTheme();
 
     return (
@@ -15,10 +15,7 @@ const Features = ({ title, subTitle }) => {
             py={4}
             sx={{
                 flexGrow: 1,
-                backgroundColor: darken(
-                    0.008,
-                    theme.palette.background.default,
-                ),
+                backgroundColor: contrast ? darken(0.008, theme.palette.background.default) : theme.palette.background.default,
             }}
         >
             <RiseTitle title={title} subTitle={subTitle} />

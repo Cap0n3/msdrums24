@@ -5,6 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import ImageCell from "./subcomponents/ImageCell";
 import TextCell from "./subcomponents/TextCell";
 import useViewportSize from "../../hooks/useViewportSize";
+import { darken } from "polished";
 
 const PresentationData = [
     {
@@ -84,15 +85,16 @@ const Content = ({ item, index, alternate }) => {
     );
 };
 
-const FeatureShowcase = () => {
+const FeatureShowcase = ({ contrast=false }) => {
     const theme = useTheme();
     const { width } = useViewportSize();
 
     return (
         <Box
+            component="section"
             sx={{
                 flexGrow: 1,
-                backgroundColor: theme.palette.background.default,
+                backgroundColor: contrast ? darken(0.008, theme.palette.background.default) : theme.palette.background.default,
                 overflow: "hidden",
             }}
         >

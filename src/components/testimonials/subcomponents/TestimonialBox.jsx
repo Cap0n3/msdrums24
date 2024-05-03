@@ -24,7 +24,7 @@ const TestimonialBox = ({wrapperRef, review, active, transitionTime}) => {
                     }}
                 >
                     <Avatar
-                        src={review.studentPic}
+                        src={review.customerPic}
                         alt={review.picAlt}
                         sx={{ width: 100, height: 100 }}
                     />
@@ -36,10 +36,10 @@ const TestimonialBox = ({wrapperRef, review, active, transitionTime}) => {
                         "{review.quote}"
                     </Typography>
                     <Typography variant="subtitle2">
-                        {review.studentName}
+                        {review.customerName}
                     </Typography>
                     <Typography variant="caption">
-                        {review.roleFR}
+                        {review.role}
                     </Typography>
                 </Box>
             </Slide>

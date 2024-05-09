@@ -3,11 +3,12 @@ import { useTheme } from "@mui/material";
 import GridSection from "../common/section/GridSection";
 import ShowcaseText from "./subcomponents/ShowcaseText";
 import RespImage from '../common/respImage/RespImage';
-import { padding } from 'polished';
+import { useMediaQuery } from "@mui/material";
 
 const Showcase = ({data}) => {
     const theme = useTheme();
     const sleekPaddingY = 8; // Padding top and bottom for middle sections
+    const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
     return (
         <>
@@ -16,7 +17,7 @@ const Showcase = ({data}) => {
                     key={index}
                     contents={[
                         {
-                            children: <RespImage image={item.image} alt={item.title} percentageWidth={90} />,
+                            children: <RespImage image={item.image} alt={item.title} percentageWidth={isSm ? 100 : 90} />,
                             sx: {
                                 display: "flex",
                                 justifyContent: "center",
@@ -28,8 +29,8 @@ const Showcase = ({data}) => {
                             sx: {
                                 display: "flex",
                                 justifyContent: "center",
-                                alignItems: "center",
-                                px: 8,
+                                alignItems: { xs: "flex-start", sm: "center"},
+                                px: isSm ? 0 : 4,
                             },
                         },
                     ]}

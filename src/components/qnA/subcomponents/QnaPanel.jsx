@@ -83,7 +83,6 @@ const QnaPanel = ({ questions }) => {
                         component={"div"}
                         sx={{
                             width: "100%",
-                            p: 4,
                         }}
                     >
                         {questions.map((question, index) => (

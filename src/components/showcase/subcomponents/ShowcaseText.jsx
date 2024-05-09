@@ -27,10 +27,7 @@ const ShowcaseText = ({ title, description }) => {
                         sx={{
                             display: "flex",
                             flexDirection: "column",
-                            justifyContent: "center",
-                            alignItems: "start",
                             width: "100%",
-                            height: 400,
                         }}
                     >
                         <Typography

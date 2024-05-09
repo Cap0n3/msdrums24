@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useTheme } from '@emotion/react';
-import { Box, Fade, Slide, autocompleteClasses } from '@mui/material';
+import React, { useState, useEffect } from "react";
+import { useTheme } from "@emotion/react";
+import { Box, Fade, Slide, autocompleteClasses } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
-const Image = ({image, alt, width="100%", height="100%"}) => {
+const Image = ({ image, alt, width = "100%", height = "100%" }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -17,18 +17,16 @@ const Image = ({image, alt, width="100%", height="100%"}) => {
         if (inView) {
             setIsVisible(true);
         }
-    }
-    , [inView]);
+    }, [inView]);
 
     return (
         <Fade in={inView} timeout={1000}>
             <Box
                 ref={ref}
-                sx={{ 
+                sx={{
                     width: "100%",
-                    paddingTop: "100%", 
-                    position: "relative", 
-                    border: "1px solid red"
+                    paddingTop: "100%",
+                    position: "relative",
                 }}
             >
                 <Slide direction="up" in={isVisible} timeout={500}>
@@ -41,12 +39,11 @@ const Image = ({image, alt, width="100%", height="100%"}) => {
                             bottom: 0,
                             overflow: "hidden",
                             borderRadius: 2,
-                            border: "1px solid green",
                         }}
                     >
                         <img
                             src={image}
-                            alt={alt} 
+                            alt={alt}
                             style={{
                                 objectFit: "cover",
                                 width: "100%",

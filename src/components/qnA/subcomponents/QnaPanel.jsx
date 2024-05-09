@@ -69,8 +69,7 @@ const QnaPanel = ({ questions }) => {
         if (inView) {
             setIsVisible(true);
         }
-    }
-    , [inView]);
+    }, [inView]);
 
     return (
         <Fade in={inView} timeout={1000}>

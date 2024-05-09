@@ -13,7 +13,12 @@ const QnA = ({ questions, contrast = false }) => {
             <GridSection
                 contents={[
                     {
-                        children: <Image image="https://picsum.photos/id/4/800/800" width={300} />,
+                        children: (
+                            <Image
+                                image="https://picsum.photos/id/4/800/800"
+                                width={300}
+                            />
+                        ),
                         sx: {
                             display: "flex",
                             justifyContent: "center",

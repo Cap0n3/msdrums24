@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useTheme, styled } from "@mui/material";
-import Image from "../common/imgComponent/Image";
+import React from "react";
+import { useTheme } from "@mui/material";
+import RespImage from "../common/respImage/RespImage";
 import { darken } from "polished";
 import GridSection from "../common/section/GridSection";
 import QnaPanel from "./subcomponents/QnaPanel";
@@ -14,9 +14,9 @@ const QnA = ({ questions, contrast = false }) => {
                 contents={[
                     {
                         children: (
-                            <Image
+                            <RespImage
                                 image="https://picsum.photos/id/4/800/800"
-                                width={300}
+                                percentageWidth={90}
                             />
                         ),
                         sx: {
@@ -40,7 +40,7 @@ const QnA = ({ questions, contrast = false }) => {
                         ? darken(0.1, theme.palette.background.default)
                         : theme.palette.background.default
                 }
-                reverse={true}
+                reverse={false}
             />
         </>
     );

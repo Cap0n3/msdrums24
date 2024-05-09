@@ -3,7 +3,7 @@ import { Box, Typography, Slide, Fade } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { useInView } from "react-intersection-observer";
 
-const TextCell = ({ title, description }) => {
+const ShowcaseText = ({ title, description }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -14,7 +14,6 @@ const TextCell = ({ title, description }) => {
     });
 
     useEffect(() => {
-        // console.log("TextCell in view: ", inView);
         if (inView) {
             setIsVisible(true);
         }
@@ -56,4 +55,4 @@ const TextCell = ({ title, description }) => {
     );
 };
 
-export default TextCell;
+export default ShowcaseText;

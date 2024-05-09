@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Box, Slide, Fade } from "@mui/material";
+import { useTheme } from "@emotion/react";
+import { Box, Fade, Slide } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
-const ImageCell = ({ image }) => {
+const RespImage = ({ image, alt, percentageWidth=100 }) => {
+    const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
+
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.5,
@@ -11,7 +14,6 @@ const ImageCell = ({ image }) => {
     });
 
     useEffect(() => {
-        // console.log("TextImage in view: ", inView);
         if (inView) {
             setIsVisible(true);
         }
@@ -21,7 +23,11 @@ const ImageCell = ({ image }) => {
         <Fade in={inView} timeout={1000}>
             <Box
                 ref={ref}
-                sx={{ width: "100%", paddingTop: "100%", position: "relative" }}
+                sx={{
+                    width: `${percentageWidth}%`,
+                    paddingTop: `${percentageWidth}%`,
+                    position: "relative",
+                }}
             >
                 <Slide direction="up" in={isVisible} timeout={500}>
                     <Box
@@ -37,7 +43,7 @@ const ImageCell = ({ image }) => {
                     >
                         <img
                             src={image}
-                            alt=""
+                            alt={alt}
                             style={{
                                 objectFit: "cover",
                                 width: "100%",
@@ -51,4 +57,4 @@ const ImageCell = ({ image }) => {
     );
 };
 
-export default ImageCell;
+export default RespImage;

@@ -1,0 +1,17 @@
+[
+    {
+        "image": "https://picsum.photos/id/4/800/800",
+        "title": "Some description of my awesome product",
+        "description": "My product is so cool that you will love it, I think you really need to know more about it. I am sure you will love it."
+    },
+    {
+        "image": "https://picsum.photos/id/20/800/800",
+        "title": "Maybe you want to know more about this",
+        "description": "Your life will change after you know more about this product, it is a game changer. Let me tell you more about it."
+    },
+    {
+        "image": "https://picsum.photos/id/352/800/800",
+        "title": "No way! This is mind blowing",
+        "description": "I can't believe how amazing this product is, I am sure you will be amazed too. Let me show you more about it."
+    }
+]

@@ -3,6 +3,13 @@ import { useTheme } from "@emotion/react";
 import { Box, Fade, Slide } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
+/**
+ * Responsive image component, automatically fades and slides in when in view.
+ * 
+ * @param {*} image - Image URL
+ * @param {*} alt - Image alt text
+ * @param {*} percentageWidth - Percentage width of the image (default: 100)
+ */
 const RespImage = ({ image, alt, percentageWidth=100 }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);

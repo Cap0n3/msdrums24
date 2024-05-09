@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTheme, styled } from "@mui/material";
 import RiseTitle from "../common/riseTitle/RiseTitle";
+import Image from "../common/imgComponent/Image";
 import { Container, Box, Typography } from "@mui/material";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -74,14 +75,21 @@ const QnA = ({ questions, contrast = false }) => {
                         justifyContent: "center",
                         alignItems: "center",
                         p: 4,
+                        border: "1px solid blue",
                     }}
                 >
-                    <img
+                    {/* <img
                         src="https://picsum.photos/600/600"
                         alt="FAQ"
                         width={600}
                         height={600}
-                    />
+                    /> */}
+                    <Box sx={{ width: "90%" }}>
+                        <Image
+                            image="https://picsum.photos/600/600"
+                            alt="FAQ"
+                        />
+                    </Box>
                 </Container>
                 <Container
                     sx={{

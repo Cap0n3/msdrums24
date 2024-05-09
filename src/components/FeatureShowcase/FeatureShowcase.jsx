@@ -85,7 +85,7 @@ const Content = ({ item, index, alternate }) => {
     );
 };
 
-const FeatureShowcase = ({ contrast=false }) => {
+const FeatureShowcase = ({ contrast = false }) => {
     const theme = useTheme();
     const { width } = useViewportSize();
 
@@ -94,7 +94,9 @@ const FeatureShowcase = ({ contrast=false }) => {
             component="section"
             sx={{
                 flexGrow: 1,
-                backgroundColor: contrast ? darken(0.008, theme.palette.background.default) : theme.palette.background.default,
+                backgroundColor: contrast
+                    ? darken(0.008, theme.palette.background.default)
+                    : theme.palette.background.default,
                 overflow: "hidden",
             }}
         >

@@ -110,7 +110,9 @@ const Testimonials = ({
                 height: "100%",
                 width: "100%",
                 overflow: "hidden",
-                backgroundColor: contrast ? darken(0.008, theme.palette.background.default) : theme.palette.background.default,
+                backgroundColor: contrast
+                    ? darken(0.008, theme.palette.background.default)
+                    : theme.palette.background.default,
             }}
         >
             <RiseTitle title={title} />

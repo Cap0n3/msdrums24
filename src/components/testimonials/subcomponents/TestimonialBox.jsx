@@ -24,8 +24,8 @@ const TestimonialBox = ({ wrapperRef, review, active, transitionTime }) => {
                         position: "relative",
                         justifyContent: "space-around",
                         borderRadius: "10px",
-                        width: "350px",
-                        height: "300px",
+                        width: { xs: "280px", md: "350px" },
+                        height: { xs: "320px", md: "300px" },
                         backgroundColor: theme.palette.background.paper,
                         boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
                     }}

@@ -12,9 +12,9 @@ const GridSection = ({
     // Check if the screen is medium or larger
     const isMdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
 
-    const ResponsiveCell = ({ children, xs, sm, md, p, sx }) => {
+    const ResponsiveCell = ({ children, xs, sm, md, sx }) => {
         return (
-            <Grid xs={xs} sm={sm} md={md} p={p} sx={sx}>
+            <Grid xs={xs} sm={sm} md={md} sx={sx}>
                 {children}
             </Grid>
         );

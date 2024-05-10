@@ -19,7 +19,10 @@ export default function Root() {
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    mt: { xs: `${website_layout.mobileNavHeight}px`, md: `${website_layout.navHeight}px` },
+                    mt: {
+                        xs: `${website_layout.mobileNavHeight}px`,
+                        md: `${website_layout.navHeight}px`,
+                    },
                 }}
             >
                 <Outlet />

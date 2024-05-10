@@ -43,7 +43,10 @@ function Nav() {
             sx={{
                 display: "flex",
                 justifyContent: "center",
-                height: { xs: `${website_layout.mobileNavHeight}px`, md: `${website_layout.navHeight}px` },
+                height: {
+                    xs: `${website_layout.mobileNavHeight}px`,
+                    md: `${website_layout.navHeight}px`,
+                },
                 backgroundColor: lighten(
                     0.05,
                     theme.palette.background.default,

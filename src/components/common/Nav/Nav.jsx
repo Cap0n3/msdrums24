@@ -21,6 +21,7 @@ function Nav() {
     const theme = useTheme();
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [loaded, setLoaded] = useState(false);
+    const [isTransparent, setIsTransparent] = useState(true);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -30,9 +31,27 @@ function Nav() {
         setAnchorElNav(null);
     };
 
+    const handleScroll = () => {
+        const threshold = 20; // You can adjust this value
+        if (window.scrollY > threshold) {
+            setIsTransparent(false);
+        } else {
+            setIsTransparent(true);
+        }
+    };
+
     useEffect(() => {
         setLoaded(true);
         return () => {
+            setLoaded(false);
+        };
+    }, []);
+
+    useEffect(() => {
+        setLoaded(true);
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
             setLoaded(false);
         };
     }, []);
@@ -47,11 +66,14 @@ function Nav() {
                     xs: `${website_layout.mobileNavHeight}px`,
                     md: `${website_layout.navHeight}px`,
                 },
-                backgroundColor: lighten(
-                    0.05,
-                    theme.palette.background.default,
-                ),
+                backgroundColor: {
+                    xs: isTransparent
+                        ? "transparent"
+                        : lighten(0.05, theme.palette.background.default),
+                    md: theme.palette.background.default,
+                },
                 backgroundImage: "none",
+                boxShadow: isTransparent ? "none" : theme.shadows[4],
             }}
         >
             <Container maxWidth="xl">
@@ -136,14 +158,7 @@ function Nav() {
                             display: { xs: "flex", md: "none" },
                         }}
                     >
-                        <Zoom
-                            in={loaded}
-                            style={{
-                                transitionDelay: loaded ? "250ms" : "0ms",
-                            }}
-                        >
-                            <NavLogo />
-                        </Zoom>
+                        {!isTransparent && <NavLogo />}
                     </Box>
                     <Box
                         sx={{

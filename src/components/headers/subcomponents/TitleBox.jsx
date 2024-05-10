@@ -25,7 +25,10 @@ const TitleBox = ({ title, description, call2Action }) => {
         >
             <Box
                 maxWidth="sm"
-                sx={{ marginLeft: "8%", p: { xs: 4, md: 0 } }}
+                sx={{
+                    marginLeft: "8%",
+                    p: { xs: 4, md: 0 },
+                }}
                 ref={containerRef}
             >
                 <Typography

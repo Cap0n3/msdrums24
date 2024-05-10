@@ -29,7 +29,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     alignItems: "start",
                     justifyContent: { xs: "flex-end", md: "center" },
                     height: {
-                        xs: `${windowSize.innerHeight - website_layout.mobileNavHeight}px`,
+                        xs: `${windowSize.innerHeight}px`,
                         md: `${windowSize.innerHeight - website_layout.navHeight}px`,
                     },
                     minHeight: "500px",
@@ -47,7 +47,6 @@ const HeroHeader = ({ title, description, call2Action }) => {
                         display: { xs: "block", md: "none" },
                         width: "100%",
                         height: "100%",
-                        //border: "1px solid red",
                         backgroundImage: `url(${mobileBanner})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",

@@ -20,7 +20,7 @@ export default function Root() {
                     display: "flex",
                     flexDirection: "column",
                     mt: {
-                        xs: `${website_layout.mobileNavHeight}px`,
+                        //xs: `${website_layout.mobileNavHeight}px`,
                         md: `${website_layout.navHeight}px`,
                     },
                 }}

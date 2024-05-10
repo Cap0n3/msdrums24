@@ -27,7 +27,7 @@ export function getTheme(mode) {
         typography: {
             fontFamily: "Source Sans Pro, sans-serif",
             h1: {
-                fontSize: "2.5rem",
+                fontSize: "2.3rem",
                 fontWeight: 500,
                 "@media (min-width:600px)": {
                     fontSize: "4rem",
@@ -55,14 +55,14 @@ export function getTheme(mode) {
                 },
             },
             subtitle1: {
-                fontSize: "1.3rem",
+                fontSize: "1rem",
                 fontWeight: 300,
                 "@media (min-width:600px)": {
                     fontSize: "1.3rem",
                 },
             },
             subtitle2: {
-                fontSize: "1.1rem",
+                fontSize: "1rem",
                 fontWeight: 400,
                 "@media (min-width:600px)": {
                     fontSize: "1.3rem",
@@ -97,7 +97,7 @@ export function getTheme(mode) {
             MuiButton: {
                 styleOverrides: {
                     root: {
-                        borderRadius: website_layout.borderRadius,             
+                        borderRadius: website_layout.borderRadius,
                     },
                 },
             },

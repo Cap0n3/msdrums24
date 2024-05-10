@@ -45,7 +45,7 @@ const AccordionSummary = styled((props) => (
     "& .MuiAccordionSummary-content": {
         marginLeft: theme.spacing(1),
     },
-    '&.Mui-expanded': {
+    "&.Mui-expanded": {
         borderRadius: `${theme.shape.borderRadius}px ${theme.shape.borderRadius}px 0 0`,
     },
 }));

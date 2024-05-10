@@ -1,5 +1,3 @@
-import { border } from "polished";
-
 const website_layout = {
     navHeight: 80,
     mobileNavHeight: 60,

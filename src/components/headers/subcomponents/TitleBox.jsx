@@ -55,11 +55,12 @@ const TitleBox = ({ title, description, call2Action }) => {
                 >
                     <Button
                         component={Link}
-                        to="/method"
+                        //to="/method"
                         color="primary"
                         variant="outlined"
                         size="large"
                         sx={{ mt: 2 }}
+                        onClick={() => { console.log("Call to action clicked"); }}   
                     >
                         {call2Action}
                     </Button>

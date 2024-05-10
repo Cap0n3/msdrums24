@@ -85,14 +85,7 @@ function Nav() {
                             display: { xs: "none", md: "flex" },
                         }}
                     >
-                        <Zoom
-                            in={loaded}
-                            style={{
-                                transitionDelay: loaded ? "500ms" : "0ms",
-                            }}
-                        >
-                            <NavLogo />
-                        </Zoom>
+                        <NavLogo />
                     </Box>
                     <Box
                         sx={{

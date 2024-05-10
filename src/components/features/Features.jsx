@@ -18,6 +18,7 @@ const Features = ({ title, subTitle, contrast = false }) => {
                 backgroundColor: contrast
                     ? darken(0.008, theme.palette.background.default)
                     : theme.palette.background.default,
+                minHeight: "500px",
             }}
         >
             <RiseTitle title={title} subTitle={subTitle} />

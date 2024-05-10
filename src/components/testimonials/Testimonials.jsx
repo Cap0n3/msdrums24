@@ -126,7 +126,7 @@ const Testimonials = ({
                         alignItems: "center",
                         gap: 4,
                         width: "100%",
-                        minHeight: "305px",
+                        minHeight: "320px",
                         overflow: "hidden",
                     }}
                 >

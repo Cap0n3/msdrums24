@@ -78,6 +78,7 @@ const GridSection = ({
                 backgroundColor: backgroundColor
                     ? backgroundColor
                     : "transparent",
+                minHeight: "500px",
             }}
         >
             <Grid container spacing={0}>

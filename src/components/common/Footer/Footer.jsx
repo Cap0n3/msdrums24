@@ -26,6 +26,7 @@ const Footer = ({
                 bgcolor: theme.palette.background.default,
                 color: "white",
                 padding: "2rem",
+                minHeight: "250px",
             }}
         >
             <Grid

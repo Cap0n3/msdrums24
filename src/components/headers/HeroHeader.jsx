@@ -28,7 +28,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     flexDirection: "column",
                     alignItems: "start",
                     justifyContent: { xs: "flex-end", md: "center" },
-                    height: `${windowSize.innerHeight - website_layout.navHeight}px`,
+                    height: { xs: `${windowSize.innerHeight - website_layout.mobileNavHeight}px`, md: `${windowSize.innerHeight - website_layout.navHeight}px` },
                     minHeight: "500px",
                     backgroundColor: theme.palette.background.default,
                     backgroundSize: "cover",

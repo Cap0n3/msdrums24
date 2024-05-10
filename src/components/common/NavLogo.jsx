@@ -1,16 +1,14 @@
 import { forwardRef } from "react";
-import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import PlaceholderLogo from "../../assets/img/logos/PlaceholderLogo";
 
 const NavLogo = forwardRef((props, ref) => {
     const theme = useTheme();
-    const isXS = useMediaQuery(theme.breakpoints.down("md"));
+    const isXS = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (
         <Box
@@ -28,12 +26,12 @@ const NavLogo = forwardRef((props, ref) => {
             }}
         >
             <PlaceholderLogo
-                heigth="50px"
-                width="50px"
+                heigth={isXS ? "30px" : "50px"}
+                width={isXS ? "30px" : "50px"}
                 color={theme.palette.secondary.main}
             />
             <Typography
-                variant={isXS ? "h5" : "h6"}
+                variant="h3"
                 noWrap
                 component={Link}
                 to="/"

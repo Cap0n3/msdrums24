@@ -96,18 +96,18 @@ const QnaPanel = ({ questions }) => {
                                     id="panel1-header"
                                 >
                                     <Typography
-                                        variant="h6"
+                                        variant="h4"
                                         sx={{
                                             color: theme.palette.text.primary,
-                                            fontWeight: 600,
-                                            fontSize: "1rem",
+                                            //fontWeight: 600,
+                                            //fontSize: "1rem",
                                         }}
                                     >
                                         {question.question}
                                     </Typography>
                                 </AccordionSummary>
                                 <AccordionDetails>
-                                    <Typography variant="body1">
+                                    <Typography component="p" variant="body2">
                                         {question.answer}
                                     </Typography>
                                 </AccordionDetails>

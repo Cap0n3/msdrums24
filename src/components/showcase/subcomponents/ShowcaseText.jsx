@@ -31,15 +31,16 @@ const ShowcaseText = ({ title, description }) => {
                         }}
                     >
                         <Typography
-                            variant="h6"
+                            component="h3"
+                            variant="h3"
                             mt={2}
-                            fontWeight={600}
                             sx={{ color: theme.palette.text.primary }}
                         >
                             {title}
                         </Typography>
                         <Typography
-                            variant="subtitle1"
+                            component="p"
+                            variant="body1"
                             mt={2}
                             sx={{ color: theme.palette.text.secondary }}
                         >

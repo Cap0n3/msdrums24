@@ -3,10 +3,9 @@ import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useMediaQuery } from "@mui/material";
 
-
 /**
  * Website standard section that contains a grid of cells. Only two cells are supported.
- * 
+ *
  * @param {Object} props
  * @param {Array} props.contents - An array of objects that contain the content of each cell
  * @param {number} props.paddingTop - The padding top of the section (default is 8)
@@ -42,13 +41,13 @@ import { useMediaQuery } from "@mui/material";
  *  backgroundColor="#f0f0f0"
  *  reverse={false}
  * />
- * 
+ *
  */
 const GridSection = ({
     contents,
-    paddingTop=8,
-    paddingBottom=8,
-    paddingX=8,
+    paddingTop = 8,
+    paddingBottom = 8,
+    paddingX = 8,
     backgroundColor,
     smScreen_cellSpacing,
     reverse,

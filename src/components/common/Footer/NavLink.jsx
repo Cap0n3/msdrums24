@@ -14,6 +14,7 @@ const NavLink = ({ url, name }) => {
             }}
         >
             <Typography
+                component="p"
                 variant="body2"
                 fontWeight="fontWeightLight"
                 sx={{ color: theme.palette.text.primary }}

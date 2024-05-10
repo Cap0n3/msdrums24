@@ -113,6 +113,8 @@ function Nav() {
                                     onClick={handleCloseNavMenu}
                                 >
                                     <Typography
+                                        component="span"
+                                        variant="body1"
                                         textAlign="center"
                                         sx={{
                                             color: theme.palette.text.primary,

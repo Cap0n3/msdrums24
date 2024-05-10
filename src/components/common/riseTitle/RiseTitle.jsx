@@ -38,9 +38,8 @@ const RiseTitle = ({ title, subTitle }) => {
                 <Slide direction="up" in={isVisible} timeout={500}>
                     <Container>
                         <Typography
-                            variant="h4"
+                            variant="h2"
                             align="center"
-                            fontWeight={400}
                             sx={{ color: theme.palette.text.primary }}
                             gutterBottom
                         >
@@ -48,7 +47,8 @@ const RiseTitle = ({ title, subTitle }) => {
                         </Typography>
                         {subTitle && (
                             <Typography
-                                variant="h6"
+                                component="p"
+                                variant="subtitle2"
                                 align="center"
                                 mb={4}
                                 sx={{ color: theme.palette.text.secondary }}

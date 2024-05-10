@@ -52,6 +52,7 @@ const Footer = ({
                         <NavLogo />
                     </Box>
                     <Typography
+                        component="p"
                         variant="body2"
                         sx={{ color: theme.palette.text.secondary }}
                         gutterBottom
@@ -61,7 +62,8 @@ const Footer = ({
                 </Grid>
                 <Grid xs={6} md={2}>
                     <Typography
-                        variant="h6"
+                        component="h4"
+                        variant="h4"
                         sx={{ color: theme.palette.text.primary }}
                         gutterBottom
                     >
@@ -79,7 +81,8 @@ const Footer = ({
                 </Grid>
                 <Grid xs={6} md={2}>
                     <Typography
-                        variant="h6"
+                        component="h4"
+                        variant="h4"
                         sx={{ color: theme.palette.text.primary }}
                         gutterBottom
                     >
@@ -97,13 +100,15 @@ const Footer = ({
                 </Grid>
                 <Grid xs={12} md={4}>
                     <Typography
-                        variant="h6"
+                        component="h4"
+                        variant="h4"
                         sx={{ color: theme.palette.text.primary }}
                         gutterBottom
                     >
                         Newsletter
                     </Typography>
                     <Typography
+                        component="p"
                         variant="body2"
                         sx={{ color: theme.palette.text.secondary }}
                     >

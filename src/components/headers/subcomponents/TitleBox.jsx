@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useTheme } from '@emotion/react';
-import { Box, Typography, Button, Slide } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import { useTheme } from "@emotion/react";
+import { Box, Typography, Button, Slide } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const TitleBox = ({title, description, call2Action}) => {
+const TitleBox = ({ title, description, call2Action }) => {
     const theme = useTheme();
     const [loaded, setLoaded] = useState(false);
     const containerRef = useRef(null);
@@ -23,10 +23,14 @@ const TitleBox = ({title, description, call2Action}) => {
             timeout={500}
             style={{ transitionDelay: loaded ? "1500ms" : "0ms" }}
         >
-            <Box maxWidth="sm" sx={{ marginLeft: "8%" }} ref={containerRef}>
+            <Box
+                maxWidth="sm"
+                sx={{ marginLeft: "8%", p: { xs: 4, md: 0 } }}
+                ref={containerRef}
+            >
                 <Typography
                     component="h1"
-                    variant="h2"
+                    variant="h1"
                     align="left"
                     sx={{ color: theme.palette.text.primary }}
                     gutterBottom
@@ -35,7 +39,7 @@ const TitleBox = ({title, description, call2Action}) => {
                 </Typography>
                 <Typography
                     component="h2"
-                    variant="p"
+                    variant="subtitle1"
                     align="left"
                     sx={{ color: theme.palette.text.primary }}
                 >

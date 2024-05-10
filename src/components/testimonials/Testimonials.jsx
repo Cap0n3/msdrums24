@@ -183,7 +183,7 @@ const Testimonials = ({
                         onClick={() => changeSlide("toIndex", index)}
                         style={{ cursor: "pointer" }}
                         sx={{
-                            fontSize: "1.5rem",
+                            fontSize: { xs: "1.2rem", md: "1.8rem" },
                             margin: "0 3px",
                         }}
                     >

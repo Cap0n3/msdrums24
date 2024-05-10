@@ -36,13 +36,14 @@ const TestimonialBox = ({ wrapperRef, review, active, transitionTime }) => {
                         sx={{ width: 100, height: 100 }}
                     />
                     <Typography
+                        component="p"
                         variant="body2"
                         textAlign={"center"}
                         gutterBottom
                     >
                         "{review.quote}"
                     </Typography>
-                    <Typography variant="subtitle2">
+                    <Typography component="p" variant="subtitle2">
                         {review.customerName}
                     </Typography>
                     <Typography variant="caption">{review.role}</Typography>

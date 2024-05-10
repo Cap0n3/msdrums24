@@ -1,5 +1,6 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { colors } from "./palette";
+import website_layout from "./layout";
 
 export function getTheme(mode) {
     return createTheme({
@@ -89,33 +90,38 @@ export function getTheme(mode) {
                 },
             },
         },
-        // Define font-weight for title variants
-        // components: {
-        //     MuiTypography: {
-        //         styleOverrides: {
-        //             h1: {
-        //                 fontWeight: 500,
-        //             },
-        //             h2: {
-        //                 fontWeight: 500,
-        //             },
-        //             h3: {
-        //                 fontWeight: 400,
-        //             },
-        //             h4: {
-        //                 fontWeight: 400,
-        //             },
-        //             h5: {
-        //                 fontWeight: 400,
-        //             },
-        //             h6: {
-        //                 fontWeight: 400,
-        //             },
-        //             p: {
-        //                 fontWeight: 300,
-        //             },
-        //         },
-        //     },
-        // },
+        shape: {
+            borderRadius: website_layout.borderRadius,
+        },
+        components: {
+            MuiButton: {
+                styleOverrides: {
+                    root: {
+                        borderRadius: website_layout.borderRadius,             
+                    },
+                },
+            },
+            MuiOutlinedInput: {
+                styleOverrides: {
+                    root: {
+                        borderRadius: website_layout.borderRadius,
+                    },
+                },
+            },
+            MuiAccordion: {
+                styleOverrides: {
+                    root: {
+                        borderRadius: website_layout.borderRadius,
+                    },
+                },
+            },
+            MuiAccordionSummary: {
+                styleOverrides: {
+                    root: {
+                        borderRadius: website_layout.borderRadius,
+                    },
+                },
+            },
+        },
     });
 }

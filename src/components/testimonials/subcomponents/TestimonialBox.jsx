@@ -23,7 +23,7 @@ const TestimonialBox = ({ wrapperRef, review, active, transitionTime }) => {
                         alignItems: "center",
                         position: "relative",
                         justifyContent: "space-around",
-                        borderRadius: "10px",
+                        borderRadius: theme.shape.borderRadius,
                         width: { xs: "280px", md: "350px" },
                         height: { xs: "320px", md: "300px" },
                         backgroundColor: theme.palette.background.paper,

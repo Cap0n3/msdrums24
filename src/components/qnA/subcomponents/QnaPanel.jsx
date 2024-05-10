@@ -7,6 +7,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import RiseTitle from "../../common/riseTitle/RiseTitle";
 import { useTheme, styled } from "@mui/material";
+import { border, borderRadius } from "polished";
 
 // =========================== //
 // === Accordion component === //
@@ -16,11 +17,14 @@ const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
     border: `1px solid ${theme.palette.divider}`,
-    "&:not(:last-child)": {
-        borderBottom: 0,
-    },
+    // "&:not(:last-child)": {
+    //     borderBottom: 0,
+    // },
     "&::before": {
         display: "none",
+    },
+    "&.Mui-expanded": {
+        borderRadius: theme.shape.borderRadius,
     },
 }));
 
@@ -40,6 +44,9 @@ const AccordionSummary = styled((props) => (
     },
     "& .MuiAccordionSummary-content": {
         marginLeft: theme.spacing(1),
+    },
+    '&.Mui-expanded': {
+        borderRadius: `${theme.shape.borderRadius}px ${theme.shape.borderRadius}px 0 0`,
     },
 }));
 
@@ -90,6 +97,10 @@ const QnaPanel = ({ questions }) => {
                                 key={index}
                                 expanded={expanded === `panel${index + 1}`}
                                 onChange={handleChange(`panel${index + 1}`)}
+                                sx={{
+                                    boxShadow: "0 0 10px rgba(0, 0, 0, .1)",
+                                    my: 2,
+                                }}
                             >
                                 <AccordionSummary
                                     aria-controls="panel1-content"
@@ -99,8 +110,6 @@ const QnaPanel = ({ questions }) => {
                                         variant="h4"
                                         sx={{
                                             color: theme.palette.text.primary,
-                                            //fontWeight: 600,
-                                            //fontSize: "1rem",
                                         }}
                                     >
                                         {question.question}

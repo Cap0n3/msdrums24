@@ -23,6 +23,7 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
                     textAlign: "center",
                     maxWidth: 340,
                     backgroundColor: theme.palette.background.default,
+                    borderRadius: theme.shape.borderRadius,
                 }}
             >
                 {featureLogo(logo, {

@@ -45,7 +45,7 @@ const RespImage = ({ image, alt, percentageWidth = 100 }) => {
                             right: 0,
                             bottom: 0,
                             overflow: "hidden",
-                            borderRadius: 2,
+                            borderRadius: theme.shape.borderRadius,
                         }}
                     >
                         <img

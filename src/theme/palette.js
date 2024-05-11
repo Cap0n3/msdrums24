@@ -25,4 +25,8 @@ export const colors = {
             dark: "#b0bec5", // Light blue grey for dark theme
         },
     },
+    border: {
+        light: "#e0e0e0", // Light grey
+        dark: "#424242", // Dark grey
+    },
 };

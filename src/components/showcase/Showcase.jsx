@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@mui/material";
-import GridSection from "../common/section/GridSection";
+import GridSection from "../common/gridSection/GridSection";
 import ShowcaseText from "./subcomponents/ShowcaseText";
 import RespImage from "../common/respImage/RespImage";
 import { useMediaQuery } from "@mui/material";

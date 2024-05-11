@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Slide, Fade, Paper, Typography, Box } from "@mui/material";
 import { useInView } from "react-intersection-observer";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material";
 
 const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
     const theme = useTheme();

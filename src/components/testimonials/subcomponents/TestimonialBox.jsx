@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material";
 import { Box, Avatar, Typography, Slide } from "@mui/material";
 
 const TestimonialBox = ({ wrapperRef, review, active, transitionTime }) => {

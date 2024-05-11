@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@mui/material";
 import RespImage from "../common/respImage/RespImage";
 import { darken } from "polished";
-import GridSection from "../common/section/GridSection";
+import GridSection from "../common/gridSection/GridSection";
 import QnaPanel from "./subcomponents/QnaPanel";
 
 const QnA = ({ questions, contrast = false }) => {

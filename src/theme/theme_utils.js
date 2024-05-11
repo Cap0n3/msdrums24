@@ -23,6 +23,9 @@ export function getTheme(mode) {
                 primary: colors.text.primary[mode],
                 secondary: colors.text.secondary[mode],
             },
+            border: {
+                main: colors.border[mode],
+            },
         },
         typography: {
             fontFamily: "Source Sans Pro, sans-serif",

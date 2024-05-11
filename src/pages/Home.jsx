@@ -7,6 +7,7 @@ import QnA from "../components/qnA/QnA";
 import headerData from "../data/home/header.data.json";
 import qnaData from "../data/home/qnA.data.json";
 import showcaseData from "../data/home/showcase.data.json";
+import Pricing from "../components/pricing/Pricing";
 
 const HomePages = () => {
     return (
@@ -24,6 +25,7 @@ const HomePages = () => {
             <Showcase data={showcaseData} />
             <Testimonials title="What our customers say" contrast={true} />
             <QnA questions={qnaData} />
+            <Pricing contrast={true} />
         </>
     );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material";
 import { Box, Fade, Slide } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 

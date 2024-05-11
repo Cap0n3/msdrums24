@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Slide, Fade } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
 const ShowcaseText = ({ title, description }) => {

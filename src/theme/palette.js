@@ -7,6 +7,14 @@ export const colors = {
         light: "#ff4081", // Light pink
         dark: "#ce93d8", // Dark pink
     },
+    button: {
+        light: "#7986cb", // Light purple
+        dark: "#ab47bc", // Dark purple
+    },
+    buttonHover: {
+        light: "#303f9f", // Dark blue
+        dark: "#80CBC4", // Dark purple
+    },
     error: {
         light: "#e57373", // Light red
         dark: "#d32f2f", // Dark red

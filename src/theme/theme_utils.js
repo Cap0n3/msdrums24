@@ -12,6 +12,10 @@ export function getTheme(mode) {
             secondary: {
                 main: colors.secondary[mode],
             },
+            button: {
+                main: colors.primary[mode],
+                hover: colors.buttonHover[mode],
+            },
             error: {
                 main: colors.error[mode],
             },

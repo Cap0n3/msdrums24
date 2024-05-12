@@ -4,8 +4,28 @@ import { useTheme } from "@mui/material";
 import BasicSection from "../common/basicSection/BasicSection";
 import PriceCard from "./subcomponents/PriceCard";
 
-const Pricing = ({ contrast }) => {
+const Pricing = ({ cardsData, contrast }) => {
     const theme = useTheme();
+
+    // Map the cards data to the PriceCard components
+    const priceCards = cardsData.map((option, index) => {
+        const cardKey = Object.keys(option)[0]; // Get the key of each card (e.g., PriceCardBimonthly)
+        const cardData = option[cardKey]; // Get the data of each card using the key
+        return (
+            <PriceCard
+                key={index}
+                image={cardData.image}
+                title={cardData.title}
+                price={cardData.price}
+                paymentFrequency={cardData.paymentFrequency}
+                sellingPoints={cardData.sellingPoints}
+                action={cardData.action}
+                backgroundColor={theme.palette.background.paper}
+                highlight={cardData.highlight}
+            />
+        );
+    });
+
     return (
         <BasicSection
             backgroundColor={theme.palette.background.default}
@@ -13,10 +33,17 @@ const Pricing = ({ contrast }) => {
             paddingTop={12}
             paddingBottom={12}
         >
-            <Stack direction={{ xs: "column", md: "row" }} spacing={4}>
-                <PriceCard backgroundColor={theme.palette.background.paper} />
-                <PriceCard backgroundColor={theme.palette.background.paper} highlight />
-                <PriceCard backgroundColor={theme.palette.background.paper} />
+            <Stack
+                direction={{ xs: "column", lg: "row" }}
+                spacing={4}
+                sx={{ 
+                    display: "flex", 
+                    width: "100%", 
+                    justifyContent: "center",
+                    alignItems: "center", 
+                }}
+            >
+                {priceCards}
             </Stack>
         </BasicSection>
     );

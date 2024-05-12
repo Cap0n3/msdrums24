@@ -4,10 +4,11 @@ import Features from "../components/features/Features";
 import Showcase from "../components/showcase/Showcase";
 import Testimonials from "../components/testimonials/Testimonials";
 import QnA from "../components/qnA/QnA";
+import Pricing from "../components/pricing/Pricing";
 import headerData from "../data/home/header.data.json";
 import qnaData from "../data/home/qnA.data.json";
 import showcaseData from "../data/home/showcase.data.json";
-import Pricing from "../components/pricing/Pricing";
+import priceCardsData from "../data/home/pricing.data.json";
 
 const HomePages = () => {
     return (
@@ -25,7 +26,7 @@ const HomePages = () => {
             <Showcase data={showcaseData} />
             <Testimonials title="What our customers say" contrast={true} />
             <QnA questions={qnaData} />
-            <Pricing contrast={true} />
+            <Pricing cardsData={priceCardsData} contrast={true} />
         </>
     );
 };

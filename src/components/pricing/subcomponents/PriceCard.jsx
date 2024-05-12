@@ -16,62 +16,55 @@ import {
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useTheme } from "@mui/material";
 
-const muiDarkTheme = {
-    white: "#FAFAFA",
-    dark_bg: "#121212",
-    dark_bg_el1: "#424242",
-    purple: "#CE93D8",
-    teal: "#80CBC4",
-};
-
-const sellPoints = [
-    "Fast Progress",
-    "Personalized Lesson Plans",
-    "Flexible Scheduling",
-    "One-on-One Attention",
-    "Instant Feedback and Support",
-    "Learn at Your Own Pace",
-    "Tailored Song Selection",
-    "Technique Improvement Focus",
-    "All Skill Levels Welcome",
-    "Engaging and Fun Learning Environment",
-];
-
 const ListItemComponent = ({ theme, text }) => (
     <ListItem>
         <ListItemIcon>
             <CheckCircleIcon sx={{ color: theme.palette.primary.main }} />
         </ListItemIcon>
-        <ListItemText primary={text} sx={{ color: theme.palette.text.primary }} />
+        <ListItemText
+            primary={text}
+            sx={{ color: theme.palette.text.primary }}
+        />
     </ListItem>
 );
 
-const PriceCard = ({ backgroundColor="#fff", highlight = false }) => {
+const PriceCard = ({
+    image,
+    title,
+    price,
+    paymentFrequency,
+    sellingPoints,
+    action,
+    backgroundColor = "#fff",
+    highlight = false,
+}) => {
     const theme = useTheme();
     return (
         <Card
             raised={highlight ? true : false}
             sx={{
                 pb: 4,
-                maxWidth: { xs: "100%", md: 400 },
+                width: { xs: "100%", lg: "33%" },
+                maxWidth: 450,
+                minWidth: 300,
                 minHeight: 600,
                 borderRadius: 4,
                 backgroundColor: backgroundColor,
                 border: `1px solid ${theme.palette.border.main}`,
                 transform: {
-                    xs: "none",
-                    md: highlight ? "scale(1.1)" : "scale(1)",
+                    md: "none",
+                    lg: highlight ? "scale(1.1)" : "scale(1)",
                 }, // Scale up if highlighted
             }}
         >
             <CardMedia
                 component="img"
                 height="190"
-                image="https://doodleipsum.com/700/hand-drawn?i=3565f8ff86cd4081f5176bfcc8704793"
+                image={image}
                 alt="Some illustration"
             />
             <CardHeader
-                title="Weekly"
+                title={title}
                 titleTypographyProps={{
                     color: theme.palette.text.secondary,
                     align: "center",
@@ -93,14 +86,14 @@ const PriceCard = ({ backgroundColor="#fff", highlight = false }) => {
                         color={theme.palette.text.primary}
                         fontWeight={500}
                     >
-                        CHF 360
+                        CHF {price}
                         <Typography
                             variant="caption"
                             component="span"
                             fontWeight={300}
                             color={theme.palette.text.secondary}
                         >
-                            /month
+                            {paymentFrequency}
                         </Typography>
                     </Typography>
                 </Box>
@@ -109,8 +102,12 @@ const PriceCard = ({ backgroundColor="#fff", highlight = false }) => {
                     aria-label="main mailbox folders"
                     dense={true}
                 >
-                    {sellPoints.map((point) => (
-                        <ListItemComponent key={point} text={point} theme={theme} />
+                    {sellingPoints.map((point) => (
+                        <ListItemComponent
+                            key={point}
+                            text={point}
+                            theme={theme}
+                        />
                     ))}
                 </List>
             </CardContent>
@@ -120,15 +117,15 @@ const PriceCard = ({ backgroundColor="#fff", highlight = false }) => {
                     size="large"
                     sx={{
                         mt: 4,
-                        color: muiDarkTheme.purple,
-                        borderColor: muiDarkTheme.purple,
+                        color: theme.palette.primary.main,
+                        borderColor: theme.palette.button.main,
                         "&:hover": {
-                            color: muiDarkTheme.teal,
-                            borderColor: muiDarkTheme.teal,
+                            color: theme.palette.button.hover,
+                            borderColor: theme.palette.button.hover,
                         },
                     }}
                 >
-                    Join
+                    {action}
                 </Button>
             </CardActions>
         </Card>

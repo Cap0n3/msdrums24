@@ -79,6 +79,7 @@ const GridSection = ({
                     ? backgroundColor
                     : "transparent",
                 minHeight: "500px",
+                overflow: "hidden", // Prevents bottom page gap during excessive resizing (due to FX)
             }}
         >
             <Grid container spacing={0}>

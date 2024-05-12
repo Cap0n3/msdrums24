@@ -19,7 +19,6 @@ export default function Root() {
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    overflow: "hidden", // Prevents gap at bottom of page when resizing excessively (?)
                     mt: {
                         //xs: `${website_layout.mobileNavHeight}px`,
                         md: `${website_layout.navHeight}px`,

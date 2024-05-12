@@ -8,7 +8,7 @@ import { getTheme } from "./theme/theme_utils";
 import useScrollToTop from "./hooks/useScrollToTop";
 
 function App() {
-    const [mode, setMode] = useState("dark"); // Can be "light" or "dark"
+    const [mode, setMode] = useState("light"); // Can be "light" or "dark"
 
     // === ROUTER === //
     const router = createBrowserRouter([website_routes]);

@@ -9,8 +9,8 @@ const Pricing = ({ cardsData, contrast }) => {
 
     // Map the cards data to the PriceCard components
     const priceCards = cardsData.map((option, index) => {
-        const cardKey = Object.keys(option)[0]; // Get the key of each card (e.g., PriceCardBimonthly)
-        const cardData = option[cardKey]; // Get the data of each card using the key
+        const cardKey = Object.keys(option)[0];
+        const cardData = option[cardKey];
         return (
             <PriceCard
                 key={index}

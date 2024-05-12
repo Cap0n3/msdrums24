@@ -1,10 +1,9 @@
 const appbar_pages = [
     { id: "home", name: "Home", link: "/" },
-    { id: "method", name: "Méthode", link: "/method" },
-    { id: "about", name: "À propos", link: "/about" },
-    { id: "terms", name: "Conditions", link: "/terms" },
-    { id: "pricing", name: "Tarifs", link: "/prices" },
-    { id: "contact", name: "Contact", link: "/contact" },
+    { id: "item1", name: "Item1", link: "/" },
+    { id: "item2", name: "Item2", link: "/" },
+    { id: "item3", name: "Item3", link: "/" },
+
 ];
 
 const footer_pages_col1 = [

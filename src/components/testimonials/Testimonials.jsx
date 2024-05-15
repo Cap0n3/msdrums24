@@ -10,6 +10,7 @@ import { TestimonialsData } from "../../data/home/testimonials.data";
 import { darken } from "polished";
 
 const Testimonials = ({
+    identifier,
     title,
     transitionTime = 500,
     timerInterval = 12000,
@@ -96,6 +97,7 @@ const Testimonials = ({
 
     return (
         <Box
+            id={identifier}
             ref={inViewRef}
             component="section"
             pt={4}

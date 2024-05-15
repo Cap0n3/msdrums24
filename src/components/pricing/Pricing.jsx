@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material";
 import BasicSection from "../common/basicSection/BasicSection";
 import PriceCard from "./subcomponents/PriceCard";
 
-const Pricing = ({ cardsData, contrast }) => {
+const Pricing = ({ identifier, cardsData, contrast }) => {
     const theme = useTheme();
 
     // Map the cards data to the PriceCard components
@@ -28,7 +28,7 @@ const Pricing = ({ cardsData, contrast }) => {
 
     return (
         <BasicSection
-            identifier="pricing"
+            identifier={identifier}
             backgroundColor="#B0BEC5"
             contrast={contrast}
             paddingTop={12}

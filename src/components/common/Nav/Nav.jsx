@@ -168,6 +168,8 @@ function Nav() {
                                 onClick={handleCloseNavMenu}
                                 sx={{
                                     my: 2,
+                                    padding: "0.4rem .9rem",
+                                    textAlign: "center",
                                     color: theme.palette.text.primary,
                                     display: "block",
                                     fontWeight: 400,

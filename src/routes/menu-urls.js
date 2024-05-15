@@ -1,8 +1,10 @@
 const appbar_pages = [
-    { id: "home", name: "Home", link: "/" },
-    { id: "item1", name: "Item1", link: "/" },
-    { id: "item2", name: "Item2", link: "/" },
-    { id: "item3", name: "Item3", link: "/" },
+    //{ id: "home", name: "Home", link: "/" },
+    //{ id: "featuresNav", name: "Features", link: "#features" },
+    { id: "showcaseNav", name: "Showcase", link: "#showcase" },
+    //{ id: "testimonNav", name: "Testimonials", link: "#testimonials" },
+    { id: "qnaNav", name: "Q&A", link: "#qna" },
+    { id: "pricingNav", name: "Pricing", link: "#pricing" },
 
 ];
 

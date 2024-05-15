@@ -6,11 +6,12 @@ import RiseTitle from "../common/riseTitle/RiseTitle";
 import FeatureBoxes from "./subcomponents/FeatureBoxes";
 import { features } from "../../data/home/features.data";
 
-const Features = ({ title, subTitle, contrast = false }) => {
+const Features = ({ identifier, title, subTitle, contrast = false }) => {
     const theme = useTheme();
 
     return (
         <Box
+            id={identifier}
             component="section"
             py={4}
             sx={{

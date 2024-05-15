@@ -44,6 +44,7 @@ import { useMediaQuery } from "@mui/material";
  *
  */
 const GridSection = ({
+    identifier="",
     contents,
     paddingTop = 8,
     paddingBottom = 8,
@@ -69,6 +70,7 @@ const GridSection = ({
 
     return (
         <Box
+            id={identifier}
             component="section"
             sx={{
                 flexGrow: 1,

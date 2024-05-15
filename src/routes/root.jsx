@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import website_layout from "../theme/layout";
 import { Box } from "@mui/material";
 import footerData from "../data/home/footer.data.json";
+import ScrollToHash from "../components/common/ScrollToHash";
+
 export default function Root() {
     // Scroll to top on page load and on route change
     useEffect(() => {
@@ -14,6 +16,7 @@ export default function Root() {
     return (
         <>
             <Nav />
+            <ScrollToHash />
             <Box
                 component="main"
                 sx={{

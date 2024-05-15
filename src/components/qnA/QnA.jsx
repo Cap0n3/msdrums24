@@ -5,12 +5,13 @@ import { darken } from "polished";
 import GridSection from "../common/gridSection/GridSection";
 import QnaPanel from "./subcomponents/QnaPanel";
 
-const QnA = ({ questions, contrast = false }) => {
+const QnA = ({ identifier, questions, contrast = false }) => {
     const theme = useTheme();
 
     return (
         <>
             <GridSection
+                identifier={identifier}
                 contents={[
                     {
                         children: (

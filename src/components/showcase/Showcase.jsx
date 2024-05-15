@@ -5,7 +5,7 @@ import ShowcaseText from "./subcomponents/ShowcaseText";
 import RespImage from "../common/respImage/RespImage";
 import { useMediaQuery } from "@mui/material";
 
-const Showcase = ({ data }) => {
+const Showcase = ({ identifier, data }) => {
     const theme = useTheme();
     const sleekPaddingY = 8; // Padding top and bottom for middle sections
     const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
@@ -15,6 +15,7 @@ const Showcase = ({ data }) => {
             {data &&
                 data.map((item, index) => (
                     <GridSection
+                        identifier={identifier}
                         key={index}
                         contents={[
                             {

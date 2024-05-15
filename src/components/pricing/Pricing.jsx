@@ -28,7 +28,8 @@ const Pricing = ({ cardsData, contrast }) => {
 
     return (
         <BasicSection
-            backgroundColor={theme.palette.background.default}
+            identifier="pricing"
+            backgroundColor="#B0BEC5"
             contrast={contrast}
             paddingTop={12}
             paddingBottom={12}

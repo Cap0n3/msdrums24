@@ -5,15 +5,16 @@ import { darken } from "polished";
 
 const BasicSection = ({
     children,
+    identifier="",
     contrast = false,
     paddingTop = 8,
     paddingBottom = 8,
     paddingX = 8,
-    backgroundColor = "transparent",
 }) => {
     const theme = useTheme();
     return (
         <Box
+            id={identifier}
             component="section"
             sx={{
                 flexGrow: 1,

@@ -44,7 +44,7 @@ import { useMediaQuery } from "@mui/material";
  *
  */
 const GridSection = ({
-    identifier="",
+    identifier = "",
     contents,
     paddingTop = 8,
     paddingBottom = 8,

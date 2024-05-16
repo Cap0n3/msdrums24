@@ -2,7 +2,7 @@ import React from "react";
 import Root from "./root";
 import ErrorPage from "../pages/Error";
 import HomePage from "../pages/Home";
-import MethodPage from "../pages/Method";
+import ContactPage from "../pages/ContactPage";
 
 export const website_routes = {
     path: "/",
@@ -14,8 +14,8 @@ export const website_routes = {
             element: <HomePage />,
         },
         {
-            path: "/method",
-            element: <MethodPage />,
+            path: "/contact",
+            element: <ContactPage />,
         },
     ],
 };

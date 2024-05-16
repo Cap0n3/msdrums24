@@ -17,7 +17,7 @@ const ScrollToHash = () => {
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: "smooth"
+                    behavior: "smooth",
                 });
             }
         }

@@ -1,11 +1,10 @@
 const appbar_pages = [
     //{ id: "home", name: "Home", link: "/" },
     //{ id: "featuresNav", name: "Features", link: "#features" },
-    { id: "showcaseNav", name: "Showcase", link: "#showcase" },
+    { id: "showcaseNav", name: "Showcase", link: "/#showcase" },
     //{ id: "testimonNav", name: "Testimonials", link: "#testimonials" },
-    { id: "qnaNav", name: "Q&A", link: "#qna" },
-    { id: "pricingNav", name: "Pricing", link: "#pricing" },
-
+    { id: "qnaNav", name: "Q&A", link: "/#qna" },
+    { id: "pricingNav", name: "Pricing", link: "/#pricing" },
 ];
 
 const footer_pages_col1 = [

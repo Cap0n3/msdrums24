@@ -5,7 +5,7 @@ import { darken } from "polished";
 
 const BasicSection = ({
     children,
-    identifier="",
+    identifier = "",
     contrast = false,
     paddingTop = 8,
     paddingBottom = 8,

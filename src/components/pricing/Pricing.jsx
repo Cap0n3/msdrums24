@@ -37,11 +37,11 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
             <Stack
                 direction={{ xs: "column", lg: "row" }}
                 spacing={4}
-                sx={{ 
-                    display: "flex", 
-                    width: "100%", 
+                sx={{
+                    display: "flex",
+                    width: "100%",
                     justifyContent: "center",
-                    alignItems: "center", 
+                    alignItems: "center",
                 }}
             >
                 {priceCards}

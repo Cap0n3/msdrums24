@@ -55,7 +55,6 @@ import { Link } from "react-router-dom";
 //     return null;
 // };
 
-
 const HomePages = () => {
     return (
         <>
@@ -73,9 +72,17 @@ const HomePages = () => {
                 contrast={true}
             />
             <Showcase identifier="showcase" data={showcaseData} />
-            <Testimonials identifier="testimonials" title="What our customers say" contrast={true} />
+            <Testimonials
+                identifier="testimonials"
+                title="What our customers say"
+                contrast={true}
+            />
             <QnA identifier="qna" questions={qnaData} />
-            <Pricing identifier="pricing" cardsData={priceCardsData} contrast={true} />
+            <Pricing
+                identifier="pricing"
+                cardsData={priceCardsData}
+                contrast={true}
+            />
         </>
     );
 };

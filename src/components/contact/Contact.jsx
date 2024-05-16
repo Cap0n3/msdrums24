@@ -11,14 +11,25 @@ const Contact = () => {
             contents={[
                 {
                     children: <Map />,
+                    sx: {
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "flex-start",
+                    },
                 },
                 {
                     children: <ContactForm />,
+                    sx: {
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "flex-start",
+                    },
                 },
             ]}
             identifier="contact"
             contrast={true}
             backgroundColor={theme.palette.background.default}
+            spacing={4}
         />
     );
 };

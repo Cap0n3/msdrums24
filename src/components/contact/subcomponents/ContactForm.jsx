@@ -23,7 +23,7 @@ const ContactForm = () => {
 
     return (
         <Box sx={{ width: "100%", maxWidth: "550px", minWidth: "200px" }}>
-            <Typography component="h1" variant="h5" gutterBottom>
+            <Typography component="h1" variant="h2" gutterBottom>
                 Contact Us
             </Typography>
             <Typography component="p" variant="body2" gutterBottom>

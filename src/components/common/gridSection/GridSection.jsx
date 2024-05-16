@@ -13,6 +13,7 @@ import { useMediaQuery } from "@mui/material";
  * @param {number} props.paddingX - The padding left and right of the section (default is 8)
  * @param {string} props.backgroundColor - The background color of the section
  * @param {number} props.smScreen_cellSpacing - The space between cells for small screens
+ * @param {number} props.spacing - The space between cells for all screens
  * @param {boolean} props.reverse - Reverse the order of the contents
  * @returns {JSX.Element}
  * @constructor
@@ -51,6 +52,7 @@ const GridSection = ({
     paddingX = 8,
     backgroundColor,
     smScreen_cellSpacing,
+    spacing = 0,
     reverse,
 }) => {
     // Check if the screen is medium or larger
@@ -84,7 +86,7 @@ const GridSection = ({
                 overflow: "hidden", // Prevents bottom page gap during excessive resizing (due to FX)
             }}
         >
-            <Grid container spacing={0}>
+            <Grid container spacing={spacing}>
                 {contents &&
                     orderedContents.map((content, index) => (
                         <ResponsiveCell

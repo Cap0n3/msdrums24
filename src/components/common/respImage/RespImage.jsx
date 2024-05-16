@@ -27,7 +27,7 @@ const RespImage = ({ image, alt, percentageWidth = 100 }) => {
     }, [inView]);
 
     return (
-        <Fade in={inView} timeout={1000}>
+        <Fade in={inView} timeout={2000}>
             <Box
                 ref={ref}
                 sx={{

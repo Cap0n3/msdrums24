@@ -79,7 +79,7 @@ const QnaPanel = ({ questions }) => {
     }, [inView]);
 
     return (
-        <Fade in={inView} timeout={1000}>
+        <Fade in={inView} timeout={2000}>
             <Box ref={ref} component={"section"}>
                 <RiseTitle
                     title="Frequently Asked Questions"

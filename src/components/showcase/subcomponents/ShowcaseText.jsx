@@ -20,7 +20,7 @@ const ShowcaseText = ({ title, description }) => {
     }, [inView]);
 
     return (
-        <Fade in={inView} timeout={1000}>
+        <Fade in={inView} timeout={2000}>
             <Box ref={ref} sx={{ width: "100%" }}>
                 <Slide direction="up" in={isVisible} timeout={500}>
                     <Box

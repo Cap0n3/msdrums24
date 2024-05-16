@@ -6,6 +6,7 @@ import website_layout from "../theme/layout";
 import { Box } from "@mui/material";
 import footerData from "../data/home/footer.data.json";
 import ScrollToHash from "../components/common/ScrollToHash";
+import ScrollTop from "../components/common/ScrollToTop";
 
 export default function Root() {
     // Scroll to top on page load and on route change
@@ -17,6 +18,7 @@ export default function Root() {
         <>
             <Nav />
             <ScrollToHash />
+            <ScrollTop />
             <Box
                 component="main"
                 sx={{

@@ -64,7 +64,6 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
                     spacing={6}
                     sx={{
                         display: "flex",
-                        //flexDirection: { xs: "column", lg: "row" },
                         width: "100%",
                         minHeight: 320,
                         justifyContent: "center",

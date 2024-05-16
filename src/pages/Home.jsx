@@ -26,13 +26,13 @@ const HomePages = () => {
                 subTitle="Here are some of the features that you'll love."
                 contrast={true}
             />
-            {/* <Showcase identifier="showcase" data={showcaseData} />
+            <Showcase identifier="showcase" data={showcaseData} />
             <Testimonials
                 identifier="testimonials"
                 title="What our customers say"
                 contrast={true}
             />
-            <QnA identifier="qna" questions={qnaData} /> */}
+            <QnA identifier="qna" questions={qnaData} />
             <Pricing
                 identifier="pricing"
                 cardsData={priceCardsData}

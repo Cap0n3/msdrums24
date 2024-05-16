@@ -14,7 +14,14 @@ const Map = () => {
     };
 
     return (
-        <Box sx={{ width: "100%", height: "100%", maxWidth: "750px", minHeight: "400px" }}>
+        <Box
+            sx={{
+                width: "100%",
+                height: "100%",
+                maxWidth: "750px",
+                minHeight: "400px",
+            }}
+        >
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "" }}
                 defaultCenter={defaultProps.center}

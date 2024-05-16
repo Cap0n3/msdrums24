@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { Stack, Fade } from "@mui/material";
+import { Box, Stack, Fade } from "@mui/material";
 import { useTheme } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import BasicSection from "../common/basicSection/BasicSection";
 import PriceCard from "./subcomponents/PriceCard";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Pricing = ({ identifier, cardsData, contrast }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
+    const isMD = useMediaQuery(theme.breakpoints.down("lg"));
 
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: isMD ? 0.1 : 0.5,
         delay: 200,
     });
+
+    useEffect(() => {
+        console.log("isMD: ", isMD);
+    }, [isMD]);
 
     useEffect(() => {
         if (inView) {
@@ -58,9 +64,12 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
                     spacing={6}
                     sx={{
                         display: "flex",
+                        //flexDirection: { xs: "column", lg: "row" },
                         width: "100%",
+                        minHeight: 320,
                         justifyContent: "center",
                         alignItems: "center",
+                        //border: "1px solid red"
                     }}
                 >
                     {priceCards}

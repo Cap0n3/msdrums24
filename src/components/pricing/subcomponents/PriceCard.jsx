@@ -18,7 +18,6 @@ import {
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useTheme } from "@mui/material";
 
-
 const ListItemComponent = ({ theme, text }) => (
     <ListItem>
         <ListItemIcon>
@@ -46,103 +45,100 @@ const PriceCard = ({
     const theme = useTheme();
 
     return (
-        <Box sx={{
-            width: { xs: "100%", sm: 450 },
-            transform: {
-                md: "none",
-                lg: highlight ? "scale(1.1)" : "scale(1)",
-            }, // Scale up if highlighted
-        }}>
-            <Slide direction="up" in={inView} timeout={transitionTime}>
-                <Card
-                    raised={highlight ? true : false}
-                    sx={{
-                        pb: 4,
-                        //width: { xs: "100%", lg: "33%" },
-                        //maxWidth: 450,
-                        width: "100%",
-                        minWidth: 300,
-                        minHeight: 650,
-                        borderRadius: 4,
-                        backgroundColor: backgroundColor,
-                        border: `1px solid ${theme.palette.border.main}`,
-
+        <Slide direction="up" in={inView} timeout={transitionTime}>
+            <Card
+                raised={highlight ? true : false}
+                sx={{
+                    pb: 4,
+                    //width: { xs: "100%", lg: "33%" },
+                    //maxWidth: 450,
+                    width: { xs: "100%", sm: 450 },
+                    minWidth: 200,
+                    minHeight: 650,
+                    borderRadius: 4,
+                    backgroundColor: backgroundColor,
+                    border: `1px solid ${theme.palette.border.main}`,
+                    transform: {
+                        md: "none",
+                        lg: highlight ? "scale(1.1)" : "scale(1)",
+                    }, // Scale up if highlighted
+                }}
+            >
+                <CardMedia
+                    component="img"
+                    height="190"
+                    image={image}
+                    alt="Some illustration"
+                />
+                <CardHeader
+                    title={title}
+                    titleTypographyProps={{
+                        color: theme.palette.text.secondary,
+                        align: "center",
                     }}
-                >
-                    <CardMedia
-                        component="img"
-                        height="190"
-                        image={image}
-                        alt="Some illustration"
-                    />
-                    <CardHeader
-                        title={title}
-                        titleTypographyProps={{
-                            color: theme.palette.text.secondary,
-                            align: "center",
+                />
+                <CardContent>
+                    <Box
+                        component={"div"}
+                        sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "flex-end",
+                            mb: 4,
                         }}
-                    />
-                    <CardContent>
-                        <Box
-                            component={"div"}
-                            sx={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "flex-end",
-                                mb: 4,
-                            }}
+                    >
+                        <Typography
+                            variant="h5"
+                            component="span"
+                            color={theme.palette.text.primary}
+                            fontWeight={500}
                         >
+                            CHF {price}
                             <Typography
-                                variant="h5"
+                                variant="caption"
                                 component="span"
-                                color={theme.palette.text.primary}
-                                fontWeight={500}
+                                fontWeight={300}
+                                color={theme.palette.text.secondary}
                             >
-                                CHF {price}
-                                <Typography
-                                    variant="caption"
-                                    component="span"
-                                    fontWeight={300}
-                                    color={theme.palette.text.secondary}
-                                >
-                                    {paymentFrequency}
-                                </Typography>
+                                {paymentFrequency}
                             </Typography>
-                        </Box>
-                        <List
-                            component="nav"
-                            aria-label="main mailbox folders"
-                            dense={true}
-                        >
-                            {sellingPoints.map((point) => (
-                                <ListItemComponent
-                                    key={point}
-                                    text={point}
-                                    theme={theme}
-                                />
-                            ))}
-                        </List>
-                    </CardContent>
-                    <CardActions sx={{ display: "flex", justifyContent: "center" }}>
-                        <Button
-                            variant="outlined"
-                            size="large"
-                            sx={{
-                                mt: 4,
-                                color: theme.palette.primary.main,
-                                borderColor: theme.palette.button.main,
-                                "&:hover": {
-                                    color: theme.palette.button.hover,
-                                    borderColor: theme.palette.button.hover,
-                                },
-                            }}
-                        >
-                            {action}
-                        </Button>
-                    </CardActions>
-                </Card>
-            </Slide>
-        </Box>
+                        </Typography>
+                    </Box>
+                    <List
+                        component="nav"
+                        aria-label="main mailbox folders"
+                        dense={true}
+                    >
+                        {sellingPoints.map((point) => (
+                            <ListItemComponent
+                                key={point}
+                                text={point}
+                                theme={theme}
+                            />
+                        ))}
+                    </List>
+                </CardContent>
+                <CardActions
+                    sx={{ display: "flex", justifyContent: "center" }}
+                >
+                    <Button
+                        variant="outlined"
+                        size="large"
+                        sx={{
+                            mt: 4,
+                            color: theme.palette.primary.main,
+                            borderColor: theme.palette.button.main,
+                            "&:hover": {
+                                color: theme.palette.button.hover,
+                                borderColor: theme.palette.button.hover,
+                            },
+                        }}
+                    >
+                        {action}
+                    </Button>
+                </CardActions>
+            </Card>
+        </Slide>
     );
 };
 

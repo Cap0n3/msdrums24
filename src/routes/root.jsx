@@ -9,7 +9,6 @@ import footerData from "../data/footer.data.json";
 import ScrollToHash from "../components/common/ScrollToHash";
 import ScrollTop from "../components/common/ScrollToTop";
 
-
 export default function Root() {
     // Scroll to top on page load and on route change
     // useEffect(() => {

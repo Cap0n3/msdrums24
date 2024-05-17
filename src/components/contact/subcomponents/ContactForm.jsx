@@ -116,7 +116,9 @@ const ContactForm = () => {
                     {isWaitingServerResp ? "Sending..." : "Send"}
                 </Button>
                 {isSendSuccess === true && (
-                    <Alert severity="success" sx={{ mt: 4 }}>Email sent successfully!</Alert>
+                    <Alert severity="success" sx={{ mt: 4 }}>
+                        Email sent successfully!
+                    </Alert>
                 )}
                 {isSendSuccess === false && (
                     <Alert

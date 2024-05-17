@@ -9,6 +9,7 @@ import headerData from "../data/header.data.json";
 import qnaData from "../data/qnA.data.json";
 import showcaseData from "../data/showcase.data.json";
 import priceCardsData from "../data/pricing.data.json";
+import C2aParallax from "../components/c2aParallax/C2aParallax";
 
 const HomePages = () => {
     return (
@@ -27,17 +28,18 @@ const HomePages = () => {
                 contrast={true}
             />
             <Showcase identifier="showcase" data={showcaseData} />
+            <C2aParallax />
             <Testimonials
                 identifier="testimonials"
                 title="What our customers say"
                 contrast={true}
             />
-            <QnA identifier="qna" questions={qnaData} />
             <Pricing
                 identifier="pricing"
                 cardsData={priceCardsData}
                 contrast={true}
             />
+            <QnA identifier="qna" questions={qnaData} />
         </>
     );
 };

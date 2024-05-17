@@ -63,7 +63,6 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
                         minHeight: 320,
                         justifyContent: "center",
                         alignItems: "center",
-                        //border: "1px solid red"
                     }}
                 >
                     {priceCards}

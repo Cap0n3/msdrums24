@@ -4,13 +4,12 @@ import { Container, Stack, Typography } from "@mui/material";
 import IconLink from "./subcomponents/IconLink";
 import data from "../../../data/socials.data.json";
 
-
-const Socials = ({ marginTop=4 }) => {
+const Socials = ({ marginTop = 4 }) => {
     const theme = useTheme();
 
     return (
         <Container
-            maxWidth={300}
+            maxWidth="300px"
             sx={{
                 mt: marginTop,
                 display: "flex",
@@ -24,7 +23,11 @@ const Socials = ({ marginTop=4 }) => {
             </Typography>
             <Stack direction="row" spacing={2}>
                 {data.socials.map((social, index) => (
-                    <IconLink key={index} platform={social.platform} url={social.url} />
+                    <IconLink
+                        key={index}
+                        platform={social.platform}
+                        url={social.url}
+                    />
                 ))}
             </Stack>
         </Container>

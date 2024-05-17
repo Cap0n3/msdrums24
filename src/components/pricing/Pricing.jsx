@@ -48,7 +48,6 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
         );
     });
 
-
     return (
         <BasicSection
             identifier={identifier}

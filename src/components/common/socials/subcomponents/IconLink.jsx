@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import { useTheme } from "@mui/material";
 import { Box } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from '@mui/icons-material/Instagram';
-
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const IconLink = ({ platform, url }) => {
     const theme = useTheme();
@@ -13,19 +12,39 @@ const IconLink = ({ platform, url }) => {
     const socials = [
         {
             name: "Facebook",
-            icon: <FacebookIcon fontSize="large" htmlColor={theme.palette.secondary.main} />,
+            icon: (
+                <FacebookIcon
+                    fontSize="large"
+                    htmlColor={theme.palette.secondary.main}
+                />
+            ),
         },
         {
             name: "Twitter",
-            icon: <XIcon fontSize="large" htmlColor={theme.palette.secondary.main} />,
+            icon: (
+                <XIcon
+                    fontSize="large"
+                    htmlColor={theme.palette.secondary.main}
+                />
+            ),
         },
         {
             name: "LinkedIn",
-            icon: <LinkedInIcon fontSize="large" htmlColor={theme.palette.secondary.main} />,
+            icon: (
+                <LinkedInIcon
+                    fontSize="large"
+                    htmlColor={theme.palette.secondary.main}
+                />
+            ),
         },
         {
             name: "Instagram",
-            icon: <InstagramIcon fontSize="large" htmlColor={theme.palette.secondary.main} />,
+            icon: (
+                <InstagramIcon
+                    fontSize="large"
+                    htmlColor={theme.palette.secondary.main}
+                />
+            ),
         },
     ];
 
@@ -42,16 +61,17 @@ const IconLink = ({ platform, url }) => {
             default:
                 return null;
         }
-    }
+    };
 
     return (
-
-        <Box sx={{
-            "&:hover": {
-                transform: "scale(1.1)",
-                transition: "transform 0.5s",
-            },
-        }}>
+        <Box
+            sx={{
+                "&:hover": {
+                    transform: "scale(1.1)",
+                    transition: "transform 0.5s",
+                },
+            }}
+        >
             <a href={url} target="_blank" rel="noreferrer">
                 {findIcon(platform)}
             </a>

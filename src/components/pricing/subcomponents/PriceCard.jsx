@@ -60,7 +60,7 @@ const PriceCard = ({
                         transform: {
                             md: "none",
                             lg: highlight ? "scale(1.1)" : "scale(1)",
-                        } // Scale up if highlighted
+                        }, // Scale up if highlighted
                     }}
                 >
                     <CardMedia

@@ -11,7 +11,7 @@ import { margin } from "polished";
  * @param {String} subTitle - The subtitle of the component (optional)
  * @param {Number} marginBottom - The margin bottom of the component (optional)
  */
-const RiseTitle = ({ title, subTitle, marginBottom=0 }) => {
+const RiseTitle = ({ title, subTitle, marginBottom = 0 }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
 

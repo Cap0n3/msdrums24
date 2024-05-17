@@ -11,6 +11,7 @@
         "format": "prettier --tab-width 4 --write ."
     },
     "dependencies": {
+        "@emailjs/browser": "^4.3.3",
         "@emotion/react": "^11.11.4",
         "@emotion/styled": "^11.11.0",
         "@mui/icons-material": "^5.15.12",

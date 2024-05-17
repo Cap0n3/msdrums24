@@ -77,7 +77,7 @@ function Nav() {
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    {/* Logo */}
+                    {/* === Logo medium screen and up === */}
                     <Box
                         sx={{
                             flexGrow: 1,
@@ -86,6 +86,7 @@ function Nav() {
                     >
                         <NavLogo />
                     </Box>
+                    {/* === Menu icon small screen === */}
                     <Box
                         sx={{
                             flexGrow: 1,
@@ -104,22 +105,28 @@ function Nav() {
                                 sx={{ color: theme.palette.text.primary }}
                             />
                         </IconButton>
+                        {/* === Nav links for small screen === */}
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
+                                vertical: 'bottom',
+                                horizontal: 'left',
                             }}
                             keepMounted
                             transformOrigin={{
-                                vertical: "top",
-                                horizontal: "left",
+                                vertical: 'top',
+                                horizontal: 'left',
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: "block", md: "none" },
+                                display: { xs: 'block', md: 'none' },
+                                '& .MuiPaper-root': {
+                                    borderRadius: 2,
+                                    boxShadow: theme.shadows[5],
+                                    minWidth: 200,
+                                },
                             }}
                         >
                             {appbar_pages.map((page) => (
@@ -128,6 +135,17 @@ function Nav() {
                                     component={Link}
                                     to={page.link}
                                     onClick={handleCloseNavMenu}
+                                    sx={{
+                                        '&:hover': {
+                                            backgroundColor: theme.palette.action.hover,
+                                        },
+                                        '& .MuiTypography-root': {
+                                            transition: 'color 0.3s ease',
+                                            '&:hover': {
+                                                color: theme.palette.primary.main,
+                                            },
+                                        },
+                                    }}
                                 >
                                     <Typography
                                         component="span"
@@ -135,6 +153,7 @@ function Nav() {
                                         textAlign="center"
                                         sx={{
                                             color: theme.palette.text.primary,
+                                            padding: theme.spacing(1, 2),
                                         }}
                                     >
                                         {page.name}
@@ -143,7 +162,7 @@ function Nav() {
                             ))}
                         </Menu>
                     </Box>
-                    {/* Logo small screen */}
+                    {/* === Logo small screen === */}
                     <Box
                         sx={{
                             flexGrow: 1,
@@ -152,6 +171,7 @@ function Nav() {
                     >
                         {!isTransparent && <NavLogo />}
                     </Box>
+                    {/* === Nav links for medium screen and up === */}
                     <Box
                         sx={{
                             flexGrow: 1,

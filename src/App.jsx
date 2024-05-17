@@ -8,7 +8,7 @@ import { getTheme } from "./theme/theme_utils";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
-    const [mode, setMode] = useState("dark"); // Can be "light" or "dark"
+    const [mode, setMode] = useState("light"); // Can be "light" or "dark"
 
     // === ROUTER === //
     const router = createBrowserRouter([website_routes]);

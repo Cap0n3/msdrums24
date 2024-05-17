@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { TextField, Button, Box, Typography } from "@mui/material";
 import RiseTitle from "../../common/riseTitle/RiseTitle";
+import Socials from "../../common/socials/Socials";
 
 const ContactForm = () => {
     const {
@@ -94,6 +95,7 @@ const ContactForm = () => {
                     Submit
                 </Button>
             </form>
+            <Socials />
         </Box>
     );
 };

@@ -6,7 +6,7 @@ import { Box, IconButton, Typography, Tooltip, Fade } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import TestimonialBox from "./subcomponents/TestimonialBox";
 import RiseTitle from "../common/riseTitle/RiseTitle";
-import { TestimonialsData } from "../../data/home/testimonials.data";
+import { TestimonialsData } from "../../data/testimonials.data";
 import { darken } from "polished";
 
 const Testimonials = ({

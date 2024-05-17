@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import website_layout from "../theme/layout";
 import { Box } from "@mui/material";
-import footerData from "../data/home/footer.data.json";
+import footerData from "../data/footer.data.json";
 import ScrollToHash from "../components/common/ScrollToHash";
 import ScrollTop from "../components/common/ScrollToTop";
 

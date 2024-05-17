@@ -1,0 +1,16 @@
+{
+    "socials": [
+        {
+            "platform": "Twitter",
+            "url": "https://twitter.com/example"
+        },
+        {
+            "platform": "Facebook",
+            "url": "https://facebook.com/example"
+        },
+        {
+            "platform": "Instagram",
+            "url": "https://instagram.com/example"
+        }
+    ]
+}

@@ -18,10 +18,6 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
     });
 
     useEffect(() => {
-        console.log("isMD: ", isMD);
-    }, [isMD]);
-
-    useEffect(() => {
         if (inView) {
             setIsVisible(true);
         }

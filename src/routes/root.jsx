@@ -1,6 +1,7 @@
 import Nav from "../components/common/Nav/Nav";
 import Footer from "../components/common/Footer/Footer";
 import { Outlet } from "react-router-dom";
+import useScrollToTop from "../hooks/useScrollToTop";
 import { useEffect } from "react";
 import website_layout from "../theme/layout";
 import { Box } from "@mui/material";
@@ -8,11 +9,15 @@ import footerData from "../data/footer.data.json";
 import ScrollToHash from "../components/common/ScrollToHash";
 import ScrollTop from "../components/common/ScrollToTop";
 
+
 export default function Root() {
     // Scroll to top on page load and on route change
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
+
+    // === SCROLL TO TOP === //
+    useScrollToTop();
 
     return (
         <>

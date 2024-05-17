@@ -16,6 +16,11 @@ const useScrollToTop = () => {
             window.history.scrollRestoration = "manual";
         }
 
+        // If locatiion has a hash, don't scroll to top
+        if (location.hash) {
+            return;
+        }
+
         window.scrollTo(0, 0);
     }, [location.pathname]);
 };

@@ -18,8 +18,8 @@ const Map = () => {
             sx={{
                 width: "100%",
                 height: "100%",
-                maxWidth: "750px",
-                minHeight: "400px",
+                //maxWidth: "750px",
+                minHeight: "800px",
             }}
         >
             <GoogleMapReact

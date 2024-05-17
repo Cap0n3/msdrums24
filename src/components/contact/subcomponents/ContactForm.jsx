@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { TextField, Button, Box, Typography } from "@mui/material";
+import RiseTitle from "../../common/riseTitle/RiseTitle";
 
 const ContactForm = () => {
     const {
@@ -22,14 +23,12 @@ const ContactForm = () => {
     };
 
     return (
-        <Box sx={{ width: "100%", maxWidth: "550px", minWidth: "200px" }}>
-            <Typography component="h1" variant="h2" gutterBottom>
-                Contact Us
-            </Typography>
-            <Typography component="p" variant="body2" gutterBottom>
+        <Box sx={{ width: "100%", maxWidth: "450px", minWidth: "200px", px: { xs: 4, md: 0}}}>
+            <RiseTitle title="Want to contact us ?" />
+            {/* <Typography component="p" variant="body2" gutterBottom>
                 We would love to hear from you. Please fill out the form below
                 and we will get back to you as soon as possible.
-            </Typography>
+            </Typography> */}
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <TextField
                     variant="outlined"
@@ -40,7 +39,7 @@ const ContactForm = () => {
                     label="Name"
                     name="name"
                     autoComplete="name"
-                    autoFocus
+                    //autoFocus
                     {...register("name", {
                         required: "Name is required",
                         minLength: {

@@ -117,7 +117,7 @@ const Testimonials = ({
                     : theme.palette.background.default,
             }}
         >
-            <RiseTitle title={title} />
+            <RiseTitle title={title} marginBottom={4} />
             <Fade in={checked} timeout={200}>
                 <Box
                     ref={containerRef}

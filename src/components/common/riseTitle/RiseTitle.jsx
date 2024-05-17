@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "@mui/material";
 import { Box, Typography, Container, Slide, Fade } from "@mui/material";
 import { useInView } from "react-intersection-observer";
+import { margin } from "polished";
 
 /**
  * RiseTitle component is a reusable component that displays a section title and subtitle with a fade and slide animation
  *
  * @param {String} title - The title of the component
  * @param {String} subTitle - The subtitle of the component (optional)
+ * @param {Number} marginBottom - The margin bottom of the component (optional)
  */
-const RiseTitle = ({ title, subTitle }) => {
+const RiseTitle = ({ title, subTitle, marginBottom=0 }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -32,7 +34,7 @@ const RiseTitle = ({ title, subTitle }) => {
                 sx={{
                     display: "flex",
                     justifyContent: "center",
-                    minHeight: 120,
+                    mb: marginBottom,
                 }}
             >
                 <Slide direction="up" in={isVisible} timeout={500}>

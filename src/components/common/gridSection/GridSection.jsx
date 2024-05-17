@@ -1,16 +1,21 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
+import { darken } from "polished";
 
 /**
  * Website standard section that contains a grid of cells. Only two cells are supported.
  *
  * @param {Object} props
+ * @param {string} props.identifier - The id of the section
  * @param {Array} props.contents - An array of objects that contain the content of each cell
+ * @param {boolean} props.contrast - The contrast of the section (default is false)
  * @param {number} props.paddingTop - The padding top of the section (default is 8)
  * @param {number} props.paddingBottom - The padding bottom of the section (default is 8)
  * @param {number} props.paddingX - The padding left and right of the section (default is 8)
+ * @param {number} props.minHeight - The minimum height of the section (default is 500)
  * @param {string} props.backgroundColor - The background color of the section
  * @param {number} props.smScreen_cellSpacing - The space between cells for small screens
  * @param {number} props.spacing - The space between cells for all screens
@@ -47,16 +52,18 @@ import { useMediaQuery } from "@mui/material";
 const GridSection = ({
     identifier = "",
     contents,
+    contrast = false,
     paddingTop = 8,
     paddingBottom = 8,
     paddingX = 8,
-    backgroundColor,
+    minHeight = 500,
     smScreen_cellSpacing,
     spacing = 0,
     reverse,
 }) => {
     // Check if the screen is medium or larger
     const isMdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
+    const theme = useTheme();
 
     const ResponsiveCell = ({ children, xs, sm, md, sx }) => {
         return (
@@ -79,10 +86,10 @@ const GridSection = ({
                 pt: paddingTop,
                 pb: paddingBottom,
                 px: paddingX,
-                backgroundColor: backgroundColor
-                    ? backgroundColor
-                    : "transparent",
-                minHeight: "500px",
+                backgroundColor: contrast
+                    ? darken(0.008, theme.palette.background.default)
+                    : theme.palette.background.default,
+                minHeight: minHeight,
                 overflow: "hidden", // Prevents bottom page gap during excessive resizing (due to FX)
             }}
         >

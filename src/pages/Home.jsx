@@ -14,8 +14,6 @@ import C2aParallax from "../components/c2aParallax/C2aParallax";
 const HomePages = () => {
     return (
         <>
-            {/* <Navigation />
-            <ScrollToHash /> */}
             <HeroHeader
                 title={headerData.header_title}
                 description={headerData.header_description}

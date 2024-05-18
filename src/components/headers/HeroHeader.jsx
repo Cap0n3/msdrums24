@@ -8,7 +8,14 @@ import banner from "../../assets/img/template_banner.png";
 import mobileBanner from "../../assets/img/template_banner_mobile.png";
 import TitleBox from "./subcomponents/TitleBox";
 
-
+/**
+ * Hero Header component, rezises the header based on the device type (Mobile, Tablet, Desktop). 
+ * 
+ * Note : Implemented a custom hook to detect the device type (Mobile, Tablet, Desktop) and avoid weird resizing issues due to browser navbar.
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
 const HeroHeader = ({ title, description, call2Action }) => {
     const theme = useTheme();
     const [loaded, setLoaded] = useState(false);
@@ -24,6 +31,8 @@ const HeroHeader = ({ title, description, call2Action }) => {
             setMobileViewportHeight(windowSize.innerHeight);
         }
 
+        console.log(mobileViewportHeight)
+
         return () => {
             setLoaded(false);
         };
@@ -38,12 +47,9 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     flexDirection: "column",
                     alignItems: "start",
                     justifyContent: { xs: "flex-end", md: "center" },
-                    height: {
-                        xs: `${mobileViewportHeight}px`,
-                        md: mobileViewportHeight // For larger tablets, use mobile viewport height (md breakpoint)
+                    height: mobileViewportHeight // For larger tablets, use mobile viewport height (md breakpoint)
                             ? `${mobileViewportHeight}px` 
                             : `${windowSize.innerHeight - website_layout.navHeight}px`, // Desktop
-                    },
                     minHeight: "500px",
                     backgroundColor: theme.palette.background.default,
                     backgroundSize: "cover",

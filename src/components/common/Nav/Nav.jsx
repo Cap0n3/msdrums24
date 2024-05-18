@@ -110,19 +110,19 @@ function Nav() {
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
+                                vertical: "bottom",
+                                horizontal: "left",
                             }}
                             keepMounted
                             transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
+                                vertical: "top",
+                                horizontal: "left",
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' },
-                                '& .MuiPaper-root': {
+                                display: { xs: "block", md: "none" },
+                                "& .MuiPaper-root": {
                                     borderRadius: 2,
                                     boxShadow: theme.shadows[5],
                                     minWidth: 200,
@@ -136,13 +136,15 @@ function Nav() {
                                     to={page.link}
                                     onClick={handleCloseNavMenu}
                                     sx={{
-                                        '&:hover': {
-                                            backgroundColor: theme.palette.action.hover,
+                                        "&:hover": {
+                                            backgroundColor:
+                                                theme.palette.action.hover,
                                         },
-                                        '& .MuiTypography-root': {
-                                            transition: 'color 0.3s ease',
-                                            '&:hover': {
-                                                color: theme.palette.primary.main,
+                                        "& .MuiTypography-root": {
+                                            transition: "color 0.3s ease",
+                                            "&:hover": {
+                                                color: theme.palette.primary
+                                                    .main,
                                             },
                                         },
                                     }}

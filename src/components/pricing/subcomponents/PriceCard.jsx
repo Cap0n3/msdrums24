@@ -51,7 +51,7 @@ const PriceCard = ({
                     raised={highlight ? true : false}
                     sx={{
                         pb: 4,
-                        width: { xs: "100%", sm: 350, xl: 420},
+                        width: { xs: "100%", sm: 350, xl: 420 },
                         minWidth: 300,
                         minHeight: 650,
                         borderRadius: 4,

@@ -34,16 +34,6 @@ const HeroHeader = ({ title, description, call2Action }) => {
         }
     };
 
-    const handleResize = () => {
-        const { height, width } = windowSize;
-        console.log("Desktop resizing");
-        if(device === "Desktop") {
-            console.log("Height: ", height);
-            console.log("Width: ", width);
-            setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
-        }
-    };
-
     /**
      * Set the viewport height on component load and trigger loading animation.
      */
@@ -58,7 +48,8 @@ const HeroHeader = ({ title, description, call2Action }) => {
      * In case user is resizing the window on desktop, update the viewport height.
      */
     useEffect(() => {
-        handleResize();
+        //handleResize();
+        updateViewportHeight();
     }, [windowSize.width]);
 
 

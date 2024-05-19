@@ -21,7 +21,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
     const theme = useTheme();
     const [loaded, setLoaded] = useState(false);
     const windowSize = useViewportSize();
-    const [viewportHeight, setViewportHeight] = useState(null);
+    const [viewportHeight, setViewportHeight] = useState("100vh");
     const device = useDeviceType();
 
     const updateViewportHeight = () => {
@@ -34,28 +34,33 @@ const HeroHeader = ({ title, description, call2Action }) => {
         }
     };
 
+    /**
+     * Set the viewport height on component load and trigger loading animation.
+     */
     useEffect(() => {
         setLoaded(true);
-        // Update the viewport height on load
         updateViewportHeight();
 
         return () => setLoaded(false);
     }, []);
 
+
+    const handleResize = () => {
+        const { height, width } = windowSize;
+        console.log("Desktop resizing");
+        if(device === "Desktop") {
+            console.log("Height: ", height);
+            console.log("Width: ", width);
+            setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
+        }
+    };
+
     /**
      * In case user is resizing the window on desktop, update the viewport height.
      */
     useEffect(() => {
-        const handleResize = () => {
-            const { height, width } = windowSize;
-            if(device === "Desktop") {
-                setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
-            }
-        };
-        window.addEventListener("resize", handleResize);
-
-        return () => window.removeEventListener("resize", handleResize);
-    }, [windowSize]);
+        handleResize();
+    }, [windowSize.width]);
 
 
     return (
@@ -67,7 +72,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     flexDirection: "column",
                     alignItems: "start",
                     justifyContent: { xs: "flex-end", md: "center" },
-                    height: viewportHeight ? viewportHeight : "100vh",
+                    height: viewportHeight,
                     minHeight: "500px",
                     backgroundColor: theme.palette.background.default,
                     backgroundSize: "cover",

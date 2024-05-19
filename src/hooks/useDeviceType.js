@@ -10,16 +10,14 @@ const getDeviceType = () => {
         userAgent,
     );
 
-    console.log("userAgent:", userAgent);
-
     if (isMobile) {
-        console.log("Mobile");
+        //console.log("Mobile");
         return "Mobile";
     } else if (isTablet) {
-        console.log("Tablet");
+        //console.log("Tablet");
         return "Tablet";
     } else {
-        console.log("Desktop");
+        //console.log("Desktop");
         return "Desktop";
     }
 };

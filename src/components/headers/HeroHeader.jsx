@@ -7,6 +7,7 @@ import website_layout from "../../theme/layout";
 import banner from "../../assets/img/template_banner.png";
 import mobileBanner from "../../assets/img/template_banner_mobile.png";
 import TitleBox from "./subcomponents/TitleBox";
+import useViewportSize from "../../hooks/useViewportSize";
 
 /**
  * Hero Header component, rezises the header based on the device type (Mobile, Tablet, Desktop). 
@@ -19,24 +20,43 @@ import TitleBox from "./subcomponents/TitleBox";
 const HeroHeader = ({ title, description, call2Action }) => {
     const theme = useTheme();
     const [loaded, setLoaded] = useState(false);
-    const windowSize = useWindowSize();
-    const [mobileViewportHeight, setMobileViewportHeight] = useState(null);
+    const windowSize = useViewportSize();
+    const [viewportHeight, setViewportHeight] = useState(null);
     const device = useDeviceType();
+
+    const updateViewportHeight = () => {
+        const { height, width } = windowSize;
+
+        if (device === "Mobile" || device === "Tablet") {
+            setViewportHeight(height);
+        } else if (device === "Desktop") {
+            setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
+        }
+    };
 
     useEffect(() => {
         setLoaded(true);
-        console.log(device);
-        if (device === "Mobile" || device === "Tablet") {
-            // Get mobile viewport height (once on load, to avoid resizing issues due to browser navbar)
-            setMobileViewportHeight(windowSize.innerHeight);
-        }
+        // Update the viewport height on load
+        updateViewportHeight();
 
-        console.log(mobileViewportHeight)
-
-        return () => {
-            setLoaded(false);
-        };
+        return () => setLoaded(false);
     }, []);
+
+    /**
+     * In case user is resizing the window on desktop, update the viewport height.
+     */
+    useEffect(() => {
+        const handleResize = () => {
+            const { height, width } = windowSize;
+            if(device === "Desktop") {
+                setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
+            }
+        };
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, [windowSize]);
+
 
     return (
         <Fade in={loaded} timeout={3000}>
@@ -47,15 +67,14 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     flexDirection: "column",
                     alignItems: "start",
                     justifyContent: { xs: "flex-end", md: "center" },
-                    height: mobileViewportHeight // For larger tablets, use mobile viewport height (md breakpoint)
-                            ? `${mobileViewportHeight}px` 
-                            : `${windowSize.innerHeight - website_layout.navHeight}px`, // Desktop
+                    height: viewportHeight ? viewportHeight : "100vh",
                     minHeight: "500px",
                     backgroundColor: theme.palette.background.default,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundImage: { xs: "none", md: `url(${banner})` },
                     overflow: "hidden",
+                    border: "1px solid red",
                 }}
             >
                 <Box

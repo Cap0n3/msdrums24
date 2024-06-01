@@ -59,7 +59,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 // === QnA Panel component === //
 // =========================== //
 
-const QnaPanel = ({ questions }) => {
+const QnaPanel = ({ title, subtitle, questions }) => {
     const theme = useTheme();
     const [expanded, setExpanded] = useState("panel1");
     const [isVisible, setIsVisible] = useState(false);
@@ -82,8 +82,8 @@ const QnaPanel = ({ questions }) => {
         <Fade in={inView} timeout={2000}>
             <Box ref={ref} component={"section"}>
                 <RiseTitle
-                    title="Frequently Asked Questions"
-                    subTitle="Here are some of the most common questions we get asked"
+                    title={title}
+                    subTitle={subtitle}
                 />
                 <Slide in={isVisible} direction="up" timeout={1000}>
                     <Box

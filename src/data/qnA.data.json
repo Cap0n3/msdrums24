@@ -1,14 +1,30 @@
-[
-    {
-        "question": "How do I get started?",
-        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing"
-    },
-    {
-        "question": "What is the best way to contact support?",
-        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing"
-    },
-    {
-        "question": "Can I cancel my subscription?",
-        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing"
-    }
-]
+{
+    "en": [
+        {
+            "question": "How do I get started?",
+            "answer": "You can get started simply by creating an account, we will take care of the rest for you!"
+        },
+        {
+            "question": "What is the best way to contact support?",
+            "answer": "Easy peasy, you can contact us through the contact form, we will get back to you as soon as possible! We also have a chatbot for your support needs."
+        },
+        {
+            "question": "Can I cancel my subscription?",
+            "answer": "Of course, you can cancel your subscription anytime. Go to your profile and click on the 'unsubscribe' button."
+        }
+    ],
+    "fr": [
+        {
+            "question": "Comment puis-je commencer?",
+            "answer": "Vous pouvez commencer en creant un compte, nous nous occuperons du reste pour vous !"
+        },
+        {
+            "question": "Quelle est la meilleure façon de contacter le support?",
+            "answer": "C'est très facile, vous pouvez contacter le support en remplissant le formulaire de contact. Nous vous recontacterons dans les plus bref delais ! Nous avons aussi un chatbot pour répondre à vos questions."
+        },
+        {
+            "question": "Puis-je annuler mon abonnement?",
+            "answer": "Oui bien-sûr ! Vous pouvez annuler votre abonnement n'importe quand. Allez dans votre profil et cliquez sur le bouton 'Annuler l'abonnement' !"
+        }
+    ]
+}

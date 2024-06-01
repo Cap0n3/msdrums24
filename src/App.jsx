@@ -6,6 +6,7 @@ import { CssBaseline } from "@mui/material";
 import { website_routes } from "./routes/routes";
 import { getTheme } from "./theme/theme_utils";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { LanguageProvider } from "./context/LangContext";
 
 function App() {
     const [mode, setMode] = useState("light"); // Can be "light" or "dark"
@@ -21,7 +22,9 @@ function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline /> {/* Add this line */}
                 <ParallaxProvider>
-                    <RouterProvider router={router} />
+                    <LanguageProvider>
+                        <RouterProvider router={router} />
+                    </LanguageProvider>
                 </ParallaxProvider>
             </ThemeProvider>
         </>

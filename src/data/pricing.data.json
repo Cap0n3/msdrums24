@@ -1,56 +1,114 @@
-[
-    {
-        "PriceCardBimonthly": {
-            "image": "https://doodleipsum.com/700/hand-drawn?i=26f85ea1f7d110048f47acadd7fc24f1",
-            "title": "Bimonthly",
-            "price": 160,
-            "paymentFrequency": "/month",
-            "sellingPoints": [
-                "Fast progress",
-                "2 lessons per month",
-                "Great for busy people",
-                "Best value",
-                "Free trial lesson",
-                "Free lesson materials"
-            ],
-            "action": "Get started",
-            "highlight": false
+{
+    "en": [
+        {
+            "PriceCardBimonthly": {
+                "image": "https://doodleipsum.com/700/hand-drawn?i=26f85ea1f7d110048f47acadd7fc24f1",
+                "title": "Bimonthly",
+                "price": 160,
+                "paymentFrequency": "/month",
+                "sellingPoints": [
+                    "Fast progress",
+                    "2 lessons per month",
+                    "Great for busy people",
+                    "Best value",
+                    "Free trial lesson",
+                    "Free lesson materials"
+                ],
+                "action": "Get started",
+                "highlight": false
+            }
+        },
+        {
+            "PriceCardWeekly": {
+                "image": "https://doodleipsum.com/700/hand-drawn?i=3565f8ff86cd4081f5176bfcc8704793",
+                "title": "Weekly",
+                "price": 320,
+                "paymentFrequency": "/month",
+                "sellingPoints": [
+                    "Regular progress",
+                    "4 lessons per month",
+                    "Great for serious learners",
+                    "Free trial lesson",
+                    "Free lesson materials",
+                    "Free online support"
+                ],
+                "action": "Get started",
+                "highlight": true
+            }
+        },
+        {
+            "PriceCardSingle": {
+                "image": "https://doodleipsum.com/700/hand-drawn?i=a33f4f3788b9b0620b5cb339296262c6",
+                "title": "À la carte",
+                "price": 90,
+                "paymentFrequency": "/lesson",
+                "sellingPoints": [
+                    "Try it out",
+                    "1 lesson",
+                    "Great for busy people",
+                    "When you need it",
+                    "Free lesson materials",
+                    "Free online support"
+                ],
+                "action": "Get started",
+                "highlight": false
+            }
         }
-    },
-    {
-        "PriceCardWeekly": {
-            "image": "https://doodleipsum.com/700/hand-drawn?i=3565f8ff86cd4081f5176bfcc8704793",
-            "title": "Weekly",
-            "price": 320,
-            "paymentFrequency": "/month",
-            "sellingPoints": [
-                "Regular progress",
-                "4 lessons per month",
-                "Great for serious learners",
-                "Free trial lesson",
-                "Free lesson materials",
-                "Free online support"
-            ],
-            "action": "Get started",
-            "highlight": true
+    ],
+    "fr": [
+        {
+            "PriceCardBimonthly": {
+                "image": "https://doodleipsum.com/700/hand-drawn?i=26f85ea1f7d110048f47acadd7fc24f1",
+                "title": "Bimensuel",
+                "price": 160,
+                "paymentFrequency": "/mois",
+                "sellingPoints": [
+                    "Progrès rapide",
+                    "2 leçons par mois",
+                    "Bien pour les personnes occupées",
+                    "Bon rapport qualité/progrès",
+                    "Leçon d'essai gratuite",
+                    "Matériel de leçon gratuit"
+                ],
+                "action": "Commencer",
+                "highlight": false
+            }
+        },
+        {
+            "PriceCardWeekly": {
+                "image": "https://doodleipsum.com/700/hand-drawn?i=3565f8ff86cd4081f5176bfcc8704793",
+                "title": "Hebdomadaire",
+                "price": 320,
+                "paymentFrequency": "/mois",
+                "sellingPoints": [
+                    "Progrès régulier",
+                    "4 leçons par mois",
+                    "Idéal pour les personne motivées",
+                    "Leçon d'essai gratuite",
+                    "Matériel de leçon gratuit",
+                    "Support en ligne gratuit"
+                ],
+                "action": "Commencer",
+                "highlight": true
+            }
+        },
+        {
+            "PriceCardSingle": {
+                "image": "https://doodleipsum.com/700/hand-drawn?i=a33f4f3788b9b0620b5cb339296262c6",
+                "title": "À la carte",
+                "price": 90,
+                "paymentFrequency": "/leçon",
+                "sellingPoints": [
+                    "Flexible",
+                    "1 leçon sans engagement",
+                    "Idéal pour les personnes occupées",
+                    "Quand vous en avez besoin",
+                    "Matériel de leçon gratuit",
+                    "Support en ligne gratuit"
+                ],
+                "action": "S'inscrire",
+                "highlight": false
+            }
         }
-    },
-    {
-        "PriceCardSingle": {
-            "image": "https://doodleipsum.com/700/hand-drawn?i=a33f4f3788b9b0620b5cb339296262c6",
-            "title": "À la carte",
-            "price": 90,
-            "paymentFrequency": "/lesson",
-            "sellingPoints": [
-                "Try it out",
-                "1 lesson",
-                "Great for busy people",
-                "When you need it",
-                "Free lesson materials",
-                "Free online support"
-            ],
-            "action": "Get started",
-            "highlight": false
-        }
-    }
-]
+    ]
+}

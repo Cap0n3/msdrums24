@@ -1,6 +1,14 @@
 {
-    "footer_description": "Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short.",
-    "newsletter_description": "Sign up our newsletter to get news, information update or insight about our product.",
-    "newsletter_placeholder": "Enter your email address",
-    "newsletter_button": "Subscribe"
+    "en": {
+        "footer_description": "Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short.",
+        "newsletter_description": "Sign up for our newsletter to get news, information updates, or insights about our product.",
+        "newsletter_placeholder": "Enter your email address",
+        "newsletter_button": "Subscribe"
+    },
+    "fr": {
+        "footer_description": "Quelque chose de court et de direct à propos de la collection ci-dessous - son contenu, son créateur, etc. Faites-le court et doux, mais pas trop court.",
+        "newsletter_description": "Inscrivez-vous à notre newsletter pour recevoir des nouvelles, des mises à jour ou des informations sur notre produit.",
+        "newsletter_placeholder": "Entrez votre adresse e-mail",
+        "newsletter_button": "S'abonner"
+    }
 }

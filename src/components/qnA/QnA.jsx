@@ -5,7 +5,7 @@ import { darken } from "polished";
 import GridSection from "../common/gridSection/GridSection";
 import QnaPanel from "./subcomponents/QnaPanel";
 
-const QnA = ({ identifier, questions, contrast = false }) => {
+const QnA = ({ identifier, title, subtitle, questions, contrast = false }) => {
     const theme = useTheme();
 
     return (
@@ -27,7 +27,7 @@ const QnA = ({ identifier, questions, contrast = false }) => {
                         },
                     },
                     {
-                        children: <QnaPanel questions={questions} />,
+                        children: <QnaPanel title={title} subtitle={subtitle} questions={questions} />,
                         sx: {
                             display: "flex",
                             justifyContent: "center",

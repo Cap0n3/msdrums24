@@ -6,12 +6,12 @@ import { Box, IconButton, Typography, Tooltip, Fade } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import TestimonialBox from "./subcomponents/TestimonialBox";
 import RiseTitle from "../common/riseTitle/RiseTitle";
-import { TestimonialsData } from "../../data/testimonials.data";
 import { darken } from "polished";
 
 const Testimonials = ({
     identifier,
     title,
+    testimonials,
     transitionTime = 500,
     timerInterval = 12000,
     nbOfReviews = 3,
@@ -44,8 +44,8 @@ const Testimonials = ({
 
     useEffect(() => {
         const chunks = [];
-        for (let i = 0; i < TestimonialsData.length; i += nbOfCards) {
-            chunks.push(TestimonialsData.slice(i, i + nbOfCards));
+        for (let i = 0; i < testimonials.length; i += nbOfCards) {
+            chunks.push(testimonials.slice(i, i + nbOfCards));
         }
         setReviewSlides(chunks);
         setCurrentSlideIndex(0); // Reset the current slide index (avoid crash on excessive resizing)

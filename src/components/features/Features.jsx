@@ -4,9 +4,9 @@ import { darken } from "polished";
 import { Box } from "@mui/material";
 import RiseTitle from "../common/riseTitle/RiseTitle";
 import FeatureBoxes from "./subcomponents/FeatureBoxes";
-import { features } from "../../data/features.data";
 
-const Features = ({ identifier, title, subTitle, contrast = false }) => {
+
+const Features = ({ identifier, title, subTitle, features, contrast = false }) => {
     const theme = useTheme();
 
     return (

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import { Box, Fade } from "@mui/material";
-import useWindowSize from "../../hooks/useWindowSize";
 import useDeviceType from "../../hooks/useDeviceType";
 import website_layout from "../../theme/layout";
 import banner from "../../assets/img/template_banner.png";
 import mobileBanner from "../../assets/img/template_banner_mobile.png";
 import TitleBox from "./subcomponents/TitleBox";
 import useViewportSize from "../../hooks/useViewportSize";
+
 
 /**
  * Hero Header component, rezises the header based on the device type (Mobile, Tablet, Desktop). 
@@ -23,6 +23,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
     const windowSize = useViewportSize();
     const [viewportHeight, setViewportHeight] = useState("100vh");
     const device = useDeviceType();
+
 
     const updateViewportHeight = () => {
         const { height, width } = windowSize;

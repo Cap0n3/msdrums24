@@ -14,6 +14,8 @@ import MenuItem from "@mui/material/MenuItem";
 import NavLogo from "../NavLogo";
 import { Link } from "react-router-dom";
 import website_layout from "../../../theme/layout";
+import LangSwitch from "../switches/LangSwitch";
+
 
 function Nav({ page_links }) {
     const theme = useTheme();
@@ -204,6 +206,7 @@ function Nav({ page_links }) {
                                 {page.name}
                             </Button>
                         ))}
+                        <LangSwitch />
                     </Box>
                 </Toolbar>
             </Container>

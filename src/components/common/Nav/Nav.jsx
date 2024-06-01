@@ -12,11 +12,10 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import NavLogo from "../NavLogo";
-import { appbar_pages } from "../../../routes/menu-urls";
 import { Link } from "react-router-dom";
 import website_layout from "../../../theme/layout";
 
-function Nav() {
+function Nav({ page_links }) {
     const theme = useTheme();
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [loaded, setLoaded] = useState(false);
@@ -129,7 +128,7 @@ function Nav() {
                                 },
                             }}
                         >
-                            {appbar_pages.map((page) => (
+                            {page_links.map((page) => (
                                 <MenuItem
                                     key={page.id}
                                     component={Link}
@@ -182,7 +181,7 @@ function Nav() {
                             gap: 2,
                         }}
                     >
-                        {appbar_pages.map((page) => (
+                        {page_links.map((page) => (
                             <Button
                                 key={page.id}
                                 component={Link}

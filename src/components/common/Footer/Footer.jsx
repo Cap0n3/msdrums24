@@ -4,10 +4,6 @@ import { Typography, TextField, Button, Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import Stack from "@mui/material/Stack";
 import NavLink from "./NavLink";
-import {
-    footer_pages_col1,
-    footer_pages_col2,
-} from "../../../routes/menu-urls";
 import NavLogo from "../NavLogo";
 
 const Footer = ({
@@ -15,6 +11,8 @@ const Footer = ({
     newsletter_description,
     newsletter_placeholder,
     newsletter_button,
+    footer_links_col1,
+    footer_links_col2,
 }) => {
     const theme = useTheme();
 
@@ -71,7 +69,7 @@ const Footer = ({
                         À propos
                     </Typography>
                     <Stack spacing={0.5}>
-                        {footer_pages_col1.map((page) => (
+                        {footer_links_col1.map((page) => (
                             <NavLink
                                 key={page.id}
                                 url={page.link}
@@ -90,7 +88,7 @@ const Footer = ({
                         Support
                     </Typography>
                     <Stack spacing={0.5}>
-                        {footer_pages_col2.map((page) => (
+                        {footer_links_col2.map((page) => (
                             <NavLink
                                 key={page.id}
                                 url={page.link}

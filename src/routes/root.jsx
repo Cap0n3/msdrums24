@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Nav from "../components/common/Nav/Nav";
+import Nav from "../components/common/nav/Nav";
 import Footer from "../components/common/Footer/Footer";
 import { Outlet } from "react-router-dom";
 import useScrollToTop from "../hooks/useScrollToTop";

@@ -9,7 +9,7 @@ import { margin } from "polished";
  *
  * @param {String} title - The title of the component
  * @param {String} subTitle - The subtitle of the component (optional)
- * @param {Number} marginBottom - The margin bottom of the component (optional)
+ * @param {Number} marginBottom - The margin bottom of the component (optional, default is 0)
  */
 const RiseTitle = ({ title, subTitle, marginBottom = 0 }) => {
     const theme = useTheme();

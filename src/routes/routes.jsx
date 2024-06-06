@@ -13,9 +13,9 @@ export const website_routes = {
             path: "/",
             element: <HomePage />,
         },
-        {
-            path: "/contact",
-            element: <ContactPage />,
-        },
+        // {
+        //     path: "/contact",
+        //     element: <ContactPage />,
+        // },
     ],
 };

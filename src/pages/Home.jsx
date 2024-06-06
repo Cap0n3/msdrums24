@@ -5,6 +5,7 @@ import Showcase from "../components/showcase/Showcase";
 import Testimonials from "../components/testimonials/Testimonials";
 import QnA from "../components/qnA/QnA";
 import Pricing from "../components/pricing/Pricing";
+import Contact from "../components/contact/Contact";
 import headerData from "../data/header.data.json";
 import { featureData } from "../data/features.data";
 import qnaData from "../data/qnA.data.json";
@@ -66,6 +67,7 @@ const HomePages = () => {
                 }
                 questions={qnaData[language]}
             />
+            <Contact identifier="contact" />
         </>
     );
 };

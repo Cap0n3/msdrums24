@@ -18,7 +18,7 @@ const Contact = () => {
                     },
                 },
                 {
-                    children: <Map />,
+                    children: <Map percentageWidth={90} />,
                     sx: {
                         display: "flex",
                         justifyContent: "center",
@@ -29,11 +29,10 @@ const Contact = () => {
             identifier="contact"
             contrast={true}
             backgroundColor={theme.palette.background.default}
-            spacing={0}
+            //spacing={0}
             smScreen_cellSpacing={8}
             paddingTop={{ xs: 8, md: 0 }}
             paddingBottom={0}
-            paddingX={0}
             minHeight={800}
         />
     );

@@ -18,7 +18,7 @@ import { darken } from "polished";
  * @param {number} props.minHeight - The minimum height of the section (default is 500)
  * @param {string} props.backgroundColor - The background color of the section
  * @param {number} props.smScreen_cellSpacing - The space between cells for small screens
- * @param {number} props.spacing - The space between cells for all screens
+ * @param {number} props.spacing - The space between cells for all screens (default is 0)
  * @param {boolean} props.reverse - Reverse the order of the contents
  * @returns {JSX.Element}
  * @constructor

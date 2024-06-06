@@ -122,7 +122,7 @@ const Footer = ({
                         />
                         <Button
                             variant="contained"
-                            color="secondary"
+                            color="primary"
                             size="large"
                             sx={{ mt: 1, width: "100%" }}
                         >

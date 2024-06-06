@@ -106,6 +106,20 @@ export function getTheme(mode) {
                     root: {
                         borderRadius: website_layout.borderRadius,
                     },
+                    containedPrimary: {
+                        backgroundColor: colors.button[mode],
+                        "&:hover": {
+                            backgroundColor: colors.buttonHover[mode],
+                        },
+                    },
+                    outlinedPrimary: {
+                        borderColor: colors.button[mode],
+                        color: colors.button[mode],
+                        "&:hover": {
+                            borderColor: colors.buttonHover[mode],
+                            color: colors.buttonHover[mode],
+                        },
+                    },
                 },
             },
             MuiOutlinedInput: {

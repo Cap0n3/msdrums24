@@ -125,12 +125,6 @@ const PriceCard = ({
                             size="large"
                             sx={{
                                 mt: 4,
-                                color: theme.palette.primary.main,
-                                borderColor: theme.palette.button.main,
-                                "&:hover": {
-                                    color: theme.palette.button.hover,
-                                    borderColor: theme.palette.button.hover,
-                                },
                             }}
                         >
                             {action}

@@ -43,7 +43,6 @@ const ContactForm = () => {
                 width: "90%",
                 //maxWidth: "450px",
                 //minWidth: "150px",
-                border: "1px solid red",
                 //px: { xs: 4, md: 4 },
             }}
         >

@@ -59,7 +59,7 @@ const TitleBox = ({ title, description, call2Action }) => {
                     <Button
                         component={Link}
                         //to="/method"
-                        color="primary"
+                        //color="primary"
                         variant="outlined"
                         size="large"
                         sx={{ mt: 2 }}

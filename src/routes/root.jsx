@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Nav from "../components/common/nav/Nav";
-import Footer from "../components/common/Footer/Footer";
+import Footer from "../components/common/footer/Footer";
 import { Outlet } from "react-router-dom";
 import useScrollToTop from "../hooks/useScrollToTop";
 import website_layout from "../theme/layout";

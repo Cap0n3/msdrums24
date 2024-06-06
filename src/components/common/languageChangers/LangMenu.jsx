@@ -6,7 +6,7 @@ import { Box, Typography, Menu, MenuItem } from "@mui/material";
 import { LangContext } from "../../../context/LangContext";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-const LangSwitch = () => {
+const LangMenu = () => {
     const { language, setLanguage } = useContext(LangContext);
     const theme = useTheme();
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -72,4 +72,4 @@ const LangSwitch = () => {
     );
 };
 
-export default LangSwitch;
+export default LangMenu;

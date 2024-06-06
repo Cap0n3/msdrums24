@@ -1,5 +1,3 @@
-// Implement a language switcher based on context LangContext using MUI menu
-
 import React, { useContext } from "react";
 import { useTheme } from "@mui/material/styles";
 import { Box, Typography, Menu, MenuItem } from "@mui/material";

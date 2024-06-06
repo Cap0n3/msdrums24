@@ -32,6 +32,7 @@ const Testimonials = ({
     const timerRef = useRef(null); // Using useRef to hold the timer
     const containerRef = useRef(null);
 
+    // Set the number of cards based on the screen size
     useEffect(() => {
         if (width >= 900 && width <= 1280) {
             setNbOfCards(2);
@@ -42,6 +43,7 @@ const Testimonials = ({
         }
     }, [width]);
 
+    // Set the number of slides based on the number of cards
     useEffect(() => {
         const chunks = [];
         for (let i = 0; i < testimonials.length; i += nbOfCards) {
@@ -49,8 +51,9 @@ const Testimonials = ({
         }
         setReviewSlides(chunks);
         setCurrentSlideIndex(0); // Reset the current slide index (avoid crash on excessive resizing)
-    }, [nbOfCards]);
+    }, [nbOfCards, testimonials]);
 
+    // Change the slide
     const changeSlide = (direction, slideIndex = null) => {
         // Get number of review slides for reference
         const lastSlideIndex = reviewSlides.length - 1;
@@ -86,6 +89,7 @@ const Testimonials = ({
         }, transitionTime + 100); // Let the slide disappear before changing the slide (avoid flickering)
     };
 
+    // Put slide timer on if mouse is not inside
     useEffect(() => {
         if (!isMouseInside && inView) {
             timerRef.current = setInterval(() => {

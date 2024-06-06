@@ -3,6 +3,17 @@ import { Box } from "@mui/material";
 import { useTheme } from "@mui/material";
 import { darken } from "polished";
 
+/**
+ * Basic section is a section that contains a single element
+ * 
+ * @param {JSX.Element} props.children - The content of the section
+ * @param {string} props.identifier - The id of the section
+ * @param {boolean} props.contrast - The contrast of the section (default is false)
+ * @param {number} props.paddingTop - The padding top of the section (default is 8)
+ * @param {number} props.paddingBottom - The padding bottom of the section (default is 8)
+ * @param {number} props.paddingX - The padding left and right of the section (default is 8)
+ * @returns 
+ */
 const BasicSection = ({
     children,
     identifier = "",

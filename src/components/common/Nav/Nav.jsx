@@ -8,11 +8,11 @@ import {
     IconButton,
     Typography,
     Menu,
-    MenuIcon,
     Container,
     Button,
     MenuItem,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import NavLogo from "../NavLogo";
 import { Link } from "react-router-dom";
 import website_layout from "../../../theme/layout";

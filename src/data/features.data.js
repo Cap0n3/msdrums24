@@ -18,7 +18,7 @@ export const featureData = {
             logo: PhotoCameraFrontIcon,
             title: "Feature 3",
             text: "Video chat with your friends and family. It's so easy to use that you'll never want to use anything else.",
-        }
+        },
     ],
     fr: [
         {
@@ -35,6 +35,6 @@ export const featureData = {
             logo: PhotoCameraFrontIcon,
             title: "Fonctionnalité 3",
             text: "Discutez en vidéo avec vos amis et votre famille. C'est tellement facile à utiliser que vous ne voudrez jamais utiliser autre chose.",
-        }
-    ]
+        },
+    ],
 };

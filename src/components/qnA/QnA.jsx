@@ -27,7 +27,13 @@ const QnA = ({ identifier, title, subtitle, questions, contrast = false }) => {
                         },
                     },
                     {
-                        children: <QnaPanel title={title} subtitle={subtitle} questions={questions} />,
+                        children: (
+                            <QnaPanel
+                                title={title}
+                                subtitle={subtitle}
+                                questions={questions}
+                            />
+                        ),
                         sx: {
                             display: "flex",
                             justifyContent: "center",

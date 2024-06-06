@@ -81,10 +81,7 @@ const QnaPanel = ({ title, subtitle, questions }) => {
     return (
         <Fade in={inView} timeout={2000}>
             <Box ref={ref} component={"section"}>
-                <RiseTitle
-                    title={title}
-                    subTitle={subtitle}
-                />
+                <RiseTitle title={title} subTitle={subtitle} />
                 <Slide in={isVisible} direction="up" timeout={1000}>
                     <Box
                         component={"div"}

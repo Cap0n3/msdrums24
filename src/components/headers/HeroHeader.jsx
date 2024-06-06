@@ -8,14 +8,13 @@ import mobileBanner from "../../assets/img/template_banner_mobile.png";
 import TitleBox from "./subcomponents/TitleBox";
 import useViewportSize from "../../hooks/useViewportSize";
 
-
 /**
- * Hero Header component, rezises the header based on the device type (Mobile, Tablet, Desktop). 
- * 
+ * Hero Header component, rezises the header based on the device type (Mobile, Tablet, Desktop).
+ *
  * Note : Implemented a custom hook to detect the device type (Mobile, Tablet, Desktop) and avoid weird resizing issues due to browser navbar.
- * 
- * @param {*} param0 
- * @returns 
+ *
+ * @param {*} param0
+ * @returns
  */
 const HeroHeader = ({ title, description, call2Action }) => {
     const theme = useTheme();
@@ -24,14 +23,15 @@ const HeroHeader = ({ title, description, call2Action }) => {
     const [viewportHeight, setViewportHeight] = useState("100vh");
     const device = useDeviceType();
 
-
     const updateViewportHeight = () => {
         const { height, width } = windowSize;
 
         if (device === "Mobile" || device === "Tablet") {
             setViewportHeight(height);
         } else if (device === "Desktop") {
-            setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
+            setViewportHeight(
+                width < 900 ? height : height - website_layout.navHeight,
+            );
         }
     };
 
@@ -52,7 +52,6 @@ const HeroHeader = ({ title, description, call2Action }) => {
         //handleResize();
         updateViewportHeight();
     }, [windowSize.width]);
-
 
     return (
         <Fade in={loaded} timeout={3000}>

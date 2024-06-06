@@ -27,7 +27,11 @@ const HomePages = () => {
             <Features
                 identifier="features"
                 title={language === "en" ? "Features" : "Fonctionnalités"}
-                subTitle={language === "en" ? "Here are some of the features that you'll love." : "Voici quelques des fonctionnalités que vous allez adorer."}
+                subTitle={
+                    language === "en"
+                        ? "Here are some of the features that you'll love."
+                        : "Voici quelques des fonctionnalités que vous allez adorer."
+                }
                 features={featureData[language]}
                 contrast={true}
             />
@@ -35,7 +39,11 @@ const HomePages = () => {
             <C2aParallax />
             <Testimonials
                 identifier="testimonials"
-                title={language === "en" ? "What our customers say" : "Ce que nos clients disent"}
+                title={
+                    language === "en"
+                        ? "What our customers say"
+                        : "Ce que nos clients disent"
+                }
                 testimonials={TestimonialsData[language]}
                 contrast={true}
             />
@@ -44,10 +52,20 @@ const HomePages = () => {
                 cardsData={priceCardsData[language]}
                 contrast={true}
             />
-            <QnA identifier="qna" 
-                title={ language === "en" ? "Frequently asked questions" : "Questions fréquentes"}
-                subtitle={language === "en" ? "Here are some of the most commonly asked questions." : "Voici les questions les plus courantes."}
-                questions={qnaData[language]} />
+            <QnA
+                identifier="qna"
+                title={
+                    language === "en"
+                        ? "Frequently asked questions"
+                        : "Questions fréquentes"
+                }
+                subtitle={
+                    language === "en"
+                        ? "Here are some of the most commonly asked questions."
+                        : "Voici les questions les plus courantes."
+                }
+                questions={qnaData[language]}
+            />
         </>
     );
 };

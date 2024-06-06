@@ -5,8 +5,13 @@ import { Box } from "@mui/material";
 import RiseTitle from "../common/riseTitle/RiseTitle";
 import FeatureBoxes from "./subcomponents/FeatureBoxes";
 
-
-const Features = ({ identifier, title, subTitle, features, contrast = false }) => {
+const Features = ({
+    identifier,
+    title,
+    subTitle,
+    features,
+    contrast = false,
+}) => {
     const theme = useTheme();
 
     return (

@@ -13,7 +13,6 @@ import ScrollTop from "../components/common/ScrollToTop";
 import { LangContext } from "../context/LangContext";
 
 export default function Root() {
-
     // === SCROLL TO TOP === //
     useScrollToTop();
 
@@ -40,8 +39,12 @@ export default function Root() {
             </Box>
             <Footer
                 description={footerData[language].footer_description}
-                newsletter_description={footerData[language].newsletter_description}
-                newsletter_placeholder={footerData[language].newsletter_placeholder}
+                newsletter_description={
+                    footerData[language].newsletter_description
+                }
+                newsletter_placeholder={
+                    footerData[language].newsletter_placeholder
+                }
                 newsletter_button={footerData[language].newsletter_button}
                 footer_links_col1={footer_links_col1[language]}
                 footer_links_col2={footer_links_col2[language]}

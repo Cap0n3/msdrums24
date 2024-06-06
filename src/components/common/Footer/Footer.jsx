@@ -137,7 +137,8 @@ const Footer = ({
                     variant="caption"
                     sx={{ color: theme.palette.text.secondary }}
                 >
-                    © Copyright 2024 My Company | Designed & Coded with love by Alexandre Guillin | All Rights Reserved
+                    © Copyright 2024 My Company | Designed & Coded with love by
+                    Alexandre Guillin | All Rights Reserved
                 </Typography>
             </Box>
         </Box>

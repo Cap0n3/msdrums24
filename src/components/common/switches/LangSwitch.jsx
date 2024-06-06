@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import { useTheme } from "@mui/material/styles";
 import { Box, Typography, Menu, MenuItem } from "@mui/material";
 import { LangContext } from "../../../context/LangContext";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const LangSwitch = () => {
     const { language, setLanguage } = useContext(LangContext);
@@ -14,7 +14,7 @@ const LangSwitch = () => {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    
+
     const handleClose = () => {
         setAnchorEl(null);
     };
@@ -48,7 +48,8 @@ const LangSwitch = () => {
                         // border: "1px solid orange"
                     }}
                 >
-                    {language.toUpperCase()} <ArrowDropDownIcon fontSize="small" />
+                    {language.toUpperCase()}{" "}
+                    <ArrowDropDownIcon fontSize="small" />
                 </Typography>
             </Box>
             <Menu
@@ -60,8 +61,12 @@ const LangSwitch = () => {
                     "aria-labelledby": "basic-button",
                 }}
             >
-                <MenuItem onClick={() => handleMenuItemClick("en")}>EN</MenuItem>
-                <MenuItem onClick={() => handleMenuItemClick("fr")}>FR</MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick("en")}>
+                    EN
+                </MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick("fr")}>
+                    FR
+                </MenuItem>
             </Menu>
         </>
     );

@@ -3,12 +3,14 @@ import { useTheme } from "@mui/material/styles";
 import { Box, Typography, Menu, MenuItem } from "@mui/material";
 import { LangContext } from "../../../context/LangContext";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-const LangMenu = () => {
+const LangMenu = ({dots = false}) => {
     const { language, setLanguage } = useContext(LangContext);
     const theme = useTheme();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+    
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -46,8 +48,14 @@ const LangMenu = () => {
                         // border: "1px solid orange"
                     }}
                 >
-                    {language.toUpperCase()}{" "}
-                    <ArrowDropDownIcon fontSize="small" />
+                    {dots ? (
+                        <MoreVertIcon fontSize="small" />
+                    ) : (
+                        <>
+                            {language.toUpperCase()}
+                            <ArrowDropDownIcon fontSize="small" />
+                        </>
+                    )}
                 </Typography>
             </Box>
             <Menu

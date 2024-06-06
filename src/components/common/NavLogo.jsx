@@ -6,14 +6,12 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import PlaceholderLogo from "../../assets/img/logos/PlaceholderLogo";
 
-const NavLogo = forwardRef((props, ref) => {
+const NavLogo = ({ title = "" }) => {
     const theme = useTheme();
     const isXS = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (
         <Box
-            ref={ref}
-            {...props}
             sx={{
                 display: "flex",
                 alignItems: "center",
@@ -26,8 +24,8 @@ const NavLogo = forwardRef((props, ref) => {
             }}
         >
             <PlaceholderLogo
-                heigth={isXS ? "30px" : "50px"}
-                width={isXS ? "30px" : "50px"}
+                heigth={isXS ? "35px" : "50px"}
+                width={isXS ? "35px" : "50px"}
                 color={theme.palette.secondary.main}
             />
             <Typography
@@ -43,10 +41,10 @@ const NavLogo = forwardRef((props, ref) => {
                     textDecoration: "none",
                 }}
             >
-                LOGO
+                {!isXS && title}
             </Typography>
         </Box>
     );
-});
+};
 
 export default NavLogo;

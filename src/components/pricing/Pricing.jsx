@@ -53,12 +53,11 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
             paddingBottom={12}
         >
             <Fade in={inView} timeout={2000}>
-                <Stack
-                    ref={ref}
-                    direction={{ xs: "column", lg: "row" }}
-                    spacing={6}
+                <Box ref={ref}
                     sx={{
                         display: "flex",
+                        flexWrap: { xs: "wrap", lg: "nowrap" },
+                        gap: { xs: 4, lg: 8 },
                         width: "100%",
                         minHeight: 320,
                         justifyContent: "center",
@@ -66,7 +65,7 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
                     }}
                 >
                     {priceCards}
-                </Stack>
+                </Box>
             </Fade>
         </BasicSection>
     );

@@ -52,7 +52,7 @@ const PriceCard = ({
                     sx={{
                         pb: 4,
                         width: { xs: "100%", sm: 350, xl: 420 },
-                        minWidth: 300,
+                        minWidth: 280,
                         minHeight: 650,
                         borderRadius: 4,
                         backgroundColor: backgroundColor,

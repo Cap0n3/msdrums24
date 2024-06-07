@@ -41,9 +41,6 @@ const ContactForm = () => {
         <Box
             sx={{
                 width: "90%",
-                //maxWidth: "450px",
-                //minWidth: "150px",
-                //px: { xs: 4, md: 4 },
             }}
         >
             <RiseTitle title="Want to contact us ?" subTitle="Get in touch" />

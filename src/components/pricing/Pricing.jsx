@@ -51,8 +51,8 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
             identifier={identifier}
             backgroundColor="#B0BEC5"
             contrast={contrast}
-            paddingTop={12}
-            paddingBottom={12}
+            paddingTop={{ xs: 8, md: 12 }}
+            paddingBottom={{ xs: 8, md: 12 }}
         >
             <Fade in={inView} timeout={2000}>
                 <Box

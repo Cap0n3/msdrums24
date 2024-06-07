@@ -105,7 +105,7 @@ const Testimonials = ({
             ref={inViewRef}
             component="section"
             pt={4}
-            pb={8}
+            pb={{ xs: 10, md: 8 }}
             onMouseEnter={() => setIsMouseInside(true)}
             onMouseLeave={() => setIsMouseInside(false)}
             sx={{
@@ -174,7 +174,7 @@ const Testimonials = ({
                 display="flex"
                 justifyContent="center"
                 position="absolute"
-                bottom={15}
+                bottom={{ xs: 25, md: 15 }}
                 width="100%"
             >
                 {reviewSlides.map((_, index) => (

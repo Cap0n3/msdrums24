@@ -49,7 +49,6 @@ const HomePages = () => {
                         : "Ce que nos clients disent"
                 }
                 testimonials={TestimonialsData[language]}
-                contrast={true}
             />
             <Pricing
                 identifier="pricing"

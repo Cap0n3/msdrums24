@@ -43,6 +43,7 @@ const BasicSection = ({
                     : theme.palette.background.default,
                 minHeight: "500px",
                 overflow: "hidden",
+                //border: "1px solid green"
             }}
         >
             {children}

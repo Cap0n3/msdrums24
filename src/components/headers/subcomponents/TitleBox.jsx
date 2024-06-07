@@ -29,7 +29,6 @@ const TitleBox = ({ title, description, call2Action }) => {
                     marginLeft: { xs: "none", lg: '8%' },
                     px: { xs: 4, lg: 0 },
                     py: { xs: 8, lg: 0 },
-                    border: "1px solid red",
                 }}
                 ref={containerRef}
             >

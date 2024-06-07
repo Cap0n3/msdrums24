@@ -77,7 +77,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     backgroundPosition: "center",
                     backgroundImage: { xs: "none", md: `url(${banner})` },
                     overflow: "hidden",
-                    border: "1px solid blue",
+                    //border: "1px solid blue",
                 }}
             >
                 <Box
@@ -90,7 +90,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                         backgroundImage: `url(${mobileBanner})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
-                        border: "1px solid green",
+                        //border: "1px solid green",
                     }}
                 ></Box>
                 <TitleBox

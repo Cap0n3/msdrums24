@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material";
 import { darken } from "polished";
 
 /**
- * Basic section is a section that contains a single element
+ * Basic section is a section that contains a single element. It can be used as a container for other elements.
  * 
  * @param {JSX.Element} props.children - The content of the section
  * @param {string} props.identifier - The id of the section
@@ -12,6 +12,7 @@ import { darken } from "polished";
  * @param {number} props.paddingTop - The padding top of the section (default is 8)
  * @param {number} props.paddingBottom - The padding bottom of the section (default is 8)
  * @param {number} props.paddingX - The padding left and right of the section (default is 8)
+ * @param {string} props.direction - The direction of the section (default is "row")
  * @returns 
  */
 const BasicSection = ({
@@ -21,6 +22,7 @@ const BasicSection = ({
     paddingTop = 8,
     paddingBottom = 8,
     paddingX = 8,
+    direction = "row",
 }) => {
     const theme = useTheme();
     return (
@@ -30,6 +32,7 @@ const BasicSection = ({
             sx={{
                 flexGrow: 1,
                 display: "flex",
+                flexDirection: direction,
                 justifyContent: "center",
                 alignItems: "center",
                 pt: paddingTop,

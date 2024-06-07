@@ -3,6 +3,9 @@ import { Slide, Fade, Paper, Typography, Box } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "@mui/material";
 
+/**
+ * Subcomponents for FeatureBoxes
+ */ 
 const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
     const theme = useTheme();
 
@@ -18,9 +21,12 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
                 elevation={1}
                 square={false}
                 sx={{
-                    m: 2,
                     p: 4,
-                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: 2,
                     maxWidth: 340,
                     backgroundColor: theme.palette.background.default,
                     borderRadius: theme.shape.borderRadius,
@@ -28,12 +34,15 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
             >
                 {featureLogo(logo, {
                     fontSize: "large",
-                    sx: { color: theme.palette.primary.main },
+                    sx: { 
+                        color: theme.palette.primary.main,
+                        mb: { xs: 0, lg: 2 }, 
+                    },
                 })}
                 <Typography
                     component="h3"
                     variant="h3"
-                    mt={2}
+                    //mt={2}
                     sx={{ color: theme.palette.text.primary }}
                 >
                     {title}
@@ -41,7 +50,8 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
                 <Typography
                     component="p"
                     variant="body1"
-                    mt={2}
+                    textAlign="center"
+                    //mt={2}
                     sx={{ color: theme.palette.text.secondary }}
                 >
                     {description}
@@ -76,7 +86,7 @@ const FeatureBoxes = ({ data }) => {
                     display: "flex",
                     justifyContent: "space-around",
                     flexWrap: "wrap",
-                    gap: 2,
+                    gap: 4,
                     maxWidth: 1200,
                     minHeight: 320,
                     margin: "auto",

@@ -28,7 +28,7 @@ const HomePages = () => {
                 description={headerData[language].header_description}
                 call2Action={headerData[language].header_call2Action}
             />
-            {/* <Features
+            <Features
                 identifier="features"
                 title={language === "en" ? "Features" : "Fonctionnalités"}
                 subTitle={
@@ -54,7 +54,7 @@ const HomePages = () => {
                 identifier="pricing"
                 cardsData={priceCardsData[language]}
                 contrast={true}
-            /> */}
+            />
             <QnA
                 identifier="qna"
                 title={

@@ -26,16 +26,21 @@ const TitleBox = ({ title, description, call2Action }) => {
             <Box
                 maxWidth="sm"
                 sx={{
-                    marginLeft: "8%",
-                    p: { xs: 4, md: 0 },
+                    marginLeft: { xs: "none", lg: '8%' },
+                    px: { xs: 4, lg: 0 },
+                    py: { xs: 8, lg: 0 },
+                    border: "1px solid red",
                 }}
                 ref={containerRef}
             >
                 <Typography
                     component="h1"
                     variant="h1"
-                    align="left"
-                    sx={{ color: theme.palette.text.primary }}
+                    sx={{ 
+                        textAlign: { xs: "center", lg: "left" },
+                        color: theme.palette.text.primary,
+                        //border: "1px solid red"
+                    }}
                     gutterBottom
                 >
                     {title}
@@ -43,8 +48,11 @@ const TitleBox = ({ title, description, call2Action }) => {
                 <Typography
                     component="h2"
                     variant="subtitle1"
-                    align="left"
-                    sx={{ color: theme.palette.text.primary }}
+                    sx={{ 
+                        textAlign: { xs: "center", lg: "left" },
+                        color: theme.palette.text.primary,
+                        //border: "1px solid green"
+                    }}
                 >
                     {description}
                 </Typography>
@@ -53,13 +61,13 @@ const TitleBox = ({ title, description, call2Action }) => {
                         mt: 4,
                         display: "flex",
                         flexDirection: "column",
-                        alignItems: "start",
+                        alignItems: { xs: "center", lg: "start" },
                     }}
                 >
                     <Button
                         component={Link}
                         //to="/method"
-                        //color="primary"
+                        color="primary"
                         variant="outlined"
                         size="large"
                         sx={{ mt: 2 }}

@@ -27,8 +27,12 @@ const HeroHeader = ({ title, description, call2Action }) => {
         const { height, width } = windowSize;
 
         if (device === "Mobile" || device === "Tablet") {
-            setViewportHeight(height);
+            console.log("MOBILE SIZE IS " + height);
+            if (height > 500) {
+                setViewportHeight(height);
+            }       
         } else if (device === "Desktop") {
+            console.log("DESKTOP SIZE IS " + height);
             setViewportHeight(
                 width < 900 ? height : height - website_layout.navHeight,
             );
@@ -46,7 +50,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
     }, []);
 
     /**
-     * In case user is resizing the window on desktop, update the viewport height.
+     * In case user is resizing the window on desktop or mobile/tablet, update the viewport height.
      */
     useEffect(() => {
         //handleResize();
@@ -60,7 +64,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "start",
+                    alignItems: { xs: "center", md: "flex-start" },
                     justifyContent: { xs: "flex-end", md: "center" },
                     height: viewportHeight,
                     minHeight: "500px",

@@ -6,6 +6,7 @@ import Socials from "../../common/socials/Socials";
 import useEmailHandler from "../../../hooks/useEmailHandler";
 import Alert from "@mui/material/Alert";
 import { useInView } from "react-intersection-observer";
+import { FORM_REGEX } from "../../../utils/FormRegex";
 
 const ContactForm = () => {
     const serviceID = __EMAILJS_SERVICE_ID__;
@@ -85,6 +86,14 @@ const ContactForm = () => {
                                                     value: 2,
                                                     message: "Name is too short",
                                                 },
+                                                maxLength: {
+                                                    value: 50,
+                                                    message: "Name is too long",
+                                                },
+                                                pattern: {
+                                                    value: FORM_REGEX.nameRgx,
+                                                    message: "Invalid name, use only letters",
+                                                },
                                             })}
                                             error={!!errors.name}
                                             helperText={errors.name ? errors.name.message : ""}
@@ -101,8 +110,16 @@ const ContactForm = () => {
                                             autoComplete="email"
                                             {...register("email", {
                                                 required: "Email is required",
+                                                minLength: {
+                                                    value: 2,
+                                                    message: "Email is too short",
+                                                },
+                                                maxLength: {
+                                                    value: 50,
+                                                    message: "Email is too long",
+                                                },
                                                 pattern: {
-                                                    value: /^\S+@\S+$/i,
+                                                    value: FORM_REGEX.emailRgx,
                                                     message: "Invalid email address",
                                                 },
                                             })}
@@ -121,9 +138,21 @@ const ContactForm = () => {
                                             label="Message"
                                             id="message"
                                             multiline
-                                            rows={4}
+                                            rows={6}
                                             {...register("message", {
                                                 required: "Message is required",
+                                                minLength: {
+                                                    value: 2,
+                                                    message: "Message is too short",
+                                                },
+                                                maxLength: {
+                                                    value: 10000,
+                                                    message: "Message is too long",
+                                                },
+                                                pattern: {
+                                                    value: FORM_REGEX.messageRgx,
+                                                    message: "Invalid message, use only letters/numbers and common punctuation",
+                                                },
                                             })}
                                             error={!!errors.message}
                                             helperText={

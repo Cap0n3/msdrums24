@@ -7,13 +7,16 @@ import banner from "../../assets/img/template_banner.png";
 import mobileBanner from "../../assets/img/template_banner_mobile.png";
 import TitleBox from "./subcomponents/TitleBox";
 import useViewportSize from "../../hooks/useViewportSize";
+import useOrientation from "../../hooks/useOrientation";
 
 /**
  * Hero Header component, rezises the header based on the device type (Mobile, Tablet, Desktop).
  *
  * Note : Implemented a custom hook to detect the device type (Mobile, Tablet, Desktop) and avoid weird resizing issues due to browser navbar.
  *
- * @param {*} param0
+ * @param {string} param0.title - The title of the header.
+ * @param {string} param0.description - The description of the header.
+ * @param {string} param0.call2Action - The call to action of the header.
  * @returns
  */
 const HeroHeader = ({ title, description, call2Action }) => {
@@ -21,21 +24,22 @@ const HeroHeader = ({ title, description, call2Action }) => {
     const [loaded, setLoaded] = useState(false);
     const windowSize = useViewportSize();
     const [viewportHeight, setViewportHeight] = useState("100vh");
+    const [bannerHeight, setBannerHeight] = useState("100%");
     const device = useDeviceType();
+    const orientation = useOrientation();
 
     const updateViewportHeight = () => {
         const { height, width } = windowSize;
 
         if (device === "Mobile" || device === "Tablet") {
-            console.log("MOBILE SIZE IS " + height);
-            if (height > 500) {
+            if (orientation === "landscape" && height < 500) {
+                setViewportHeight("100%");
+                setBannerHeight(height);
+            } else {
                 setViewportHeight(height);
-            }       
+            }
         } else if (device === "Desktop") {
-            console.log("DESKTOP SIZE IS " + height);
-            setViewportHeight(
-                width < 900 ? height : height - website_layout.navHeight,
-            );
+            setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
         }
     };
 
@@ -54,8 +58,8 @@ const HeroHeader = ({ title, description, call2Action }) => {
      */
     useEffect(() => {
         //handleResize();
-        updateViewportHeight();
-    }, [windowSize.width]);
+        updateViewportHeight(orientation);
+    }, [windowSize.width, orientation]);
 
     return (
         <Fade in={loaded} timeout={3000}>
@@ -73,6 +77,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     backgroundPosition: "center",
                     backgroundImage: { xs: "none", md: `url(${banner})` },
                     overflow: "hidden",
+                    border: "1px solid blue",
                 }}
             >
                 <Box
@@ -81,10 +86,11 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     sx={{
                         display: { xs: "block", md: "none" },
                         width: "100%",
-                        height: "100%",
+                        height: bannerHeight,
                         backgroundImage: `url(${mobileBanner})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
+                        border: "1px solid green",
                     }}
                 ></Box>
                 <TitleBox

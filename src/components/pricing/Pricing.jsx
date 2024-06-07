@@ -55,7 +55,8 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
             paddingBottom={12}
         >
             <Fade in={inView} timeout={2000}>
-                <Box ref={ref}
+                <Box
+                    ref={ref}
                     sx={{
                         display: "flex",
                         flexWrap: { xs: "wrap", lg: "nowrap" },

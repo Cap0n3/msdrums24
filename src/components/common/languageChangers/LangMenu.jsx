@@ -3,14 +3,14 @@ import { useTheme } from "@mui/material/styles";
 import { Box, Typography, Menu, MenuItem } from "@mui/material";
 import { LangContext } from "../../../context/LangContext";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-const LangMenu = ({dots = false}) => {
+const LangMenu = ({ dots = false }) => {
     const { language, setLanguage } = useContext(LangContext);
     const theme = useTheme();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-    
+
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };

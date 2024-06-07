@@ -2,15 +2,21 @@ import React from "react";
 import { Box } from "@mui/material";
 import GoogleMapReact from "google-map-react";
 import { useTheme } from "@mui/material/styles";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const Marker = ({ text }) => {
     return (
         <Box>
-            <LocationOnIcon sx={{ color: "red", fontSize: "3rem", transform: "translate(-50%, -100%)" }} />
+            <LocationOnIcon
+                sx={{
+                    color: "red",
+                    fontSize: "3rem",
+                    transform: "translate(-50%, -100%)",
+                }}
+            />
         </Box>
     );
-}
+};
 
 const Map = ({ percentageWidth = 100 }) => {
     const theme = useTheme();
@@ -23,7 +29,13 @@ const Map = ({ percentageWidth = 100 }) => {
     };
 
     return (
-        <Box sx={{ width: `${percentageWidth}%`, paddingTop: `${percentageWidth}%`, position: "relative", }}>
+        <Box
+            sx={{
+                width: `${percentageWidth}%`,
+                paddingTop: `${percentageWidth}%`,
+                position: "relative",
+            }}
+        >
             <Box
                 sx={{
                     position: "absolute",

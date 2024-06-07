@@ -14,12 +14,15 @@ import showcaseData from "../data/showcase.data.json";
 import priceCardsData from "../data/pricing.data.json";
 import C2aParallax from "../components/c2aParallax/C2aParallax";
 import { LangContext } from "../context/LangContext";
+import SEOBlock from "../components/seoBlock/SEOBlock";
+import seoData from "../data/seo.data.json";
 
 const HomePages = () => {
     const { language } = useContext(LangContext);
 
     return (
         <>
+            <SEOBlock data={seoData["home"]} />
             <HeroHeader
                 title={headerData[language].header_title}
                 description={headerData[language].header_description}

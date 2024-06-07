@@ -26,7 +26,7 @@ const TitleBox = ({ title, description, call2Action }) => {
             <Box
                 maxWidth="sm"
                 sx={{
-                    marginLeft: { xs: "none", lg: '8%' },
+                    marginLeft: { xs: "none", lg: "8%" },
                     px: { xs: 4, lg: 0 },
                     py: { xs: 8, lg: 0 },
                 }}
@@ -35,7 +35,7 @@ const TitleBox = ({ title, description, call2Action }) => {
                 <Typography
                     component="h1"
                     variant="h1"
-                    sx={{ 
+                    sx={{
                         textAlign: { xs: "center", lg: "left" },
                         color: theme.palette.text.primary,
                         //border: "1px solid red"
@@ -47,7 +47,7 @@ const TitleBox = ({ title, description, call2Action }) => {
                 <Typography
                     component="h2"
                     variant="subtitle1"
-                    sx={{ 
+                    sx={{
                         textAlign: { xs: "center", lg: "left" },
                         color: theme.palette.text.primary,
                         //border: "1px solid green"

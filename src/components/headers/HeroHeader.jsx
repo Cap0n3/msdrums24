@@ -39,7 +39,9 @@ const HeroHeader = ({ title, description, call2Action }) => {
                 setViewportHeight(height);
             }
         } else if (device === "Desktop") {
-            setViewportHeight(width < 900 ? height : height - website_layout.navHeight);
+            setViewportHeight(
+                width < 900 ? height : height - website_layout.navHeight,
+            );
         }
     };
 

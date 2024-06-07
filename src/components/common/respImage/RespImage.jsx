@@ -39,7 +39,6 @@ const RespImage = ({ image, alt, title, percentageWidth = 100 }) => {
         };
     }, [image]);
 
-
     return (
         <Fade in={inView} timeout={2000}>
             <Box

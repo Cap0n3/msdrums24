@@ -91,7 +91,9 @@ const ContactForm = () => {
                                 },
                             })}
                             error={!!errors.email}
-                            helperText={errors.email ? errors.email.message : ""}
+                            helperText={
+                                errors.email ? errors.email.message : ""
+                            }
                         />
                     </Grid>
                     <Grid item xs={12}>
@@ -108,7 +110,9 @@ const ContactForm = () => {
                                 required: "Message is required",
                             })}
                             error={!!errors.message}
-                            helperText={errors.message ? errors.message.message : ""}
+                            helperText={
+                                errors.message ? errors.message.message : ""
+                            }
                         />
                     </Grid>
                     <Grid item xs={12}>

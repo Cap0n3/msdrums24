@@ -2,7 +2,7 @@ import React from "react";
 import Root from "./root";
 import ErrorPage from "../pages/Error";
 import HomePage from "../pages/Home";
-import ContactPage from "../pages/ContactPage";
+import NewPage from "../pages/NewPage";
 
 export const website_routes = {
     path: "/",
@@ -14,8 +14,8 @@ export const website_routes = {
             element: <HomePage />,
         },
         // {
-        //     path: "/contact",
-        //     element: <ContactPage />,
+        //     path: "/mypage",
+        //     element: <NewPage />,
         // },
     ],
 };

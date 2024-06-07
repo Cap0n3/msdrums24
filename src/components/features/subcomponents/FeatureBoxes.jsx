@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material";
 
 /**
  * Subcomponents for FeatureBoxes
- */ 
+ */
 const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
     const theme = useTheme();
 
@@ -34,9 +34,9 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
             >
                 {featureLogo(logo, {
                     fontSize: "large",
-                    sx: { 
+                    sx: {
                         color: theme.palette.primary.main,
-                        mb: { xs: 0, lg: 2 }, 
+                        mb: { xs: 0, lg: 2 },
                     },
                 })}
                 <Typography

@@ -1,0 +1,12 @@
+{
+    "home": {
+        "title": "Home",
+        "description": "This is a Home page.",
+        "canonHREF": "http://localhost:5173/"
+    },
+    "newpage": {
+        "title": "Another page",
+        "description": "This is another page",
+        "canonHREF": "http://localhost:5173/mypage"
+    }
+}

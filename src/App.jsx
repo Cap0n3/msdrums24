@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { website_routes } from "./routes/routes";
 import { getTheme } from "./theme/theme_utils";
+import { HelmetProvider } from "react-helmet-async";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { LanguageProvider } from "./context/LangContext";
 
@@ -19,14 +20,16 @@ function App() {
 
     return (
         <>
-            <ThemeProvider theme={theme}>
-                <CssBaseline /> {/* Add this line */}
-                <ParallaxProvider>
-                    <LanguageProvider>
-                        <RouterProvider router={router} />
-                    </LanguageProvider>
-                </ParallaxProvider>
-            </ThemeProvider>
+            <HelmetProvider>
+                <ThemeProvider theme={theme}>
+                    <CssBaseline /> {/* Add this line */}
+                    <ParallaxProvider>
+                        <LanguageProvider>
+                            <RouterProvider router={router} />
+                        </LanguageProvider>
+                    </ParallaxProvider>
+                </ThemeProvider>
+            </HelmetProvider>
         </>
     );
 }

@@ -8,11 +8,13 @@ import { useInView } from "react-intersection-observer";
  *
  * @param {*} image - Image URL
  * @param {*} alt - Image alt text
+ * @param {*} title - Image title
  * @param {*} percentageWidth - Percentage width of the image (default: 100)
  */
-const RespImage = ({ image, alt, percentageWidth = 100 }) => {
+const RespImage = ({ image, alt, title, percentageWidth = 100 }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -25,6 +27,18 @@ const RespImage = ({ image, alt, percentageWidth = 100 }) => {
             setIsVisible(true);
         }
     }, [inView]);
+
+    /**
+     * Get image dimensions when image is loaded, then set the dimensions html attribute for image (seo friendly)
+     */
+    useEffect(() => {
+        const img = new Image();
+        img.src = image;
+        img.onload = () => {
+            setDimensions({ width: img.width, height: img.height });
+        };
+    }, [image]);
+
 
     return (
         <Fade in={inView} timeout={2000}>
@@ -50,7 +64,11 @@ const RespImage = ({ image, alt, percentageWidth = 100 }) => {
                     >
                         <img
                             src={image}
+                            loading="lazy"
+                            title={title}
                             alt={alt}
+                            width={dimensions.width}
+                            height={dimensions.height}
                             style={{
                                 objectFit: "cover",
                                 width: "100%",

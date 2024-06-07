@@ -32,6 +32,8 @@ const ListItemComponent = ({ theme, text }) => (
 
 const PriceCard = ({
     image,
+    imageAlt,
+    imageTitle,
     title,
     price,
     paymentFrequency,
@@ -66,8 +68,11 @@ const PriceCard = ({
                     <CardMedia
                         component="img"
                         height="190"
+                        width="700"
                         image={image}
-                        alt="Some illustration"
+                        alt={imageAlt}
+                        title={imageTitle}
+                        loading="lazy"
                     />
                     <CardHeader
                         title={title}

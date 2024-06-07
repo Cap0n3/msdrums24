@@ -3,16 +3,19 @@
         {
             "image": "https://picsum.photos/id/4/800/800",
             "title": "Some description of my awesome product",
+            "alt": "Some description of my awesome product",
             "description": "My product is so cool that you will love it, I think you really need to know more about it. I am sure you will love it."
         },
         {
             "image": "https://picsum.photos/id/20/800/800",
             "title": "Maybe you want to know more about this",
+            "alt": "Maybe you want to know more about this",
             "description": "Your life will change after you know more about this product, it is a game changer. Let me tell you more about it."
         },
         {
             "image": "https://picsum.photos/id/352/800/800",
             "title": "No way! This is mind blowing",
+            "alt": "No way! This is mind blowing",
             "description": "I can't believe how amazing this product is, I am sure you will be amazed too. Let me show you more about it."
         }
     ],
@@ -20,16 +23,19 @@
         {
             "image": "https://picsum.photos/id/4/800/800",
             "title": "Une description de mon produit",
+            "alt": "Une description de mon produit",
             "description": "Mon produit est tellement génial que vous allez l'adopter, je pense que vous devez vraiment en savoir plus à son sujet. Je suis sûr que vous allez l'adorer."
         },
         {
             "image": "https://picsum.photos/id/20/800/800",
             "title": "Peut-être que vous voulez en savoir plus sur celui-ci",
+            "alt": "Peut être que vous voulez en savoir plus sur celui-ci",
             "description": "Votre vie changera après en avoir appris davantage sur ce produit, c'est un changement radical. Laissez-moi vous en dire plus à ce sujet."
         },
         {
             "image": "https://picsum.photos/id/352/800/800",
             "title": "Pas possible ! C'est époustouflant !",
+            "alt": "Pas possible ! C'est bevoustouflant !",
             "description": "Je ne peux pas croire à quel point ce produit est incroyable, je suis sûr que vous serez également étonné. Laissez-moi vous en montrer plus à ce sujet."
         }
     ]

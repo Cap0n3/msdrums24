@@ -31,6 +31,8 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
             <PriceCard
                 key={index}
                 image={cardData.image}
+                imageAlt={cardData.title}
+                imageTitle={cardData.title}
                 title={cardData.title}
                 price={cardData.price}
                 paymentFrequency={cardData.paymentFrequency}

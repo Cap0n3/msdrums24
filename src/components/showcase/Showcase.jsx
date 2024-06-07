@@ -22,7 +22,8 @@ const Showcase = ({ identifier, data }) => {
                                 children: (
                                     <RespImage
                                         image={item.image}
-                                        alt={item.title}
+                                        title={item.title}
+                                        alt={item.alt}
                                         percentageWidth={isSm ? 100 : 90}
                                     />
                                 ),

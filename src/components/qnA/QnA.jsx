@@ -18,6 +18,7 @@ const QnA = ({ identifier, title, subtitle, questions, contrast = false }) => {
                             <RespImage
                                 image="https://picsum.photos/id/4/800/800"
                                 percentageWidth={90}
+                                alt="QnA"
                             />
                         ),
                         sx: {

@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { Typography, TextField, Button, Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import Stack from "@mui/material/Stack";
-import NavLink from "./NavLink";
+import NavLink from "./subcomponents/NavLink";
 import NavLogo from "../NavLogo";
 
 const Footer = ({

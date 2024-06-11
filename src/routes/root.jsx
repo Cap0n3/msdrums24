@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Nav from "../components/common/nav/Nav";
 import Footer from "../components/common/footer/Footer";
+import MapFooter from "../components/common/footer/MapFooter";
 import { Outlet } from "react-router-dom";
 import useScrollToTop from "../hooks/useScrollToTop";
 import website_layout from "../theme/layout";
@@ -37,7 +38,19 @@ export default function Root() {
             >
                 <Outlet />
             </Box>
-            <Footer
+            {/* <Footer
+                description={footerData[language].footer_description}
+                newsletter_description={
+                    footerData[language].newsletter_description
+                }
+                newsletter_placeholder={
+                    footerData[language].newsletter_placeholder
+                }
+                newsletter_button={footerData[language].newsletter_button}
+                footer_links_col1={footer_links_col1[language]}
+                footer_links_col2={footer_links_col2[language]}
+            /> */}
+            <MapFooter
                 description={footerData[language].footer_description}
                 newsletter_description={
                     footerData[language].newsletter_description

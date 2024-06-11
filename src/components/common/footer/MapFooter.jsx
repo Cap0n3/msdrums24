@@ -80,21 +80,21 @@ const MapFooter = ({
                     >
                         {description}
                     </Typography>
+                    <Box sx={{ marginTop: "auto", textAlign: { xs: "center", md: "left" }, border: "1px solid green" }}>
+                        <Typography
+                            component="p"
+                            variant="caption"
+                            sx={{ color: theme.palette.text.secondary }}
+                        >
+                            © Copyright 2024 My Company | Designed & Coded with love by
+                            Alexandre Guillin | All Rights Reserved
+                        </Typography>
+                    </Box>
                 </Grid>
                 <Grid xs={12} md={4} sx={{ minHeight: "250px", padding: 0 }}>
                     <FootMap />
                 </Grid>
             </Grid>
-            <Box sx={{ textAlign: "center" }}>
-                <Typography
-                    component="p"
-                    variant="caption"
-                    sx={{ color: theme.palette.text.secondary }}
-                >
-                    © Copyright 2024 My Company | Designed & Coded with love by
-                    Alexandre Guillin | All Rights Reserved
-                </Typography>
-            </Box>
         </Box>
     );
 };

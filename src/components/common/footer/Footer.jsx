@@ -20,21 +20,23 @@ const Footer = ({
         <Box
             component="footer"
             sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
                 flexGrow: 1,
                 bgcolor: theme.palette.background.default,
                 color: "white",
                 minHeight: "250px",
+                pt: 8,
+                px: { xs: 2, md: 4 },
                 //border: "1px solid yellow",
             }}
         >
             <Grid
                 container
-                spacing={5}
-                sx={{ 
-                    paddingTop: "1rem", 
-                    paddingBottom: "1rem",
-                    margin: 0,
-                    //border: "1px solid blue", 
+                sx={{
+                    mb: 4,
+                    //border: "1px solid blue",
                 }}
             >
                 <Grid
@@ -44,6 +46,8 @@ const Footer = ({
                         display: "flex",
                         flexDirection: "column",
                         gap: "2rem",
+                        pb: { xs: 4, md: 0 },
+                        //border: "1px solid red",
                     }}
                 >
                     <Box
@@ -64,7 +68,14 @@ const Footer = ({
                         {description}
                     </Typography>
                 </Grid>
-                <Grid xs={6} md={2}>
+                <Grid
+                    xs={6}
+                    md={2}
+                    sx={{
+                        pl: { xs: 0, md: 4 },
+                        //border: "1px solid green"
+                    }}
+                >
                     <Typography
                         component="h4"
                         variant="h4"
@@ -83,7 +94,7 @@ const Footer = ({
                         ))}
                     </Stack>
                 </Grid>
-                <Grid xs={6} md={2}>
+                <Grid xs={6} md={2} sx={{ pl: { xs: 0, md: 4 } }}>
                     <Typography
                         component="h4"
                         variant="h4"
@@ -102,7 +113,7 @@ const Footer = ({
                         ))}
                     </Stack>
                 </Grid>
-                <Grid xs={12} md={4}>
+                <Grid xs={12} md={4} sx={{ pt: { xs: 2, md: 0 } }}>
                     <Typography
                         component="h4"
                         variant="h4"
@@ -140,8 +151,8 @@ const Footer = ({
                 <Typography
                     component="p"
                     variant="caption"
-                    sx={{ 
-                        color: theme.palette.text.secondary, 
+                    sx={{
+                        color: theme.palette.text.secondary,
                         px: { xs: 1, md: 0 },
                     }}
                 >

@@ -21,7 +21,7 @@ const Marker = ({ text }) => {
 
 /**
  * Main map component, displays a Google Map with a marker at the location of the company.
- * 
+ *
  * @param {*} percentageWidth - Percentage width of the map (default: 100)
  */
 const Map = ({ percentageWidth = 100 }) => {

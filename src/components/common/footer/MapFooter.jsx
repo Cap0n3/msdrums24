@@ -6,9 +6,9 @@ import NavLink from "./subcomponents/NavLink";
 import NavLogo from "../NavLogo";
 import FootMap from "./subcomponents/FootMap";
 
-const MapFooter = ({
-    description
-}) => {
+const footerMinHeight = "250px";
+
+const MapFooter = ({ description }) => {
     const theme = useTheme();
 
     return (
@@ -18,22 +18,17 @@ const MapFooter = ({
                 flexGrow: 1,
                 bgcolor: theme.palette.background.default,
                 color: "white",
-                //padding: 0,
-                minHeight: "250px",
-                border: "1px solid yellow",
-
+                minHeight: footerMinHeight,
+                //border: "1px solid yellow",
             }}
         >
             <Grid
                 container
                 spacing={5}
-                sx={{ 
-                    border: "1px solid red",
+                sx={{
                     margin: 0,
                     padding: 0,
-                    minHeight: "250px",
-                    //paddingTop: "1rem", 
-                    //paddingBottom: "1rem" 
+                    //border: "1px solid red",
                 }}
             >
                 <Grid
@@ -59,18 +54,9 @@ const MapFooter = ({
                         spacing={4}
                         sx={{ alignItems: "center" }}
                     >
-                        <NavLink
-                            name="About"
-                            url="/#showcase"
-                        />
-                        <NavLink
-                            name="Pricing"
-                            url="/#pricing"
-                        />
-                        <NavLink
-                            name="FAQ"
-                            url="/#qna"
-                        />
+                        <NavLink name="About" url="/#showcase" />
+                        <NavLink name="Pricing" url="/#pricing" />
+                        <NavLink name="FAQ" url="/#qna" />
                     </Stack>
                     <Typography
                         component="p"
@@ -80,18 +66,28 @@ const MapFooter = ({
                     >
                         {description}
                     </Typography>
-                    <Box sx={{ marginTop: "auto", textAlign: { xs: "center", md: "left" }, border: "1px solid green" }}>
+                    <Box
+                        sx={{
+                            marginTop: "auto",
+                            textAlign: { xs: "center", md: "left" },
+                            //border: "1px solid green",
+                        }}
+                    >
                         <Typography
                             component="p"
                             variant="caption"
                             sx={{ color: theme.palette.text.secondary }}
                         >
-                            © Copyright 2024 My Company | Designed & Coded with love by
-                            Alexandre Guillin | All Rights Reserved
+                            © Copyright 2024 My Company | Designed & Coded with
+                            love by Alexandre Guillin | All Rights Reserved
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid xs={12} md={4} sx={{ minHeight: "250px", padding: 0 }}>
+                <Grid
+                    xs={12}
+                    md={4}
+                    sx={{ minHeight: footerMinHeight, padding: 0 }}
+                >
                     <FootMap />
                 </Grid>
             </Grid>

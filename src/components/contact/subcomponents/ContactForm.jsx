@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { TextField, Button, Box, Typography, Grid, Fade, Slide } from "@mui/material";
+import {
+    TextField,
+    Button,
+    Box,
+    Typography,
+    Grid,
+    Fade,
+    Slide,
+} from "@mui/material";
 import RiseTitle from "../../common/riseTitle/RiseTitle";
 import Socials from "../../common/socials/Socials";
 import useEmailHandler from "../../../hooks/useEmailHandler";
@@ -68,7 +76,11 @@ const ContactForm = () => {
                 <Box ref={ref}>
                     <Slide direction="up" in={isVisible} timeout={500}>
                         <Box>
-                            <form ref={formRef} onSubmit={handleSubmit(onSubmit)} noValidate>
+                            <form
+                                ref={formRef}
+                                onSubmit={handleSubmit(onSubmit)}
+                                noValidate
+                            >
                                 <Grid container spacing={4}>
                                     <Grid item xs={12}>
                                         <TextField
@@ -84,7 +96,8 @@ const ContactForm = () => {
                                                 required: "Name is required",
                                                 minLength: {
                                                     value: 2,
-                                                    message: "Name is too short",
+                                                    message:
+                                                        "Name is too short",
                                                 },
                                                 maxLength: {
                                                     value: 50,
@@ -92,11 +105,16 @@ const ContactForm = () => {
                                                 },
                                                 pattern: {
                                                     value: FORM_REGEX.nameRgx,
-                                                    message: "Invalid name, use only letters",
+                                                    message:
+                                                        "Invalid name, use only letters",
                                                 },
                                             })}
                                             error={!!errors.name}
-                                            helperText={errors.name ? errors.name.message : ""}
+                                            helperText={
+                                                errors.name
+                                                    ? errors.name.message
+                                                    : ""
+                                            }
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -112,20 +130,25 @@ const ContactForm = () => {
                                                 required: "Email is required",
                                                 minLength: {
                                                     value: 2,
-                                                    message: "Email is too short",
+                                                    message:
+                                                        "Email is too short",
                                                 },
                                                 maxLength: {
                                                     value: 50,
-                                                    message: "Email is too long",
+                                                    message:
+                                                        "Email is too long",
                                                 },
                                                 pattern: {
                                                     value: FORM_REGEX.emailRgx,
-                                                    message: "Invalid email address",
+                                                    message:
+                                                        "Invalid email address",
                                                 },
                                             })}
                                             error={!!errors.email}
                                             helperText={
-                                                errors.email ? errors.email.message : ""
+                                                errors.email
+                                                    ? errors.email.message
+                                                    : ""
                                             }
                                         />
                                     </Grid>
@@ -143,20 +166,25 @@ const ContactForm = () => {
                                                 required: "Message is required",
                                                 minLength: {
                                                     value: 2,
-                                                    message: "Message is too short",
+                                                    message:
+                                                        "Message is too short",
                                                 },
                                                 maxLength: {
                                                     value: 10000,
-                                                    message: "Message is too long",
+                                                    message:
+                                                        "Message is too long",
                                                 },
                                                 pattern: {
                                                     value: FORM_REGEX.messageRgx,
-                                                    message: "Invalid message, use only letters/numbers and common punctuation",
+                                                    message:
+                                                        "Invalid message, use only letters/numbers and common punctuation",
                                                 },
                                             })}
                                             error={!!errors.message}
                                             helperText={
-                                                errors.message ? errors.message.message : ""
+                                                errors.message
+                                                    ? errors.message.message
+                                                    : ""
                                             }
                                         />
                                     </Grid>
@@ -167,12 +195,17 @@ const ContactForm = () => {
                                             variant="contained"
                                             color="primary"
                                         >
-                                            {isWaitingServerResp ? "Sending..." : "Send"}
+                                            {isWaitingServerResp
+                                                ? "Sending..."
+                                                : "Send"}
                                         </Button>
                                     </Grid>
                                     {isSendSuccess === true && (
                                         <Grid item xs={12}>
-                                            <Alert severity="success" sx={{ mt: 4 }}>
+                                            <Alert
+                                                severity="success"
+                                                sx={{ mt: 4 }}
+                                            >
                                                 Email sent successfully!
                                             </Alert>
                                         </Grid>

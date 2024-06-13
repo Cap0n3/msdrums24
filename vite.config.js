@@ -11,6 +11,9 @@ export default defineConfig(({ command, mode }) => {
         define: {
             __EMAILJS_SERVICE_ID__: JSON.stringify(env.EMAILJS_SERVICE_ID),
             __EMAILJS_TEMPLATE_ID__: JSON.stringify(env.EMAILJS_TEMPLATE_ID),
+            __EMAILJS_TEMPLATE_CUSTOM_ID__: JSON.stringify(
+                env.EMAILJS_TEMPLATE_CUSTOM_ID,
+            ),
             __EMAILJS_PUBLIC_KEY__: JSON.stringify(env.EMAILJS_PUBLIC_KEY),
             __GOOGLE_MAPS_KEY__: JSON.stringify(env.GOOGLE_MAPS_KEY),
         },

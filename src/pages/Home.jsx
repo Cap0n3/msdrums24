@@ -16,6 +16,8 @@ import C2aParallax from "../components/c2aParallax/C2aParallax";
 import { LangContext } from "../context/LangContext";
 import SEOBlock from "../components/seoBlock/SEOBlock";
 import seoData from "../data/seo.data.json";
+// import BasicSection from "../components/common/basicSection/BasicSection";
+// import CustomForm from "../components/common/forms/customForm/CustomForm";
 
 const HomePages = () => {
     const { language } = useContext(LangContext);
@@ -70,6 +72,9 @@ const HomePages = () => {
                 questions={qnaData[language]}
             />
             <Contact identifier="contact" />
+            {/* <BasicSection
+                children={<CustomForm />}
+            /> */}
         </>
     );
 };

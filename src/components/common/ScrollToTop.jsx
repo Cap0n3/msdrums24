@@ -34,7 +34,7 @@ const ScrollTop = () => {
             sx={{
                 position: "fixed",
                 bottom: 16,
-                right: 16,
+                left: 16,
                 display: showScrollBtn ? "flex" : "none",
                 backgroundColor: theme.palette.button.main,
             }}

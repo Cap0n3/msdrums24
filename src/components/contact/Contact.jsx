@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "@mui/material";
 import GridSection from "../common/gridSection/GridSection";
-import ContactForm from "./subcomponents/ContactForm";
+import ContactForm from "../common/forms/contactForm/ContactForm";
 import Map from "./subcomponents/Map";
 
 const Contact = () => {

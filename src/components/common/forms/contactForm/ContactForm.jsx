@@ -9,12 +9,12 @@ import {
     Fade,
     Slide,
 } from "@mui/material";
-import RiseTitle from "../../common/riseTitle/RiseTitle";
-import Socials from "../../common/socials/Socials";
-import useEmailHandler from "../../../hooks/useEmailHandler";
+import RiseTitle from "../../riseTitle/RiseTitle";
+import Socials from "../../socials/Socials";
+import useEmailHandler from "../../../../hooks/useEmailHandler";
 import Alert from "@mui/material/Alert";
 import { useInView } from "react-intersection-observer";
-import { FORM_REGEX } from "../../../utils/FormRegex";
+import { FORM_REGEX } from "../../../../utils/FormRegex";
 
 const ContactForm = () => {
     const serviceID = __EMAILJS_SERVICE_ID__;

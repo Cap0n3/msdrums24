@@ -12,6 +12,9 @@ const NavLogo = ({ title = "" }) => {
 
     return (
         <Box
+            component={Link}
+            to="/"
+            reloadDocument={true}
             sx={{
                 display: "flex",
                 alignItems: "center",
@@ -21,6 +24,7 @@ const NavLogo = ({ title = "" }) => {
                         transition: "transform 0.3s ease-in-out",
                     },
                 },
+                textDecoration: "none",
             }}
         >
             <PlaceholderLogo
@@ -31,8 +35,6 @@ const NavLogo = ({ title = "" }) => {
             <Typography
                 variant="h3"
                 noWrap
-                component={Link}
-                to="/"
                 sx={{
                     ml: 2,
                     color: theme.palette.secondary.main,

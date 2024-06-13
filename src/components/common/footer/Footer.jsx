@@ -23,14 +23,19 @@ const Footer = ({
                 flexGrow: 1,
                 bgcolor: theme.palette.background.default,
                 color: "white",
-                padding: "2rem",
                 minHeight: "250px",
+                //border: "1px solid yellow",
             }}
         >
             <Grid
                 container
                 spacing={5}
-                sx={{ paddingTop: "1rem", paddingBottom: "1rem" }}
+                sx={{ 
+                    paddingTop: "1rem", 
+                    paddingBottom: "1rem",
+                    margin: 0,
+                    //border: "1px solid blue", 
+                }}
             >
                 <Grid
                     xs={12}
@@ -135,7 +140,10 @@ const Footer = ({
                 <Typography
                     component="p"
                     variant="caption"
-                    sx={{ color: theme.palette.text.secondary }}
+                    sx={{ 
+                        color: theme.palette.text.secondary, 
+                        px: { xs: 1, md: 0 },
+                    }}
                 >
                     © Copyright 2024 My Company | Designed & Coded with love by
                     Alexandre Guillin | All Rights Reserved

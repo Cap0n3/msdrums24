@@ -38,19 +38,7 @@ export default function Root() {
             >
                 <Outlet />
             </Box>
-            {/* <Footer
-                description={footerData[language].footer_description}
-                newsletter_description={
-                    footerData[language].newsletter_description
-                }
-                newsletter_placeholder={
-                    footerData[language].newsletter_placeholder
-                }
-                newsletter_button={footerData[language].newsletter_button}
-                footer_links_col1={footer_links_col1[language]}
-                footer_links_col2={footer_links_col2[language]}
-            /> */}
-            <MapFooter
+            <Footer
                 description={footerData[language].footer_description}
                 newsletter_description={
                     footerData[language].newsletter_description
@@ -62,6 +50,9 @@ export default function Root() {
                 footer_links_col1={footer_links_col1[language]}
                 footer_links_col2={footer_links_col2[language]}
             />
+            {/* <MapFooter
+                description={footerData[language].footer_description}
+            /> */}
         </>
     );
 }

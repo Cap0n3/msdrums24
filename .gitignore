@@ -1,5 +1,7 @@
 # Don't forget to add env file when working on project !
 
+#.env
+
 # Logs
 logs
 *.log
@@ -13,7 +15,6 @@ node_modules
 dist
 dist-ssr
 *.local
-.prettierignore
 
 # Editor directories and files
 .vscode/*

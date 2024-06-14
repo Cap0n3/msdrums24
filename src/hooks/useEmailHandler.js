@@ -22,7 +22,7 @@ const useEmailHandler = (serviceID, templateID, publicKey) => {
         event.preventDefault();
         setIsWaitingServerResp(true);
 
-        console.log(formRef.current);
+        //console.log(formRef.current);
 
         try {
             const result = await emailjs.sendForm(

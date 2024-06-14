@@ -28,13 +28,7 @@ const ContactForm = () => {
         handleSubmit,
         reset,
         formState: { errors },
-    } = useForm({
-        defaultValues: {
-            name: "",
-            email: "",
-            message: "",
-        },
-    });
+    } = useForm({ defaultValues });
 
     const {
         formRef,
@@ -83,28 +77,28 @@ const ContactForm = () => {
                                 noValidate
                             >
                                 <Grid container spacing={4}>
-                                    <Grid item xs={12} sm={6}>
+                                    <Grid item xs={12} md={6}>
                                         <TextInput
                                             field={formFields.firstNameField}
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
-                                    <Grid item xs={12} sm={6}>
+                                    <Grid item xs={12} md={6}>
                                         <TextInput
                                             field={formFields.lastNameField}
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
-                                    <Grid item xs={12} sm={6}>
+                                    <Grid item xs={12} md={6}>
                                         <TextInput
                                             field={formFields.emailField}
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
-                                    <Grid item xs={12} sm={6}>
+                                    <Grid item xs={12} md={6}>
                                         <TextInput
                                             field={formFields.phoneField}
                                             register={register}

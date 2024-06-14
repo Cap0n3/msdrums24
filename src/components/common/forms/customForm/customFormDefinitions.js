@@ -25,7 +25,10 @@ export const formFields = {
             required: "First Name is required",
             minLength: { value: 2, message: "First Name is too short" },
             maxLength: { value: 50, message: "First Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     lastNameField: {
@@ -37,7 +40,10 @@ export const formFields = {
             required: "Last Name is required",
             minLength: { value: 2, message: "Last Name is too short" },
             maxLength: { value: 50, message: "Last Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     emailField: {
@@ -57,7 +63,10 @@ export const formFields = {
         type: "text",
         validation: {
             required: "Phone is required",
-            pattern: { value: FORM_REGEX.phoneRgx, message: "Invalid phone number" },
+            pattern: {
+                value: FORM_REGEX.phoneRgx,
+                message: "Invalid phone number",
+            },
         },
     },
     birthDateField: {
@@ -109,7 +118,7 @@ export const formFields = {
             { value: "tuesday", label: "Tuesday" },
             { value: "wednesday", label: "Wednesday" },
             { value: "thursday", label: "Thursday" },
-            { value: "friday", label: "Friday"}
+            { value: "friday", label: "Friday" },
         ],
     },
     hourOption1Field: {
@@ -145,7 +154,7 @@ export const formFields = {
             { value: "tuesday", label: "Tuesday" },
             { value: "wednesday", label: "Wednesday" },
             { value: "thursday", label: "Thursday" },
-            { value: "friday", label: "Friday"},
+            { value: "friday", label: "Friday" },
         ],
     },
     hourOption2Field: {
@@ -166,7 +175,7 @@ export const formFields = {
             { value: "16-17", label: "16:00 - 17:00" },
             { value: "17-18", label: "17:00 - 18:00" },
             { value: "18-19", label: "18:00 - 19:00" },
-        ]
+        ],
     },
     messageField: {
         id: "cForm_message",
@@ -177,7 +186,11 @@ export const formFields = {
             required: "Message is required",
             minLength: { value: 2, message: "Message is too short" },
             maxLength: { value: 5000, message: "Message is too long" },
-            pattern: { value: FORM_REGEX.messageRgx, message: "Invalid message, use only letters/numbers and common punctuation" },
+            pattern: {
+                value: FORM_REGEX.messageRgx,
+                message:
+                    "Invalid message, use only letters/numbers and common punctuation",
+            },
         },
     },
 };

@@ -1,34 +1,33 @@
-
-
 # Documentation for Custom Form Implementation <!-- omit in toc -->
 
 ## Overview <!-- omit in toc -->
 
 This documentation details the implementation of a custom form using React and Material-UI, including form definition, input component creation, and form submission handling.
 
-- [Dependencies](#dependencies)
-- [Form Definition](#form-definition)
-  - [Default Values](#default-values)
-  - [Form Fields](#form-fields)
-    - [First method](#first-method)
-    - [Second method](#second-method)
-- [Form Input Components](#form-input-components)
-  - [TextInput Component](#textinput-component)
-  - [SelectInput Component](#selectinput-component)
-- [Form Creation](#form-creation)
-  - [CustomForm Component](#customform-component)
-    - [Implementation for first method](#implementation-for-first-method)
-    - [Implementation for second method](#implementation-for-second-method)
-- [Conclusion](#conclusion)
+-   [Dependencies](#dependencies)
+-   [Form Definition](#form-definition)
+    -   [Default Values](#default-values)
+    -   [Form Fields](#form-fields)
+        -   [First method](#first-method)
+        -   [Second method](#second-method)
+-   [Form Input Components](#form-input-components)
+    -   [TextInput Component](#textinput-component)
+    -   [SelectInput Component](#selectinput-component)
+-   [Form Creation](#form-creation)
+    -   [CustomForm Component](#customform-component)
+        -   [Implementation for first method](#implementation-for-first-method)
+        -   [Implementation for second method](#implementation-for-second-method)
+-   [Conclusion](#conclusion)
 
 ## Dependencies
 
-- [Material-UI](https://mui.com/material-ui/)
-- [React-Hook-Form](https://react-hook-form.com/)
+-   [Material-UI](https://mui.com/material-ui/)
+-   [React-Hook-Form](https://react-hook-form.com/)
 
 ## Form Definition
 
 The form definition consists of two main parts:
+
 1. Default Values
 2. Form Fields
 
@@ -72,7 +71,10 @@ export const formFields = {
             required: "First Name is required",
             minLength: { value: 2, message: "First Name is too short" },
             maxLength: { value: 50, message: "First Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     lastNameField: {
@@ -84,7 +86,10 @@ export const formFields = {
             required: false, // This one is not required
             minLength: { value: 2, message: "Last Name is too short" },
             maxLength: { value: 50, message: "Last Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     levelField: {
@@ -111,7 +116,11 @@ export const formFields = {
             required: "Message is required",
             minLength: { value: 2, message: "Message is too short" },
             maxLength: { value: 5000, message: "Message is too long" },
-            pattern: { value: FORM_REGEX.messageRgx, message: "Invalid message, use only letters/numbers and common punctuation" },
+            pattern: {
+                value: FORM_REGEX.messageRgx,
+                message:
+                    "Invalid message, use only letters/numbers and common punctuation",
+            },
         },
     },
     // Add other fields similarly...
@@ -135,7 +144,10 @@ export const formFields = [
             required: "First Name is required",
             minLength: { value: 2, message: "First Name is too short" },
             maxLength: { value: 50, message: "First Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     {
@@ -146,7 +158,10 @@ export const formFields = [
         validation: {
             minLength: { value: 2, message: "Last Name is too short" },
             maxLength: { value: 50, message: "Last Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     {
@@ -168,12 +183,13 @@ export const formFields = [
 ```
 
 The `formFields` array defines each form field's properties:
-- `id`: Unique identifier for the field.
-- `name`: Name attribute used for form submission.
-- `label`: Label text displayed for the field.
-- `type`: Field type (e.g., `text`, `select`).
-- `validation`: Validation rules including required, minLength, maxLength, and pattern.
-- `options`: Available options for select fields.
+
+-   `id`: Unique identifier for the field.
+-   `name`: Name attribute used for form submission.
+-   `label`: Label text displayed for the field.
+-   `type`: Field type (e.g., `text`, `select`).
+-   `validation`: Validation rules including required, minLength, maxLength, and pattern.
+-   `options`: Available options for select fields.
 
 ## Form Input Components
 
@@ -187,7 +203,7 @@ Two React components are created for handling text inputs and select inputs.
 import React from "react";
 import { TextField } from "@mui/material";
 
-export const TextInput = ({ field, textarea=false, register, errors }) => (
+export const TextInput = ({ field, textarea = false, register, errors }) => (
     <TextField
         variant="outlined"
         required={!!field.validation.required}
@@ -210,10 +226,11 @@ export const TextInput = ({ field, textarea=false, register, errors }) => (
 ```
 
 The `TextInput` component:
-- Uses `TextField` from Material-UI.
-- Receives `field`, `register`, and `errors` as props.
-- Registers the field with validation rules.
-- Displays error messages and accessibility attributes.
+
+-   Uses `TextField` from Material-UI.
+-   Receives `field`, `register`, and `errors` as props.
+-   Registers the field with validation rules.
+-   Displays error messages and accessibility attributes.
 
 ### SelectInput Component
 
@@ -221,7 +238,13 @@ The `TextInput` component:
 // FormInput.jsx
 
 import React from "react";
-import { FormControl, InputLabel, Select, MenuItem, Typography } from "@mui/material";
+import {
+    FormControl,
+    InputLabel,
+    Select,
+    MenuItem,
+    Typography,
+} from "@mui/material";
 import { Controller } from "react-hook-form";
 
 export const SelectInput = ({ field, control, errors }) => (
@@ -258,9 +281,10 @@ export const SelectInput = ({ field, control, errors }) => (
 ```
 
 The `SelectInput` component:
-- Uses `FormControl`, `InputLabel`, `Select`, `MenuItem`, and `Typography` from Material-UI.
-- Utilizes `Controller` from `react-hook-form` to manage the field.
-- Displays error messages and accessibility attributes.
+
+-   Uses `FormControl`, `InputLabel`, `Select`, `MenuItem`, and `Typography` from Material-UI.
+-   Utilizes `Controller` from `react-hook-form` to manage the field.
+-   Displays error messages and accessibility attributes.
 
 ## Form Creation
 
@@ -272,13 +296,7 @@ The `SelectInput` component:
 // CustomForm.js
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import {
-    Button,
-    Box,
-    Grid,
-    Alert,
-    Typography,
-} from "@mui/material";
+import { Button, Box, Grid, Alert, Typography } from "@mui/material";
 import useEmailHandler from "../../../../hooks/useEmailHandler";
 import { defaultValues, formFields } from "../formInputs/formDefinitions";
 import { TextInput, SelectInput } from "../formInputs/FormInputs";
@@ -288,76 +306,106 @@ const CustomForm = () => {
     const templateID = __EMAILJS_TEMPLATE_CUSTOM_ID__;
     const publicKey = __EMAILJS_PUBLIC_KEY__;
 
-    const { register, handleSubmit, reset, control, formState: { errors } } = useForm({ defaultValues });
-    const { formRef, isWaitingServerResp, isSendSuccess, serverResponse, setIsSendSuccess, sendEmail } = useEmailHandler(serviceID, templateID, publicKey);
+    const {
+        register,
+        handleSubmit,
+        reset,
+        control,
+        formState: { errors },
+    } = useForm({ defaultValues });
+    const {
+        formRef,
+        isWaitingServerResp,
+        isSendSuccess,
+        serverResponse,
+        setIsSendSuccess,
+        sendEmail,
+    } = useEmailHandler(serviceID, templateID, publicKey);
 
     const onSubmit = async (data, event) => {
         //await sendEmail(event);
-        
+
         console.log(data); // FOR TESTING
         setIsSendSuccess(true); // FOR TESTING
-        
+
         reset();
     };
 
     return (
         <Box sx={{ width: "90%" }}>
+            <Box>
                 <Box>
-                    <Box>
-                        <form ref={formRef} onSubmit={handleSubmit(onSubmit)} noValidate>
-                            <Grid container spacing={4}>
-                                <Grid item xs={12}>
-                                    <TextInput
-                                        field={formFields.firstNameField}
-                                        register={register}
-                                        errors={errors}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextInput
-                                        field={formFields.lastNameField}
-                                        register={register}
-                                        errors={errors}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <SelectInput
-                                        field={formFields.levelField}
-                                        control={control}
-                                        errors={errors}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <TextInput
-                                        field={formFields.messageField}
-                                        register={register}
-                                        errors={errors}
-                                        textarea // Thid is a textarea
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <Button type="submit" fullWidth variant="contained" color="primary">
-                                        {isWaitingServerResp ? "Sending..." : "Send"}
-                                    </Button>
-                                </Grid>
-                                {isSendSuccess === true && (
-                                    <Grid item xs={12}>
-                                        <Alert severity="success" sx={{ mt: 4 }}>
-                                            Email sent successfully!
-                                        </Alert>
-                                    </Grid>
-                                )}
-                                {isSendSuccess === false && (
-                                    <Grid item xs={12}>
-                                        <Alert severity="error" onClose={() => { setIsSendSuccess(null); }} sx={{ mt: 4 }}>
-                                            Failed to send email.
-                                        </Alert>
-                                    </Grid>
-                                )}
+                    <form
+                        ref={formRef}
+                        onSubmit={handleSubmit(onSubmit)}
+                        noValidate
+                    >
+                        <Grid container spacing={4}>
+                            <Grid item xs={12}>
+                                <TextInput
+                                    field={formFields.firstNameField}
+                                    register={register}
+                                    errors={errors}
+                                />
                             </Grid>
-                        </form>
-                    </Box>
+                            <Grid item xs={12}>
+                                <TextInput
+                                    field={formFields.lastNameField}
+                                    register={register}
+                                    errors={errors}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <SelectInput
+                                    field={formFields.levelField}
+                                    control={control}
+                                    errors={errors}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextInput
+                                    field={formFields.messageField}
+                                    register={register}
+                                    errors={errors}
+                                    textarea // Thid is a textarea
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    color="primary"
+                                >
+                                    {isWaitingServerResp
+                                        ? "Sending..."
+                                        : "Send"}
+                                </Button>
+                            </Grid>
+                            {isSendSuccess === true && (
+                                <Grid item xs={12}>
+                                    <Alert severity="success" sx={{ mt: 4 }}>
+                                        Email sent successfully!
+                                    </Alert>
+                                </Grid>
+                            )}
+                            {isSendSuccess === false && (
+                                <Grid item xs={12}>
+                                    <Alert
+                                        severity="error"
+                                        onClose={() => {
+                                            setIsSendSuccess(null);
+                                        }}
+                                        sx={{ mt: 4 }}
+                                    >
+                                        Failed to send email.
+                                    </Alert>
+                                </Grid>
+                            )}
+                        </Grid>
+                    </form>
                 </Box>
+            </Box>
         </Box>
     );
 };
@@ -381,10 +429,23 @@ const CustomForm = () => {
     const serviceID = __EMAILJS_SERVICE_ID__;
     const templateID = __EMAILJS_TEMPLATE_CUSTOM_ID__;
     const publicKey = __EMAILJS_PUBLIC_KEY__;
-    
-    const { register, handleSubmit, reset, control, formState: { errors } } = useForm({ defaultValues });
 
-    const { formRef, isWaitingServerResp, isSendSuccess, serverResponse, setIsSendSuccess, sendEmail } = useEmailHandler(serviceID, templateID, publicKey);
+    const {
+        register,
+        handleSubmit,
+        reset,
+        control,
+        formState: { errors },
+    } = useForm({ defaultValues });
+
+    const {
+        formRef,
+        isWaitingServerResp,
+        isSendSuccess,
+        serverResponse,
+        setIsSendSuccess,
+        sendEmail,
+    } = useEmailHandler(serviceID, templateID, publicKey);
 
     const onSubmit = async (data, event) => {
         //await sendEmail(event);
@@ -398,32 +459,60 @@ const CustomForm = () => {
             <Box>
                 <Box>
                     <Box>
-                        <form ref={formRef} onSubmit={handleSubmit(onSubmit)} noValidate>
+                        <form
+                            ref={formRef}
+                            onSubmit={handleSubmit(onSubmit)}
+                            noValidate
+                        >
                             <Grid container spacing={4}>
                                 {formFields.map((field) => (
                                     <Grid item xs={12} key={field.id}>
                                         {field.type === "select" ? (
-                                            <SelectInput field={field} control={control} errors={errors} />
+                                            <SelectInput
+                                                field={field}
+                                                control={control}
+                                                errors={errors}
+                                            />
                                         ) : (
-                                            <TextInput field={field} register={register} errors={errors} />
+                                            <TextInput
+                                                field={field}
+                                                register={register}
+                                                errors={errors}
+                                            />
                                         )}
                                     </Grid>
                                 ))}
                                 <Grid item xs={12}>
-                                    <Button type="submit" fullWidth variant="contained" color="primary">
-                                        {isWaitingServerResp ? "Sending..." : "Send"}
+                                    <Button
+                                        type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        color="primary"
+                                    >
+                                        {isWaitingServerResp
+                                            ? "Sending..."
+                                            : "Send"}
                                     </Button>
                                 </Grid>
                                 {isSendSuccess === true && (
                                     <Grid item xs={12}>
-                                        <Alert severity="success" sx={{ mt: 4 }}>
+                                        <Alert
+                                            severity="success"
+                                            sx={{ mt: 4 }}
+                                        >
                                             Email sent successfully!
                                         </Alert>
                                     </Grid>
                                 )}
                                 {isSendSuccess === false && (
                                     <Grid item xs={12}>
-                                        <Alert severity="error" onClose={() => { setIsSendSuccess(null); }} sx={{ mt: 4 }}>
+                                        <Alert
+                                            severity="error"
+                                            onClose={() => {
+                                                setIsSendSuccess(null);
+                                            }}
+                                            sx={{ mt: 4 }}
+                                        >
                                             Failed to send email.
                                         </Alert>
                                     </Grid>
@@ -441,11 +530,12 @@ export default CustomForm;
 ```
 
 The `CustomForm` component:
-- Initializes the form with `useForm` from `react-hook-form`.
-- Uses the `useEmailHandler` hook for handling email sending.
-- Defines the `onSubmit` function for form submission.
-- Renders form fields dynamically based on the `formFields` array.
-- Displays success or error alerts based on the form submission status.
+
+-   Initializes the form with `useForm` from `react-hook-form`.
+-   Uses the `useEmailHandler` hook for handling email sending.
+-   Defines the `onSubmit` function for form submission.
+-   Renders form fields dynamically based on the `formFields` array.
+-   Displays success or error alerts based on the form submission status.
 
 ## Conclusion
 

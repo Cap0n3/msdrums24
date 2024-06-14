@@ -18,7 +18,10 @@ export const formFields = {
             required: "First Name is required",
             minLength: { value: 2, message: "First Name is too short" },
             maxLength: { value: 50, message: "First Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     lastNameField: {
@@ -30,7 +33,10 @@ export const formFields = {
             required: "Last Name is required",
             minLength: { value: 2, message: "Last Name is too short" },
             maxLength: { value: 50, message: "Last Name is too long" },
-            pattern: { value: FORM_REGEX.nameRgx, message: "Invalid name, use only letters (A-Z, a-z)" },
+            pattern: {
+                value: FORM_REGEX.nameRgx,
+                message: "Invalid name, use only letters (A-Z, a-z)",
+            },
         },
     },
     emailField: {
@@ -50,7 +56,10 @@ export const formFields = {
         type: "text",
         validation: {
             required: false,
-            pattern: { value: FORM_REGEX.phoneRgx, message: "Invalid phone number" },
+            pattern: {
+                value: FORM_REGEX.phoneRgx,
+                message: "Invalid phone number",
+            },
         },
     },
     messageField: {
@@ -62,7 +71,11 @@ export const formFields = {
             required: "Message is required",
             minLength: { value: 2, message: "Message is too short" },
             maxLength: { value: 5000, message: "Message is too long" },
-            pattern: { value: FORM_REGEX.messageRgx, message: "Invalid message, use only letters/numbers and common punctuation" },
+            pattern: {
+                value: FORM_REGEX.messageRgx,
+                message:
+                    "Invalid message, use only letters/numbers and common punctuation",
+            },
         },
     },
 };

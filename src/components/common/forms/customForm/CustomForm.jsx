@@ -22,12 +22,25 @@ const CustomForm = () => {
     const publicKey = __EMAILJS_PUBLIC_KEY__;
     const [isVisible, setIsVisible] = useState(false);
 
-    const { register, handleSubmit, reset, control, formState: { errors } } = useForm({ defaultValues });
+    const {
+        register,
+        handleSubmit,
+        reset,
+        control,
+        formState: { errors },
+    } = useForm({ defaultValues });
 
-    const { formRef, isWaitingServerResp, isSendSuccess, serverResponse, setIsSendSuccess, sendEmail } = useEmailHandler(serviceID, templateID, publicKey);
+    const {
+        formRef,
+        isWaitingServerResp,
+        isSendSuccess,
+        serverResponse,
+        setIsSendSuccess,
+        sendEmail,
+    } = useEmailHandler(serviceID, templateID, publicKey);
 
     const onSubmit = async (data, event) => {
-        await sendEmail(event);        
+        await sendEmail(event);
         reset();
     };
 
@@ -50,7 +63,11 @@ const CustomForm = () => {
                 <Box ref={ref}>
                     <Slide direction="up" in={isVisible} timeout={500}>
                         <Box>
-                            <form ref={formRef} onSubmit={handleSubmit(onSubmit)} noValidate>
+                            <form
+                                ref={formRef}
+                                onSubmit={handleSubmit(onSubmit)}
+                                noValidate
+                            >
                                 <Grid container spacing={4}>
                                     <Grid item xs={12} sm={6}>
                                         <TextInput
@@ -138,20 +155,36 @@ const CustomForm = () => {
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <Button type="submit" fullWidth variant="contained" color="primary">
-                                            {isWaitingServerResp ? "Sending..." : "Send"}
+                                        <Button
+                                            type="submit"
+                                            fullWidth
+                                            variant="contained"
+                                            color="primary"
+                                        >
+                                            {isWaitingServerResp
+                                                ? "Sending..."
+                                                : "Send"}
                                         </Button>
                                     </Grid>
                                     {isSendSuccess === true && (
                                         <Grid item xs={12}>
-                                            <Alert severity="success" sx={{ mt: 4 }}>
+                                            <Alert
+                                                severity="success"
+                                                sx={{ mt: 4 }}
+                                            >
                                                 Email sent successfully!
                                             </Alert>
                                         </Grid>
                                     )}
                                     {isSendSuccess === false && (
                                         <Grid item xs={12}>
-                                            <Alert severity="error" onClose={() => { setIsSendSuccess(null); }} sx={{ mt: 4 }}>
+                                            <Alert
+                                                severity="error"
+                                                onClose={() => {
+                                                    setIsSendSuccess(null);
+                                                }}
+                                                sx={{ mt: 4 }}
+                                            >
                                                 Failed to send email.
                                             </Alert>
                                         </Grid>

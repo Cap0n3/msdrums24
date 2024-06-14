@@ -6,8 +6,8 @@ Welcome to the **Landing Page Template** documentation. This guide will help you
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js (version 18.x or higher)
-- Yarn package manager
+-   Node.js (version 18.x or higher)
+-   Yarn package manager
 
 ## Getting Started
 
@@ -52,11 +52,10 @@ This will make the server accessible over your local network.
 
 In the project directory, you can run the following scripts:
 
-- `yarn dev`: Starts the development server.
-- `yarn dev --host`: Starts the development server and makes it accessible over the local network.
-- `yarn build`: Builds the app for production.
-- `yarn serve`: Serves the production build locally.
-
+-   `yarn dev`: Starts the development server.
+-   `yarn dev --host`: Starts the development server and makes it accessible over the local network.
+-   `yarn build`: Builds the app for production.
+-   `yarn serve`: Serves the production build locally.
 
 ## Custom Forms - Easily handle forms
 

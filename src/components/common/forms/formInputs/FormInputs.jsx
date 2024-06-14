@@ -1,8 +1,15 @@
 import React from "react";
-import { TextField, FormControl, InputLabel, Select, MenuItem, Typography } from "@mui/material";
+import {
+    TextField,
+    FormControl,
+    InputLabel,
+    Select,
+    MenuItem,
+    Typography,
+} from "@mui/material";
 import { Controller } from "react-hook-form";
 
-export const TextInput = ({ field, textarea=false, register, errors }) => (
+export const TextInput = ({ field, textarea = false, register, errors }) => (
     <TextField
         variant="outlined"
         required={!!field.validation.required}
@@ -17,13 +24,12 @@ export const TextInput = ({ field, textarea=false, register, errors }) => (
         error={!!errors[field.name]} // !!errors double negation to convert msg to boolean
         helperText={errors[field.name] ? errors[field.name].message : ""}
         // For accessibility
-        aria-invalid={!!errors[field.name]} 
+        aria-invalid={!!errors[field.name]}
         aria-describedby={field.name + "-error"}
         aria-required={!!field.validation.required}
         aria-errormessage={errors[field.name] ? errors[field.name].message : ""}
     />
 );
-
 
 export const SelectInput = ({ field, control, errors }) => (
     <FormControl required={!!field.validation.required} fullWidth>

@@ -114,20 +114,36 @@ const ContactForm = () => {
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <Button type="submit" fullWidth variant="contained" color="primary">
-                                            {isWaitingServerResp ? "Sending..." : "Send"}
+                                        <Button
+                                            type="submit"
+                                            fullWidth
+                                            variant="contained"
+                                            color="primary"
+                                        >
+                                            {isWaitingServerResp
+                                                ? "Sending..."
+                                                : "Send"}
                                         </Button>
                                     </Grid>
                                     {isSendSuccess === true && (
                                         <Grid item xs={12}>
-                                            <Alert severity="success" sx={{ mt: 4 }}>
+                                            <Alert
+                                                severity="success"
+                                                sx={{ mt: 4 }}
+                                            >
                                                 Email sent successfully!
                                             </Alert>
                                         </Grid>
                                     )}
                                     {isSendSuccess === false && (
                                         <Grid item xs={12}>
-                                            <Alert severity="error" onClose={() => { setIsSendSuccess(null); }} sx={{ mt: 4 }}>
+                                            <Alert
+                                                severity="error"
+                                                onClose={() => {
+                                                    setIsSendSuccess(null);
+                                                }}
+                                                sx={{ mt: 4 }}
+                                            >
                                                 Failed to send email.
                                             </Alert>
                                         </Grid>

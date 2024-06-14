@@ -26,6 +26,7 @@ export function getTheme(mode) {
             text: {
                 primary: colors.text.primary[mode],
                 secondary: colors.text.secondary[mode],
+                msDrumsBeige: colors.text.msDrumsBeige[mode],
             },
             border: {
                 main: colors.border[mode],
@@ -34,13 +35,15 @@ export function getTheme(mode) {
         typography: {
             fontFamily: "Source Sans Pro, sans-serif",
             h1: {
+                fontFamily: "WalcottGothicJFHollywood",
                 fontSize: "2.3rem",
                 fontWeight: 500,
                 "@media (min-width:600px)": {
-                    fontSize: "4rem",
+                    fontSize: "4.5rem",
                 },
             },
             h2: {
+                fontFamily: "WalcottGothicJFHollywood",
                 fontSize: "1.5rem",
                 fontWeight: 500,
                 "@media (min-width:600px)": {
@@ -101,6 +104,16 @@ export function getTheme(mode) {
             borderRadius: website_layout.borderRadius,
         },
         components: {
+            MuiCssBaseline: {
+                    styleOverrides: `
+                        @font-face {
+                        font-family: 'WalcottGothicJFHollywood';
+                        src: url('../../public/fonts/WalcottGothicJFHollywood Regular.ttf') format('truetype');
+                        font-weight: normal;
+                        font-style: normal;
+                }
+                `,
+            },
             MuiButton: {
                 styleOverrides: {
                     root: {

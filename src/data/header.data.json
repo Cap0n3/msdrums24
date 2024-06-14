@@ -1,12 +1,12 @@
 {
     "en": {
-        "header_title": "Website Header",
-        "header_description": "Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short.",
-        "header_call2Action": "Action"
+        "header_title": "-MS Drums-",
+        "header_description": "Drum lessons in Geneva",
+        "header_call2Action": "About"
     },
     "fr": {
-        "header_title": "En-tête du site Web",
-        "header_description": "Quelque chose de concis et de direct à propos de la collection ci-dessous - son contenu, son créateur, etc. Faites-le court et doux, mais pas trop court quand même !",
-        "header_call2Action": "Action"
+        "header_title": "-MS Drums-",
+        "header_description": "Cours de batterie à Genève",
+        "header_call2Action": "Découvrir"
     }
 }

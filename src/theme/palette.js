@@ -32,6 +32,10 @@ export const colors = {
             light: "#757575", // Grey for light theme
             dark: "#b0bec5", // Light blue grey for dark theme
         },
+        msDrumsBeige: {
+            light: "#F0E5C5",
+            dark: "#F0E5C5",
+        },
     },
     border: {
         light: "#e0e0e0", // Light grey

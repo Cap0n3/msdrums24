@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { Box, Fade } from "@mui/material";
 import useDeviceType from "../../hooks/useDeviceType";
 import website_layout from "../../theme/layout";
-import banner from "../../assets/img/template_banner.png";
+import banner from "../../assets/img/headers/HeroHeader.jpg";
 import mobileBanner from "../../assets/img/template_banner_mobile.png";
 import TitleBox from "./subcomponents/TitleBox";
 import useViewportSize from "../../hooks/useViewportSize";
@@ -70,7 +70,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: { xs: "center", md: "flex-start" },
+                    alignItems: "center",
                     justifyContent: { xs: "flex-end", md: "center" },
                     height: viewportHeight,
                     minHeight: "500px",

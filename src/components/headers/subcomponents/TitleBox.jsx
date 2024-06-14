@@ -26,7 +26,7 @@ const TitleBox = ({ title, description, call2Action }) => {
             <Box
                 maxWidth="sm"
                 sx={{
-                    marginLeft: { xs: "none", lg: "8%" },
+                    //marginLeft: { xs: "none", lg: "8%" },
                     px: { xs: 4, lg: 0 },
                     py: { xs: 8, lg: 0 },
                 }}
@@ -36,8 +36,9 @@ const TitleBox = ({ title, description, call2Action }) => {
                     component="h1"
                     variant="h1"
                     sx={{
-                        textAlign: { xs: "center", lg: "left" },
-                        color: theme.palette.text.primary,
+                        textAlign: "center",
+                        color: theme.palette.text.msDrumsBeige,
+                        textTransform: "uppercase",
                         //border: "1px solid red"
                     }}
                     gutterBottom
@@ -46,10 +47,11 @@ const TitleBox = ({ title, description, call2Action }) => {
                 </Typography>
                 <Typography
                     component="h2"
-                    variant="subtitle1"
+                    variant="h2"
                     sx={{
-                        textAlign: { xs: "center", lg: "left" },
-                        color: theme.palette.text.primary,
+                        textAlign: "center",
+                        textTransform: "uppercase",
+                        color: theme.palette.text.msDrumsBeige,
                         //border: "1px solid green"
                     }}
                 >
@@ -60,7 +62,7 @@ const TitleBox = ({ title, description, call2Action }) => {
                         mt: 4,
                         display: "flex",
                         flexDirection: "column",
-                        alignItems: { xs: "center", lg: "start" },
+                        alignItems: "center",
                     }}
                 >
                     <Button

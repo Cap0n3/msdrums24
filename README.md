@@ -16,7 +16,7 @@ Follow these steps to get the project up and running on your local machine.
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/Cap0n3/landing_template.git
 cd your-repo-name
 ```
 
@@ -59,7 +59,7 @@ In the project directory, you can run the following scripts:
 
 ## Custom Forms - Easily handle forms
 
-This documentation details the implementation of a custom form using React, Material-UI and React-Hook-Form. It includes form definition, input component creation, and form submission handling. [Go here to learn more](./src/components/common/forms/README.md)
+This documentation details the implementation of a custom form using React, Material-UI and React-Hook-Form. It includes form definition, input component creation, and form submission handling. [Go here to learn more about form creation.](./src/components/common/forms/README.md)
 
 ## Vite documentation
 

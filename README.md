@@ -1,66 +1,9 @@
-# Landing Page Template
+# MS Drums - Site web des cours de batterie
 
-Welcome to the **Landing Page Template** documentation. This guide will help you get started with setting up and running the project.
+Découvrez le professeur de batterie Mathieu Meynet au travers de son site internet dédié à l'enseignement de la batterie.
 
-## Prerequisites
+## MS Drums
 
-Before you begin, ensure you have met the following requirements:
+Mathieu Meynet enseigne la batterie depuis 2008. Jusqu'à présent, il a formé plus d'une centaine d'élèves âgés de 7 à 80 ans, chacun avec des objectifs et des niveaux différents. Son approche pédagogique est centrée sur les besoins spécifiques de chaque élève, que ce soit pour préparer des examens de musique, développer une méthode de travail efficace ou approfondir la compréhension de la théorie musicale.
 
--   Node.js (version 18.x or higher)
--   Yarn package manager
-
-## Getting Started
-
-Follow these steps to get the project up and running on your local machine.
-
-### 1. Clone the Repository
-
-```sh
-git clone https://github.com/Cap0n3/landing_template.git
-cd your-repo-name
-```
-
-### 2. Install Dependencies
-
-To install the necessary dependencies, run:
-
-```sh
-yarn
-```
-
-### 3. Start the Development Server
-
-To start the development server, use the following command:
-
-```sh
-yarn dev
-```
-
-This will start the Vite development server and you can view your project at `http://localhost:3000` by default.
-
-### 4. Access the Server from the Network
-
-If you need to access the development server from other devices on your network, use the following command:
-
-```sh
-yarn dev --host
-```
-
-This will make the server accessible over your local network.
-
-## Available Scripts
-
-In the project directory, you can run the following scripts:
-
--   `yarn dev`: Starts the development server.
--   `yarn dev --host`: Starts the development server and makes it accessible over the local network.
--   `yarn build`: Builds the app for production.
--   `yarn serve`: Serves the production build locally.
-
-## Custom Forms - Easily handle forms
-
-This documentation details the implementation of a custom form using React, Material-UI and React-Hook-Form. It includes form definition, input component creation, and form submission handling. [Go here to learn more about form creation.](./src/components/common/forms/README.md)
-
-## Vite documentation
-
-To learn more about Vite, visit the [Vite documentation](https://vitejs.dev/).
+Que vous soyez ici pour découvrir la batterie, apprendre vos morceaux préférés, ou recevoir des conseils pour le jeu en groupe sur scène ou en studio, Mathieu s'adapte à votre niveau et à vos aspirations. Il se concentre sur l'objectif principal de vous assurer que vous preniez du plaisir à jouer tout en progressant. Pour lui, la musique doit avant tout être une source de joie et d'accomplissement personnel.

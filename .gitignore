@@ -1,6 +1,6 @@
 # Don't forget to add env file when working on project !
 
-#.env
+.env
 
 # Logs
 logs

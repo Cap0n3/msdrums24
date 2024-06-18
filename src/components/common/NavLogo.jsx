@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import PlaceholderLogo from "../../assets/img/logos/PlaceholderLogo";
+import MSLogo from "../../assets/img/logos/logo_msdrums.png";
 
 const NavLogo = ({ title = "" }) => {
     const theme = useTheme();
@@ -27,10 +27,12 @@ const NavLogo = ({ title = "" }) => {
                 textDecoration: "none",
             }}
         >
-            <PlaceholderLogo
-                heigth={isXS ? "35px" : "50px"}
-                width={isXS ? "35px" : "50px"}
-                color={theme.palette.secondary.main}
+            <img 
+                src={MSLogo} 
+                alt="logo" 
+                width={isXS ? "60px" : "80px"}
+                height={isXS ? "50px" : "67px"}
+                loading="lazy"     
             />
             <Typography
                 variant="h3"

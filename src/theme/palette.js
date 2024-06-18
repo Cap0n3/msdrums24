@@ -8,11 +8,11 @@ export const colors = {
         dark: "#ce93d8", // Dark pink
     },
     button: {
-        light: "#7986cb", // Light purple
+        light: "#F0E5C5", // MS Drum Beige
         dark: "#ab47bc", // Dark purple
     },
     buttonHover: {
-        light: "#303f9f", // Dark blue
+        light: "#FFF8E3", // Very light beige
         dark: "#80CBC4", // Dark purple
     },
     error: {

@@ -221,7 +221,7 @@ const Nav = ({ page_links }) => {
                             display: { xs: "none", md: "flex" },
                         }}
                     >
-                        <NavLogo title="Logo" />
+                        <NavLogo title="" />
                     </Box>
 
                     <MobileMenu

@@ -67,11 +67,11 @@ const LangMenu = ({ dots = false }) => {
                     "aria-labelledby": "basic-button",
                 }}
             >
-                <MenuItem onClick={() => handleMenuItemClick("en")}>
-                    EN
-                </MenuItem>
                 <MenuItem onClick={() => handleMenuItemClick("fr")}>
                     FR
+                </MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick("en")}>
+                    EN
                 </MenuItem>
             </Menu>
         </>

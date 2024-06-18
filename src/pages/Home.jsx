@@ -33,11 +33,11 @@ const HomePages = () => {
             />
             <Features
                 identifier="features"
-                title={language === "en" ? "Features" : "Fonctionnalités"}
+                title={language === "en" ? "Features" : "Je vous propose"}
                 subTitle={
                     language === "en"
                         ? "Here are some of the features that you'll love."
-                        : "Voici quelques des fonctionnalités que vous allez adorer."
+                        : "Un enseignement sérieux et convivial, adapté à vos envies ou objectifs et à votre rythme, peu importe votre niveau !"
                 }
                 features={featureData[language]}
                 contrast={true}

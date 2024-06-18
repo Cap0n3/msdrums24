@@ -4,7 +4,7 @@ import { Box, Fade } from "@mui/material";
 import useDeviceType from "../../hooks/useDeviceType";
 import website_layout from "../../theme/layout";
 import banner from "../../assets/img/headers/HeroHeader.jpg";
-import mobileBanner from "../../assets/img/template_banner_mobile.png";
+import mobileBanner from "../../assets/img/headers/HeroHeader.jpg";
 import TitleBox from "./subcomponents/TitleBox";
 import useViewportSize from "../../hooks/useViewportSize";
 import useOrientation from "../../hooks/useOrientation";

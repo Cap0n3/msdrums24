@@ -71,7 +71,7 @@ const TitleBox = ({ title, description, call2Action }) => {
                         color="primary"
                         variant="outlined"
                         size="large"
-                        sx={{ mt: 2 }}
+                        //sx={{ mt: 2 }}
                         onClick={() => {
                             console.log("Call to action clicked");
                         }}

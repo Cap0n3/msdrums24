@@ -3,6 +3,7 @@ import { useTheme } from "@mui/material";
 import { Box, Typography, Button, Slide } from "@mui/material";
 import { Link } from "react-router-dom";
 
+
 const TitleBox = ({ title, description, call2Action }) => {
     const theme = useTheme();
     const [loaded, setLoaded] = useState(false);
@@ -67,14 +68,11 @@ const TitleBox = ({ title, description, call2Action }) => {
                 >
                     <Button
                         component={Link}
-                        //to="/method"
+                        to="/#features"
                         color="primary"
                         variant="outlined"
                         size="large"
                         //sx={{ mt: 2 }}
-                        onClick={() => {
-                            console.log("Call to action clicked");
-                        }}
                     >
                         {call2Action}
                     </Button>

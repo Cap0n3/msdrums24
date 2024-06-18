@@ -1,14 +1,8 @@
 {
     "en": {
-        "footer_description": "Something short and leading about your enterprise - its contents, its creator, etc. Make it short and sweet, but not too short.",
-        "newsletter_description": "Sign up for our newsletter to get news, information updates, or insights about our product.",
-        "newsletter_placeholder": "Enter your email address",
-        "newsletter_button": "Subscribe"
+        "footer_description": "I offer dedicated and friendly teaching tailored to your goals and pace, no matter your level! My approach focuses on your unique needs, whether you're preparing for music exams, looking to develop an effective practice routine, or wanting to deepen your understanding of music theory."
     },
     "fr": {
-        "footer_description": "Quelque chose de concis et de direct à propos de votre entreprise - son contenu, son créateur, etc. Soyez bref et pertinent, mais pas trop court.",
-        "newsletter_description": "Inscrivez-vous à notre newsletter pour recevoir des nouvelles, des mises à jour ou des informations sur notre produit.",
-        "newsletter_placeholder": "Entrez votre adresse e-mail",
-        "newsletter_button": "S'abonner"
+        "footer_description": "Je vous propose un enseignement sérieux et convivial, adapté à vos envies ou objectifs et à votre rythme, peu importe votre niveau ! Mon approche est centrée sur vos besoins spécifiques, que ce soit pour préparer vos examens de musique, développer une méthode de travail efficace ou approfondir la compréhension de la théorie musicale."
     }
 }

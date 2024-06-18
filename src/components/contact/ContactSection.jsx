@@ -4,7 +4,7 @@ import GridSection from "../common/gridSection/GridSection";
 import ContactForm from "../common/forms/contactForm/ContactForm";
 import Map from "./subcomponents/Map";
 
-const Contact = () => {
+const ContactSection = () => {
     const theme = useTheme();
     return (
         <GridSection
@@ -34,4 +34,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default ContactSection;

@@ -71,18 +71,20 @@ const HeroHeader = ({ title, description, call2Action }) => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    justifyContent: { xs: "flex-end", md: "center" },
+                    //justifyContent: { xs: "flex-end", md: "center" },
+                    justifyContent: "center",
                     height: viewportHeight,
                     minHeight: "500px",
                     backgroundColor: theme.palette.background.default,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    backgroundImage: { xs: "none", md: `url(${banner})` },
+                    //backgroundImage: { xs: "none", md: `url(${banner})` },
+                    backgroundImage: `url(${banner})`,
                     overflow: "hidden",
                     //border: "1px solid blue",
                 }}
             >
-                <Box
+                {/* <Box
                     component={"div"}
                     className="mobile-banner"
                     sx={{
@@ -94,7 +96,7 @@ const HeroHeader = ({ title, description, call2Action }) => {
                         backgroundPosition: "center",
                         //border: "1px solid green",
                     }}
-                ></Box>
+                ></Box> */}
                 <TitleBox
                     title={title}
                     description={description}

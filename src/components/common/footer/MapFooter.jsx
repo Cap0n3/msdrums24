@@ -8,7 +8,7 @@ import FootMap from "./subcomponents/FootMap";
 
 const footerMinHeight = "250px";
 
-const MapFooter = ({ description }) => {
+const MapFooter = ({ links, description }) => {
     const theme = useTheme();
 
     return (
@@ -54,9 +54,9 @@ const MapFooter = ({ description }) => {
                         spacing={4}
                         sx={{ alignItems: "center" }}
                     >
-                        <NavLink name="About" url="/#showcase" />
-                        <NavLink name="Pricing" url="/#pricing" />
-                        <NavLink name="FAQ" url="/#qna" />
+                        {links.map(link => (
+                            <NavLink key={link.id} name={link.name} url={link.link} />
+                        ))}
                     </Stack>
                     <Typography
                         component="p"

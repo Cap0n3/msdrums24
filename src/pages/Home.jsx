@@ -48,8 +48,8 @@ const HomePages = () => {
                 identifier="testimonials"
                 title={
                     language === "en"
-                        ? "What our customers say"
-                        : "Ce que nos clients disent"
+                        ? "What my students say"
+                        : "Ce que mes élèves en disent"
                 }
                 testimonials={TestimonialsData[language]}
             />

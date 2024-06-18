@@ -1,6 +1,6 @@
 import React from "react";
 
-const Graduate = ({ height = 60, width = 60, color = "black" }) => {
+const Graduate = ({ height=60, width=60, color="black" }) => {
     return (
         <>
             <svg

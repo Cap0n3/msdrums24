@@ -1,30 +1,54 @@
 {
     "en": [
         {
-            "question": "How do I get started?",
-            "answer": "You can get started simply by creating an account, we will take care of the rest for you!"
+            "question": "Are registrations open all year round ?",
+            "answer": "Yes, you can sign up and start classes at any time of the year !"
         },
         {
-            "question": "What is the best way to contact support?",
-            "answer": "Easy peasy, you can contact us through the contact form, we will get back to you as soon as possible! We also have a chatbot for your support needs."
+            "question": "Is it possible to take a trial class before signing up ?",
+            "answer": "Yes, I offer a non-binding 30-minute trial class for children and a 45-minute trial class for teenagers and adults. If you sign up for one of the plans or à la carte classes, the trial class fee will be deducted from the first invoice."
         },
         {
-            "question": "Can I cancel my subscription?",
-            "answer": "Of course, you can cancel your subscription anytime. Go to your profile and click on the 'unsubscribe' button."
+            "question": "If I've never played a musical instrument and have no theoretical knowledge of music, can I enroll ?",
+            "answer": "Yes ! No prior musical or theoretical knowledge is required."
+        },
+        {
+            "question": "I'd like to enroll my child. What age do you accept students from ?",
+            "answer": "I teach children from the age of 7, with 30-minute lessons."
+        },
+        {
+            "question": "How do à la carte classes work ?",
+            "answer": "The schedule for each lesson is agreed upon in advance between the student and the teacher. Please note that I cannot guarantee a fixed weekly schedule for à la carte students. Priority is given to students following one of the plans."
+        },
+        {
+            "question": "I'd like to stop lessons. How do I go about it ?",
+            "answer": "For all plans, the student commits to a minimum of 3 months. In the event of cancellation, one month's notice is required."
         }
     ],
     "fr": [
         {
-            "question": "Comment puis-je commencer?",
-            "answer": "Vous pouvez commencer en creant un compte, nous nous occuperons du reste pour vous !"
+            "question": "Est-ce que les inscriptions sont ouvertes toute l'année ?",
+            "answer": "Oui, vous pouvez vous inscrire et commencer les cours n'importe quand durant l'année !"
         },
         {
-            "question": "Quelle est la meilleure façon de contacter le support?",
-            "answer": "C'est très facile, vous pouvez contacter le support en remplissant le formulaire de contact. Nous vous recontacterons dans les plus bref delais ! Nous avons aussi un chatbot pour répondre à vos questions."
+            "question": "Est-ce possible de faire un cours d'essai avant de s'inscrire ?",
+            "answer": "Oui, je propose un cours d'essai sans engagement d'une durée de 30 minutes pour les enfants et de 45 minutes pour les adolescents et adultes. En cas d'inscription pour une des formules ou les cours à la carte, le tarif du cours d'essai sera déduit de la première facture."
         },
         {
-            "question": "Puis-je annuler mon abonnement?",
-            "answer": "Oui bien-sûr ! Vous pouvez annuler votre abonnement n'importe quand. Allez dans votre profil et cliquez sur le bouton 'Annuler l'abonnement' !"
+            "question": "Je n'ai jamais joué d'un instrument de musique et je n'ai pas de connaissance théorique de la musique, est-ce que je peux m'inscrire ?",
+            "answer": "Oui ! Aucune connaissance musicale ou théorique n'est requise au préalable."
+        },
+        {
+            "question": "Je souhaite inscrire mon enfant, à partir de quel âge acceptez-vous les élèves ?",
+            "answer": "Je donne des cours aux enfants à partir de 7 ans, pour des cours d'une durée de 30 minutes."
+        },
+        {
+            "question": "Comment fonctionnent les cours à la carte ?",
+            "answer": "Les cours à la carte sont destinés aux personnes ne pouvant pas assister aux cours de manière régulière. L'horaire de chaque leçon est convenu à l'avance entre l'élève et le professeur. A savoir que je ne peux pas garantir un horaire fixe hebdomadaire pour les élèves à la carte. Je donne la priorité aux élèves suivant une des formules."
+        },
+        {
+            "question": "Je souhaite arrêter les cours, comment procéder ?",
+            "answer": "Pour toutes les formules, l'élève s'engage pour une durée de 3 mois minimum. En cas de résiliation, un préavis d'un mois est demandé."
         }
     ]
 }

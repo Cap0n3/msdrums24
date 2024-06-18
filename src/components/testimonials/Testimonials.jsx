@@ -132,8 +132,12 @@ const Testimonials = ({
                         alignItems: "center",
                         gap: 4,
                         width: "100%",
-                        minHeight: "320px",
+                        minHeight: {
+                            xs: 460,
+                            md: 440,
+                        },
                         overflow: "hidden",
+                        //border: "1px solid red",
                     }}
                 >
                     {reviewSlides.length > 0 &&

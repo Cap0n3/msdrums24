@@ -127,6 +127,7 @@ const PriceCard = ({
                     >
                         <Button
                             variant="outlined"
+                            color="secondary"
                             size="large"
                             sx={{
                                 mt: 4,

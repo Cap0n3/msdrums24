@@ -4,7 +4,7 @@ export const colors = {
         dark: "#ab47bc", // Dark purple
     },
     secondary: {
-        light: "#ff4081", // Light pink
+        light: "#CBBB9F", // Light pink
         dark: "#ce93d8", // Dark pink
     },
     button: {

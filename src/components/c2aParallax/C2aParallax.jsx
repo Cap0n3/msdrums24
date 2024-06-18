@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { ParallaxBanner } from "react-scroll-parallax";
+import StickImage from "../../../public/img/parallax/parallaxImage.jpg";
 
 const C2aParallax = () => {
     //const { ref } = useParallax({ speed: 10 });
@@ -9,7 +10,7 @@ const C2aParallax = () => {
         <ParallaxBanner
             layers={[
                 {
-                    image: "https://picsum.photos/id/42/3456/2304",
+                    image: StickImage,
                     speed: -15,
                 },
             ]}

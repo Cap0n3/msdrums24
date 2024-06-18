@@ -44,11 +44,7 @@ const QnA = ({ identifier, title, subtitle, questions, contrast = false }) => {
                     },
                 ]}
                 smScreen_cellSpacing={8} // Space between columns for small screens
-                backgroundColor={
-                    contrast
-                        ? darken(0.1, theme.palette.background.default)
-                        : theme.palette.background.default
-                }
+                contrast={contrast}
                 reverse={false}
             />
         </>

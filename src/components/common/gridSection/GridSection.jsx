@@ -87,7 +87,7 @@ const GridSection = ({
                 pb: paddingBottom,
                 px: paddingX,
                 backgroundColor: contrast
-                    ? darken(0.008, theme.palette.background.default)
+                    ? darken(0.01, theme.palette.background.default)
                     : theme.palette.background.default,
                 minHeight: minHeight,
                 overflow: "hidden", // Prevents bottom page gap during excessive resizing (due to FX)

@@ -20,7 +20,7 @@ export const colors = {
         dark: "#d32f2f", // Dark red
     },
     background: {
-        light: "#ffffff", // White for light theme
+        light: "#FEFCF9", // White for light theme
         dark: "#121212", // Very dark grey for dark theme
     },
     text: {

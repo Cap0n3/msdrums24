@@ -39,7 +39,7 @@ const BasicSection = ({
                 pb: paddingBottom,
                 px: paddingX,
                 backgroundColor: contrast
-                    ? darken(0.008, theme.palette.background.default)
+                    ? darken(0.01, theme.palette.background.default)
                     : theme.palette.background.default,
                 minHeight: "500px",
                 overflow: "hidden",

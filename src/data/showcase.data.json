@@ -1,42 +1,42 @@
 {
     "en": [
         {
-            "image": "https://picsum.photos/id/4/800/800",
-            "title": "Some description of my awesome product",
-            "alt": "Some description of my awesome product",
-            "description": "My product is so cool that you will love it, I think you really need to know more about it. I am sure you will love it."
+            "image": "/img/showcase/Math.jpg",
+            "title": "About",
+            "alt": "about",
+            "description": "Passionate about music since childhood, I began by learning guitar, but it was with drums that I finally found my instrument of choice. I started out as a self-taught musician, then followed the Pro curriculum at the ETM (now the Ecole des musiques actuelles), where I was trained in drums, guitar, solfeggio, harmony and pedagogy. I started teaching drums in Nyon at the MGS music school before opening my own drum school in Geneva in 2016. Alongside my teaching activities, I have played in various musical groups, including The Black Widow's Project. Currently, I play with the band Killing Volts. These various projects have enabled me to record 6 studio albums and tour extensively throughout Europe and Russia."
         },
         {
-            "image": "https://picsum.photos/id/20/800/800",
-            "title": "Maybe you want to know more about this",
-            "alt": "Maybe you want to know more about this",
-            "description": "Your life will change after you know more about this product, it is a game changer. Let me tell you more about it."
+            "image": "/img/showcase/SunDrummer.jpg",
+            "title": "For all ages and levels",
+            "alt": "For all ages and levels",
+            "description": "I have trained over a hundred students from 7 to 77 years old, each with different objectives and levels. My approach is tailored to your specific needs, whether you want to prepare for exams, develop an effective working method or delve deeper into music theory. Whether you want to discover the drums, learn your favorite tunes, or get advice on playing in a band on stage or in the studio, I adapt to your level and your aspirations. My aim is to help you progress while having fun playing, because music should be a source of joy and personal fulfillment."
         },
         {
-            "image": "https://picsum.photos/id/352/800/800",
-            "title": "No way! This is mind blowing",
-            "alt": "No way! This is mind blowing",
-            "description": "I can't believe how amazing this product is, I am sure you will be amazed too. Let me show you more about it."
+            "image": "/img/showcase/SalleCours.jpg",
+            "title": "Professional studio",
+            "alt": "Professional studio",
+            "description": "I have a fully-equipped studio in the dynamic Acacias/Jonction neighborhood, specially designed to welcome my students in the best possible conditions. This professional space is equipped with everything needed to offer an optimal learning experience: several quality drum sets, sound equipment, and various instruments to accompany the sessions. The comfortable, inspiring setting enables each student to concentrate fully on his or her practice and make effective progress, whether for individual lessons or in pairs, with a formula or 'à la carte'."
         }
     ],
     "fr": [
         {
-            "image": "https://picsum.photos/id/4/800/800",
-            "title": "Une description de mon produit",
-            "alt": "Une description de mon produit",
-            "description": "Mon produit est tellement génial que vous allez l'adopter, je pense que vous devez vraiment en savoir plus à son sujet. Je suis sûr que vous allez l'adorer."
+            "image": "/img/showcase/Math.jpg",
+            "title": "À propos de moi",
+            "alt": "à propos",
+            "description": "Passionné de musique depuis l'enfance, j'ai commencé par la guitare avant de me tourner vers la batterie, mon instrument de prédilection. Autodidacte, j'ai suivi le cursus Pro à l'ETM (aujourd'hui l'Ecole des musiques actuelles) où j'ai été formé en batterie, guitare, solfège, harmonie et pédagogie. J'ai enseigné à l'école de musique MGS à Nyon, puis ouvert ma propre école de batterie à Genève en 2016. Parallèlement, j'ai joué avec divers groupes dont The Black Widow's Project et actuellement Killing Volts. J'ai enregistré 6 albums studio et tourné en Europe et en Russie."
         },
         {
-            "image": "https://picsum.photos/id/20/800/800",
-            "title": "Peut-être que vous voulez en savoir plus sur celui-ci",
-            "alt": "Peut être que vous voulez en savoir plus sur celui-ci",
-            "description": "Votre vie changera après en avoir appris davantage sur ce produit, c'est un changement radical. Laissez-moi vous en dire plus à ce sujet."
+            "image": "/img/showcase/SunDrummer.jpg",
+            "title": "Pour Tous les âges et niveaux",
+            "alt": "Pour Tous les âges et niveaux",
+            "description": "J'ai formé plus d'une centaine d'élèves de 7 à 77 ans, chacun avec des objectifs et niveaux différents. Mon approche s'adapte à vos besoins spécifiques, que ce soit pour préparer des examens, développer une méthode de travail efficace ou approfondir la théorie musicale. Que vous souhaitiez découvrir la batterie, apprendre vos morceaux préférés, ou obtenir des conseils pour jouer en groupe sur scène ou en studio, je m'adapte à votre niveau et à vos aspirations. Mon objectif est de vous faire progresser tout en prenant plaisir à jouer, car la musique doit être une source de joie et d'accomplissement personnel."
         },
         {
-            "image": "https://picsum.photos/id/352/800/800",
-            "title": "Pas possible ! C'est époustouflant !",
-            "alt": "Pas possible ! C'est bevoustouflant !",
-            "description": "Je ne peux pas croire à quel point ce produit est incroyable, je suis sûr que vous serez également étonné. Laissez-moi vous en montrer plus à ce sujet."
+            "image": "/img/showcase/SalleCours.jpg",
+            "title": "Studio Professionnel",
+            "alt": "Studio Professionnel",
+            "description": "Je dispose d'un studio tout équipé situé dans le quartier dynamique des Acacias/Jonction, spécialement aménagé pour accueillir mes élèves dans les meilleures conditions. Cet espace professionnel est doté de tout le matériel nécessaire pour offrir une expérience d'apprentissage optimale : plusieurs batteries de qualité, des équipements de sonorisation, et divers instruments pour accompagner les sessions. Le cadre confortable et inspirant permet à chaque élève de se concentrer pleinement sur sa pratique et de progresser efficacement, que ce soit pour des leçons individuelles ou en binôme, avec une formule ou “à la carte”."
         }
     ]
 }

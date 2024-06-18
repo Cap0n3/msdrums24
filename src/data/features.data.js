@@ -1,40 +1,43 @@
 import BusinessIcon from "@mui/icons-material/Business";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import PhotoCameraFrontIcon from "@mui/icons-material/PhotoCameraFront";
+import BassDrumIcon from "../components/common/icons/BassDrumIcon";
+import DrumSticks from "../components/common/icons/DrumSticksIcon";
+import Graduate from "../components/common/icons/GraduateIcon";
 
 export const featureData = {
     en: [
         {
-            logo: BusinessIcon,
-            title: "Feature 1",
-            text: "Feature talking about the first feature of the product. Your product is so cool that it has this feature.",
+            logo: BassDrumIcon,
+            title: "Customized approach",
+            text: "Whether you're a beginner or an advanced student, from 7 to 77 years old, I adapt to your needs and pace. My classes offer an individualized learning experience, guaranteeing enjoyable and effective progress for every student.",
         },
         {
-            logo: WorkHistoryIcon,
-            title: "Feature 2",
-            text: "Think of how much time you'll save with this feature. It's so cool that you'll never want to go back.",
+            logo: DrumSticks,
+            title: "Preparation",
+            text: "Thanks to my extensive experience, I can help you master music theory, work efficiently, and prepare for stage and studio performances. You'll be ready to tackle every musical challenge with confidence and skill.",
         },
         {
-            logo: PhotoCameraFrontIcon,
-            title: "Feature 3",
-            text: "Video chat with your friends and family. It's so easy to use that you'll never want to use anything else.",
+            logo: Graduate,
+            title: "Professional Expertise",
+            text: "With over 15 years' experience, I share technical skills and practical advice to inspire and motivate both beginners and advanced drummers alike to become the best drummers they can be.",
         },
     ],
     fr: [
         {
-            logo: BusinessIcon,
-            title: "Fonctionnalité 1",
-            text: "Fonctionnalité parlant de la première caractéristique du produit. Votre produit est tellement cool qu'il a cette fonctionnalité.",
+            logo: BassDrumIcon,
+            title: "Approche Personnalisée",
+            text: "Que vous soyez débutant ou avancé, de 7 à 77 ans, je m'adapte à vos besoins et à votre rythme. Mes cours offrent une expérience d'apprentissage individualisée, garantissant un progrès agréable et efficace pour chaque élève.",
         },
         {
-            logo: WorkHistoryIcon,
-            title: "Fonctionnalité 2",
-            text: "Pensez à tout le temps que vous économiserez ! C'est tellement génial que vous ne voudrez jamais revenir en arrière.",
+            logo: DrumSticks,
+            title: "Préparation",
+            text: "Grâce à mon expérience, je vous aide à maîtriser la théorie musicale, à travailler efficacement et à vous préparer pour les performances scéniques et en studio. Vous serez prêt pour chaque défi musical avec confiance.",
         },
         {
-            logo: PhotoCameraFrontIcon,
-            title: "Fonctionnalité 3",
-            text: "Discutez en vidéo avec vos amis et votre famille. C'est tellement facile à utiliser que vous ne voudrez jamais utiliser autre chose.",
+            logo: Graduate,
+            title: "Expertise Professionnelle",
+            text: "Avec plus de 15 ans d'expérience, je partage des compétences techniques et des conseils pratiques pour inspirer et motiver les débutants et les plus avancés à devenir les meilleurs batteurs ou batteuses possible.",
         },
     ],
 };

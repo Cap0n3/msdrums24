@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import { Box, Typography, Icon } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MSLogo from "../../assets/img/logos/logo_msdrums.png";
@@ -27,12 +26,12 @@ const NavLogo = ({ title = "" }) => {
                 textDecoration: "none",
             }}
         >
-            <img 
-                src={MSLogo} 
-                alt="logo" 
+            <img
+                src={MSLogo}
+                alt="logo"
                 width={isXS ? "60px" : "80px"}
                 height={isXS ? "50px" : "67px"}
-                loading="lazy"     
+                loading="lazy"
             />
             <Typography
                 variant="h3"

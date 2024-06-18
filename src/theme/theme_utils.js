@@ -105,7 +105,7 @@ export function getTheme(mode) {
         },
         components: {
             MuiCssBaseline: {
-                    styleOverrides: `
+                styleOverrides: `
                         @font-face {
                         font-family: 'WalcottGothicJFHollywood';
                         src: url('../../public/fonts/WalcottGothicJFHollywood Regular.ttf') format('truetype');

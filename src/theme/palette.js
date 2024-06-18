@@ -1,6 +1,6 @@
 export const colors = {
     primary: {
-        light: "#7986cb", // Light purple
+        light: "#CBBB9F", // Dark beige
         dark: "#ab47bc", // Dark purple
     },
     secondary: {

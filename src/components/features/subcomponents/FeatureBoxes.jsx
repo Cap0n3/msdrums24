@@ -10,7 +10,10 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
     const theme = useTheme();
 
     const featureLogo = (IconComponent, iconProps) => (
-        <Box display="flex" justifyContent="center">
+        <Box
+            display="flex"
+            justifyContent="center"
+        >
             <IconComponent {...iconProps} />
         </Box>
     );
@@ -24,7 +27,7 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
                     p: 4,
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
+                    justifyContent: "flex-start",
                     alignItems: "center",
                     gap: 2,
                     maxWidth: 340,
@@ -33,16 +36,15 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
                 }}
             >
                 {featureLogo(logo, {
-                    fontSize: "large",
-                    sx: {
-                        color: theme.palette.primary.main,
-                        mb: { xs: 0, lg: 2 },
-                    },
+                    width: 50,
+                    height: 50,
+                    color: theme.palette.primary.main,
                 })}
                 <Typography
                     component="h3"
                     variant="h3"
                     //mt={2}
+                    textAlign="center"
                     sx={{ color: theme.palette.text.primary }}
                 >
                     {title}

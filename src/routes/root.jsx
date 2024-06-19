@@ -7,7 +7,7 @@ import useScrollToTop from "../hooks/useScrollToTop";
 import website_layout from "../theme/layout";
 import { Box } from "@mui/material";
 import { nav_page_links } from "./menu-urls";
-import {  mapFooter_links } from "./menu-urls";
+import { mapFooter_links } from "./menu-urls";
 import footerData from "../data/footer.data.json";
 import ScrollToHash from "../components/common/ScrollToHash";
 import ScrollTop from "../components/common/ScrollToTop";

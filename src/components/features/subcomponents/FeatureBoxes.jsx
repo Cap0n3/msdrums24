@@ -10,10 +10,7 @@ const FeatBox = ({ inView, logo, title, description, transitionTime }) => {
     const theme = useTheme();
 
     const featureLogo = (IconComponent, iconProps) => (
-        <Box
-            display="flex"
-            justifyContent="center"
-        >
+        <Box display="flex" justifyContent="center">
             <IconComponent {...iconProps} />
         </Box>
     );

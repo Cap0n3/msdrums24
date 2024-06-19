@@ -54,8 +54,12 @@ const MapFooter = ({ links, description }) => {
                         spacing={4}
                         sx={{ alignItems: "center" }}
                     >
-                        {links.map(link => (
-                            <NavLink key={link.id} name={link.name} url={link.link} />
+                        {links.map((link) => (
+                            <NavLink
+                                key={link.id}
+                                name={link.name}
+                                url={link.link}
+                            />
                         ))}
                     </Stack>
                     <Typography

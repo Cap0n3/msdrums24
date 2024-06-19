@@ -3,7 +3,6 @@ import { useTheme } from "@mui/material";
 import { Box, Typography, Button, Slide } from "@mui/material";
 import { Link } from "react-router-dom";
 
-
 const TitleBox = ({ title, description, call2Action }) => {
     const theme = useTheme();
     const [loaded, setLoaded] = useState(false);

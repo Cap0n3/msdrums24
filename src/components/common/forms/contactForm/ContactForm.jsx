@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import {
-    TextField,
     Button,
     Box,
-    Typography,
     Grid,
     Fade,
     Slide,
@@ -17,7 +15,11 @@ import { useInView } from "react-intersection-observer";
 import { defaultValues, formFields } from "./contactFormDefinitions";
 import { TextInput } from "../formInputs/FormInputs";
 
-const ContactForm = () => {
+const ContactForm = ({
+    title = "Want to contact us ?",
+    subTitle = "Get in touch",
+    warning,
+}) => {
     const serviceID = __EMAILJS_SERVICE_ID__;
     const templateID = __EMAILJS_TEMPLATE_ID__;
     const publicKey = __EMAILJS_PUBLIC_KEY__;
@@ -62,11 +64,19 @@ const ContactForm = () => {
                 width: "90%",
             }}
         >
-            <RiseTitle title="Want to contact us ?" subTitle="Get in touch" />
-            {/* <Typography component="p" variant="body2" gutterBottom>
-                We would love to hear from you. Please fill out the form below
-                and we will get back to you as soon as possible.
-            </Typography> */}
+            <RiseTitle title={title} subTitle={subTitle} />
+            {warning && (
+                <Alert
+                    variant="filled"
+                    severity="info"
+                    sx={{
+                        mb: 4,
+                    }}
+                >
+                    {warning}
+                </Alert>
+            )}
+
             <Fade in={inView} timeout={2000}>
                 <Box ref={ref}>
                     <Slide direction="up" in={isVisible} timeout={500}>

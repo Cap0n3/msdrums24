@@ -1,0 +1,14 @@
+{
+    "en": {
+        "title": "Get in touch",
+        "subTitle": "For all inquiries, please fill in the form below.",
+        "warning": "Please note: for all registrations and trial classes, please complete the registration form.",
+        "submit": "Submit"
+    },
+    "fr": {
+        "title": "Contactez-moi",
+        "subTitle": "Pour toutes demandes de renseignement, merci de remplir le formulaire ci-dessous.",
+        "warning": "Attention : pour toutes les inscriptions et les cours d’essais, merci de remplir le formulaire d'inscription.",
+        "submit": "Envoyer"
+    }
+}

@@ -69,7 +69,7 @@ const MapFooter = ({ links, description }) => {
                     <Box
                         sx={{
                             marginTop: "auto",
-                            textAlign: { xs: "center", md: "left" },
+                            textAlign: "center",
                             //border: "1px solid green",
                         }}
                     >

@@ -61,7 +61,7 @@ const PlansSection = () => {
                     :
                     <DesktopPlanTable data={data} />
             }
-            <DesktopPlansTableALT data={plansData["fr"]} />
+            {/* <DesktopPlansTableALT data={plansData["fr"]} /> */}
         </BasicSection>
     );
 };

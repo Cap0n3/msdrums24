@@ -25,7 +25,7 @@ const MobilePlanTable = ({ data }) => {
     return (
         <Box sx={{ width: "100%", display: "flex", flexDirection: "column", gap: "50px" }}>
             <TableContainer>
-                { isXS ? <TableKeysColumn data={data.keysColumn} /> : "" }
+                { isXS && <TableKeysColumn data={data.keysColumn} /> }
                 <Box sx={{ width: "100%", borderLeft: innerBorders }}>
                     <Header title={data.firstColumn[0]} bgColor={theme.palette.background.lightBeige} />
                     <Box sx={{ display: "flex" }}>
@@ -38,7 +38,7 @@ const MobilePlanTable = ({ data }) => {
                 </Box>
             </TableContainer>
             <TableContainer>
-                <TableKeysColumn data={data.keysColumn} />
+                { isXS && <TableKeysColumn data={data.keysColumn} /> }
                 <Box sx={{ width: "100%", borderLeft: innerBorders }}>
                     <Header title={data.fourthColumn[0]} bgColor={theme.palette.background.lightBeige} />
                     <StackCells data={data.fourthColumn.slice(1)} />
@@ -47,7 +47,7 @@ const MobilePlanTable = ({ data }) => {
                 </Box>
             </TableContainer>
             <TableContainer>
-                <TableKeysColumn data={data.keysColumn} />
+                { isXS && <TableKeysColumn data={data.keysColumn} /> }
                 <Box sx={{ width: "100%", borderLeft: innerBorders }}>
                     <Header title={data.firstColumn[0]} bgColor={theme.palette.background.lightBeige} />
                     <Box sx={{ display: "flex" }}>

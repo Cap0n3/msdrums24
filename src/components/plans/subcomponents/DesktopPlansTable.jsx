@@ -1,39 +1,58 @@
-import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from "@mui/material";
+import React from "react";
+import {
+    Box,
+    Typography,
+} from "@mui/material";
+import TableContainer from "./tableElements/TableContainer";
+import Header from "./tableElements/TableHeader";
+import Cell from "./tableElements/TableCell";
+import TableKeysColumn from "./tableElements/TableKeysColumn";
+import StackCells from "./tableElements/utils/StackCells";
+import Footer from "./tableElements/TableFooter";
+import { useTheme } from "@mui/material/styles";
+import { innerBorders } from "../PlansSection";
 
 
-const PlanTable = ({ planType, planDetails }) => (
-    <TableContainer component={Paper} style={{ marginBottom: '16px' }}>
-        <Typography variant="h6" style={{ margin: '16px' }}>{planType}</Typography>
-        <Table>
-            <TableHead>
-                <TableRow>
-                    <TableCell>Duration</TableCell>
-                    {Object.keys(planDetails[Object.keys(planDetails)[0]]).map(key => (
-                        <TableCell key={key}>{key.replace(/_/g, ' ')}</TableCell>
-                    ))}
-                </TableRow>
-            </TableHead>
-            <TableBody>
-                {Object.entries(planDetails).map(([duration, details]) => (
-                    <TableRow key={duration}>
-                        <TableCell>{duration}</TableCell>
-                        {Object.values(details).map((value, idx) => (
-                            <TableCell key={idx}>{value}</TableCell>
-                        ))}
-                    </TableRow>
-                ))}
-            </TableBody>
-        </Table>
-    </TableContainer>
-);
+const DesktopPlanTable = ({ data }) => {
+    const theme = useTheme();
 
-const DesktopPlansTable = ({data}) => (
-    <div>
-        {Object.entries(data).map(([planType, planDetails]) => (
-            <PlanTable key={planType} planType={planType} planDetails={planDetails} />
-        ))}
-    </div>
-);
+    React.useEffect(() => {
+        const plans = Object.keys(data)
+        
+        console.log(plans)
+    }, [data]);
 
-export default DesktopPlansTable;
+    return (
+        <TableContainer>
+            <TableKeysColumn data={data.keysColumn} />
+            <Box sx={{ width: "100%", borderLeft: innerBorders }}>
+                <Header title={data.firstColumn[0]} bgColor={theme.palette.background.lightBeige} />
+                <Box sx={{ display: "flex" }}>
+                    <StackCells data={data.firstColumn.slice(1)} rightBorder={true} />
+                    <StackCells data={data.secondColumn.slice(1)} rightBorder={true} />
+                    <StackCells data={data.thirdColumn.slice(1)} />
+                </Box>
+                <Cell item="34" index={0} align="center"  />
+                <Footer content="De septembre à juin" />
+            </Box>
+            <Box sx={{ width: "100%", borderLeft: innerBorders }}>
+                <Header title={data.fourthColumn[0]} bgColor={theme.palette.background.lightBeige} />
+                <StackCells data={data.fourthColumn.slice(1)} />
+                <Cell item="34" index={0} align="center"  />
+                <Footer content="De septembre à juin" />
+            </Box>
+            <Box sx={{ width: "100%", borderLeft: innerBorders }}>
+                <Header title={data.firstColumn[0]} bgColor={theme.palette.background.lightBeige} />
+                <Box sx={{ display: "flex" }}>
+                    <StackCells data={data.firstColumn.slice(1)} rightBorder={true} />
+                    <StackCells data={data.secondColumn.slice(1)} rightBorder={true} />
+                    <StackCells data={data.thirdColumn.slice(1)} />
+                </Box>
+                <Cell item="34" index={0} align="center"  />
+                <Footer content="De septembre à juin" />
+            </Box>
+        </TableContainer>
+    );
+};
+
+export default DesktopPlanTable;

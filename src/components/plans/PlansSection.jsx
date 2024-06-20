@@ -4,11 +4,9 @@ import { useMediaQuery } from "@mui/material";
 import BasicSection from "../common/basicSection/BasicSection";
 import DesktopPlanTable from "./subcomponents/DesktopPlansTable";
 import MobilePlanTable from "./subcomponents/MobilePlansTables";
-import plansData from "../../data/plansTable.data.json";
 
 const data = {
     keysColumn: [
-        "Formule",
         "Durée du cours",
         "Tarif annuel",
         "Tarif trimestriel",
@@ -22,8 +20,6 @@ const data = {
         "1280.-",
         "320.-",
         "128.-",
-        "De septembre à juin",
-        "34"
     ],
     secondColumn: [
         "Formule Individuelle",
@@ -31,8 +27,6 @@ const data = {
         "1880.-",
         "470.-",
         "188.-",
-        "De septembre à juin",
-        "34"
     ],
     thirdColumn: [
         "Formule Individuelle",
@@ -40,8 +34,6 @@ const data = {
         "2480.-",
         "620.-",
         "248.-",
-        "De septembre à juin",
-        "34"
     ],
     fourthColumn: [
         "Formule Binôme",
@@ -49,8 +41,6 @@ const data = {
         "1720.-",
         "425.-",
         "170.-",
-        "De septembre à juin",
-        "34"
     ],
 };
 
@@ -63,7 +53,12 @@ const PlansSection = () => {
 
     return (
         <BasicSection identifier="plans">
-            <DesktopPlanTable data={plansData["fr"]} />
+            {
+                isSm ?
+                    <MobilePlanTable data={data} />
+                    :
+                    <DesktopPlanTable data={data} />
+            }
         </BasicSection>
     );
 };

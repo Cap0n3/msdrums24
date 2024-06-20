@@ -2,13 +2,21 @@
     "en": {
         "title": "Get in touch",
         "subTitle": "For all inquiries, please fill in the form below.",
-        "warning": "Please note: for all registrations and trial classes, please complete the registration form.",
+        "warning": {
+            "message": "Please note: for all registrations and trial classes, please complete the registration form.",
+            "link_text": "Go to registration form",
+            "link_url": "/registration"
+        },
         "submit": "Submit"
     },
     "fr": {
         "title": "Contactez-moi",
         "subTitle": "Pour toutes demandes de renseignement, merci de remplir le formulaire ci-dessous.",
-        "warning": "Attention : pour toutes les inscriptions et les cours d’essais, merci de remplir le formulaire d'inscription.",
+        "warning": {
+            "message": "Attention : pour toutes les inscriptions et les cours d’essais, merci de remplir le formulaire d'inscription.",
+            "link_text": "Aller au formulaire",
+            "link_url": "/inscription"
+        },
         "submit": "Envoyer"
     }
 }

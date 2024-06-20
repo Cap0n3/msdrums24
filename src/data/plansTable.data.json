@@ -1,0 +1,92 @@
+{
+    "en": {
+        "Individual Plan": {
+            "30 min": {
+                "Annual fee": 1280,
+                "Quarterly fee": 320,
+                "Monthly fee": 128,
+                "Number of lessons": 34,
+                "Period": "From September to June"
+            },
+            "45 min": {
+                "Annual fee": 1880,
+                "Quarterly fee": 470,
+                "Monthly fee": 188,
+                "Number of lessons": 34,
+                "Period": "From September to June"
+            },
+            "60 min": {
+                "Annual fee": 2480,
+                "Quarterly fee": 620,
+                "Monthly fee": 248,
+                "Number of lessons": 34,
+                "Period": "From September to June"
+            }
+        },
+        "Dual Plan": {
+            "45 min": {
+                "Annual fee": 1720,
+                "Quarterly fee": 425,
+                "Monthly fee": 170,
+                "Number of lessons": 34,
+                "Period": "From September to June"
+            }
+        },
+        "A la carte": {
+            "30 min": {
+                "Fee per lesson": 40
+            },
+            "45 min": {
+                "Fee per lesson": 60
+            },
+            "60 min": {
+                "Fee per lesson": 80
+            }
+        }
+    },
+    "fr": {
+        "Formule individuelle": {
+            "30 min": {
+                "Tarif annuel": 1280,
+                "Tarif trimestriel": 320,
+                "Tarif mensuel": 128,
+                "Nombre de cours": 34,
+                "Période": "De septembre à juin"
+            },
+            "45 min": {
+                "Tarif annuel": 1880,
+                "Tarif trimestriel": 470,
+                "Tarif mensuel": 188,
+                "Nombre de cours": 34,
+                "Période": "De septembre à juin"
+            },
+            "60 min": {
+                "Tarif annuel": 2480,
+                "Tarif trimestriel": 620,
+                "Tarif mensuel": 248,
+                "Nombre de cours": 34,
+                "Période": "De septembre à juin"
+            }
+        },
+        "Formule Binôme": {
+            "45 min": {
+                "Tarif annuel": 1720,
+                "Tarif trimestriel": 425,
+                "Tarif mensuel": 170,
+                "Nombre de cours": 34,
+                "Période": "De septembre à juin"
+            }
+        },
+        "A la carte": {
+            "30 min": {
+                "Tarif par cours": 40
+            },
+            "45 min": {
+                "Tarif par cours": 60
+            },
+            "60 min": {
+                "Tarif par cours": 80
+            }
+        }
+    }
+}

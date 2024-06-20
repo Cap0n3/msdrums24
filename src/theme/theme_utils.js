@@ -21,6 +21,8 @@ export function getTheme(mode) {
             },
             background: {
                 default: colors.background[mode],
+                lightBeige: colors.msDrumsBeige.light,
+                darkBeige: colors.msDrumsBeige.dark,
                 paper: mode === "dark" ? "#333333" : "#ffffff",
             },
             text: {
@@ -108,7 +110,7 @@ export function getTheme(mode) {
                 styleOverrides: `
                         @font-face {
                         font-family: 'WalcottGothicJFHollywood';
-                        src: url('../../public/fonts/WalcottGothicJFHollywood Regular.ttf') format('truetype');
+                        src: url('/fonts/WalcottGothicJFHollywood Regular.ttf') format('truetype');
                         font-weight: normal;
                         font-style: normal;
                 }
@@ -124,6 +126,9 @@ export function getTheme(mode) {
                         "&:hover": {
                             backgroundColor: colors.buttonHover[mode],
                         },
+                        "&:visited": {
+                            color: colors.button[mode],
+                        },
                     },
                     outlinedPrimary: {
                         borderColor: colors.button[mode],
@@ -131,6 +136,9 @@ export function getTheme(mode) {
                         "&:hover": {
                             borderColor: colors.buttonHover[mode],
                             color: colors.buttonHover[mode],
+                        },
+                        "&:visited": {
+                            color: colors.button[mode],
                         },
                     },
                 },

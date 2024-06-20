@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import {
-    Button,
-    Box,
-    Grid,
-    Fade,
-    Slide,
-} from "@mui/material";
+import { Link } from "react-router-dom";
+import { Button, Box, Grid, Fade, Slide } from "@mui/material";
 import RiseTitle from "../../riseTitle/RiseTitle";
 import Socials from "../../socials/Socials";
 import useEmailHandler from "../../../../hooks/useEmailHandler";
@@ -14,6 +9,22 @@ import Alert from "@mui/material/Alert";
 import { useInView } from "react-intersection-observer";
 import { defaultValues, formFields } from "./contactFormDefinitions";
 import { TextInput } from "../formInputs/FormInputs";
+import DirectionsBox from "../../../misc/DirectionsBox";
+
+const WarningBox = ({ warning }) => {
+    return (
+        <Alert
+            variant="filled"
+            severity="info"
+            sx={{
+                mb: 4,
+            }}
+        >
+            {warning.message}{" "}
+            <Link to={warning.link_url}>{warning.link_text}</Link>
+        </Alert>
+    );
+};
 
 const ContactForm = ({
     title = "Want to contact us ?",
@@ -65,17 +76,7 @@ const ContactForm = ({
             }}
         >
             <RiseTitle title={title} subTitle={subTitle} />
-            {warning && (
-                <Alert
-                    variant="filled"
-                    severity="info"
-                    sx={{
-                        mb: 4,
-                    }}
-                >
-                    {warning}
-                </Alert>
-            )}
+            {warning && <WarningBox warning={warning} />}
 
             <Fade in={inView} timeout={2000}>
                 <Box ref={ref}>
@@ -160,7 +161,8 @@ const ContactForm = ({
                                     )}
                                 </Grid>
                             </form>
-                            <Socials />
+                            {/* <Socials /> */}
+                            {/* <DirectionsBox /> */}
                         </Box>
                     </Slide>
                 </Box>

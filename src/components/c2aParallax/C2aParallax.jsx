@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { ParallaxBanner } from "react-scroll-parallax";
-import StickImage from "../../../public/img/parallax/parallaxImage.jpg";
+import StickImage from "/img/parallax/parallaxImage.jpg";
 
 const C2aParallax = () => {
     //const { ref } = useParallax({ speed: 10 });

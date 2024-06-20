@@ -71,7 +71,6 @@ const TitleBox = ({ title, description, call2Action }) => {
                         color="primary"
                         variant="outlined"
                         size="large"
-                        //sx={{ mt: 2 }}
                     >
                         {call2Action}
                     </Button>

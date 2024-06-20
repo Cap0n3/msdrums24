@@ -3,7 +3,9 @@ import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import BasicSection from "../common/basicSection/BasicSection";
 import DesktopPlanTable from "./subcomponents/DesktopPlansTable";
+import DesktopPlansTableALT from "./subcomponents/DesktopPlansTable_ALT";
 import MobilePlanTable from "./subcomponents/MobilePlansTables";
+import plansData from "../../data/plansTable.data.json";
 
 const data = {
     keysColumn: [
@@ -52,13 +54,14 @@ const PlansSection = () => {
     const isSm = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
-        <BasicSection identifier="plans">
+        <BasicSection identifier="plans" direction="column">
             {
                 isSm ?
                     <MobilePlanTable data={data} />
                     :
                     <DesktopPlanTable data={data} />
             }
+            <DesktopPlansTableALT data={plansData["fr"]} />
         </BasicSection>
     );
 };

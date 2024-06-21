@@ -13,43 +13,40 @@ import { useTheme } from "@mui/material/styles";
 import { innerBorders } from "../PlansSection";
 
 
-const DesktopPlanTable = ({ data }) => {
+const DesktopPlanTable = ({ plans, subKeys, dataColumns }) => {
     const theme = useTheme();
 
-    React.useEffect(() => {
-        const plans = Object.keys(data)
-        
-        console.log(plans)
-    }, [data]);
+    React.useEffect(() => { 
+        console.log(plans, subKeys, dataColumns)
+    }, [plans, subKeys, dataColumns]);
 
     return (
         <TableContainer>
-            <TableKeysColumn data={data.keysColumn} />
+            <TableKeysColumn data={subKeys} />
             <Box sx={{ width: "100%", borderLeft: innerBorders }}>
-                <Header title={data.firstColumn[0]} bgColor={theme.palette.background.lightBeige} />
+                <Header title={plans[0]} bgColor={theme.palette.background.lightBeige} />
                 <Box sx={{ display: "flex" }}>
-                    <StackCells data={data.firstColumn.slice(1)} rightBorder={true} />
-                    <StackCells data={data.secondColumn.slice(1)} rightBorder={true} />
-                    <StackCells data={data.thirdColumn.slice(1)} />
+                    <StackCells data={dataColumns[0].slice(0, -2)} rightBorder={true} />
+                    <StackCells data={dataColumns[1].slice(0, -2)} rightBorder={true} />
+                    <StackCells data={dataColumns[2].slice(0, -2)} rightBorder={true} />
                 </Box>
-                <Cell item="34" index={0} align="center"  />
-                <Footer content="De septembre à juin" />
+                {/* Full length cells (spanning 3 columns) */}
+                <Cell item={dataColumns[0][4]} index={0} align="center" />
+                <Cell item={dataColumns[0][5]} index={1} align="center" />
             </Box>
             <Box sx={{ width: "100%", borderLeft: innerBorders }}>
-                <Header title={data.fourthColumn[0]} bgColor={theme.palette.background.lightBeige} />
-                <StackCells data={data.fourthColumn.slice(1)} />
-                <Cell item="34" index={0} align="center"  />
-                <Footer content="De septembre à juin" />
+                <Header title={plans[1]} bgColor={theme.palette.background.lightBeige} />
+                <StackCells data={dataColumns[3]} />
             </Box>
             <Box sx={{ width: "100%", borderLeft: innerBorders }}>
-                <Header title={data.firstColumn[0]} bgColor={theme.palette.background.lightBeige} />
+                <Header title={plans[2]} bgColor={theme.palette.background.lightBeige} />
                 <Box sx={{ display: "flex" }}>
-                    <StackCells data={data.firstColumn.slice(1)} rightBorder={true} />
-                    <StackCells data={data.secondColumn.slice(1)} rightBorder={true} />
-                    <StackCells data={data.thirdColumn.slice(1)} />
+                    <StackCells data={dataColumns[4].slice(0, -1)} rightBorder={true} />
+                    <StackCells data={dataColumns[5].slice(0, -1)} rightBorder={true} />
+                    <StackCells data={dataColumns[6].slice(0, -1)} />
                 </Box>
-                <Cell item="34" index={0} align="center"  />
-                <Footer content="De septembre à juin" />
+                {/* Full length cells (spanning 3 columns) */}
+                <Cell item={dataColumns[4][5]} index={1} align="center" />
             </Box>
         </TableContainer>
     );

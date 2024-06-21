@@ -3,53 +3,15 @@ import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import BasicSection from "../common/basicSection/BasicSection";
 import DesktopPlanTable from "./subcomponents/DesktopPlansTable";
-import DesktopPlansTableALT from "./subcomponents/DesktopPlansTable_ALT";
 import MobilePlanTable from "./subcomponents/MobilePlansTables";
-import plansData from "../../data/plansTable.data.json";
+import AdditionalInfoComponent from "./subcomponents/AddInfoComponent";
 
-const data = {
-    keysColumn: [
-        "Durée du cours",
-        "Tarif annuel",
-        "Tarif trimestriel",
-        "Tarif mensuel*",
-        "Nombre de cours",
-        "Période",
-    ],
-    firstColumn: [
-        "Formule Individuelle",
-        "30 min.",
-        "1280.-",
-        "320.-",
-        "128.-",
-    ],
-    secondColumn: [
-        "Formule Individuelle",
-        "45 min.",
-        "1880.-",
-        "470.-",
-        "188.-",
-    ],
-    thirdColumn: [
-        "Formule Individuelle",
-        "60 min.",
-        "2480.-",
-        "620.-",
-        "248.-",
-    ],
-    fourthColumn: [
-        "Formule Binôme",
-        "45 min.",
-        "1720.-",
-        "425.-",
-        "170.-",
-    ],
-};
 
 export const cellHeight = 60;
 export const innerBorders = "0.5px solid #D6DBDF";
 
-const PlansSection = ({data}) => {
+
+const PlansSection = ({ data, additionalInfos }) => {
     const theme = useTheme();
     const isSm = useMediaQuery(theme.breakpoints.down("md"));
     const [planNames, setPlanNames] = useState([]);
@@ -75,7 +37,7 @@ const PlansSection = ({data}) => {
 
         // Function to create columns based on the plan data
         const createColumn = (planData) => Object.values(planData);
-        
+
         setColumns([
             createColumn(individualPlan30min),
             createColumn(individualPlan45min),
@@ -87,28 +49,15 @@ const PlansSection = ({data}) => {
         ]);
     }, [data]);
 
-    // useEffect(() => {
-    //     console.log(dataSubkeys);
-    //     console.log(columns);
-    //     console.log(planNames);
-    // }, [planNames, dataSubkeys, columns]);
-
-    // useEffect(() => {
-    //     console.log(data);
-    // }, [data]);
-
     return (
         <BasicSection identifier="plans" direction="column">
             {planNames.length > 0 && dataSubkeys.length > 0 && columns.length > 0 && (
-                <DesktopPlanTable plans={planNames} subKeys={dataSubkeys} dataColumns={columns} />
-            )}
-            {/* {
                 isSm ?
-                    <MobilePlanTable data={data} />
+                    <MobilePlanTable plans={planNames} subKeys={dataSubkeys} dataColumns={columns} />
                     :
-                    <DesktopPlanTable data={data} />
-            } */}
-            {/* <DesktopPlansTableALT data={plansData["fr"]} /> */}
+                    <DesktopPlanTable plans={planNames} subKeys={dataSubkeys} dataColumns={columns} />
+            )}
+            <AdditionalInfoComponent additionalInfos={additionalInfos} />
         </BasicSection>
     );
 };

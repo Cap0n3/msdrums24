@@ -8,7 +8,6 @@ import Header from "./tableElements/TableHeader";
 import Cell from "./tableElements/TableCell";
 import TableKeysColumn from "./tableElements/TableKeysColumn";
 import StackCells from "./tableElements/utils/StackCells";
-import Footer from "./tableElements/TableFooter";
 import { useTheme } from "@mui/material/styles";
 import { innerBorders } from "../PlansSection";
 
@@ -31,8 +30,8 @@ const DesktopPlanTable = ({ plans, subKeys, dataColumns }) => {
                     <StackCells data={dataColumns[2].slice(0, -2)} rightBorder={true} />
                 </Box>
                 {/* Full length cells (spanning 3 columns) */}
-                <Cell item={dataColumns[0][4]} index={0} align="center" />
-                <Cell item={dataColumns[0][5]} index={1} align="center" />
+                <Cell item={dataColumns[0][4]} index={4} align="center" />
+                <Cell item={dataColumns[0][5]} index={5} align="center" />
             </Box>
             <Box sx={{ width: "100%", borderLeft: innerBorders }}>
                 <Header title={plans[1]} bgColor={theme.palette.background.lightBeige} />
@@ -46,7 +45,7 @@ const DesktopPlanTable = ({ plans, subKeys, dataColumns }) => {
                     <StackCells data={dataColumns[6].slice(0, -1)} />
                 </Box>
                 {/* Full length cells (spanning 3 columns) */}
-                <Cell item={dataColumns[4][5]} index={1} align="center" />
+                <Cell item={dataColumns[4][5]} index={5} align="center" />
             </Box>
         </TableContainer>
     );

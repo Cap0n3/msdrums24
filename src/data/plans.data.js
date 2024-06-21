@@ -1,5 +1,5 @@
-{
-    "en": {
+export const pricingTable = {
+    en: {
         "Individual Plan": {
             "30 min": {
                 "Lesson Duration": "30 min.",
@@ -63,7 +63,7 @@
             }
         }
     },
-    "fr": {
+    fr: {
         "Formule individuelle": {
             "30 min": {
                 "Durée du cours": "30 min.",
@@ -127,4 +127,27 @@
             }
         }
     }
-}
+};
+
+export const infos = {
+    en: {
+        free_trial: "1st trial lesson free",
+        all_year_round: "Enrollment possible all year round",
+        more_info: {
+            "Individual and Dual Plan": [
+                "1 lesson per week except school holidays and catch-up weeks",
+                "*Monthly fee calculated on a 10-month basis"
+            ]
+        }
+    },
+    fr: {
+        free_trial: "Premier cours d'essai gratuit",
+        all_year_round: "Inscription possible toute l'année",
+        more_info: {
+            "Formule Individuelle et Binôme": [
+                "1 cours par semaine sauf vacances scolaires et semaines de rattrapage",
+                "*Tarif mensuel calculé sur une base de 10 mois"
+            ]
+        }
+    }
+};

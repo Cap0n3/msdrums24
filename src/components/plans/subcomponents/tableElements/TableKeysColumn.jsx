@@ -25,7 +25,7 @@ const TableKeysColumn = ({ data }) => {
     return (
         <Box sx={{ minWidth: "150px", maxWidth: "150px" }}>
             <Header title="" bgColor={theme.palette.background.lightBeige} />
-            <StackCells data={data} align="left" keyColumn={true} />
+            <StackCells data={data} align="left" isKeyColumn={true} />
         </Box>
     );
 };

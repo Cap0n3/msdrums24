@@ -9,10 +9,10 @@ import { innerBorders, cellHeight } from "../../PlansSection";
  * @param {*} item - item of the cell (its content)
  * @param {*} index - index of the cell
  * @param {*} align - alignment of the content
- * @param {*} keyColumn - boolean if the cell is a key column ? (default = false)
+ * @param {*} isKeyColumn - boolean if the cell is a key column ? (default = false)
  * @param {*} rightBorder - boolean if the cell has a right border
  */ 
-const Cell = ({ item, index, align, keyColumn=false, rightBorder }) => {
+const Cell = ({ item, index, align, isKeyColumn=false, tips, rightBorder }) => {
     const theme = useTheme();
 
     const justifyContentMap = {
@@ -31,7 +31,7 @@ const Cell = ({ item, index, align, keyColumn=false, rightBorder }) => {
                 flexGrow: 1,
                 height: `${cellHeight}px`,
                 p: "15px",
-                backgroundColor: keyColumn ? theme.palette.background.darkBeige : (index % 2 === 0 ? "#F8F9F9" : ""),
+                backgroundColor: isKeyColumn ? theme.palette.background.darkBeige : (index % 2 === 0 ? "#F8F9F9" : ""),
                 borderRight: rightBorder ? innerBorders : "",
                 borderTop: innerBorders,
             }}
@@ -39,9 +39,13 @@ const Cell = ({ item, index, align, keyColumn=false, rightBorder }) => {
             <Typography
                 variant="body2"
                 textAlign={align}
-                fontWeight={keyColumn ? 600 : "normal"}
+                fontWeight={isKeyColumn ? 600 : "normal"}
             >
-                {item}
+                {item} <br />
+                {
+                    tips && 
+                    <Typography variant="caption" color="text.secondary" sx={{ fontSize: "0.6rem"}}> ({tips[index]})</Typography>
+                }
             </Typography>
         </Box>
     );

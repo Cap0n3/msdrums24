@@ -7,9 +7,9 @@ import Cell from "../TableCell";
  * @param {*} data - An array of objects that contain the content of each cell.
  * @param {*} align - The alignment of the cells in the column.
  * @param {*} rightBorder - Whether to add a border to the right of the cells in the column.
- * @param {*} keyColumn - Whether the column is a key column (the first column with titles).
+ * @param {*} isKeyColumn - Whether the column is a key column (the first column with titles).
  */
-const StackCells = ({ data, align = "center", rightBorder = false, keyColumn = false }) => {
+const StackCells = ({ data, align = "center", rightBorder = false, isKeyColumn = false, tips }) => {
     return (
         <Box sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
             {data.map((item, index) => (
@@ -18,7 +18,8 @@ const StackCells = ({ data, align = "center", rightBorder = false, keyColumn = f
                     item={item}
                     index={index}
                     align={align}
-                    keyColumn={keyColumn}
+                    isKeyColumn={isKeyColumn}
+                    tips={tips}
                     rightBorder={rightBorder}
                 />
             ))}

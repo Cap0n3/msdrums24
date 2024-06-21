@@ -3,6 +3,7 @@ import Root from "./root";
 import ErrorPage from "../pages/Error";
 import HomePage from "../pages/Home";
 import Plans from "../pages/Plans";
+import Enroll from "../pages/Enroll";
 import Contact from "../pages/Contact";
 
 export const website_routes = {
@@ -17,6 +18,10 @@ export const website_routes = {
         {
             path: "/formules",
             element: <Plans />,
+        },
+        {
+            path: "/inscription",
+            element: <Enroll />,
         },
         {
             path: "/contact",

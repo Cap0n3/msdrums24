@@ -15,7 +15,7 @@ export const nav_page_links = {
         { id: nav_link_ids[0], name: "À propos", link: "/#about" },
         { id: nav_link_ids[2], name: "Tarifs", link: "/#pricing" },
         { id: nav_link_ids[1], name: "Faq", link: "/#qna" },
-        { id: nav_link_ids[3], name: "Inscription", link: "/#enroll" },
+        { id: nav_link_ids[3], name: "Inscription", link: "/inscription" },
     ],
 };
 

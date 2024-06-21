@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import BasicSection from "../common/basicSection/BasicSection";
+import RiseTitle from "../common/riseTitle/RiseTitle";
 import DesktopPlanTable from "./subcomponents/DesktopPlansTable";
 import MobilePlanTable from "./subcomponents/MobilePlansTables";
 import AdditionalInfoComponent from "./subcomponents/AddInfoComponent";
@@ -11,7 +12,7 @@ export const cellHeight = 60;
 export const innerBorders = "0.5px solid #D6DBDF";
 
 
-const PlansSection = ({ data, additionalInfos }) => {
+const PlansSection = ({ titles, data, additionalInfos }) => {
     const theme = useTheme();
     const isSm = useMediaQuery(theme.breakpoints.down("md"));
     const [planNames, setPlanNames] = useState([]);
@@ -51,6 +52,7 @@ const PlansSection = ({ data, additionalInfos }) => {
 
     return (
         <BasicSection identifier="plans" direction="column">
+            <RiseTitle title={titles.title} subTitle={titles.subTitle} />
             {planNames.length > 0 && dataSubkeys.length > 0 && columns.length > 0 && (
                 isSm ?
                     <MobilePlanTable plans={planNames} subKeys={dataSubkeys} dataColumns={columns} />

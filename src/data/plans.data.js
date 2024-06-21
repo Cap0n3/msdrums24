@@ -1,3 +1,15 @@
+export const titles = {
+    en: {
+        title: "Plans",
+        subTitle: "Choose the best plan for you !",
+    },
+    fr: {
+        title: "Formules",
+        subTitle: "Choisissez votre formule idéale !",
+    },
+}
+
+
 export const pricingTable = {
     en: {
         "Individual Plan": {

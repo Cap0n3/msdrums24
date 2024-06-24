@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import { Typography, TextField, Button, Box, Stack } from "@mui/material";
+import { Typography, Box, Stack } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import NavLink from "./subcomponents/NavLink";
 import NavLogo from "../NavLogo";
@@ -82,7 +82,7 @@ const MapFooter = ({ links, description }) => {
                             variant="caption"
                             sx={{ color: theme.palette.text.secondary }}
                         >
-                            © Copyright 2024 My Company | Designed & Coded with
+                            © Copyright 2024 MS Drums | Designed & Coded with
                             love by Alexandre Guillin | All Rights Reserved
                         </Typography>
                     </Box>

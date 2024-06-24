@@ -156,7 +156,7 @@ const Footer = ({
                         px: { xs: 1, md: 0 },
                     }}
                 >
-                    © Copyright 2024 My Company | Designed & Coded with love by
+                    © Copyright 2024 MS Drums | Designed & Coded with love by
                     Alexandre Guillin | All Rights Reserved
                 </Typography>
             </Box>

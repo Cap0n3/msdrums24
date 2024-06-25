@@ -4,15 +4,6 @@ import { useMediaQuery } from "@mui/material";
 import { Box } from "@mui/material";
 import Header from "./TableHeader";
 import StackCells from "./utils/StackCells";
-import Cell from "./TableCell";
-
-const foo = () => {
-    return (
-        <Box>
-            <p>foo</p>
-        </Box>
-    )
-};
 
 /**
  * First column of the table with the keys of the table

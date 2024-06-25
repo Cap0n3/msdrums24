@@ -30,7 +30,7 @@ export const mapFooter_links = {
         { id: "mapfooter-contact", name: "Contact", link: "/contact" },
     ],
     fr: [
-        { id: "mapfooter-enroll", name: "Inscription", link: "/#showcase" },
+        { id: "mapfooter-enroll", name: "Inscription", link: "/inscription" },
         { id: "mapfooter-plans", name: "Formules", link: "/formules" },
         { id: "mapfooter-contact", name: "Contact", link: "/contact" },
     ],

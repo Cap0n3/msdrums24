@@ -12,14 +12,16 @@ const Header = ({ title }) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                flexGrow: 1, 
+                flexGrow: 1,
                 backgroundColor: theme.palette.background.lightBeige,
                 height: `${1.5 * cellHeight}px`,
                 p: "15px",
                 //border: "1px solid pink",
             }}
         >
-            <Typography variant="h4" textAlign="center" fontWeight="bold">{title}</Typography>
+            <Typography variant="h4" textAlign="center" fontWeight="bold">
+                {title}
+            </Typography>
         </Box>
     );
 };

@@ -7,10 +7,8 @@ import DesktopPlanTable from "./subcomponents/DesktopPlansTable";
 import MobilePlanTable from "./subcomponents/MobilePlansTables";
 import AdditionalInfoComponent from "./subcomponents/AddInfoComponent";
 
-
 export const cellHeight = 60;
 export const innerBorders = "0.5px solid #D6DBDF";
-
 
 const PlansSection = ({ titles, data, additionalInfos }) => {
     const theme = useTheme();
@@ -34,7 +32,7 @@ const PlansSection = ({ titles, data, additionalInfos }) => {
         const aLaCarte45min = data[planLabels[2]][lessonDurations[1]];
         const aLaCarte60min = data[planLabels[2]][lessonDurations[2]];
         // Get subkeys of plans data (for first column of table)
-        setDataSubkeys(Object.keys(individualPlan30min))
+        setDataSubkeys(Object.keys(individualPlan30min));
 
         // Function to create columns based on the plan data
         const createColumn = (planData) => Object.values(planData);
@@ -53,12 +51,22 @@ const PlansSection = ({ titles, data, additionalInfos }) => {
     return (
         <BasicSection identifier="plans" direction="column">
             <RiseTitle title={titles.title} subTitle={titles.subTitle} />
-            {planNames.length > 0 && dataSubkeys.length > 0 && columns.length > 0 && (
-                isSm ?
-                    <MobilePlanTable plans={planNames} subKeys={dataSubkeys} dataColumns={columns} />
-                    :
-                    <DesktopPlanTable plans={planNames} subKeys={dataSubkeys} dataColumns={columns} />
-            )}
+            {planNames.length > 0 &&
+                dataSubkeys.length > 0 &&
+                columns.length > 0 &&
+                (isSm ? (
+                    <MobilePlanTable
+                        plans={planNames}
+                        subKeys={dataSubkeys}
+                        dataColumns={columns}
+                    />
+                ) : (
+                    <DesktopPlanTable
+                        plans={planNames}
+                        subKeys={dataSubkeys}
+                        dataColumns={columns}
+                    />
+                ))}
             <AdditionalInfoComponent additionalInfos={additionalInfos} />
         </BasicSection>
     );

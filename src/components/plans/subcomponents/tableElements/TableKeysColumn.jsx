@@ -11,7 +11,7 @@ import StackCells from "./utils/StackCells";
  */
 const TableKeysColumn = ({ data }) => {
     const theme = useTheme();
-    const isXXS = useMediaQuery('(min-width:600px)');
+    const isXXS = useMediaQuery("(min-width:600px)");
 
     return (
         <Box sx={{ minWidth: "150px", maxWidth: "150px" }}>

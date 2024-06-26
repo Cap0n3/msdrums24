@@ -1,17 +1,31 @@
-import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from "@mui/material";
-
+import React from "react";
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Paper,
+    Typography,
+} from "@mui/material";
 
 const PlanTable = ({ planType, planDetails }) => (
-    <TableContainer component={Paper} style={{ marginBottom: '16px' }}>
-        <Typography variant="h6" style={{ margin: '16px' }}>{planType}</Typography>
+    <TableContainer component={Paper} style={{ marginBottom: "16px" }}>
+        <Typography variant="h6" style={{ margin: "16px" }}>
+            {planType}
+        </Typography>
         <Table>
             <TableHead>
                 <TableRow>
                     <TableCell>Duration</TableCell>
-                    {Object.keys(planDetails[Object.keys(planDetails)[0]]).map(key => (
-                        <TableCell key={key}>{key.replace(/_/g, ' ')}</TableCell>
-                    ))}
+                    {Object.keys(planDetails[Object.keys(planDetails)[0]]).map(
+                        (key) => (
+                            <TableCell key={key}>
+                                {key.replace(/_/g, " ")}
+                            </TableCell>
+                        ),
+                    )}
                 </TableRow>
             </TableHead>
             <TableBody>
@@ -28,10 +42,14 @@ const PlanTable = ({ planType, planDetails }) => (
     </TableContainer>
 );
 
-const DesktopPlansTableALT = ({data}) => (
+const DesktopPlansTableALT = ({ data }) => (
     <div>
         {Object.entries(data).map(([planType, planDetails]) => (
-            <PlanTable key={planType} planType={planType} planDetails={planDetails} />
+            <PlanTable
+                key={planType}
+                planType={planType}
+                planDetails={planDetails}
+            />
         ))}
     </div>
 );

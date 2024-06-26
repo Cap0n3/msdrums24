@@ -9,7 +9,13 @@ import Cell from "../TableCell";
  * @param {*} rightBorder - Whether to add a border to the right of the cells in the column.
  * @param {*} isKeyColumn - Whether the column is a key column (the first column with titles).
  */
-const StackCells = ({ data, align = "center", rightBorder = false, isKeyColumn = false, tips }) => {
+const StackCells = ({
+    data,
+    align = "center",
+    rightBorder = false,
+    isKeyColumn = false,
+    tips,
+}) => {
     return (
         <Box sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
             {data.map((item, index) => (

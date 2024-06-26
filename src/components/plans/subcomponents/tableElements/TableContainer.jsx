@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 import { innerBorders } from "../../PlansSection";
 
 const TableContainer = ({ children }) => {
-
     return (
         <Box
             className="plan-table-container"

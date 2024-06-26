@@ -11,10 +11,6 @@ import { innerBorders } from "../PlansSection";
 const DesktopPlanTable = ({ plans, subKeys, dataColumns }) => {
     const theme = useTheme();
 
-    React.useEffect(() => {
-        console.log(plans, subKeys, dataColumns);
-    }, [plans, subKeys, dataColumns]);
-
     return (
         <TableContainer>
             <TableKeysColumn data={subKeys} />

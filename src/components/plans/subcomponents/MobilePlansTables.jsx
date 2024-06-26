@@ -13,10 +13,6 @@ const MobilePlanTable = ({ plans, subKeys, dataColumns }) => {
     const theme = useTheme();
     const isXS = useMediaQuery("(max-width:600px)");
 
-    React.useEffect(() => {
-        console.log(isXS);
-    }, [isXS]);
-
     return (
         <Box
             sx={{

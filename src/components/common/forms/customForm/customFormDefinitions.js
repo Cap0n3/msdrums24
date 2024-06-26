@@ -1,7 +1,7 @@
 import { FORM_REGEX } from "../../../../utils/FormRegex";
 
 // === All options for select form fields (see below) === //
-LEVEL_OPTIONS = {
+const LEVEL_OPTIONS = {
     en: [
         { value: "beginner", label: "Beginner" },
         { value: "intermediate", label: "Intermediate" },
@@ -14,7 +14,7 @@ LEVEL_OPTIONS = {
     ],
 };
 
-PLAN_OPTIONS = {
+const PLAN_OPTIONS = {
     en: [
         { value: "monthly", label: "Monthly" },
         { value: "yearly", label: "Yearly" },
@@ -25,7 +25,7 @@ PLAN_OPTIONS = {
     ],
 };
 
-DAY_OPTIONS = {
+const DAY_OPTIONS = {
     en: [
         { value: "monday", label: "Monday" },
         { value: "tuesday", label: "Tuesday" },
@@ -42,7 +42,7 @@ DAY_OPTIONS = {
     ],
 };
 
-HOUR_OPTIONS = [
+const HOUR_OPTIONS = [
     { value: "10-11", label: "10:00 - 11:00" },
     { value: "11-12", label: "11:00 - 12:00" },
     { value: "12-13", label: "12:00 - 13:00" },

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Stack, Fade } from "@mui/material";
+import { Box, Fade } from "@mui/material";
 import { useTheme } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 import BasicSection from "../common/basicSection/BasicSection";

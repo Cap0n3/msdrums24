@@ -83,16 +83,26 @@ const DAY_OPTIONS = {
 };
 
 const HOUR_OPTIONS = [
-    { value: "10h-11h", label: "10:00 - 11:00" },
-    { value: "11h-12h", label: "11:00 - 12:00" },
-    { value: "12h-13h", label: "12:00 - 13:00" },
-    { value: "13h-14h", label: "13:00 - 14:00" },
-    { value: "14h-15h", label: "14:00 - 15:00" },
-    { value: "15h-16h", label: "15:00 - 16:00" },
-    { value: "16h-17h", label: "16:00 - 17:00" },
-    { value: "17h-18h", label: "17:00 - 18:00" },
-    { value: "18h-19h", label: "18:00 - 19:00" },
+    { value: "11h", label: "11:00" },
+    { value: "11h30", label: "11:30" },
+    { value: "12h", label: "12:00" },
+    { value: "12h30", label: "12:30" },
+    { value: "13h", label: "13:00" },
+    { value: "13h30", label: "13:30" },
+    { value: "14h", label: "14:00" },
+    { value: "14h30", label: "14:30" },
+    { value: "15h", label: "15:00" },
+    { value: "15h30", label: "15:30" },
+    { value: "16h", label: "16:00" },
+    { value: "16h30", label: "16:30" },
+    { value: "17h", label: "17:00" },
+    { value: "17h30", label: "17:30" },
+    { value: "18h", label: "18:00" },
+    { value: "18h30", label: "18:30" },
+    { value: "19h", label: "19:00" },
+    { value: "19h30", label: "19:30" }
 ];
+
 
 // === Default values === //
 export const defaultValues = {

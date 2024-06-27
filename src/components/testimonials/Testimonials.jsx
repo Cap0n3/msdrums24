@@ -13,7 +13,7 @@ const Testimonials = ({
     title,
     testimonials,
     transitionTime = 500,
-    timerInterval = 12000,
+    timerInterval = 4000,
     nbOfReviews = 3,
     contrast = false,
 }) => {

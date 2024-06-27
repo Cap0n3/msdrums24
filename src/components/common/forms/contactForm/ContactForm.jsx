@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Button, Box, Grid, Fade, Slide } from "@mui/material";
 import RiseTitle from "../../riseTitle/RiseTitle";
+import WarningBox from "../../../common/warningBox/WarningBox";
 import useEmailHandler from "../../../../hooks/useEmailHandler";
 import Alert from "@mui/material/Alert";
 import { useInView } from "react-intersection-observer";
@@ -10,21 +11,6 @@ import { defaultValues, formFields } from "../../../../data/contact.data";
 import { LangContext } from "../../../../context/LangContext";
 import { TextInput } from "../formInputs/FormInputs";
 
-
-const WarningBox = ({ warning }) => {
-    return (
-        <Alert
-            variant="filled"
-            severity="info"
-            sx={{
-                mb: 4,
-            }}
-        >
-            {warning.message}{" "}
-            <Link to={warning.link_url}>{warning.link_text}</Link>
-        </Alert>
-    );
-};
 
 const ContactForm = ({
     title = "Want to contact us ?",
@@ -77,7 +63,11 @@ const ContactForm = ({
             }}
         >
             <RiseTitle title={title} subTitle={subTitle} />
-            {warning && <WarningBox warning={warning} />}
+            
+            <WarningBox>
+                {warning.message}{" "}
+                <Link to={warning.link_url}>{warning.link_text}</Link>
+            </WarningBox>
 
             <Fade in={inView} timeout={2000}>
                 <Box ref={ref}>

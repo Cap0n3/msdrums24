@@ -10,13 +10,14 @@ import {
     Alert,
 } from "@mui/material";
 import RiseTitle from "../../../common/riseTitle/RiseTitle";
+import WarningBox from "../../../common/warningBox/WarningBox";
 import useEmailHandler from "../../../../hooks/useEmailHandler";
 import { useInView } from "react-intersection-observer";
 import { defaultValues, formFields } from "../../../../data/enroll.data";
 import { TextInput, SelectInput } from "../formInputs/FormInputs";
 import { LangContext } from "../../../../context/LangContext";
 
-const CustomForm = ({ title="Custom Form", subtitle="Fill out the details" }) => {
+const CustomForm = ({ title="Custom Form", subtitle="Fill out the details", warning }) => {
     const serviceID = __EMAILJS_SERVICE_ID__;
     const templateID = __EMAILJS_TEMPLATE_CUSTOM_ID__;
     const publicKey = __EMAILJS_PUBLIC_KEY__;
@@ -60,6 +61,9 @@ const CustomForm = ({ title="Custom Form", subtitle="Fill out the details" }) =>
     return (
         <Box sx={{ width: "90%" }}>
             <RiseTitle title={title} subTitle={subtitle} />
+            <WarningBox>
+                {warning}
+            </WarningBox>
             <Fade in={inView} timeout={2000}>
                 <Box ref={ref}>
                     <Slide direction="up" in={isVisible} timeout={500}>

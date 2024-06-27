@@ -8,7 +8,7 @@ const Enroll = () => {
 
     return (
         <>
-            <EnrollSection title={enrollTextData[language].title} subtitle={enrollTextData[language].subtitle} />
+            <EnrollSection title={enrollTextData[language].title} subtitle={enrollTextData[language].subtitle} warning={enrollTextData[language].warning} />
         </>
     );
 };

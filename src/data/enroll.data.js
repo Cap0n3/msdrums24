@@ -8,10 +8,12 @@ export const enrollTextData = {
     en: {
         title: "Enroll",
         subtitle: "Enroll now !",
+        warning: "The form below does not commit you in any way, it is simply a request for a trial lesson. I will contact you by email upon receipt of the form.",
     },
     fr: {
         title: "Inscription",
         subtitle: "Inscrivez-vous dès maintenant !",
+        warning: "Le formulaire ci-dessous ne vous engage en rien, il est simplement une demande pour un cours d’essai. Je vous contacterai par email suite à la réception du formulaire.",
     },
 }
 

@@ -39,6 +39,11 @@ a:visited {
     color: #000000;
 }
 
+.plan-links {
+    color: #CBBB9F !important;
+    font-size: 0.9rem;
+}
+
 /* Date inputs (removes helper text 'mm/dd/yyyy') */
 input[type=date]::-webkit-datetime-edit-text {
     -webkit-appearance: none;

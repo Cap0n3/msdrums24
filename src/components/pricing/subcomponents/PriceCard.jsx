@@ -13,7 +13,6 @@ import {
     CardContent,
     CardMedia,
     CardActions,
-    Fade,
     Slide,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -39,6 +38,7 @@ const PriceCard = ({
     price,
     paymentFrequency,
     sellingPoints,
+    morePlans,
     action,
     buttonLink,
     backgroundColor = "#fff",
@@ -123,6 +123,9 @@ const PriceCard = ({
                                 />
                             ))}
                         </List>
+                        <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
+                            <Link className="plan-links" to="/formules">{morePlans}</Link>
+                        </Box>
                     </CardContent>
                     <CardActions
                         sx={{ display: "flex", justifyContent: "center" }}

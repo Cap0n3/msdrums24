@@ -7,7 +7,7 @@ import DesktopPlanTable from "./subcomponents/DesktopPlansTable";
 import MobilePlanTable from "./subcomponents/MobilePlansTables";
 import AdditionalInfoComponent from "./subcomponents/AddInfoComponent";
 
-export const cellHeight = 60;
+export const cellHeight = 80;
 export const innerBorders = "0.5px solid #D6DBDF";
 
 const PlansSection = ({ titles, data, additionalInfos }) => {

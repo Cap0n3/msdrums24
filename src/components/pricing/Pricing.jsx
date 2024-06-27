@@ -37,6 +37,7 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
                 price={cardData.price}
                 paymentFrequency={cardData.paymentFrequency}
                 sellingPoints={cardData.sellingPoints}
+                morePlans={cardData.morePlans}
                 action={cardData.action}
                 buttonLink={cardData.buttonLink}
                 backgroundColor={theme.palette.background.paper}

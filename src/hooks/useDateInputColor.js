@@ -15,9 +15,9 @@ function useDateInputColor() {
     const { language } = useContext(LangContext); // To reload inputs on language change
     
     useEffect(() => {
-        console.log("Date input color hook: ", language);
         const dateInputs = document.querySelectorAll('input[type="date"]');
-        console.log(dateInputs);
+        //console.log("Date input color hook: ", language);
+        //console.log(dateInputs);
 
         dateInputs.forEach((input) => {
             const handleChange = () => {

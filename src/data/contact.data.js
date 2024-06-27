@@ -27,6 +27,25 @@ export const contactTextData = {
     }
 }
 
+export const directionTextData = {
+    en: {
+        title: "How to get there ?",
+        subtitle: "Here are the simplest routes to take",
+        itineraries: [
+            "Bus 11 and 80, Queue d'Arve stop + 2 minutes walking",
+            "Tram 14, Jonction stop + 8 minutes walking"
+        ]
+    },
+    fr: {
+        title: "Comment venir ?",
+        subtitle: "Voici les itinéraires les plus pratiques",
+        itineraries: [
+            "Bus 11 et 80, arrêt Queue d’Arve + 2 min de marche",
+            "Tram 14 arrêt Jonction + 8 min de marche"
+        ]
+    },
+}
+
 // =========================================== //
 // ====== CONTACT FORM INPUTS DEFINITION ===== //
 // =========================================== //

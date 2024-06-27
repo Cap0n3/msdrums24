@@ -1,7 +1,5 @@
 import React from "react";
 import {
-    Box,
-    Typography,
     List,
     ListItem,
     ListItemText,
@@ -12,7 +10,7 @@ import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
 import TramIcon from "@mui/icons-material/Tram";
 import { useTheme } from "@mui/material/styles";
 
-const DirectionsBox = () => {
+const DirectionsBox = ({itineraries}) => {
     const theme = useTheme();
     return (
         <Paper
@@ -25,9 +23,6 @@ const DirectionsBox = () => {
                 backgroundColor: theme.palette.background.default,
             }}
         >
-            {/* <Typography variant="h4" component="h4" sx={{ color: theme.palette.text.primary }} textAlign={"center"} gutterBottom>
-                Comment venir ?
-            </Typography> */}
             <List>
                 <ListItem>
                     <ListItemIcon>
@@ -38,7 +33,7 @@ const DirectionsBox = () => {
                             variant: "body2",
                             color: theme.palette.text.secondary,
                         }}
-                        primary="Bus 11 et 80, arrêt Queue d’Arve + 2 min de marche"
+                        primary={itineraries[0]}
                     />
                 </ListItem>
                 <ListItem>
@@ -50,7 +45,7 @@ const DirectionsBox = () => {
                             variant: "body2",
                             color: theme.palette.text.secondary,
                         }}
-                        primary="Tram 14 arrêt Jonction + 8 min de marche"
+                        primary={itineraries[1]}
                     />
                 </ListItem>
             </List>

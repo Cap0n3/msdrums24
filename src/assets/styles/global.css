@@ -40,24 +40,40 @@ a:visited {
 }
 
 .plan-links {
-    color: #CBBB9F !important;
+    color: #cbbb9f !important;
     font-size: 0.9rem;
 }
 
-/* Date inputs (removes helper text 'mm/dd/yyyy') */
-input[type=date]::-webkit-datetime-edit-text {
-    -webkit-appearance: none;
-    display: none;
+/* 
+    <=== Date inputs (removes placeholder text 'mm/dd/yyyy') ===>
+    
+    Problem:
+    It's part of a workaround to remove the placeholder text 'mm/dd/yyyy' from date inputs when it's first presented to the user. 
+    If it is not removed, the custom label and the placeholder text will overlap confusingly (only for date inputs).
+    
+    Solution:
+    First the user will see the placeholder text, then the text will be replaced with the actual date and class 'date-filled' will be added to the input. 
+    It works in conjunction with the custom hook useDateInputColor() that will change class to date-filled if user has filled the date.
+
+*/
+
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+    color: transparent;
 }
-input[type=date]::-webkit-datetime-edit-month-field{
-    -webkit-appearance: none;
-    display: none;
+
+input[type="date"].date-filled::-webkit-datetime-edit-text,
+input[type="date"].date-filled::-webkit-datetime-edit-month-field,
+input[type="date"].date-filled::-webkit-datetime-edit-day-field,
+input[type="date"].date-filled::-webkit-datetime-edit-year-field {
+    color: black;
 }
-input[type=date]::-webkit-datetime-edit-day-field {
-    -webkit-appearance: none;
-    display: none;
-}
-input[type=date]::-webkit-datetime-edit-year-field {
-    -webkit-appearance: none;
-    display: none;
+
+input[type="date"]:focus::-webkit-datetime-edit-text,
+input[type="date"]:focus::-webkit-datetime-edit-month-field,
+input[type="date"]:focus::-webkit-datetime-edit-day-field,
+input[type="date"]:focus::-webkit-datetime-edit-year-field {
+    color: black;
 }

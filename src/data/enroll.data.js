@@ -8,14 +8,31 @@ export const enrollTextData = {
     en: {
         title: "Enroll",
         subtitle: "Enroll now !",
-        warning: "The form below does not commit you in any way, it is simply a request for a trial lesson. I will contact you by email upon receipt of the form.",
+        warning:
+            "The form below does not commit you in any way, it is simply a request for a trial lesson. I will contact you by email upon receipt of the form.",
     },
     fr: {
         title: "Inscription",
         subtitle: "Inscrivez-vous dès maintenant !",
-        warning: "Le formulaire ci-dessous ne vous engage en rien, il est simplement une demande pour un cours d’essai. Je vous contacterai par email suite à la réception du formulaire.",
+        warning:
+            "Le formulaire ci-dessous ne vous engage en rien, il est simplement une demande pour un cours d’essai. Je vous contacterai par email suite à la réception du formulaire.",
     },
-}
+};
+
+export const formMessages = {
+    en: {
+        send: "Send",
+        sending: "Sending...",
+        success: "Email sent successfully!",
+        error: "Failed to send email. Please try again later or contact support.",
+    },
+    fr: {
+        send: "Envoyer",
+        sending: "Envoi...",
+        success: "Email envoyé avec succès !",
+        error: "Echec de l'envoi de l'email. Veuillez reessayer plus tard ou contacter le support.",
+    },
+};
 
 // =========================================== //
 // ====== ENROLL FORM INPUTS DEFINITION ====== //
@@ -26,21 +43,21 @@ export const enrollTextData = {
 // === All options for select form fields (see below) === //
 const LEVEL_OPTIONS = {
     en: [
-        { value: "beginner", label: "Beginner" },
-        { value: "intermediate", label: "Intermediate" },
-        { value: "advanced", label: "Advanced" },
+        { value: "débutant", label: "Beginner" },
+        { value: "intermédiaire", label: "Intermediate" },
+        { value: "avancé", label: "Advanced" },
     ],
     fr: [
-        { value: "debutant", label: "Debutant" },
-        { value: "intermediaire", label: "Intermediaire" },
-        { value: "avance", label: "Avance" },
+        { value: "débutant", label: "Debutant" },
+        { value: "intermédiaire", label: "Intermediaire" },
+        { value: "avancé", label: "Avance" },
     ],
 };
 
 const PLAN_OPTIONS = {
     en: [
-        { value: "monthly", label: "Monthly" },
-        { value: "yearly", label: "Yearly" },
+        { value: "mensuel", label: "Monthly" },
+        { value: "annuel", label: "Yearly" },
     ],
     fr: [
         { value: "mensuel", label: "Mensuel" },
@@ -50,11 +67,11 @@ const PLAN_OPTIONS = {
 
 const DAY_OPTIONS = {
     en: [
-        { value: "monday", label: "Monday" },
-        { value: "tuesday", label: "Tuesday" },
-        { value: "wednesday", label: "Wednesday" },
-        { value: "thursday", label: "Thursday" },
-        { value: "friday", label: "Friday" },
+        { value: "lundi", label: "Monday" },
+        { value: "mardi", label: "Tuesday" },
+        { value: "mercredi", label: "Wednesday" },
+        { value: "jeudi", label: "Thursday" },
+        { value: "vendredi", label: "Friday" },
     ],
     fr: [
         { value: "lundi", label: "Lundi" },
@@ -66,15 +83,15 @@ const DAY_OPTIONS = {
 };
 
 const HOUR_OPTIONS = [
-    { value: "10-11", label: "10:00 - 11:00" },
-    { value: "11-12", label: "11:00 - 12:00" },
-    { value: "12-13", label: "12:00 - 13:00" },
-    { value: "13-14", label: "13:00 - 14:00" },
-    { value: "14-15", label: "14:00 - 15:00" },
-    { value: "15-16", label: "15:00 - 16:00" },
-    { value: "16-17", label: "16:00 - 17:00" },
-    { value: "17-18", label: "17:00 - 18:00" },
-    { value: "18-19", label: "18:00 - 19:00" },
+    { value: "10h-11h", label: "10:00 - 11:00" },
+    { value: "11h-12h", label: "11:00 - 12:00" },
+    { value: "12h-13h", label: "12:00 - 13:00" },
+    { value: "13h-14h", label: "13:00 - 14:00" },
+    { value: "14h-15h", label: "14:00 - 15:00" },
+    { value: "15h-16h", label: "15:00 - 16:00" },
+    { value: "16h-17h", label: "16:00 - 17:00" },
+    { value: "17h-18h", label: "17:00 - 18:00" },
+    { value: "18h-19h", label: "18:00 - 19:00" },
 ];
 
 // === Default values === //
@@ -97,7 +114,7 @@ export const defaultValues = {
 export const formFields = {
     firstNameField: {
         en: {
-            id: "cForm_fname",
+            id: "cForm_fname_en",
             name: "fname",
             label: "First Name",
             type: "text",
@@ -136,7 +153,7 @@ export const formFields = {
     },
     lastNameField: {
         en: {
-            id: "cForm_lname",
+            id: "cForm_lname_en",
             name: "lname",
             label: "Last Name",
             type: "text",
@@ -169,7 +186,7 @@ export const formFields = {
     },
     emailField: {
         en: {
-            id: "cForm_email",
+            id: "cForm_email_en",
             name: "email",
             label: "Email",
             type: "email",
@@ -197,7 +214,7 @@ export const formFields = {
     },
     phoneField: {
         en: {
-            id: "cForm_phone",
+            id: "cForm_phone_en",
             name: "phone",
             label: "Phone",
             type: "text",
@@ -225,7 +242,7 @@ export const formFields = {
     },
     birthDateField: {
         en: {
-            id: "cForm_birthDate",
+            id: "cForm_birthDate_en",
             name: "birthDate",
             label: "Birth Date",
             type: "date",
@@ -245,7 +262,7 @@ export const formFields = {
     },
     levelField: {
         en: {
-            id: "cForm_level",
+            id: "cForm_level_en",
             name: "level",
             label: "Level",
             type: "select",
@@ -267,7 +284,7 @@ export const formFields = {
     },
     planField: {
         en: {
-            id: "cForm_plan",
+            id: "cForm_plan_en",
             name: "plan",
             label: "Plan",
             type: "select",
@@ -289,7 +306,7 @@ export const formFields = {
     },
     dayOption1Field: {
         en: {
-            id: "cForm_dayOption1",
+            id: "cForm_dayOption1_en",
             name: "dayOption1",
             label: "Day",
             type: "select",
@@ -311,7 +328,7 @@ export const formFields = {
     },
     hourOption1Field: {
         en: {
-            id: "cForm_hourOption1",
+            id: "cForm_hourOption1_en",
             name: "hourOption1",
             label: "Hour",
             type: "select",
@@ -333,7 +350,7 @@ export const formFields = {
     },
     dayOption2Field: {
         en: {
-            id: "cForm_dayOption2",
+            id: "cForm_dayOption2_en",
             name: "dayOption2",
             label: "Day",
             type: "select",
@@ -355,7 +372,7 @@ export const formFields = {
     },
     hourOption2Field: {
         en: {
-            id: "cForm_hourOption2",
+            id: "cForm_hourOption2_en",
             name: "hourOption2",
             label: "Hour",
             type: "select",
@@ -377,7 +394,7 @@ export const formFields = {
     },
     messageField: {
         en: {
-            id: "cForm_message",
+            id: "cForm_message_en",
             name: "message",
             label: "Message",
             type: "text",

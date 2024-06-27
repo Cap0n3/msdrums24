@@ -13,6 +13,7 @@ import ScrollToHash from "../components/common/ScrollToHash";
 import ScrollTop from "../components/common/ScrollToTop";
 import { LangContext } from "../context/LangContext";
 
+
 export default function Root() {
     // === SCROLL TO TOP === //
     useScrollToTop();

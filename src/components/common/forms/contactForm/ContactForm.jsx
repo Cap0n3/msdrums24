@@ -11,11 +11,11 @@ import { defaultValues, formFields } from "../../../../data/contact.data";
 import { LangContext } from "../../../../context/LangContext";
 import { TextInput } from "../formInputs/FormInputs";
 
-
 const ContactForm = ({
     title = "Want to contact us ?",
     subTitle = "Get in touch",
     warning,
+    formMessages,
 }) => {
     const serviceID = __EMAILJS_SERVICE_ID__;
     const templateID = __EMAILJS_TEMPLATE_ID__;
@@ -63,7 +63,7 @@ const ContactForm = ({
             }}
         >
             <RiseTitle title={title} subTitle={subTitle} />
-            
+
             <WarningBox>
                 {warning.message}{" "}
                 <Link to={warning.link_url}>{warning.link_text}</Link>
@@ -81,35 +81,51 @@ const ContactForm = ({
                                 <Grid container spacing={4}>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.firstNameField[language]}
+                                            field={
+                                                formFields.firstNameField[
+                                                    language
+                                                ]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.lastNameField[language]}
+                                            field={
+                                                formFields.lastNameField[
+                                                    language
+                                                ]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.emailField[language]}
+                                            field={
+                                                formFields.emailField[language]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.phoneField[language]}
+                                            field={
+                                                formFields.phoneField[language]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <TextInput
-                                            field={formFields.messageField[language]}
+                                            field={
+                                                formFields.messageField[
+                                                    language
+                                                ]
+                                            }
                                             register={register}
                                             errors={errors}
                                             textarea
@@ -123,8 +139,8 @@ const ContactForm = ({
                                             color="primary"
                                         >
                                             {isWaitingServerResp
-                                                ? "Sending..."
-                                                : "Send"}
+                                                ? formMessages.sending
+                                                : formMessages.send}
                                         </Button>
                                     </Grid>
                                     {isSendSuccess === true && (
@@ -133,7 +149,7 @@ const ContactForm = ({
                                                 severity="success"
                                                 sx={{ mt: 4 }}
                                             >
-                                                Email sent successfully!
+                                                {formMessages.success}
                                             </Alert>
                                         </Grid>
                                     )}
@@ -146,7 +162,7 @@ const ContactForm = ({
                                                 }}
                                                 sx={{ mt: 4 }}
                                             >
-                                                Failed to send email.
+                                                {formMessages.error}
                                             </Alert>
                                         </Grid>
                                     )}

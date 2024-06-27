@@ -26,7 +26,11 @@ export const nav_page_links = {
 export const mapFooter_links = {
     en: [
         { id: "mapfooter-enroll", name: "Enroll", link: "/inscription" },
-        { id: "mapfooter-plans", name: "Options and pricing", link: "/formules" },
+        {
+            id: "mapfooter-plans",
+            name: "Options and pricing",
+            link: "/formules",
+        },
         { id: "mapfooter-contact", name: "Contact", link: "/contact" },
     ],
     fr: [

@@ -9,23 +9,39 @@ export const contactTextData = {
         title: "Get in touch",
         subTitle: "For all inquiries, please fill in the form below.",
         warning: {
-            message: "Please note: for all registrations and trial classes, please complete the registration form.",
+            message:
+                "Please note: for all registrations and trial classes, please complete the registration form.",
             link_text: "Go to registration form",
-            link_url: "/registration"
+            link_url: "/inscription",
         },
-        submit: "Submit"
     },
     fr: {
         title: "Contactez-moi",
-        subTitle: "Pour toutes demandes de renseignement, merci de remplir le formulaire ci-dessous.",
+        subTitle:
+            "Pour toutes demandes de renseignement, merci de remplir le formulaire ci-dessous.",
         warning: {
-            message: "Attention : pour toutes les inscriptions et les cours d’essais, merci de remplir le formulaire d'inscription.",
+            message:
+                "Attention : pour toutes les inscriptions et les cours d’essais, merci de remplir le formulaire d'inscription.",
             link_text: "Aller au formulaire",
-            link_url: "/inscription"
+            link_url: "/inscription",
         },
-        submit: "Envoyer"
-    }
-}
+    },
+};
+
+export const formMessages = {
+    en: {
+        send: "Send",
+        sending: "Sending...",
+        success: "Email sent successfully!",
+        error: "Failed to send email. Please try again later or contact support.",
+    },
+    fr: {
+        send: "Envoyer",
+        sending: "Envoi...",
+        success: "Email envoyé avec succès !",
+        error: "Echec de l'envoi de l'email. Veuillez reessayer plus tard ou contacter le support.",
+    },
+};
 
 export const directionTextData = {
     en: {
@@ -33,18 +49,18 @@ export const directionTextData = {
         subtitle: "Here are the simplest routes to take",
         itineraries: [
             "Bus 11 and 80, Queue d'Arve stop + 2 minutes walking",
-            "Tram 14, Jonction stop + 8 minutes walking"
-        ]
+            "Tram 14, Jonction stop + 8 minutes walking",
+        ],
     },
     fr: {
         title: "Comment venir ?",
         subtitle: "Voici les itinéraires les plus pratiques",
         itineraries: [
             "Bus 11 et 80, arrêt Queue d’Arve + 2 min de marche",
-            "Tram 14 arrêt Jonction + 8 min de marche"
-        ]
+            "Tram 14 arrêt Jonction + 8 min de marche",
+        ],
     },
-}
+};
 
 // =========================================== //
 // ====== CONTACT FORM INPUTS DEFINITION ===== //
@@ -69,8 +85,14 @@ export const formFields = {
             type: "text",
             validation: {
                 required: "Please enter your first name",
-                minLength: { value: 2, message: "Your first name is too short" },
-                maxLength: { value: 50, message: "Your first name is too long" },
+                minLength: {
+                    value: 2,
+                    message: "Your first name is too short",
+                },
+                maxLength: {
+                    value: 50,
+                    message: "Your first name is too long",
+                },
                 pattern: {
                     value: FORM_REGEX.nameRgx,
                     message: "Invalid first name, use only letters (A-Z, a-z)",
@@ -88,7 +110,8 @@ export const formFields = {
                 maxLength: { value: 50, message: "Votre prénom est trop long" },
                 pattern: {
                     value: FORM_REGEX.nameRgx,
-                    message: "Votre prénom est invalide, utilisez uniquement des lettres (A-Z, a-z)",
+                    message:
+                        "Votre prénom est invalide, utilisez uniquement des lettres (A-Z, a-z)",
                 },
             },
         },
@@ -120,7 +143,8 @@ export const formFields = {
                 maxLength: { value: 50, message: "Votre nom est trop long" },
                 pattern: {
                     value: FORM_REGEX.nameRgx,
-                    message: "Votre nom est invalide, utilisez uniquement des lettres (A-Z, a-z)",
+                    message:
+                        "Votre nom est invalide, utilisez uniquement des lettres (A-Z, a-z)",
                 },
             },
         },
@@ -133,7 +157,10 @@ export const formFields = {
             type: "email",
             validation: {
                 required: "Please enter your email",
-                pattern: { value: FORM_REGEX.emailRgx, message: "Your email is invalid" },
+                pattern: {
+                    value: FORM_REGEX.emailRgx,
+                    message: "Your email is invalid",
+                },
             },
         },
         fr: {
@@ -143,7 +170,10 @@ export const formFields = {
             type: "email",
             validation: {
                 required: "Veuillez entrer votre email",
-                pattern: { value: FORM_REGEX.emailRgx, message: "Votre email est invalide" },
+                pattern: {
+                    value: FORM_REGEX.emailRgx,
+                    message: "Votre email est invalide",
+                },
             },
         },
     },
@@ -210,7 +240,6 @@ export const formFields = {
         },
     },
 };
-
 
 // export const formFields = {
 //     firstNameField: {

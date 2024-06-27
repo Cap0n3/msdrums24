@@ -1,14 +1,7 @@
 // CustomForm.js
 import React, { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
-import {
-    Button,
-    Box,
-    Grid,
-    Fade,
-    Slide,
-    Alert,
-} from "@mui/material";
+import { Button, Box, Grid, Fade, Slide, Alert } from "@mui/material";
 import RiseTitle from "../../../common/riseTitle/RiseTitle";
 import WarningBox from "../../../common/warningBox/WarningBox";
 import useEmailHandler from "../../../../hooks/useEmailHandler";
@@ -16,8 +9,14 @@ import { useInView } from "react-intersection-observer";
 import { defaultValues, formFields } from "../../../../data/enroll.data";
 import { TextInput, SelectInput } from "../formInputs/FormInputs";
 import { LangContext } from "../../../../context/LangContext";
+import useDateInputColor from "../../../../hooks/useDateInputColor";
 
-const CustomForm = ({ title="Custom Form", subtitle="Fill out the details", warning }) => {
+const CustomForm = ({
+    title = "Custom Form",
+    subtitle = "Fill out the details",
+    warning,
+    formMessages
+}) => {
     const serviceID = __EMAILJS_SERVICE_ID__;
     const templateID = __EMAILJS_TEMPLATE_CUSTOM_ID__;
     const publicKey = __EMAILJS_PUBLIC_KEY__;
@@ -58,12 +57,13 @@ const CustomForm = ({ title="Custom Form", subtitle="Fill out the details", warn
         }
     }, [inView]);
 
+    // === TO FIX DATE INPUT COLOR PROBLEM === //
+    useDateInputColor();
+
     return (
         <Box sx={{ width: "90%" }}>
             <RiseTitle title={title} subTitle={subtitle} />
-            <WarningBox>
-                {warning}
-            </WarningBox>
+            <WarningBox>{warning}</WarningBox>
             <Fade in={inView} timeout={2000}>
                 <Box ref={ref}>
                     <Slide direction="up" in={isVisible} timeout={500}>
@@ -76,84 +76,124 @@ const CustomForm = ({ title="Custom Form", subtitle="Fill out the details", warn
                                 <Grid container spacing={4}>
                                     <Grid item xs={12} sm={6}>
                                         <TextInput
-                                            field={formFields.firstNameField[language]}
+                                            field={
+                                                formFields.firstNameField[
+                                                    language
+                                                ]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <TextInput
-                                            field={formFields.lastNameField[language]}
+                                            field={
+                                                formFields.lastNameField[
+                                                    language
+                                                ]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <TextInput
-                                            field={formFields.emailField[language]}
+                                            field={
+                                                formFields.emailField[language]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <TextInput
-                                            field={formFields.phoneField[language]}
+                                            field={
+                                                formFields.phoneField[language]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <TextInput
-                                            field={formFields.birthDateField[language]}
+                                            field={
+                                                formFields.birthDateField[
+                                                    language
+                                                ]
+                                            }
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <SelectInput
-                                            field={formFields.levelField[language]}
+                                            field={
+                                                formFields.levelField[language]
+                                            }
                                             control={control}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <SelectInput
-                                            field={formFields.planField[language]}
+                                            field={
+                                                formFields.planField[language]
+                                            }
                                             control={control}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <SelectInput
-                                            field={formFields.dayOption1Field[language]}
+                                            field={
+                                                formFields.dayOption1Field[
+                                                    language
+                                                ]
+                                            }
                                             control={control}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <SelectInput
-                                            field={formFields.hourOption1Field[language]}
+                                            field={
+                                                formFields.hourOption1Field[
+                                                    language
+                                                ]
+                                            }
                                             control={control}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <SelectInput
-                                            field={formFields.dayOption2Field[language]}
+                                            field={
+                                                formFields.dayOption2Field[
+                                                    language
+                                                ]
+                                            }
                                             control={control}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <SelectInput
-                                            field={formFields.hourOption2Field[language]}
+                                            field={
+                                                formFields.hourOption2Field[
+                                                    language
+                                                ]
+                                            }
                                             control={control}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <TextInput
-                                            field={formFields.messageField[language]}
+                                            field={
+                                                formFields.messageField[
+                                                    language
+                                                ]
+                                            }
                                             register={register}
                                             errors={errors}
                                             textarea
@@ -167,8 +207,8 @@ const CustomForm = ({ title="Custom Form", subtitle="Fill out the details", warn
                                             color="primary"
                                         >
                                             {isWaitingServerResp
-                                                ? "Sending..."
-                                                : "Send"}
+                                                ? formMessages.sending
+                                                : formMessages.send}
                                         </Button>
                                     </Grid>
                                     {isSendSuccess === true && (
@@ -177,7 +217,7 @@ const CustomForm = ({ title="Custom Form", subtitle="Fill out the details", warn
                                                 severity="success"
                                                 sx={{ mt: 4 }}
                                             >
-                                                Email sent successfully!
+                                                {formMessages.success}
                                             </Alert>
                                         </Grid>
                                     )}
@@ -190,7 +230,7 @@ const CustomForm = ({ title="Custom Form", subtitle="Fill out the details", warn
                                                 }}
                                                 sx={{ mt: 4 }}
                                             >
-                                                Failed to send email.
+                                                {formMessages.failed}
                                             </Alert>
                                         </Grid>
                                     )}

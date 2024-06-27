@@ -158,9 +158,27 @@ export function getTheme(mode) {
                 styleOverrides: {
                     root: {
                         borderRadius: website_layout.borderRadius,
+                        "&:hover .MuiOutlinedInput-notchedOutline": {
+                            borderColor: colors.msDrumsBeige["dark"],
+                            borderWidth: "1.5px",
+                        },
+                        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: colors.msDrumsBeige["dark"],
+                        },
                     },
                 },
             },
+            // MuiOutlinedInput: {
+            //     styleOverrides: {
+            //         root: {
+            //             borderRadius: website_layout.borderRadius,
+            //             borderColor: "red",
+            //             "&:hover": {
+            //                 borderColor: "red",
+            //             },
+            //         },
+            //     },
+            // },
             MuiAccordion: {
                 styleOverrides: {
                     root: {

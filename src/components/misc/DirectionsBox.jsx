@@ -10,7 +10,7 @@ import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
 import TramIcon from "@mui/icons-material/Tram";
 import { useTheme } from "@mui/material/styles";
 
-const DirectionsBox = ({itineraries}) => {
+const DirectionsBox = ({ itineraries }) => {
     const theme = useTheme();
     return (
         <Paper

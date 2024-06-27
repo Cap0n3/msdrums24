@@ -4,7 +4,7 @@ import GridSection from "../common/gridSection/GridSection";
 import ContactForm from "../common/forms/contactForm/ContactForm";
 import Map from "./subcomponents/Map";
 
-const ContactSection = ({ data }) => {
+const ContactSection = ({ data, formMessages }) => {
     const theme = useTheme();
     return (
         <GridSection
@@ -15,7 +15,7 @@ const ContactSection = ({ data }) => {
                             title={data.title}
                             subTitle={data.subTitle}
                             warning={data.warning}
-                            submit={data.submit}
+                            formMessages={formMessages}
                         />
                     ),
                     sx: {

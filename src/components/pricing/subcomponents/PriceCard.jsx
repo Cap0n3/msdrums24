@@ -123,8 +123,16 @@ const PriceCard = ({
                                 />
                             ))}
                         </List>
-                        <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
-                            <Link className="plan-links" to="/formules">{morePlans}</Link>
+                        <Box
+                            sx={{
+                                mt: 3,
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
+                        >
+                            <Link className="plan-links" to="/formules">
+                                {morePlans}
+                            </Link>
                         </Box>
                     </CardContent>
                     <CardActions

@@ -3,7 +3,6 @@ import { useTheme } from "@mui/material";
 import { Box, Typography, Container, Slide, Fade } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
-
 /**
  * RiseTitle component is a reusable component that displays a section title and subtitle with a fade and slide animation
  *

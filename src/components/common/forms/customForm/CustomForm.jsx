@@ -12,7 +12,7 @@ import {
 import RiseTitle from "../../../common/riseTitle/RiseTitle";
 import useEmailHandler from "../../../../hooks/useEmailHandler";
 import { useInView } from "react-intersection-observer";
-import { defaultValues, formFields } from "./customFormDefinitions";
+import { defaultValues, formFields } from "../../../../data/enroll.data";
 import { TextInput, SelectInput } from "../formInputs/FormInputs";
 import { LangContext } from "../../../../context/LangContext";
 

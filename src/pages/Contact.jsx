@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import ContactSection from "../components/contact/ContactSection";
-import contactData from "../data/contact.data.json";
+import { contactTextData } from "../data/contact.data";
 import { LangContext } from "../context/LangContext";
 import RiseTitle from "../components/common/riseTitle/RiseTitle";
 import DirectionsBox from "../components/misc/DirectionsBox";
@@ -12,7 +12,7 @@ const Contact = () => {
 
     return (
         <>
-            <ContactSection data={contactData[language]} />
+            <ContactSection data={contactTextData[language]} />
             <BasicSection direction="column">
                 <RiseTitle
                     title="Comment venir ?"

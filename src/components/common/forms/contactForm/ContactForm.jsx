@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Button, Box, Grid, Fade, Slide } from "@mui/material";
 import RiseTitle from "../../riseTitle/RiseTitle";
-import Socials from "../../socials/Socials";
 import useEmailHandler from "../../../../hooks/useEmailHandler";
 import Alert from "@mui/material/Alert";
 import { useInView } from "react-intersection-observer";
-import { defaultValues, formFields } from "./contactFormDefinitions";
+import { defaultValues, formFields } from "../../../../data/contact.data";
+import { LangContext } from "../../../../context/LangContext";
 import { TextInput } from "../formInputs/FormInputs";
-import DirectionsBox from "../../../misc/DirectionsBox";
+
 
 const WarningBox = ({ warning }) => {
     return (
@@ -35,6 +35,7 @@ const ContactForm = ({
     const templateID = __EMAILJS_TEMPLATE_ID__;
     const publicKey = __EMAILJS_PUBLIC_KEY__;
     const [isVisible, setIsVisible] = useState(false);
+    const { language } = useContext(LangContext);
 
     const {
         register,
@@ -90,35 +91,35 @@ const ContactForm = ({
                                 <Grid container spacing={4}>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.firstNameField}
+                                            field={formFields.firstNameField[language]}
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.lastNameField}
+                                            field={formFields.lastNameField[language]}
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.emailField}
+                                            field={formFields.emailField[language]}
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={6}>
                                         <TextInput
-                                            field={formFields.phoneField}
+                                            field={formFields.phoneField[language]}
                                             register={register}
                                             errors={errors}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <TextInput
-                                            field={formFields.messageField}
+                                            field={formFields.messageField[language]}
                                             register={register}
                                             errors={errors}
                                             textarea
@@ -161,8 +162,6 @@ const ContactForm = ({
                                     )}
                                 </Grid>
                             </form>
-                            {/* <Socials /> */}
-                            {/* <DirectionsBox /> */}
                         </Box>
                     </Slide>
                 </Box>

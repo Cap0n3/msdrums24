@@ -14,11 +14,13 @@ export const colors = {
         dark: "#CBBB9F", // MS Drum dark beige (nothing to do with dark theme)
     },
     button: {
-        light: "#F0E5C5", // MS Drum Beige
+        primary: "#F0E5C5", // MS Drum light Beige
+        secondary: "#CBBB9F", // MS Drum dark beige
         //dark: "#ab47bc", // Dark purple
     },
     buttonHover: {
-        light: "#FFF8E3", // Very light beige
+        primary: "#FFF8E3", // Very light beige
+        secondary: "#F0E5C5", // MS Drum light Beige
         //dark: "#80CBC4", // Dark purple
     },
     error: {

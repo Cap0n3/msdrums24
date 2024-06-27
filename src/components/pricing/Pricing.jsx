@@ -38,6 +38,7 @@ const Pricing = ({ identifier, cardsData, contrast }) => {
                 paymentFrequency={cardData.paymentFrequency}
                 sellingPoints={cardData.sellingPoints}
                 action={cardData.action}
+                buttonLink={cardData.buttonLink}
                 backgroundColor={theme.palette.background.paper}
                 highlight={cardData.highlight}
                 inView={isVisible}

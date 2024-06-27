@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
     Box,
     Button,
@@ -39,6 +40,7 @@ const PriceCard = ({
     paymentFrequency,
     sellingPoints,
     action,
+    buttonLink,
     backgroundColor = "#fff",
     highlight = false,
     inView,
@@ -126,6 +128,8 @@ const PriceCard = ({
                         sx={{ display: "flex", justifyContent: "center" }}
                     >
                         <Button
+                            component={Link}
+                            to={buttonLink}
                             variant="outlined"
                             color="secondary"
                             size="large"

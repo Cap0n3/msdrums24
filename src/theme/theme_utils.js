@@ -131,14 +131,25 @@ export function getTheme(mode) {
                         },
                     },
                     outlinedPrimary: {
-                        borderColor: colors.button[mode],
-                        color: colors.button[mode],
+                        borderColor: colors.button["primary"],
+                        color: colors.button["primary"],
                         "&:hover": {
-                            borderColor: colors.buttonHover[mode],
-                            color: colors.buttonHover[mode],
+                            borderColor: colors.buttonHover["primary"],
+                            color: colors.buttonHover["primary"],
                         },
                         "&:visited": {
-                            color: colors.button[mode],
+                            color: colors.button["primary"],
+                        },
+                    },
+                    outlinedSecondary: {
+                        borderColor: colors.button["secondary"],
+                        color: colors.button["secondary"],
+                        "&:hover": {
+                            borderColor: colors.buttonHover["secondary"],
+                            color: colors.buttonHover["secondary"],
+                        },
+                        "&:visited": {
+                            color: colors.button["secondary"],
                         },
                     },
                 },

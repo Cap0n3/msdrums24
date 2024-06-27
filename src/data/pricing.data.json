@@ -15,6 +15,7 @@
                     "Ideal for children and teenagers"
                 ],
                 "action": "Enroll",
+                "buttonLink": "/inscription",
                 "highlight": false
             }
         },
@@ -33,6 +34,7 @@
                     "Efficient coaching"
                 ],
                 "action": "Enroll",
+                "buttonLink": "/inscription",
                 "highlight": true
             }
         },
@@ -50,6 +52,7 @@
                     "For adults only"
                 ],
                 "action": "Enroll",
+                "buttonLink": "/inscription",
                 "highlight": false
             }
         }
@@ -70,6 +73,7 @@
                     "Idéal pour les enfants et ados"
                 ],
                 "action": "S'inscrire",
+                "buttonLink": "/inscription",
                 "highlight": false
             }
         },
@@ -88,6 +92,7 @@
                     "Encadrement efficace"
                 ],
                 "action": "S'inscrire",
+                "buttonLink": "/inscription",
                 "highlight": true
             }
         },
@@ -106,6 +111,7 @@
                     "Pour les adultes"
                 ],
                 "action": "S'inscrire",
+                "buttonLink": "/inscription",
                 "highlight": false
             }
         }

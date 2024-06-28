@@ -21,6 +21,7 @@ const CustomForm = ({
     const serviceID = __EMAILJS_SERVICE_ID__;
     const templateID = __EMAILJS_TEMPLATE_CUSTOM_ID__;
     const publicKey = __EMAILJS_PUBLIC_KEY__;
+    const googleRecaptchaKey = __GOOGLE_RECAPTCHA2_SITEKEY__;
     const [isVisible, setIsVisible] = useState(false);
     const { language } = useContext(LangContext);
     const captchaRef = useRef(null);
@@ -230,7 +231,7 @@ const CustomForm = ({
                                     <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
                                         <ReCAPTCHA
                                             ref={captchaRef}
-                                            sitekey="6Ld6swMqAAAAANsH8f5rrxzyJW_Cym8YboLNL3ab"
+                                            sitekey={googleRecaptchaKey}
                                             onChange={onChange}
                                             hl="fr"
                                         />

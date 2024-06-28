@@ -16,6 +16,7 @@ export default defineConfig(({ command, mode }) => {
             ),
             __EMAILJS_PUBLIC_KEY__: JSON.stringify(env.EMAILJS_PUBLIC_KEY),
             __GOOGLE_MAPS_KEY__: JSON.stringify(env.GOOGLE_MAPS_KEY),
+            __GOOGLE_RECAPTCHA2_SITEKEY__: JSON.stringify(env.GOOGLE_RECAPTCHA2_SITEKEY),
         },
         plugins: [react()],
         build: {

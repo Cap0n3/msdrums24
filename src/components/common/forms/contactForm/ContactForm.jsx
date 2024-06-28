@@ -44,7 +44,7 @@ const ContactForm = ({
         sendEmail,
     } = useEmailHandler(serviceID, templateID, publicKey);
 
-    // ReCAPTCHA
+    // ReCAPTCHA callback
     const onChange = useCallback((value) => {
         setRecaptcha(value);
     }, []);
@@ -193,8 +193,9 @@ const ContactForm = ({
                                         <Grid item xs={12}>
                                             <Alert
                                                 severity="warning"
+                                                onClose={() => {setIsCaptchaVerified(null)}}
                                             >
-                                                You need to verify that you are not a robot.
+                                                {language === "fr" ? "Veuillez valider le captcha" : "You need to validate the captcha"}
                                             </Alert>
                                         </Grid>
                                     )}

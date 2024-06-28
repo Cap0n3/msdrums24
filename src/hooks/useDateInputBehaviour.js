@@ -8,11 +8,11 @@ import { LangContext } from "../context/LangContext";
  *
  * First the user will see the placeholder text, then the text will be replaced with the
  * actual date and class 'date-filled' will be added to the input. It works in conjunction
- * with the custom hook useDateInputColor() that will change the class to 'date-filled' if
+ * with the custom hook useDateInputBehaviour() that will change the class to 'date-filled' if
  * the user has filled the date.
  * 
  */
-function useDateInputColor() {
+function useDateInputBehaviour() {
     const { language } = useContext(LangContext); // To reload inputs on language change
 
     useEffect(() => {
@@ -58,4 +58,4 @@ function useDateInputColor() {
     }, [language]);
 }
 
-export default useDateInputColor;
+export default useDateInputBehaviour;

@@ -9,7 +9,6 @@ import { HelmetProvider } from "react-helmet-async";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { LanguageProvider } from "./context/LangContext";
 
-
 function App() {
     const [mode, setMode] = useState("light"); // Can be "light" or "dark"
 

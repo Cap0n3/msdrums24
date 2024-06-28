@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Button, Box, Grid, Fade, Slide } from "@mui/material";
@@ -10,6 +10,8 @@ import { useInView } from "react-intersection-observer";
 import { defaultValues, formFields } from "../../../../data/contact.data";
 import { LangContext } from "../../../../context/LangContext";
 import { TextInput } from "../formInputs/FormInputs";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const ContactForm = ({
     title = "Want to contact us ?",
@@ -22,6 +24,9 @@ const ContactForm = ({
     const publicKey = __EMAILJS_PUBLIC_KEY__;
     const [isVisible, setIsVisible] = useState(false);
     const { language } = useContext(LangContext);
+    const captchaRef = useRef(null);
+    const [recaptcha, setRecaptcha] = useState(null);
+    const [isCaptchaVerified, setIsCaptchaVerified] = useState(null);
 
     const {
         register,
@@ -39,9 +44,21 @@ const ContactForm = ({
         sendEmail,
     } = useEmailHandler(serviceID, templateID, publicKey);
 
+    // ReCAPTCHA
+    const onChange = useCallback((value) => {
+        setRecaptcha(value);
+    }, []);
+
     const onSubmit = async (data, event) => {
-        await sendEmail(event);
+        if (!recaptcha) {
+            console.log("No captcha token");
+            setIsCaptchaVerified(false);
+            return;
+        }
+        setIsCaptchaVerified(true);
+        await sendEmail(event); // Token is sent with the event
         reset(); // Reset the form fields
+        captchaRef.current.reset(); // Reset the reCAPTCHA
     };
 
     const [ref, inView] = useInView({
@@ -83,7 +100,7 @@ const ContactForm = ({
                                         <TextInput
                                             field={
                                                 formFields.firstNameField[
-                                                    language
+                                                language
                                                 ]
                                             }
                                             register={register}
@@ -94,7 +111,7 @@ const ContactForm = ({
                                         <TextInput
                                             field={
                                                 formFields.lastNameField[
-                                                    language
+                                                language
                                                 ]
                                             }
                                             register={register}
@@ -123,7 +140,7 @@ const ContactForm = ({
                                         <TextInput
                                             field={
                                                 formFields.messageField[
-                                                    language
+                                                language
                                                 ]
                                             }
                                             register={register}
@@ -143,11 +160,18 @@ const ContactForm = ({
                                                 : formMessages.send}
                                         </Button>
                                     </Grid>
+                                    <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
+                                        <ReCAPTCHA
+                                            ref={captchaRef}
+                                            sitekey="6Ld6swMqAAAAANsH8f5rrxzyJW_Cym8YboLNL3ab"
+                                            onChange={onChange}
+                                            hl="fr"
+                                        />
+                                    </Grid>
                                     {isSendSuccess === true && (
                                         <Grid item xs={12}>
                                             <Alert
                                                 severity="success"
-                                                sx={{ mt: 4 }}
                                             >
                                                 {formMessages.success}
                                             </Alert>
@@ -160,9 +184,17 @@ const ContactForm = ({
                                                 onClose={() => {
                                                     setIsSendSuccess(null);
                                                 }}
-                                                sx={{ mt: 4 }}
                                             >
                                                 {formMessages.error}
+                                            </Alert>
+                                        </Grid>
+                                    )}
+                                    {isCaptchaVerified === false && (
+                                        <Grid item xs={12}>
+                                            <Alert
+                                                severity="warning"
+                                            >
+                                                You need to verify that you are not a robot.
                                             </Alert>
                                         </Grid>
                                     )}

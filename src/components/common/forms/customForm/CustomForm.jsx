@@ -52,7 +52,6 @@ const CustomForm = ({
 
     const onSubmit = async (data, event) => {
         if (!recaptcha) {
-            console.log("No captcha token");
             setIsCaptchaVerified(false);
             return;
         }

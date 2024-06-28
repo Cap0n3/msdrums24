@@ -35,7 +35,6 @@ function useDateInputBehaviour() {
             }
 
             const handleChange = () => {
-                console.log("Change detected");
                 if (input.value) {
                     input.classList.add("date-filled");
                 } else {

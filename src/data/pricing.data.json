@@ -2,7 +2,7 @@
     "en": [
         {
             "PriceCardBimonthly": {
-                "image": "/public/img/pricing/ManDrummer.jpg",
+                "image": "/img/pricing/ManDrummer.jpg",
                 "title": "Flash Plan",
                 "price": 128,
                 "paymentFrequency": "/month",
@@ -22,7 +22,7 @@
         },
         {
             "PriceCardWeekly": {
-                "image": "/public/img/pricing/WomanDrummer1.jpg",
+                "image": "/img/pricing/WomanDrummer1.jpg",
                 "title": "Individual Plan",
                 "price": 180,
                 "paymentFrequency": "/month",
@@ -42,7 +42,7 @@
         },
         {
             "PriceCardSingle": {
-                "image": "/public/img/pricing/WomanDrummer2.jpg",
+                "image": "/img/pricing/WomanDrummer2.jpg",
                 "title": "À la carte",
                 "price": 60,
                 "paymentFrequency": "/lesson",
@@ -63,7 +63,7 @@
     "fr": [
         {
             "PriceCardBimonthly": {
-                "image": "/public/img/pricing/ManDrummer.jpg",
+                "image": "/img/pricing/ManDrummer.jpg",
                 "title": "Formule Flash",
                 "price": 128,
                 "paymentFrequency": "/mois",
@@ -83,7 +83,7 @@
         },
         {
             "PriceCardWeekly": {
-                "image": "/public/img/pricing/WomanDrummer1.jpg",
+                "image": "/img/pricing/WomanDrummer1.jpg",
                 "title": "Formule Individuelle",
                 "price": 180,
                 "paymentFrequency": "/mois",
@@ -103,7 +103,7 @@
         },
         {
             "PriceCardSingle": {
-                "image": "/public/img/pricing/WomanDrummer2.jpg",
+                "image": "/img/pricing/WomanDrummer2.jpg",
                 "title": "À la carte",
                 "price": 60,
                 "paymentFrequency": "/leçon",

@@ -18,5 +18,16 @@ export default defineConfig(({ command, mode }) => {
             __GOOGLE_MAPS_KEY__: JSON.stringify(env.GOOGLE_MAPS_KEY),
         },
         plugins: [react()],
+        build: {
+            rollupOptions: {
+                output: {
+                    manualChunks(id) {
+                        if (id.includes('node_modules')) {
+                            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+                        }
+                    }
+                }
+            }
+        }
     };
 });

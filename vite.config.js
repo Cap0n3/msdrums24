@@ -19,6 +19,9 @@ export default defineConfig(({ command, mode }) => {
         },
         plugins: [react()],
         build: {
+            /*
+                node_modules is mostly the main reason for the large chunk problem, with this you're telling Vite to treat the used modules separately
+            */
             rollupOptions: {
                 output: {
                     manualChunks(id) {

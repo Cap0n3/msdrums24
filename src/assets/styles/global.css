@@ -49,7 +49,8 @@ a:visited {
     
     Problem:
     It's part of a workaround to remove the placeholder text 'mm/dd/yyyy' from date inputs when it's first presented to the user. 
-    If it is not removed, the custom label and the placeholder text will overlap confusingly (only for date inputs).
+    If it is not removed, the custom label and the placeholder text will overlap confusingly (only for date inputs). Only for Chrome.
+    Note: for Safari and Firefox, it only works with JS (see useDateInputColor() hook).
     
     Solution:
     First the user will see the placeholder text, then the text will be replaced with the actual date and class 'date-filled' will be added to the input. 

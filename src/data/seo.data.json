@@ -1,12 +1,22 @@
 {
     "home": {
-        "title": "Home",
-        "description": "This is a Home page.",
+        "title": "MS Drums - Home",
+        "description": "Je vous propose des cours de batterie sérieux et conviviaux, adaptés à vos envies ou objectifs et à votre rythme, peu importe votre niveau !",
         "canonHREF": "http://localhost:5173/"
     },
-    "newpage": {
-        "title": "Another page",
-        "description": "This is another page",
-        "canonHREF": "http://localhost:5173/mypage"
+    "enroll": {
+        "title": "MS Drums - Inscription",
+        "description": "Inscrivez-vous dès maintenant pour un cours d'essai !",
+        "canonHREF": "http://localhost:5173/inscription"
+    },
+    "contact": {
+        "title": "MS Drums - Contact",
+        "description": "Pour toute question, contactez-moi !",
+        "canonHREF": "http://localhost:5173/contact"
+    },
+    "plans": {
+        "title": "MS Drums - Formules",
+        "description": "En savoir plus sur mes options tarifaires",
+        "canonHREF": "http://localhost:5173/tarifs"
     }
 }

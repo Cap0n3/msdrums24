@@ -3254,6 +3254,7 @@ __metadata:
     react-intersection-observer: "npm:^9.8.2"
     react-router-dom: "npm:^6.22.2"
     react-scroll-parallax: "npm:^3.4.5"
+    react-turnstile: "npm:^1.1.3"
     styled-components: "npm:^6.1.8"
     vite: "npm:^5.1.4"
   languageName: unknown
@@ -3886,6 +3887,16 @@ __metadata:
     react: ">=16.6.0"
     react-dom: ">=16.6.0"
   checksum: 10c0/2ba754ba748faefa15f87c96dfa700d5525054a0141de8c75763aae6734af0740e77e11261a1e8f4ffc08fd9ab78510122e05c21c2d79066c38bb6861a886c82
+  languageName: node
+  linkType: hard
+
+"react-turnstile@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "react-turnstile@npm:1.1.3"
+  peerDependencies:
+    react: ">= 16.13.1"
+    react-dom: ">= 16.13.1"
+  checksum: 10c0/134deb7efaf1f23271da3c12a94a957aab330fa3e2fba8226bc2f43764efbfb6926e2b8ddbe59d76ee69e9485755bb704c23e73fa2d1a3ca63c697ef79e84713
   languageName: node
   linkType: hard
 

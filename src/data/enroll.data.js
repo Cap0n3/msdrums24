@@ -43,25 +43,27 @@ export const formMessages = {
 // === All options for select form fields (see below) === //
 const LEVEL_OPTIONS = {
     en: [
-        { value: "débutant", label: "Beginner" },
-        { value: "intermédiaire", label: "Intermediate" },
-        { value: "avancé", label: "Advanced" },
+        { value: "Débutant", label: "Beginner" },
+        { value: "Intermédiaire", label: "Intermediate" },
+        { value: "Avancé", label: "Advanced" },
     ],
     fr: [
-        { value: "débutant", label: "Debutant" },
-        { value: "intermédiaire", label: "Intermediaire" },
-        { value: "avancé", label: "Avance" },
+        { value: "Débutant", label: "Débutant" },
+        { value: "Intermédiaire", label: "Intermédiaire" },
+        { value: "Avancé", label: "Avancé" },
     ],
 };
 
 const PLAN_OPTIONS = {
     en: [
-        { value: "mensuel", label: "Monthly" },
-        { value: "annuel", label: "Yearly" },
+        { value: "Individuelle", label: "Individual" },
+        { value: "Binôme", label: "Pair" },
+        { value: "À la carte", label: "On demand" },
     ],
     fr: [
-        { value: "mensuel", label: "Mensuel" },
-        { value: "annuel", label: "Annuel" },
+        { value: "Individuelle", label: "Individuelle" },
+        { value: "Binôme", label: "Binôme" },
+        { value: "À la carte", label: "À la carte" },
     ],
 };
 
@@ -318,7 +320,7 @@ export const formFields = {
         en: {
             id: "cForm_dayOption1_en",
             name: "dayOption1",
-            label: "Day",
+            label: "Desired day",
             type: "select",
             validation: {
                 required: "Please select a day",
@@ -328,7 +330,7 @@ export const formFields = {
         fr: {
             id: "cForm_dayOption1",
             name: "dayOption1",
-            label: "Jour",
+            label: "Jour souhaité",
             type: "select",
             validation: {
                 required: "Merci de sélectionner un jour",
@@ -340,7 +342,7 @@ export const formFields = {
         en: {
             id: "cForm_hourOption1_en",
             name: "hourOption1",
-            label: "Hour",
+            label: "Desired time",
             type: "select",
             validation: {
                 required: "Please select an hour",
@@ -350,7 +352,7 @@ export const formFields = {
         fr: {
             id: "cForm_hourOption1",
             name: "hourOption1",
-            label: "Heure",
+            label: "Heure souhaitée",
             type: "select",
             validation: {
                 required: "Veuillez sélectionner une heure",
@@ -362,7 +364,7 @@ export const formFields = {
         en: {
             id: "cForm_dayOption2_en",
             name: "dayOption2",
-            label: "Day",
+            label: "Day option 2",
             type: "select",
             validation: {
                 required: false,
@@ -372,7 +374,7 @@ export const formFields = {
         fr: {
             id: "cForm_dayOption2",
             name: "dayOption2",
-            label: "Jour",
+            label: "Jour option 2",
             type: "select",
             validation: {
                 required: false,
@@ -384,7 +386,7 @@ export const formFields = {
         en: {
             id: "cForm_hourOption2_en",
             name: "hourOption2",
-            label: "Hour",
+            label: "Hour option 2",
             type: "select",
             validation: {
                 required: false,
@@ -394,7 +396,7 @@ export const formFields = {
         fr: {
             id: "cForm_hourOption2",
             name: "hourOption2",
-            label: "Heure",
+            label: "Heure option 2",
             type: "select",
             validation: {
                 required: false,

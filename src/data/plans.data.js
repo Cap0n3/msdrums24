@@ -13,7 +13,7 @@ export const pricingTable = {
     en: {
         Individual: {
             "30 min": {
-                "Lesson Duration": "30 min.",
+                "Lesson duration": "30 min.",
                 "Yearly cost (CHF)": "1280.-",
                 "Quarterly cost (CHF)": "320.-",
                 "Monthly cost* (CHF)": "128.-",
@@ -21,7 +21,7 @@ export const pricingTable = {
                 Period: "From September to June",
             },
             "45 min": {
-                "Lesson Duration": "45 min.",
+                "Lesson duration": "45 min.",
                 "Yearly cost (CHF)": "1880.-",
                 "Quarterly cost (CHF)": "470.-",
                 "Monthly cost* (CHF)": "188.-",
@@ -29,7 +29,7 @@ export const pricingTable = {
                 Period: "From September to June",
             },
             "60 min": {
-                "Lesson Duration": "60 min.",
+                "Lesson duration": "60 min.",
                 "Yearly cost (CHF)": "2480.-",
                 "Quarterly cost (CHF)": "620.-",
                 "Monthly cost* (CHF)": "248.-",
@@ -39,17 +39,17 @@ export const pricingTable = {
         },
         Pair: {
             "45 min": {
-                "Lesson Duration": "45 min.",
+                "Lesson duration": "45 min.",
                 "Yearly cost (CHF)": "1720.-",
-                "Quarterly cost (CHF)": "425.-",
-                "Monthly cost* (CHF)": "170.-",
+                "Quarterly cost (CHF)": "430.-",
+                "Monthly cost* (CHF)": "172.-",
                 "Number of lessons": "34",
-                Period: "From September to June",
+                Period: "From september to june",
             },
         },
         "On demand": {
             "30 min": {
-                "Lesson Duration": "30 min.",
+                "Lesson duration": "30 min.",
                 "Yearly cost (CHF) (CHF)": "40.- / lesson",
                 "Quarterly cost (CHF)": "-",
                 "Monthly cost* (CHF)": "-",
@@ -57,7 +57,7 @@ export const pricingTable = {
                 Period: "All year round",
             },
             "45 min": {
-                "Lesson Duration": "45 min.",
+                "Lesson duration": "45 min.",
                 "Yearly cost (CHF) (CHF)": "60.- / lesson",
                 "Quarterly cost (CHF)": "-",
                 "Monthly cost* (CHF)": "-",
@@ -65,7 +65,7 @@ export const pricingTable = {
                 Period: "All year round",
             },
             "60 min": {
-                "Lesson Duration": "60 min.",
+                "Lesson duration": "60 min.",
                 "Yearly cost (CHF) (CHF)": "80.- / lesson",
                 "Quarterly cost (CHF)": "-",
                 "Monthly cost* (CHF)": "-",
@@ -101,12 +101,12 @@ export const pricingTable = {
                 Période: "De septembre à juin",
             },
         },
-        "Formule Binôme": {
+        "Formule binôme": {
             "45 min": {
                 "Durée du cours": "45 min.",
                 "Tarif annuel (CHF)": "1720.-",
-                "Tarif trimestriel (CHF)": "425.-",
-                "Tarif mensuel (CHF)": "170.-",
+                "Tarif trimestriel (CHF)": "430.-",
+                "Tarif mensuel (CHF)": "172.-",
                 "Nombre de cours": "34",
                 Période: "De septembre à juin",
             },

@@ -19,14 +19,14 @@ export const featureData = {
         },
         {
             logo: Graduate,
-            title: "Professional Expertise",
-            text: "With over 15 years' experience, I share technical skills and practical advice to inspire and motivate both beginners and advanced drummers alike to become the best drummers they can be.",
+            title: "Professional expertise",
+            text: "With over 15 years' experience, I share technical skills and practical advice to inspire and motivate my students, whether they are beginners or more advanced in their musical journey.",
         },
     ],
     fr: [
         {
             logo: BassDrumIcon,
-            title: "Approche Personnalisée",
+            title: "Approche personnalisée",
             text: "Que vous soyez débutant ou avancé, de 7 à 77 ans, je m'adapte à vos besoins et à votre rythme. Mes cours offrent une expérience d'apprentissage individualisée, garantissant un progrès agréable et efficace pour chaque élève.",
         },
         {
@@ -36,8 +36,8 @@ export const featureData = {
         },
         {
             logo: Graduate,
-            title: "Expertise Professionnelle",
-            text: "Avec plus de 15 ans d'expérience, je partage des compétences techniques et des conseils pratiques pour inspirer et motiver les débutants et les plus avancés à devenir les meilleurs batteurs ou batteuses possible.",
+            title: "Expertise professionnelle",
+            text: "Avec plus de 15 ans d'expérience, je partage des compétences techniques et des conseils pratiques pour inspirer et motiver mes élèves, qu'ils soient débutants ou plus avancés dans leur parcours musical.",
         },
     ],
 };

@@ -86,9 +86,9 @@ const ContactForm = ({
                 <Link to={warning.link_url}>{warning.link_text}</Link>
             </WarningBox>
 
-            <Fade in={inView} timeout={2000}>
+            <Fade in={true} timeout={0}>
                 <Box ref={ref}>
-                    <Slide direction="up" in={isVisible} timeout={500}>
+                    <Slide direction="up" in={true} timeout={0}>
                         <Box>
                             <form
                                 ref={formRef}

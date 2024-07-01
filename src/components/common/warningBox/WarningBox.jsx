@@ -17,9 +17,9 @@ const WarningBox = ({ children }) => {
     }, [inView]);
 
     return (
-        <Fade in={inView} timeout={2000}>
+        <Fade in={true} timeout={0}>
             <Box ref={ref} sx={{ mb: 4 }}>
-                <Slide direction="up" in={isVisible} timeout={500}>
+                <Slide direction="up" in={true} timeout={0}>
                     <Alert variant="outlined" severity="info">
                         {children}
                     </Alert>

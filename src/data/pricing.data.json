@@ -64,7 +64,7 @@
         {
             "PriceCardBimonthly": {
                 "image": "/img/pricing/ManDrummer.jpg",
-                "title": "Formule Flash",
+                "title": "Formule flash",
                 "price": 128,
                 "paymentFrequency": "/mois",
                 "sellingPoints": [
@@ -84,7 +84,7 @@
         {
             "PriceCardWeekly": {
                 "image": "/img/pricing/WomanDrummer1.jpg",
-                "title": "Formule Individuelle",
+                "title": "Formule individuelle",
                 "price": 180,
                 "paymentFrequency": "/mois",
                 "sellingPoints": [

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Nav from "../components/common/nav/Nav";
-import Footer from "../components/common/footer/Footer";
 import MapFooter from "../components/common/footer/MapFooter";
 import { Outlet } from "react-router-dom";
 import useScrollToTop from "../hooks/useScrollToTop";
@@ -9,6 +8,7 @@ import { Box } from "@mui/material";
 import { nav_page_links } from "./menu-urls";
 import { mapFooter_links } from "./menu-urls";
 import footerData from "../data/footer.data.json";
+import { mapData } from "../data/contact.data";
 import ScrollToHash from "../components/common/ScrollToHash";
 import ScrollTop from "../components/common/ScrollToTop";
 import { LangContext } from "../context/LangContext";
@@ -42,6 +42,7 @@ export default function Root() {
             <MapFooter
                 links={mapFooter_links[language]}
                 description={footerData[language].footer_description}
+                mapCoords={mapData}
             />
         </>
     );

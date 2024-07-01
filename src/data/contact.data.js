@@ -47,6 +47,7 @@ export const directionTextData = {
     en: {
         title: "How to get there ?",
         subtitle: "Here are the simplest routes to take",
+        address: "Chemin de la Gravière 8, 1227 Acacias, Switzerland",
         itineraries: [
             "Bus 11 and 80, Queue d'Arve stop + 2 minutes walking",
             "Tram 14, Jonction stop + 8 minutes walking",
@@ -55,12 +56,20 @@ export const directionTextData = {
     fr: {
         title: "Comment venir ?",
         subtitle: "Voici les itinéraires les plus pratiques",
+        address: "Chemin de la Gravière 8, 1227 Acacias, Suisse",
         itineraries: [
             "Bus 11 et 80, arrêt Queue d’Arve + 2 min de marche",
             "Tram 14 arrêt Jonction + 8 min de marche",
         ],
     },
 };
+
+// MAP COORDINATES
+export const mapData = {
+    latitude: 46.196813,
+    longitude: 6.130437,
+}
+
 
 // =========================================== //
 // ====== CONTACT FORM INPUTS DEFINITION ===== //

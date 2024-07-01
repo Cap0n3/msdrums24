@@ -8,7 +8,7 @@ import FootMap from "./subcomponents/FootMap";
 
 const footerMinHeight = "250px";
 
-const MapFooter = ({ links, description }) => {
+const MapFooter = ({ links, description, mapCoords }) => {
     const theme = useTheme();
 
     return (
@@ -92,7 +92,7 @@ const MapFooter = ({ links, description }) => {
                     md={4}
                     sx={{ minHeight: footerMinHeight, padding: 0 }}
                 >
-                    <FootMap />
+                    <FootMap latitude={mapCoords.latitude} longitude={mapCoords.longitude} />
                 </Grid>
             </Grid>
         </Box>

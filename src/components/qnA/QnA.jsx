@@ -5,7 +5,7 @@ import { darken } from "polished";
 import GridSection from "../common/gridSection/GridSection";
 import QnaPanel from "./subcomponents/QnaPanel";
 
-const QnA = ({ identifier, title, subtitle, questions, contrast = false }) => {
+const QnA = ({ identifier, title, subtitle, questions, image="https://picsum.photos/id/4/800/800", contrast = false }) => {
     const theme = useTheme();
 
     return (
@@ -16,7 +16,7 @@ const QnA = ({ identifier, title, subtitle, questions, contrast = false }) => {
                     {
                         children: (
                             <RespImage
-                                image="https://picsum.photos/id/4/800/800"
+                                image={image}
                                 percentageWidth={90}
                                 title="QnA"
                                 alt="QnA"

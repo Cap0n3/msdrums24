@@ -67,6 +67,7 @@ const HomePages = () => {
                         : "Voici les questions les plus courantes."
                 }
                 questions={qnaData[language]}
+                image="/img/showcase/Notebook.jpg"
             />
             {/* <BasicSection
                 children={<CustomForm />}

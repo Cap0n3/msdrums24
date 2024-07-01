@@ -4,7 +4,7 @@ import GridSection from "../common/gridSection/GridSection";
 import ContactForm from "../common/forms/contactForm/ContactForm";
 import Map from "./subcomponents/Map";
 
-const ContactSection = ({ data, formMessages }) => {
+const ContactSection = ({ data, mapCords, formMessages }) => {
     const theme = useTheme();
     return (
         <GridSection
@@ -25,7 +25,7 @@ const ContactSection = ({ data, formMessages }) => {
                     },
                 },
                 {
-                    children: <Map percentageWidth={90} />,
+                    children: <Map latitude={mapCords.latitude} longitude={mapCords.longitude} percentageWidth={90} />,
                     sx: {
                         display: "flex",
                         justifyContent: "center",

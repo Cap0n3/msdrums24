@@ -6,11 +6,12 @@ import {
     ListItemIcon,
     Paper,
 } from "@mui/material";
+import MyLocationIcon from '@mui/icons-material/MyLocation';
 import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
 import TramIcon from "@mui/icons-material/Tram";
 import { useTheme } from "@mui/material/styles";
 
-const DirectionsBox = ({ itineraries }) => {
+const DirectionsBox = ({ address, itineraries }) => {
     const theme = useTheme();
     return (
         <Paper
@@ -24,6 +25,18 @@ const DirectionsBox = ({ itineraries }) => {
             }}
         >
             <List>
+                <ListItem>
+                    <ListItemIcon>
+                        <MyLocationIcon />
+                    </ListItemIcon>
+                    <ListItemText
+                        primaryTypographyProps={{
+                            variant: "body2",
+                            color: theme.palette.text.secondary,
+                        }}
+                        primary={address}
+                    />
+                </ListItem>
                 <ListItem>
                     <ListItemIcon>
                         <DirectionsBusIcon />

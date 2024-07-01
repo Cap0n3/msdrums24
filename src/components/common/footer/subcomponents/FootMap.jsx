@@ -17,11 +17,11 @@ const Marker = ({ text }) => {
     );
 };
 
-const FootMap = () => {
+const FootMap = ({ latitude, longitude }) => {
     const defaultProps = {
         center: {
-            lat: 46.18085861206055,
-            lng: 6.080923080444336,
+            lat: latitude,
+            lng: longitude,
         },
         zoom: 14,
     };
@@ -39,8 +39,8 @@ const FootMap = () => {
                 defaultZoom={defaultProps.zoom}
             >
                 <Marker
-                    lat={46.18085861206055}
-                    lng={6.080923080444336}
+                    lat={latitude}
+                    lng={longitude}
                     text="My Marker"
                 />
             </GoogleMapReact>

@@ -24,7 +24,7 @@ const Marker = ({ text }) => {
  *
  * @param {*} percentageWidth - Percentage width of the map (default: 100)
  */
-const Map = ({ percentageWidth = 100 }) => {
+const Map = ({ latitude, longitude, percentageWidth = 100 }) => {
     const theme = useTheme();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -36,8 +36,8 @@ const Map = ({ percentageWidth = 100 }) => {
 
     const defaultProps = {
         center: {
-            lat: 46.18085861206055,
-            lng: 6.080923080444336,
+            lat: latitude,
+            lng: longitude,
         },
         zoom: 14,
     };
@@ -77,8 +77,8 @@ const Map = ({ percentageWidth = 100 }) => {
                                 defaultZoom={defaultProps.zoom}
                             >
                                 <Marker
-                                    lat={46.18085861206055}
-                                    lng={6.080923080444336}
+                                    lat={latitude}
+                                    lng={longitude}
                                     text="My Marker"
                                 />
                             </GoogleMapReact>

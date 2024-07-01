@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import ContactSection from "../components/contact/ContactSection";
-import { contactTextData, directionTextData, formMessages } from "../data/contact.data";
+import { contactTextData, directionTextData, formMessages, mapData } from "../data/contact.data";
 import { LangContext } from "../context/LangContext";
 import RiseTitle from "../components/common/riseTitle/RiseTitle";
 import DirectionsBox from "../components/misc/DirectionsBox";
@@ -15,13 +15,14 @@ const Contact = () => {
     return (
         <>
             <SEOBlock data={seoData["contact"]} />
-            <ContactSection data={contactTextData[language]} formMessages={formMessages[language]} />
+            <ContactSection data={contactTextData[language]} mapCords={mapData} formMessages={formMessages[language]} />
             <BasicSection direction="column">
                 <RiseTitle
                     title={directionTextData[language].title}
                     subTitle={directionTextData[language].subTitle}
                 />
                 <DirectionsBox
+                    address={directionTextData[language].address}
                     itineraries={directionTextData[language].itineraries}
                 />
             </BasicSection>

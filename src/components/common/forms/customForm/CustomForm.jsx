@@ -58,7 +58,9 @@ const CustomForm = ({
         setIsCaptchaVerified(true);
         await sendEmail(event); // Token is sent with the event
         reset(); // Reset the form fields
-        captchaRef.current.reset(); // Reset the reCAPTCHA
+        // Reset the reCAPTCHA
+        captchaRef.current.reset(); 
+        setRecaptcha(null);
     };
 
     const [ref, inView] = useInView({

@@ -4,7 +4,7 @@ import { useMediaQuery } from "@mui/material";
 import BasicSection from "../common/basicSection/BasicSection";
 import RiseTitle from "../common/riseTitle/RiseTitle";
 import DesktopPlanTable from "./subcomponents/DesktopPlansTable";
-import MobilePlanTable from "./subcomponents/MobilePlansTables";
+import MobilePlanTables from "./subcomponents/MobilePlansTables";
 import AdditionalInfoComponent from "./subcomponents/AddInfoComponent";
 
 export const cellHeight = 80;
@@ -55,7 +55,7 @@ const PlansSection = ({ titles, data, additionalInfos }) => {
                 dataSubkeys.length > 0 &&
                 columns.length > 0 &&
                 (isSm ? (
-                    <MobilePlanTable
+                    <MobilePlanTables
                         plans={planNames}
                         subKeys={dataSubkeys}
                         dataColumns={columns}

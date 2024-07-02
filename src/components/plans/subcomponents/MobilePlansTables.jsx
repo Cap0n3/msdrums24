@@ -9,7 +9,7 @@ import StackCells from "./tableElements/utils/StackCells";
 import { useTheme } from "@mui/material/styles";
 import { innerBorders } from "../PlansSection";
 
-const MobilePlanTable = ({ plans, subKeys, dataColumns }) => {
+const MobilePlanTables = ({ plans, subKeys, dataColumns }) => {
     const theme = useTheme();
     const isXS = useMediaQuery("(max-width:600px)");
 
@@ -45,8 +45,8 @@ const MobilePlanTable = ({ plans, subKeys, dataColumns }) => {
                         />
                     </Box>
                     {/* Full length cells (spanning 3 columns) */}
-                    <Cell item={dataColumns[0][4]} index={4} align="center" />
-                    <Cell item={dataColumns[0][5]} index={5} align="center" />
+                    <Cell item={dataColumns[0][4]} index={4} align="center" tips={isXS ? subKeys : null} />
+                    <Cell item={dataColumns[0][5]} index={5} align="center" tips={isXS ? subKeys : null} />
                 </Box>
             </TableContainer>
             <TableContainer>
@@ -88,4 +88,4 @@ const MobilePlanTable = ({ plans, subKeys, dataColumns }) => {
     );
 };
 
-export default MobilePlanTable;
+export default MobilePlanTables;

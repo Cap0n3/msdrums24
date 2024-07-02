@@ -3,15 +3,15 @@
         {
             "PriceCardBimonthly": {
                 "image": "/img/pricing/ManDrummer.jpg",
-                "title": "Flash Plan",
+                "title": "Express Plan",
                 "price": 128,
                 "paymentFrequency": "/month",
                 "sellingPoints": [
                     "30 minutes",
                     "All levels",
                     "Weekly lesson",
-                    "34 classes from Sept to June",
-                    "10 months of lessons",
+                    "34 classes",
+                    "From september to june",
                     "Ideal for children and teenagers"
                 ],
                 "morePlans": "More pricing options",
@@ -30,8 +30,8 @@
                     "45 minutes",
                     "All levels",
                     "Weekly lesson",
-                    "34 classes from Sept to June",
-                    "10 months of lessons",
+                    "34 classes",
+                    "From september to june",
                     "Efficient coaching"
                 ],
                 "morePlans": "More pricing options",
@@ -64,15 +64,15 @@
         {
             "PriceCardBimonthly": {
                 "image": "/img/pricing/ManDrummer.jpg",
-                "title": "Formule flash",
+                "title": "Formule express",
                 "price": 128,
                 "paymentFrequency": "/mois",
                 "sellingPoints": [
                     "30 minutes",
                     "Tous niveaux",
                     "Cours hebdomadaire",
-                    "34 cours de sept à juin",
-                    "10 mois de cours",
+                    "34 cours",
+                    "De septembre à juin",
                     "Idéal pour les enfants et ados"
                 ],
                 "morePlans": "+ de formules",
@@ -91,8 +91,8 @@
                     "45 minutes",
                     "Tous niveaux",
                     "Cours hebdomadaire",
-                    "34 cours de sept à juin",
-                    "10 mois de cours",
+                    "34 cours",
+                    "De septembre à juin",
                     "Encadrement efficace"
                 ],
                 "morePlans": "+ de formules",

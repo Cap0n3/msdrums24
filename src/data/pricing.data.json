@@ -24,7 +24,7 @@
             "PriceCardWeekly": {
                 "image": "/img/pricing/WomanDrummer1.jpg",
                 "title": "Individual Plan",
-                "price": 180,
+                "price": 188,
                 "paymentFrequency": "/month",
                 "sellingPoints": [
                     "45 minutes",
@@ -85,7 +85,7 @@
             "PriceCardWeekly": {
                 "image": "/img/pricing/WomanDrummer1.jpg",
                 "title": "Formule individuelle",
-                "price": 180,
+                "price": 188,
                 "paymentFrequency": "/mois",
                 "sellingPoints": [
                     "45 minutes",

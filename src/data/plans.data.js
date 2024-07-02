@@ -142,22 +142,22 @@ export const pricingTable = {
 
 export const infos = {
     en: {
-        free_trial: "Your first lesson is free !",
+        free_trial: "Trial lesson deducted on enrolment",
         all_year_round: "You can start taking lessons at any time of the year",
         more_info: {
             "Individual and pair options": [
                 "One lesson a week, exluding school holidays and makeup lesson weeks",
-                "*Monthly cost calculated for a 10-month period",
+                "Monthly cost calculated for a 10-month period",
             ],
         },
     },
     fr: {
-        free_trial: "Premier cours d'essai gratuit",
+        free_trial: "Cours d'essai déduit en cas d'inscription",
         all_year_round: "Inscription possible toute l'année",
         more_info: {
             "Formule Individuelle et Binôme": [
                 "1 cours par semaine sauf vacances scolaires et semaines de rattrapage",
-                "*Tarif mensuel calculé sur une base de 10 mois",
+                "Tarif mensuel calculé sur une base de 10 mois",
             ],
         },
     },

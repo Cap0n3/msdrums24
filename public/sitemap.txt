@@ -1,4 +1,4 @@
-http://localhost:5173/
-http://localhost:5173/formules
-http://localhost:5173/inscription
-http://localhost:5173/contact
+https://msdrums.ch/
+https://msdrums.ch/formules
+https://msdrums.ch/inscription
+https://msdrums.ch/contact

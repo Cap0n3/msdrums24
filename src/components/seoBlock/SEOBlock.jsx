@@ -12,6 +12,7 @@ const SEOBlock = ({ data }) => {
             <title>{data.title}</title>
             <meta name="description" content={data.description} />
             <link rel="canonical" href={data.canonHREF} />
+            {data.noFollow && <meta name="robots" content="noindex, nofollow" />}
         </Helmet>
     );
 };

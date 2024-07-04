@@ -1,22 +1,23 @@
 {
     "home": {
-        "title": "MS Drums - Home",
+        "title": "MS Drums - Cours de batterie à Genève | msdrums.ch",
         "description": "Je vous propose des cours de batterie sérieux et conviviaux, adaptés à vos envies ou objectifs et à votre rythme, peu importe votre niveau !",
         "canonHREF": "https://msdrums.ch/"
     },
     "enroll": {
-        "title": "MS Drums - Inscription",
+        "title": "MS Drums - Cours de batterie à Genève | Inscription",
         "description": "Inscrivez-vous dès maintenant pour un cours d'essai !",
         "canonHREF": "https://msdrums.ch/inscription"
     },
     "contact": {
-        "title": "MS Drums - Contact",
+        "title": "MS Drums - Cours de batterie à Genève | Contact",
         "description": "Pour toute question, contactez-moi !",
         "canonHREF": "https://msdrums.ch/contact"
     },
     "plans": {
-        "title": "MS Drums - Formules",
+        "title": "MS Drums - Cours de batterie à Genève | Formules",
         "description": "En savoir plus sur mes options tarifaires",
-        "canonHREF": "https://msdrums.ch/formules"
+        "canonHREF": "https://msdrums.ch/formules",
+        "noFollow": true
     }
 }
